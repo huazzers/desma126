@@ -6,3 +6,6 @@ theme:
   theme_style: dark
   colors:
     primary: orange
+nav:
+  - Home: index.md
+  - Schedule: schedule.md
