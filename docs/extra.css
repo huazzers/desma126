@@ -1,0 +1,82 @@
+/*removing prev and next links*/
+md-footer__inner { display: none !important; }
+.nav-link[rel="next"] {display: none;}
+.nav-link[rel="prev"] {display: none;}
+
+@media only screen and (max-width: 780px) {
+    h1{
+        font-size:1.5em !important;
+    }
+
+    h2{
+        font-size:1em !important;
+    }
+
+    h3{
+        font-size:0.9em !important;
+    }
+
+    hr{
+        margin: 1em 0em !important;
+    }
+
+    li{
+        padding:0em !important;
+    }
+
+    li .nav-item{
+        margin: 0 !important;
+    }
+
+    a.nav-link{
+        font-size:1.25em !important;
+    }
+    
+}
+
+p,li{
+    font-size:0.875em;
+    line-height:1.75em;
+}
+
+a.dropdown-item{
+    font-size:1.25em !important;
+}
+
+a{
+    color: orange !important;
+}
+
+hr{
+    margin: 2em 0em;
+}
+
+h1{
+    font-size:2.75em;
+}
+
+h2{
+    background-color:orange;
+    color: black; 
+    padding:0.15em 0.5em;
+}
+
+h3{
+    color: orange;
+    padding-top:0.15em;
+    font-weight:bold;
+}
+
+h4{
+    color: orange;
+    padding-top:0.1em;
+    
+}
+
+li{
+    padding:0.5em 0em;
+}
+
+td{
+    vertical-align: top;
+}

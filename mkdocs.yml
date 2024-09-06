@@ -1,4 +1,4 @@
-site_name: DESMA126 Game Engine
+site_name: 👾 DESMA126 Game Engine
 theme: 
   name: simple-blog
   components:
@@ -6,6 +6,15 @@ theme:
   theme_style: dark
   colors:
     primary: orange
+extra_css:
+  - extra.css
 nav:
-  - Home: index.md
-  - Schedule: schedule.md
+  - 🏠 Home: index.md
+  - 📜 Syllabus: syllabus.md
+  - 📅 Schedule: schedule.md
+  - 📌 Assignments:
+    - How To Submit: how-to-submit.md
+    - Readings & Homeplays: readings-and-homeplays.md
+    - Project 1: project-1.md
+    - Project 2: project-2.md
+    - Project 3: project-3.md
