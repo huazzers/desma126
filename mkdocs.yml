@@ -3,9 +3,7 @@ theme:
   name: simple-blog
   components:
     title: false
-  theme_style: dark
-  colors:
-    primary: orange
+  theme_style: light
 extra_css:
   - extra.css
 nav:

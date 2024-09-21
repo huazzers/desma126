@@ -1,34 +1,16 @@
 # 📅 Schedule
-<!-- For full documentation visit [mkdocs.org](https://www.mkdocs.org).
 
-## Commands
 
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs -h` - Print help message and exit.
-
-## Project layout
-
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files. -->
-
-TBD 
-
-<!--
-|         | Tuesday       | Thursday      |
+|  | Tuesday       | Thursday      |
 | ------- | ------------- | ------------- |
-| Week 0  |               | **09/26**</br>Course Overview, Tech check, Unity Intro </br> Assign: Class Survey, Project 1 (DUE: Oct 17)  |
-| Week 1  | **10/01**</br></br> | **10/03**</br>Due: Class Survey, Roll-a-ball Tutorial</br>Assign: Reading Response 1|
-| Week 2  | **10/08**</br> | **10/10**</br>Due: Reading Response 1|
-| Week 3  | **10/15**</br> | **10/17**</br>Due: Project 1</br> Assign: Reading 1|
-| Week 4  | **10/22**</br> | **10/24**</br>|
-| Week 5  | **10/29**</br> | **10/31**</br>|
-| Week 6  | **11/05**</br> | **11/07**</br>|
-| Week 7  | **11/12**</br> | **11/14**</br>|
-| Week 8  | **11/19**</br> | **11/21**</br>|
-| Week 9  | **11/26**</br> | **11/28**</br>Thanksgiving - No class. |
-| Week 10  | **12/03**</br> | **12/05**</br>|
--->
+| W0  |               | **09/26**</br><p>Due: Preliminary Survey</p><p>Course Overview & Introductions, Tech check </p><p>Lecture: Intro to Game Engine, Unity, and C#</p><p>Assign: Reading Response 1, Homeplay 1, Project 1</p> |
+| W1  | **10/01**</br><p>Tutorial: Game Objects, Transforms, Vectors</p> | **10/03**</br><p>Due: Reading Response 1</p><p>Tutorial: Prefabs, Instantiation</p>|
+| W2  | **10/08**</br><p>Due: Homeplay 1, Project 1 Sketch</p><p>Tutorial: Arrays, Noise, Randomness</p> | **10/10**</br><p>Tutorial: State Machines, Coroutines, Events</p>|
+| W3  | **10/15**</br><p>Due: Project 1</p><p>Project 1 Crit</p> | **10/17**</br><p>Lecture: Level Design</p><p>Tutorial: Physics and Interaction</p><p>Assign: Reading Response 2, Homeplay 2, Project 2</p>|
+| W4  | **10/22**</br><p>Due: Reading Response 2</p> | **10/24**</br><p>Due: Homeplay 2, Project 2 Sketch</p><p>Tutorial: Triggers, Collisions, Sound, UI</p>|
+| W5  | **10/29**</br><p>Tutorial: Static Variables, Singletons, Inventory</p> | **10/31**</br><p>Due: Project 2 Prototype</p><p>Studio Time</p>|
+| W6  | **11/05**</br><p>Studio Time</p> | **11/07**</br><p>Due: Project 2</p><p>Project 2 Crit</p><p>Assign: Project 3</p>|
+| W7  | **11/12**</br><p>Alt-Engine Micro Game Jam?</p> | **11/14**</br><p>Alt-Engine Micro Game Jam?</p>|
+| W8  | **11/19**</br><p>Due: Project 3 Sketch</p><p>Tutorial: Persistent Data</p> | **11/21**</br><p>Tutorial: Extra Unity Topics (TBD) <!--Cinemachine, NavMesh, Animation, Dialogue Systems, Shaders, Particle Systems--></p>|
+| W9  | **11/26**</br><p>Studio Time</p> | **11/28**</br><p>Thanksgiving - No class.</p> |
+| W10  | **12/03**</br><p>Studio Time</p> | **12/05**</br><p>Due: Project 3</p>|

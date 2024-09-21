@@ -1,10 +1,13 @@
-# Project 2: Ball Game Remix
+# Project 2: TBD
 
 TBD
 
 <!--
 Final Submission Due: October 17 (Week 3, Thursday) 
 
+
+?? ball game remix
+?? physics game in general -- just has to use physics mechanics? 
 
 # Prompt
 

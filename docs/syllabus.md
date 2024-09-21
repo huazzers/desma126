@@ -4,30 +4,23 @@ Broad 4240<br/>
 Tuesdays and Thursdays, 2 p.m. - 4:50 p.m.
 
 **INSTRUCTOR** - Hua Chai (he/they)<br/>
-Office hours & Location: TBA<br/>
+Office hours: By appointment only; Thursdays, 12:30 p.m. - 1:30 p.m. @ Game Lab (Broad 3252)<br/>
 Email: huazzers@g.ucla.edu
 
 **TEACHING ASSISTANT** - Sagan Yee (he/they)<br/>
-Office hours & Location: TBA<br/>
-Email: TBA
+Office hours: By appointment only; Tuesdays, 12:30 p.m. - 1:30 p.m. @ Game Lab (Broad 3252)<br/>
+Email: saganyee@ucla.edu
 
 ---
 
 ## Course Description
-This course introduces the fundamentals of programming interactive <!-- ?? does it need to be interactive.. --> projects in game development software. 
+This course introduces the fundamentals of programming interactive projects in game development software. 
 
-Classwork focuses on familiarizing students with game engines, computer programming concepts, player experience, and other skills that are foundational to making digital games. <!-- skills to be taught: level design (would this be taught in game design, or are they keeping to design in analog games?), "AI" behaviour (re: nonplayable games and simulations) or sandbox / ecosystems? --> 
+Classwork focuses on familiarizing students with game engines, computer programming concepts, player experience, and other skills that are foundational to making digital games.
 
 Lectures, exercises, and class projects teach skills needed to create digital games including custom rules, interactive physics systems, vectors, generative or randomized levels, save data, custom input systems, score-keeping, and sound. 
 
 This course is offered in parallel with the concurrent courses, Game Design and Interactive Animation.
-
-<!-- things to practice/study:
-* level design
-* generative engine
-* persistent data
-* terrain generation
--->
 
 ---
 
@@ -49,60 +42,31 @@ By the end of this course, you will be able to create a real-time, interactive s
 Using generative design to create random/unique/dynamic ecosystems, worlds, characters, and events in Unity. 
 
 > **Week 0-3**
-</br>Intro to Unity Game Engine and C#<!--Navigating Unity, Importing Assets, C# script anatomy + conventions + basics, basic camera + ui + lighting + materials-->, Prefabs and Instantiation<!--Sprites-->, Coroutines, Events, UI
+</br>Intro to Unity Game Engine and C#<!--Navigating Unity, Importing Assets, C# script anatomy + conventions + basics, basic camera + ui + lighting + materials-->, Prefabs and Instantiation<!--Sprites-->, Vector fundamentals<!--Player Controller-->, Coroutines, Events, UI
 > 
 > **Project 1: Auto-Generator**
 
-### Unit 2: Engineering for Play
+### Unit 2: Playing with Physics
 Using physics, math, and other game engine tools to design environments and mechanics for interactive gameplay.
 
-> **Week 3-6**
-</br>Level Design<!--Grayboxing, Terrain, Post-processing-->, Vector fundamentals<!--Player Controller-->, Physics Simulations<!--Collision/Trigger-->, Input Systems<!--New Input System-->, Inventory, Persistent Data, Sound
+> **Week 4-6**
+</br>Level Design<!--Grayboxing, Terrain, Post-processing-->, Input Systems<!--New Input System-->, Physics Simulations<!--Collision/Trigger-->, Static Variables and Singletons, Sound
 > 
 > **Project 2: Ball Game Remix**
 
 ### Intermission: Alt-Engines
 Explore other tiny game engines!
 
-> **Week 6/7**
-</br>Micro Game Jam -- Collaborate in teams, make an entire game in a single class.
+> **Week 7**
+</br>Micro Game Jam(s) -- Make an entire game in a single class.
 
-### Unit 3: Game as Engine
-Other game engine tools for refining your projects.
+### Unit 3: Re:Engine
+Using the full affordances of the game engine to revise, refine, and/or remix your previous projects in this class.
 
-> **Week 7-10**
-</br>Cinemachine, Multiplayer, AI Navigation, etc.
+> **Week 8-10**
+</br>More Advanced Unity Topics (TBD)
 > 
-> **Project 3: Final Project**
-
----
-
-<!--
-
-Weeks 1–2
-Introduction to game development tools, Unity Editor, C# introduction, visual language, and level design.
-
-Project 1: Worlding (Due: Week 3)
-Remix of the Roll-a-ball tutorial game that explores the possibilities of environment and spatial narrative. Roll-a-ball is a quick tour of the Unity Editor, but also provides the foundation for something more expansive.
-
-Weeks 3–6
-Alternative Engines. Working in 2D. Creating assets/sprites. Vector fundamentals, physics, and persistent data.
-
-Project 2: Zine (Due: Week 6)
-Create a zine using Unity or an alternative game engine. Experiment with custom asset creation and collage techniques. Express ideas through game mechanics, assets, text, and structure.
-
-Weeks 7–10
-Refinement, remix, sampling, streaming, custom input, mods.
-
-Project 3: Game as Engine (Due: Week 10)
-Starting with either a previous project or a completely new idea, consider alternative ways of engaging with the project using novel input systems, custom graphics/shaders/vfx, cameras, multiple players, sound, procedurally generated content, etc.
-
-Readings and Homeplays In addition to readings that we will discuss in class, you will be assigned games to play outside of class which are relevant to the our projects.
-
-Micro Jam We will have at least one micro jam where teams will attempt to create an entire game within a single class period.
-
--->
-
+> **Project 3: Final Project (TBD)**
 
 ---
 
@@ -155,35 +119,50 @@ After the due date, a full letter grade will be deducted from the project grade 
 **If you anticipate that you won’t be able to complete the work by the due date, please contact us *before* the due date so we can discuss options.**
 
 #### Appropriation, Fair Use, and Generated Content
+
 **You should strive to develop your own assets for your project submissions.** 
 
-If major portions of your project have been borrowed or generated, particularly audio, visual, and textual content, they must be conceptually significant to your project and you should be able to justify their inclusion. 
+The use of existing prompt-based AI generation programs, including but not limited to ChatGPT, DALLE, Stable Diffusion, and Midjourney, is not allowed in this class. You may consider this to be one of the limitations of this class -- you are here to learn a specific set of technical skills, and the most advisable way to engage with this course is to not use these programs at all. There are [many other reliable solutions and resources](#recommended-tools) available to you, please use this opportunity to explore them.
 
-While developing early stage prototypes and testing mechanics, it is perfectly acceptable to use placeholder assets.
+If you're planning to borrow or generate assets from somewhere else, you must consult the instructor beforehand AND be able to justify your decision for doing so. While developing early stage prototypes and testing mechanics, it is acceptable to use placeholder assets.
+
+**No credit will be awarded for plagiarised work.** All submitted projects should be original and developed within the duration of this class. Remember to acknowledge / cite your tools and sources appropriately in your submission.
 
 ---
 
 ## Resources
 
+### Readings / Games
+All assigned readings and games will be provided for you -- no need to purchase textbooks for this class. (see [*Readings & Homeplays*](./readings-and-homeplays.md) for more details.)
+
 ### Required Tools
-- **Unity** -- Please install **[Unity Hub](https://unity.com/download)** and get **the latest LTS version of Unity Editor** (currently 2022.3.43f1). Other editor versions may differ slightly from each other, but anything 2021 or later should be ok.
-- **Visual Studio** -- Install Microsoft Visual Studio with Unity Hub while you are installing Unity. Alternatively, VS Code or VS Community should be fine.
+- **Unity** -- Please install [Unity Hub](https://unity.com/download) and get the latest LTS version of Unity Editor (currently 2022.3.43f1). Other editor versions may differ slightly from each other, but anything 2021 or later should be ok.
+- **Visual Studio** -- Install Microsoft Visual Studio or Visual Studio Code, you should have the option to do this when installing Unity.
 
 ### Recommended Tools
-- **2D and 3D production software of your choice** -- you will be expected to develop your own assets for projects (see [*Appropriation, Fair Use, and Generated Content*](#appropriation-fair-use-and-generated-content) for more details.) </br></br>Here are some tools I recommend: </br></br>
-    - [**Krita**](https://krita.org/en/) -- powerful open source digital paint tool
-    - [**Blender**](https://www.blender.org/) -- fully featured open source 3D art and animation tool
-    - [**Piskel**](https://www.piskelapp.com/) -- free pixel art app
-    - [**Aseprite**](https://www.aseprite.org/) -- inexpensive pixel art / animation tool
-    - [**Sculptris**](http://pixologic.com/sculptris/) -- “A gateway into the exciting world of 3D.”
-    - [**Crocotile 3d**](https://prominent.itch.io/crocotile3d) -- A tool for creating 3d scenes with 2d tiles.
-    - [**Mixamo**](https://www.mixamo.com/) -- Free, but requires a login. Includes community sourced walk cycles and 3D animations which you can apply to any model that can T-pose.
-- **[freesound.org](https://freesound.org/)** -- audio database that has search filters sorted by licenses. login required for downloading files. good source for adding sound effects and music to your projects. 
 
-For more tools, check out this [**exhaustive list of cheap and free tools compiled by Everest Pipkin**](https://github.com/everestpipkin/tools-list#making-assets---images-models-sound-video).
+**2D and 3D production software of your choice:**
 
-### Readings / Games
-All required readings and games will be provided for you -- no need to purchase textbooks for this class. (see [*Readings & Homeplays*](./readings-and-homeplays.md) for more details.)
+- [Krita](https://krita.org/en/) -- professional free and open source digital paint tool.
+- [Blender](https://www.blender.org/) -- powerful free and open source 3D art and animation tool.
+- [Piskel](https://www.piskelapp.com/) -- free pixel art app.
+- [Aseprite](https://www.aseprite.org/) -- inexpensive pixel art and animation tool.
+- [Sculptris](http://pixologic.com/sculptris/) -- “A gateway into the exciting world of 3D.”
+- [Crocotile 3d](https://prominent.itch.io/crocotile3d) -- A tool for creating 3d scenes with 2d tiles.
+- [Mixamo](https://www.mixamo.com/) -- Free, but requires a login. Includes community sourced walk cycles and 3D animations which you can apply to any model that can T-pose.
+
+**Audio resources:**
+
+- [freesound.org](https://freesound.org/) -- audio database that has search filters sorted by licenses. login required for downloading files. good source for adding sound effects and music to your projects. 
+- [Audacity](https://www.audacityteam.org/) -- free software for recording and editing audio; the version without Muse Hub should suffice for your purposes.
+
+For more asset creation tools, check out this [exhaustive list of cheap and free tools compiled by Everest Pipkin](https://github.com/everestpipkin/tools-list#making-assets---images-models-sound-video).
+
+**Additional resources for C# scripting and Unity development:**
+
+- Unity documentation -- [Scripting Reference](https://docs.unity3d.com/ScriptReference/index.html) and [Editor Manual](https://docs.unity3d.com/Manual/index.html).
+- Community Forums -- [Stack Exchange](https://stackexchange.com/), [Unity Discussions](https://discussions.unity.com/).
+- [Learn C# in One Day and Learn it Well](https://www.amazon.com/Learn-One-Day-Well-Hands/dp/1518800270) by Jamie Chan.
 
 ---
 
@@ -191,7 +170,6 @@ All required readings and games will be provided for you -- no need to purchase 
 
 ### Land Acknowledgement
 
-The UCLA version:
 > The University of California, Los Angeles occupies the ancestral, traditional, and contemporary Lands of the Tongva and Chumash peoples. Our ability to gather and learn here is the result of coercion, dispossession, and colonization. We are grateful for the land itself and the people that have stewarded it through generations. While a land acknowledgment is not enough, it is the first step in the work toward supporting decolonial and indigenous movements for sovereignty and self-determination. Read more about what land you’re occupying: [https://native-land.ca/](https://native-land.ca/) 
 
 <!--UCLA is a land grant institution that continues to benefit from federal land theft and genocide of indigenous peoples. Statewide UC campuses are built upon Native American land, among which include sacred burial sites that have yet to be fully repatriated to their respective indigenous communities. Today, UCLA is one of the largest landlords in the region, and remains complicit in furthering the expatriation of indigenous peoples both locally and internationally. 
@@ -201,7 +179,7 @@ We're all living in the meta-game engine called the occupational forces of the U
 Other resources on land repatriation: 
 
 * [**UCLA Mapping Indigenous LA**](https://mila.ss.ucla.edu/) -- an online archive of a storymapping research project about indigenous Los Angeles peoples, histories, and geographies from past and present.
-* [**California History (Winter 2023), Respecting the Ancestors: On Repatriating American Indian Remains**](https://online.ucpress.edu/ch/article/100/4/3/197683/Respecting-the-AncestorsOn-Repatriating-American) -- essay report on the history of repatriating indigenous peoples remains (mostly a lack thereof), including UC-specific case studies. 
+* [**California History (Winter 2023), Respecting the Ancestors: On Repatriating American Indian Remains**](https://online.ucpress.edu/ch/article/100/4/3/197683/Respecting-the-AncestorsOn-Repatriating-American) -- 2023 essay report on the history of repatriating indigenous peoples remains (mostly a lack thereof), including UC-specific case studies. 
 * [**Decolonization is not a metpahor**](https://www.semanticscholar.org/paper/Decolonization-is-not-a-metaphor-Tuck-Yang/9e908da74710ecdcac794a847564939390008374) -- article on what is unsettling about decolonisation as a caution against the loose use of the term in advocacy and scholarship. 
 
 ### Commitment to Diversity & Safer Spaces
@@ -219,7 +197,7 @@ Students must adhere to the current campus directives related to COVID-19 mitiga
 ### Center for Accessible Education (CAE)
 The UCLA Center for Accessible Education (CAE) is responsible for ensuring students with documented disabilities have access to an inclusive, supportive learning environment. Students with disabilities or other needs requiring academic accommodations should speak with me as early in the quarter as possible to be sure they get the support they need.
 
-Students needing academic accommodations based on a disability should contact the Center for Accessible Education (CAE) at (310) 825-1501 or in person at Murphy Hall A255. When possible, students should contact the CAE within the first two weeks of the term as reasonable notice is needed to coordinate accommodations. For more information visit [www.cae.ucla.edu](www.cae.ucla.edu). 
+Students needing academic accommodations based on a disability should contact the Center for Accessible Education (CAE) at (310) 825-1501 or in person at Murphy Hall A255. When possible, students should contact the CAE within the first two weeks of the term as reasonable notice is needed to coordinate accommodations. For more information visit <a href="https://www.cae.ucla.edu">www.cae.ucla.edu</a>. 
 
 ### Academic Integrity and Information on Student Conduct
 UCLA is a community of scholars. In this community, all members including faculty, staff and students alike are responsible for maintaining standards of academic honesty. As a student and member of the University community, you are here to get an education and are, therefore, expected to demonstrate integrity in your academic endeavors. You are evaluated on your own merits. Cheating, plagiarism, collaborative work, multiple submissions without the permission of the professor, or other kinds of academic dishonesty are considered unacceptable behavior and will result in formal disciplinary proceedings usually resulting in suspension or dismissal. As specified in the [UCLA Student Conduct Code](https://www.deanofstudents.ucla.edu/studentconductcode), violations or attempted violations of academic dishonesty include, but are not limited to, cheating, fabrication, plagiarism, multiple submissions or facilitating academic dishonesty. When a student is suspected to have engaged in academic dishonesty, Academic Senate regulations require that the instructor report the allegation to the office of the Dean of Students. For more information, see the [UCLA Student Conduct Code](https://www.deanofstudents.ucla.edu/studentconductcode).
