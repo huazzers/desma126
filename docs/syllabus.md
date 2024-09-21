@@ -60,11 +60,11 @@ Explore other tiny game engines!
 > **Week 7**
 </br>Micro Game Jam(s) -- Make an entire game in a single class.
 
-### Unit 3: Re:Engine
-Using the full affordances of the game engine to revise, refine, and/or remix your previous projects in this class.
+### Unit 3: Save && Scene
+Using persistent data, effects, and cinematic affordances of the game engine to revise and refine your projects.
 
 > **Week 8-10**
-</br>More Advanced Unity Topics (TBD)
+</br>Cinemachine, Animation, Coroutines, Persistent Data
 > 
 > **Project 3: Final Project (TBD)**
 
@@ -180,7 +180,7 @@ Other resources on land repatriation:
 
 * [**UCLA Mapping Indigenous LA**](https://mila.ss.ucla.edu/) -- an online archive of a storymapping research project about indigenous Los Angeles peoples, histories, and geographies from past and present.
 * [**California History (Winter 2023), Respecting the Ancestors: On Repatriating American Indian Remains**](https://online.ucpress.edu/ch/article/100/4/3/197683/Respecting-the-AncestorsOn-Repatriating-American) -- 2023 essay report on the history of repatriating indigenous peoples remains (mostly a lack thereof), including UC-specific case studies. 
-* [**Decolonization is not a metpahor**](https://www.semanticscholar.org/paper/Decolonization-is-not-a-metaphor-Tuck-Yang/9e908da74710ecdcac794a847564939390008374) -- article on what is unsettling about decolonisation as a caution against the loose use of the term in advocacy and scholarship. 
+* [**Decolonization is not a metaphor**](https://www.semanticscholar.org/paper/Decolonization-is-not-a-metaphor-Tuck-Yang/9e908da74710ecdcac794a847564939390008374) -- article on what is unsettling about decolonisation as a caution against the loose use of the term in advocacy and scholarship. 
 
 ### Commitment to Diversity & Safer Spaces
 We understand the classroom as a space for practicing freedom; where one may challenge psychic, social, and cultural borders and create meaningful artistic expressions. To do so we must acknowledge and embrace the different identities and backgrounds we inhabit. This means that we will use preferred pronouns, respect self-identifications, and be mindful of special needs. Disagreement is encouraged and supported, however our differences affect our conceptualization and experience of reality, and it is extremely important to remember that certain gender, race, sex, and class identities are more privileged while others are undermined and marginalized. Consequently, this makes some people feel more protected or vulnerable during debates and discussions. A collaborative effort between the students, TA, and instructor is needed to create a supportive learning environment. While everyone should feel free to experiment creatively and conceptually, if a class member points out that something you have said or shared with the group is offensive, avoid being defensive; instead approach the discussion as a valuable opportunity for us to grow and learn from one another. Alternatively, if you feel that something said in discussion or included in a piece of work is harmful, you are encouraged to speak with the instructor or TA. 

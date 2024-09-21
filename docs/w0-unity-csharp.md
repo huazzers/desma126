@@ -22,7 +22,7 @@ For example, in a game of tag, YOU HAVE TO DESIGN RULES FOR...
 
 1. **THE SETUP** -- how do you decide who's "it"? when can they start tagging people?
 2. **THE LEVEL / PLAYING FIELD** -- how far can players go before they're "out-of-bounds"? are there safe zones where people can't be tagged? 
-3. **PLAYER BEHAVIOUR** -- are players only allowed to travel in a certain manner (e.g. brisk walking, no running), and how can that be enforced (e.g. what is the difference between briskwalking and running?) If someone gets tagged, what happens to them? Do they freeze in position, become "it", or are they out of the game? 
+3. **PLAYER BEHAVIOUR** -- are players only allowed to travel in a certain manner (e.g. speedwalking, but no running), and how can that be enforced (e.g. speedwalking means both feet cannot be lifted off the ground at the same time at any moment.) If someone gets tagged, what happens to them? Do they freeze in position, become "it", or are they out of the game? 
 4. **CONCLUDING THE EXPERIENCE** -- how do you know when the game has ended, and who the winner/loser is (if any)?
 
 </br>
@@ -44,9 +44,15 @@ In this class, we will focus on **how to implement these rules using game engine
 
 <figure>
 <img src ="https://media1.tenor.com/m/9Gvf9FdRqUYAAAAd/marine-diesel-engine-engine.gif" alt="Marine Diesel Engine Animation GIF">
-<figcaption>-- Marine Diesel Engine Animation GIF - <a href="https://tenor.com/en-GB/view/marine-diesel-engine-engine-gif-8550503">Source</a></figcaption>
+<figcaption>-- Marine Diesel Engine Animation GIF (<a href="https://tenor.com/en-GB/view/marine-diesel-engine-engine-gif-8550503">Source</a>)</figcaption>
 </figure>
 
+<figure>
+<img src="../img/horse-3-small-1.webp">
+<figcaption>-- Animation of Eadweard Muybridge’s Jockey riding a race horse from his ‘Animal Locomotion’ series, 1878/87 / J. Paul Getty Museum, Los Angeles, USA / Bridgeman Images</figcaption>
+</figure>
+
+</br>
 Consider the following definitions from the Wikitionary page for <a href ="https://en.wiktionary.org/wiki/engine#English">"Engine"</a>:
 
 </br>
@@ -126,7 +132,6 @@ And, in the same way that tools which aren't even intended for game-making *can*
 <li>
 Simulation models</br></br>
 <!--
-conways game of life: https://golly.sourceforge.io/webapp/golly.html
 life engine: https://thelifeengine.net/
 the bibites: https://thebibites.itch.io/the-bibites 
 evolution: https://keiwan.itch.io/evolution
@@ -138,6 +143,10 @@ emoji simulator: https://ncase.me/sim/
 reading: https://www.redblobgames.com/ 
 -->
 <figure>
+<figcaption></figcaption>
+</figure>
+<figure>
+<figcaption></figcaption>
 </figure>
 </li>
 </ul>
