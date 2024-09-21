@@ -3,7 +3,7 @@
 
 |  | Tuesday       | Thursday      |
 | ------- | ------------- | ------------- |
-| W0  |               | **09/26**</br><p>Due: <a href="https://forms.gle/8nvEy9DgocYWC4H3A">Preliminary Survey</a></p><p>Course Overview & Introductions, Tech check </p><p>Lecture: Intro to Game Engine, Unity, and C#</p><p>Assign: Reading Response 1, Homeplay 1, Project 1</p> |
+| W0  |               | **09/26**</br><p>Due: <a href="https://forms.gle/UtwGfebgKcHRvMCP7">Preliminary Survey</a></p><p>Course Overview & Introductions, Tech check </p><p>Lecture: Intro to Game Engine, Unity, and C#</p><p>Assign: Reading Response 1, Homeplay 1, Project 1</p> |
 | W1  | **10/01**</br><p>Tutorial: Game Objects, Transforms, Vectors</p> | **10/03**</br><p>Due: Reading Response 1, Project 1 Sketch</p><p>Tutorial: Prefabs, Instantiation, Arrays</p>|
 | W2  | **10/08**</br><p>Due: Homeplay 1 </p><p>Tutorial: Noise, Randomness, Procedural Generation</p> | **10/10**</br><p>Tutorial: UI, Building your Project</p><p>Studio Time</p>|
 | W3  | **10/15**</br><p>Due: Project 1</p><p>Project 1 Crit</p> | **10/17**</br><p>Lecture: Level Design</p><p>Tutorial: Physics and Interaction</p><p>Assign: Reading Response 2, Homeplay 2, Project 2</p>|
