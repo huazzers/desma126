@@ -109,51 +109,6 @@ Returning to our first question:
 
 If a game is ["an experience that is made from the interaction between different rules"](#what-is-a-game), then broadly speaking, <mark>a game engine could be anything that converts rules and interaction into playable experiences. </mark>
 
-And, in the same way that tools which aren't even intended for game-making *can* be used to make games...
-
-#### Game engines aren't *only* used for making games.
-
-<ul>
-<li>Films and performance</br></br>
-<figure>
-<div style="padding:56.25% 0 0 0;position:relative;">
-<iframe src="https://www.youtube.com/embed/gK3JRl3nRUc?si=XRMg0IfV8VOJXE3f" title="YouTube video player" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
-<figcaption>-- <a href="https://cathoderadiator.itch.io/juvenoia">Juvenoia</a> by Michael Luo</figcaption>
-</figure>
-<figure>
-<div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/328440768?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="FIRE UNDERGROUND (Trailer)"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
-<figcaption>-- <a href="https://ncrockett.com/Overview">Fire Underground (Trailer)</a> by Nick Crockett</figcaption>
-</figure>
-<figure>
-<div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/242495062?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="FIRE UNDERGROUND (Trailer)"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
-<figcaption>-- <a href="https://sutopat.itch.io/cubeism">Cubeism</a> by Patrick Stefaniak</figcaption>
-</figure>
-</li>
-<li>
-Simulation models</br></br>
-<!--
-life engine: https://thelifeengine.net/
-the bibites: https://thebibites.itch.io/the-bibites 
-evolution: https://keiwan.itch.io/evolution
-evopedal: https://evolgames.itch.io/evolpedal
-adapt: https://store.steampowered.com/app/888780/Adapt/ 
-better horses: https://lingdonh.itch.io/better-horses
-thrive: https://revolutionarygamesstudio.com/releases/ 
-emoji simulator: https://ncase.me/sim/
-* https://boids.cubedhuang.com/ -- boids simulator, with parameter sliders
-reading: https://www.redblobgames.com/ 
--->
-<figure>
-<figcaption></figcaption>
-</figure>
-<figure>
-<figcaption></figcaption>
-</figure>
-</li>
-</ul>
-
-... and more! 
-
 ---
 
 ## Unity is a Game Engine
@@ -171,17 +126,7 @@ Compared to most other game engines, Unity also tries to avoid being aesthetical
 
 Other industries use Unity for things like [Architectural](https://unity.com/solutions/architecture-engineering-construction) and [Auto](https://unity.com/solutions/automotive-and-transportation) rendering, [Film and TV production](https://unity.com/solutions/real-time-filmmaking-explained), [AI training](https://unity.com/products/machine-learning-agents) and [computer vision](https://unity.com/products/computer-vision).
 
-Unity also contracts with the US Department of Defense for [military training and simulation.](https://www.vice.com/en/article/y3d4jy/unity-workers-question-company-ethics-as-it-expands-from-video-games-to-war)
-
-<figure><div style ="padding:56.25% 0 0 0;position:relative;">
-<iframe width="100%" height="100%" src="https://www.youtube-nocookie.com/embed/0lLBnGe6Ecc?si=DGJKtpGZ18pKe-Dr" title="YouTube video player" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
-<figcaption>-- R.I.D.E. by USC Institute for Creative Technologies.</figcaption>
-</figure>
-
-<figure>
-<img src="../img/only-for-defensive-purposes-of-course.jpg" alt="only for defensive purposes, of course, says Otacon from Metal Gear Solid 1.">
-<figcaption>-- <!--moments before Otacon's mecha fantasies shatters.-->Metal Gear Solid (1988)</figcaption>
-</figure>
+Unity also contracts with the US Department of Defense for [military training](https://www.vice.com/en/article/y3d4jy/unity-workers-question-company-ethics-as-it-expands-from-video-games-to-war) and [simulation.](https://www.youtube-nocookie.com/embed/0lLBnGe6Ecc?si=DGJKtpGZ18pKe-Dr)
 
 ### Anatomy of the Unity Editor
 
