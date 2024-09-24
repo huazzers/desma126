@@ -24,6 +24,10 @@ md-footer__inner { display: none !important; }
         padding:0em !important;
     }
 
+    .duedate>p{
+        font-size:medium !important;
+    }
+
     ul>li.nav-item, ul.dropdown-menu>li{
         margin: 0 !important;
         padding:0em !important;
@@ -60,6 +64,23 @@ figcaption{
 p,li{
     font-size:0.875em;
     line-height:1.75em;
+}
+
+.duedate{
+    border: darkorange solid 2px;
+    padding:0 1em;
+    margin-bottom:2em;
+}
+
+.duedate>p{
+    font-size:x-large;
+    padding:0;
+    line-height: 175%;
+}
+
+.duedate>p>a{
+    font-weight:bold;
+    font-style:italic;
 }
 
 ul>li{
