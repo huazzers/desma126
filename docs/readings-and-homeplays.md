@@ -28,14 +28,13 @@
 Read Kate Compton's "So you want to build a generator" 
 [https://galaxykate0.tumblr.com/post/139774965871/so-you-want-to-build-a-generator](https://galaxykate0.tumblr.com/post/139774965871/so-you-want-to-build-a-generator)
 
+</br>
 
-**AND** 
+***Optional***
 
-Any one of the options below:
+If you're hungry for more, below are some recommended talks on more methods and applications of procedural generation:
 
-- Kate Compton PROCJAM 2015 Talk (15:58 - 49:53) "Let It Grow: Practical Procedural Generation From The Ground Up" (34 min) [https://www.youtube.com/live/s_eyo_m_hnc?feature=shared&t=958](https://www.youtube.com/live/s_eyo_m_hnc?feature=shared&t=958) 
-</br></br>**OR**
-
+- Kate Compton PROCJAM 2015 Talk (15:58 - 49:53) "Let It Grow: Practical Procedural Generation From The Ground Up" (34 min) [https://www.youtube.com/live/s_eyo_m_hnc?feature=shared&t=958](https://www.youtube.com/live/s_eyo_m_hnc?feature=shared&t=958)
 - Herbert Wolverson 2020 Roguelike Celebration Talk "Procedural Map Generation Techniques" (27 min) [https://www.youtube.com/live/TlLIOgWYVpI](https://www.youtube.com/live/TlLIOgWYVpI) 
 
 ---
@@ -50,14 +49,10 @@ Writing Interesting AI (pg6 of Seeds Issue #3) https://www.procjam.com/seeds/iss
 
 ## Homeplays
 
-<!--
-Brief descriptions of what homeplays are.
-
-Groups of 3
-Minimum time (per game) 30 minutes
-Maximum time (per game) 1 hour
-Take notes, ask questions, consider the prompt
-Take screenshots / recordings if needed-->
+- Sign up for game(s) to play in groups of 2-3;
+- 30 ~ 60 minutes of game play;
+- Take notes, ask questions, consider the prompt;
+- Take screenshots / recordings if needed.
 
 ### Homeplay 1
 
@@ -66,7 +61,7 @@ Take screenshots / recordings if needed-->
 </br><a href="https://docs.google.com/spreadsheets/d/1HrWVxhsBU-uBiyhZhQHnOK0SR3rnjlIrp7U_yHa5O1g/edit?usp=sharing">Sign Up Here</a></p>
 </div>
 
-Plan to spend about 15~30 minutes playing the game with your group members.
+Plan to spend about 30 ~ 60 minutes playing the game(s) with your group members.
 
 Then, prepare a short 3 ~ 5 minute presentation in response to the following:
 
