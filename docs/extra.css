@@ -24,7 +24,7 @@ md-footer__inner { display: none !important; }
         padding:0em !important;
     }
 
-    .duedate>p{
+    div.duedate>p{
         font-size:medium !important;
     }
 
@@ -66,19 +66,19 @@ p,li{
     line-height:1.75em;
 }
 
-.duedate{
+div.duedate{
     border: darkorange solid 2px;
     padding:0 1em;
     margin-bottom:2em;
 }
 
-.duedate>p{
+div.duedate>p{
     font-size:x-large;
     padding:0;
     line-height: 175%;
 }
 
-.duedate>p>a{
+div.duedate>p>a{
     font-weight:bold;
     font-style:italic;
 }
