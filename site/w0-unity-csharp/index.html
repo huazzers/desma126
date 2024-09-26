@@ -272,7 +272,7 @@ Consider the following definitions from the Wikitionary page for <a href ="https
 </ol>
 <h3 id="anatomy-of-a-c-script">Anatomy of a C&#35; Script</h3>
 <p>Watch this video for a brief introduction to <a href="https://www.youtube.com/watch?v=-c1RsydH2nA">C# Variables and Functions</a> in Unity.</p>
-<h3 id="script-name">Script Name</h3>
+<h4 id="script-name">Script Name</h4>
 <ul>
 <li>use pascal case, <em>e.g. MyScript.cs</em></li>
 <li>the file name of the script and the name of the MonoBehaviour must be exactly the same (case-sensitive).<ul>
@@ -282,7 +282,7 @@ Consider the following definitions from the Wikitionary page for <a href ="https
 </li>
 <li>the name must be unique -- no two MonoBehaviours should have the same name.</li>
 </ul>
-<h3 id="namespace">Namespace</h3>
+<h4 id="namespace">Namespace</h4>
 <p>A reference library containing all the methods and classes for a specific context.
 </br><pre><code>using UnityEngine</code></pre></p>
 <h4 id="variables">Variables</h4>
@@ -311,7 +311,7 @@ private static int s_winScore;</code></pre></li>
 </ul>
 </li>
 </ol>
-<h3 id="functions">Functions</h3>
+<h4 id="functions">Functions</h4>
 <p>There are two main types of functions: </p>
 <ul>
 <li><strong>method functions</strong> -- a way to group lines of code under one name; good for if you need to call a specific set of codes multiple times;</li>
@@ -336,7 +336,7 @@ private static int s_winScore;</code></pre></li>
 </ul>
 </li>
 <li><strong>Anticipate errors, and help your script help you catch them</strong><ul>
-<li>if your script absolutely needs a type of component, precede your Monobehaviour declaration with <code>[RequireComponent(typeof(ThisComponentClass))]</code></li>
+<li>if your script absolutely needs a type of component, precede your Monobehaviour declaration with <code>[RequireComponent(typeof(ComponentName))]</code></li>
 <li>use <code>Debug.Log</code> and <code>Debug.Error</code> to check for incorrect / null references. </li>
 </ul>
 </li>

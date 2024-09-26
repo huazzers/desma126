@@ -165,14 +165,14 @@ Here's the general thought process when figuring out what to put in our script:
 
 Watch this video for a brief introduction to [C# Variables and Functions](https://www.youtube.com/watch?v=-c1RsydH2nA) in Unity.
 
-### Script Name
+#### Script Name
 - use pascal case, *e.g. MyScript.cs*
 - the file name of the script and the name of the MonoBehaviour must be exactly the same (case-sensitive).
     - e.g. if your C# file name is "ScoreManager.cs", then the line declaring your Monobehaviour class in that script file should look like this: </br><pre><code>public class ScoreManager : MonoBehaviour
     {...}</code></pre>
 - the name must be unique -- no two MonoBehaviours should have the same name.
 
-### Namespace
+#### Namespace
 
 A reference library containing all the methods and classes for a specific context.
 </br><pre><code>using UnityEngine</code></pre>
@@ -200,7 +200,7 @@ When creating variables:
     - use prefixes with an underscore to differentiate private member variables from public ones.</br><pre><code>private bool _currentHealth; 
     private static int s_winScore;</code></pre>
 
-### Functions
+#### Functions
 
 There are two main types of functions: 
 
@@ -223,7 +223,7 @@ When creating functions:
 - **Keep everything private unless it *absolutely* needs to be public.**
     - if a variable just needs to be visible in the Inspector but does not need to be publicly accessible, you should keep it private then add [SerializeField] before it. </br><pre><code>[SerializeField] bool _currentIndex;</code></pre>
 - **Anticipate errors, and help your script help you catch them**
-    - if your script absolutely needs a type of component, precede your Monobehaviour declaration with `[RequireComponent(typeof(ThisComponentClass))]`
+    - if your script absolutely needs a type of component, precede your Monobehaviour declaration with `[RequireComponent(typeof(ComponentName))]`
     - use `Debug.Log` and `Debug.Error` to check for incorrect / null references. 
 - **Use comments to contextualise your lines of code**
 
