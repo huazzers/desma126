@@ -18,7 +18,7 @@ Let's break this question down. First of all...
 <figcaption>-- Chapter Three, Rise of the Videogame Zinesters. Anna Anthropy.</figcaption>
 </figure>
 
-For example, in a game of tag, YOU HAVE TO DESIGN RULES FOR...
+For example, in a game of tag, what are the rules for...
 
 1. **THE SETUP** -- how do you decide who's "it"? when can they start tagging people?
 2. **THE LEVEL / PLAYING FIELD** -- how far can players go before they're "out-of-bounds"? are there safe zones where people can't be tagged? 
@@ -165,30 +165,70 @@ Here's the general thought process when figuring out what to put in our script:
 
 Watch this video for a brief introduction to [C# Variables and Functions](https://www.youtube.com/watch?v=-c1RsydH2nA) in Unity.
 
-### Naming conventions 
-
-#### Unity C# script names
-
+### Script Name
 - use pascal case, *e.g. MyScript.cs*
 - the file name of the script and the name of the MonoBehaviour must be exactly the same (case-sensitive).
-- the name must be unique, ie. no two MonoBehaviours should have the same name.
+    - e.g. if your C# file name is "ScoreManager.cs", then the line declaring your Monobehaviour class in that script file should look like this: </br><pre><code>public class ScoreManager : MonoBehaviour
+    {...}</code></pre>
+- the name must be unique -- no two MonoBehaviours should have the same name.
 
-#### Variable names
+### Namespace
 
-- no spaces allowed.
-- use camel case. </br><pre><code>int numberOfCamels</code></pre>
-- use clear and descriptive nouns, the intent of this variable should be immediately apparent from its name
-    - if it is a bool, prefix with a verb (typically phrase as a question.) </br><pre><code>bool isWalking, hasSpecialAbility;</code></pre>
-- use prefixes with an underscore to differentiate private member variables from public ones.</br><pre><code>private bool _currentHealth; 
-private static int s_winScore;</code></pre>
+A reference library containing all the methods and classes for a specific context.
+</br><pre><code>using UnityEngine</code></pre>
 
+#### Variables
 
-#### Function Names
+Variables are labelled data containers that can be assigned values, and whose read/write access can be set by declaring them as public or private.
 
-- use pascal case. </br><pre><code>float MultiplyByTwo(){...}</code></pre>
+If a variable property exists somewhere in a component, there's likely some way to access it via scripting (to learn more, [Unity scripting reference](https://docs.unity3d.com/ScriptReference/index.html) is your best friend!)
+
+When creating variables:
+
+1. declare access permissions in lowercase (default: `private`)
+2. declare what type of variable it is
+    * `float` - a numerical value that can be in decimals
+    * `int` - a numerical integer (whole numbers only)
+    * `bool` - binary property that can be either assigned 'true' or 'false'
+    * `string` - a sequence of characters
+    * other public classes including `GameObject` and components (e.g. `Transform` )
+3. name the variable
+    - no spaces allowed.
+    - use camel case. </br><pre><code>int numberOfCamels</code></pre>
+    - use clear and descriptive nouns, the intent of this variable should be immediately apparent from its name
+        - if it is a bool, prefix with a verb (typically phrase as a question.) </br><pre><code>bool isWalking, hasSpecialAbility;</code></pre>
+    - use prefixes with an underscore to differentiate private member variables from public ones.</br><pre><code>private bool _currentHealth; 
+    private static int s_winScore;</code></pre>
+
+### Functions
+
+There are two main types of functions: 
+
+- **method functions** -- a way to group lines of code under one name; good for if you need to call a specific set of codes multiple times;
+- **event functions** -- automatically tells Unity what to do at very particular instances in the game.
+
+Functions may take in variables as arguments.
+
+When creating functions:
+
+1. declare access permissions in lowercase  (default: `private`)
+2. what type of value it returns in lowercase (if any) -- `void` returns no value.
+3. name of the function in pascal case, followed by parenthesis containing any argument variables. </br><pre><code>float MultiplyByTwo(float initialFloat){...}</code></pre>
 
 ### Key principles of Programming in Unity C&#35;
 
-- **Single Responsibility** -- Every module of code (class, function, etc.) should have a one and only purpose in the software functionality. This will be very helpful when you need to debug your scripts.
+- **Single Responsibility** -- Every module of code (class, function, etc.) should have a one and only purpose in the software functionality. This will be very helpful for:
+    - debugging scripts
+    - making your scripts easily reusable for other projects.
 - **Keep everything private unless it *absolutely* needs to be public.**
     - if a variable just needs to be visible in the Inspector but does not need to be publicly accessible, you should keep it private then add [SerializeField] before it. </br><pre><code>[SerializeField] bool _currentIndex;</code></pre>
+- **Anticipate errors, and help your script help you catch them**
+    - if your script absolutely needs a type of component, precede your Monobehaviour declaration with `[RequireComponent(typeof(ThisComponentClass))]`
+    - use `Debug.Log` and `Debug.Error` to check for incorrect / null references. 
+- **Use comments to contextualise your lines of code**
+
+---
+
+## Exercise before next class
+
+Can you write a script that forces a GameObject to start at a specific position in the scene? 

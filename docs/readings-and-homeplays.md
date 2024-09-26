@@ -37,6 +37,8 @@ If you're hungry for more, below are some recommended talks on more methods and 
 - Kate Compton PROCJAM 2015 Talk (15:58 - 49:53) "Let It Grow: Practical Procedural Generation From The Ground Up" (34 min) [https://www.youtube.com/live/s_eyo_m_hnc?feature=shared&t=958](https://www.youtube.com/live/s_eyo_m_hnc?feature=shared&t=958)
 - Herbert Wolverson 2020 Roguelike Celebration Talk "Procedural Map Generation Techniques" (27 min) [https://www.youtube.com/live/TlLIOgWYVpI](https://www.youtube.com/live/TlLIOgWYVpI) 
 
+### Reading Response 2
+
 ---
 
 <!--Other stuff...
@@ -47,15 +49,18 @@ Writing Interesting AI (pg6 of Seeds Issue #3) https://www.procjam.com/seeds/iss
 
 -->
 
+
+
 ## Homeplays
 
-- Sign up for game(s) to play in groups of 2-3;
+<!--
+- Sign up for game(s) to play in groups of 3;
 - 30 ~ 60 minutes of game play;
 - Take notes, ask questions, consider the prompt;
-- Take screenshots / recordings if needed.
+- Take screenshots / recordings if needed.-->
 
 ### Homeplay 1
-
+<!--
 <div class="duedate">
 <p>Due: Week 2 Tuesday, October 8
 </br><a href="https://docs.google.com/spreadsheets/d/1HrWVxhsBU-uBiyhZhQHnOK0SR3rnjlIrp7U_yHa5O1g/edit?usp=sharing">Sign Up Here</a></p>
@@ -70,7 +75,9 @@ Then, prepare a short 3 ~ 5 minute presentation in response to the following:
     - Do the generated results feel meaningful, memorable, merely distinguishable, or pretty much the same?
     - Was there something else about the project that was notable in your experience of it -- the camera, interaction rules, interface, etc. ?
 
-If you choose to use presentation slides, please share a link to it in the sign up sheet next to your group names.
+Please share a link to any presentation materials in the sign up sheet next to your group names.
+
+You will share your responses with the rest of the class during lesson time on the day it is due.
 
 -->
 

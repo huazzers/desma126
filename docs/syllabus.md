@@ -25,9 +25,10 @@ This course is offered in parallel with the concurrent courses, Game Design and 
 ---
 
 ## Course Prerequisites
-* DESMA 24 Interactivity
+* DESMA 24 Motion
+* DESMA 101 Media Arts Introduction / DESMA 104 Design Futures
 
-We will revisit many of the same concepts covered in Interactivity, but using the C# scripting language and the Unity scripting API. If you haven’t taken DESMA 24, but have prior experience with Unity and C#, please let me know.
+This course will be heavy on C# scripting in Unity scripting API. If you haven't fulfilled the above pre-requisites but have **prior experience in either writing code or using the Unity game engine**, please let me know.
 
 ---
 
@@ -42,7 +43,7 @@ By the end of this course, you will be able to create a real-time, interactive s
 Using generative design to create random/unique/dynamic ecosystems, worlds, characters, and events in Unity. 
 
 > **Week 0-3**
-</br>Intro to Unity Game Engine and C#<!--Navigating Unity, Importing Assets, C# script anatomy + conventions + basics, basic camera + ui + lighting + materials-->, Prefabs and Instantiation<!--Sprites-->, Vector fundamentals<!--Player Controller-->, Coroutines, Events, UI
+</br>Intro to Unity Game Engine and C#<!--Navigating Unity, Importing Assets, C# script anatomy + conventions + basics, basic camera + ui + lighting + materials-->, Vector fundamentals<!--Transforms, Player Controller-->, Prefabs and Instantiation<!--Sprites-->, Arrays and Randomness, UI
 > 
 > **Project 1: Auto-Generator**
 

@@ -5,29 +5,27 @@ Final Submission Due: Week 3 Tuesday, October 15
 
 ### Prompt
 
-Create a generator in Unity that either runs automatically, or only requires 1 ~ 2 button controls to run.
+Create a generator in Unity that only requires 1 ~ 2 button controls to run. 
 
 </br>
 **Consider the following options:**
 
 * a landscape / level / terrain generator;
 * a random character generator, eg. exquisite corpse;
-* an evolution simulator, e.g. cellular automaton;
-* an incremental / clicker game that generates... something!
+* an evolution simulator, e.g. cellular automaton.
 
 </br>
 **Possible techniques:**
 
 * modular architecture using prefabs, arrays/lists, instantiate/destroy functions, empty transforms as connection points;
 * procedural / algorithmic generation using random functions, perlin noise, custom parameters, L-systems, cellular automata, etc.
-* feedback / forward loop functions;
 
 </br>
 **Tips:**
 
 * Consider what constraints or rules you can impose to create unique forms and color palettes.
 * You may work in 2D or 3D. Lean into your strengths as a visual designer / artist as much as possible with this project! (And also remember you don't have much time!)
-* Although player interaction is not required, consider how a viewer will see / experience your generative designs. Can they orbit the camera around? Can they press a button to generate new objects?
+* Consider how a viewer will see / experience your generative designs. Can they orbit the camera around? Can they press a button to generate new objects?
 
 ### Requirements
 
@@ -41,7 +39,6 @@ Project 1 contains TWO COMPONENTS:
 **Your final project is not required to:** 
 
 - be a traditional video game;
-- use player input / be an interactive project;
 - have sound / audio.
 
 ### Evaluation
