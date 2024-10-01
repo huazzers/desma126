@@ -342,8 +342,7 @@ In Unity, build a solar system in orbit with a sun, planets, and moons... and on
 How do we make a solar system that dynamically generates at the start of the scene:
 
 1. a random number of planets and moons; 
-2. a material that lerps from one color to another depending on its distance from the Sun;
-3. a set distance interval between each consecutive sibling planet?
+2. a set distance interval between each consecutive sibling planet?
 
 ---
 
