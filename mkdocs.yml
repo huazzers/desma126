@@ -6,6 +6,9 @@ theme:
   theme_style: light
 extra_css:
   - extra.css
+extra_javascript:
+  - https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js
+  - javascripts/config.js
 nav:
   - 🏠 Home: index.md
   - 📜 Syllabus: syllabus.md

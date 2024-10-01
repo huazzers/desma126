@@ -95,6 +95,7 @@ We will evaluate your projects based on:
 
  
 #### Readings / Homeplays
+
 You will be assigned occasional readings and games that are related to this course, accompanied by a questionnaire for you to complete and bring to class. These are graded pass/fail -- if you did the work, you will get full credit.
 
 

@@ -1,0 +1,420 @@
+<!doctype html>
+<html>
+    <head>
+                <title>W1 transforms vectors - 👾 DESMA126 Game Engine</title>
+
+            <meta charset="utf-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+            
+            
+            
+
+            
+                <link  rel="icon" type="image/x-icon" href="../assets/img/favicon.ico">
+            
+                    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+                        <script>hljs.initHighlightingOnLoad();</script>
+            <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fira+Mono:400,700">
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+            <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+            <link rel="stylesheet" href="../assets/css/main.min.css">
+                <link href="../extra.css" rel="stylesheet">
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+                <script src="../javascripts/config.js"></script>
+                <script src="../search/main.js"></script>
+
+            
+                
+            
+    </head>
+
+    <body>
+        <div class="container py-3">
+            <header>
+                    <!-- block header -->
+<nav class="navbar navbar-expand-xl border-bottom">
+    <div class="container-fluid">
+        
+
+        
+            <span class=" fs-4 title-color site-name" id="component-site-name" style="text-transform: uppercase;">👾 DESMA126 Game Engine</span>
+        
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsMenu"
+            aria-controls="navbarsMenu" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse flex-column ml-auto" id="navbarsMenu">
+            <ul class="navbar-nav">
+
+                <!-- block menu -->
+                <li class="nav-item">
+                    <!-- block menu -->
+    
+        <li class="nav-item" id="component-menu">
+            <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="
+                            nav-link text-gray text-decoration-none" href="..">[🏠 Home]</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="
+                            nav-link text-gray text-decoration-none" href="../syllabus/">[📜 Syllabus]</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="
+                            nav-link text-gray text-decoration-none" href="../schedule/">[📅 Schedule]</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="
+                            nav-link dropdown-toggle text-decoration-none" href="#" data-bs-toggle="dropdown">[📌 Assignments]</a>
+                            <ul class="dropdown-menu">
+                                    <!-- block dropdown-menu -->
+    <li>
+        <a href="../how-to-submit/" class="dropdown-item text-decoration-none ">How To Submit</a>
+    </li>
+<!-- endblock -->
+                                    <!-- block dropdown-menu -->
+    <li>
+        <a href="../readings-and-homeplays/" class="dropdown-item text-decoration-none ">Readings & Homeplays</a>
+    </li>
+<!-- endblock -->
+                                    <!-- block dropdown-menu -->
+    <li>
+        <a href="../project-1/" class="dropdown-item text-decoration-none ">Project 1</a>
+    </li>
+<!-- endblock -->
+                                    <!-- block dropdown-menu -->
+    <li>
+        <a href="../project-2/" class="dropdown-item text-decoration-none ">Project 2</a>
+    </li>
+<!-- endblock -->
+                                    <!-- block dropdown-menu -->
+    <li>
+        <a href="../project-3/" class="dropdown-item text-decoration-none ">Project 3</a>
+    </li>
+<!-- endblock -->
+                            </ul>
+                        </li>
+            </ul>
+        </li>
+<!-- endblock -->
+                </li>
+                <!-- endblock -->
+
+                <!-- block search -->
+                <li class="nav-item">
+                    <a class="collapsed" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+                        <div class="md-search-icon">
+                            <i class="fa fa-search" aria-hidden="true"></i>
+                        </div>
+                    </a>
+                </li>
+                <!--  endblock -->
+
+                <!-- block source -->
+                <li class="nav-item">
+                    
+                </li>
+                <!--  endblock -->
+            </ul>
+        </div>
+    </div>
+</nav>
+<!--  endblock -->
+            </header>
+
+            <main><!-- block search -->
+<div class="collapse" id="collapseExample">
+    <div role="search" class="search-box">
+        <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+            <input type="text" name="q" class="search-query"
+            placeholder="Search docs" title="Type search term here" />
+        </form>
+    </div>
+</div>
+<!-- endblock -->
+                    <!-- block content -->
+<section class="container post">
+    <article>
+        <header>
+            
+            
+        </header>
+        <p><script>hljs.highlightAll();</script>
+
+<h1 id="transforms-and-vectors">Transforms and Vectors</h1>
+<hr />
+<p>Before we begin...</p>
+<p><br></p>
+<h2 id="review-from-last-class">Review from last class</h2>
+<ul>
+<li><a href="https://docs.unity3d.com/Manual/GameObjects.html">GameObjects</a> and <a href="https://docs.unity3d.com/Manual/UsingComponents.html">Components</a></li>
+<li><a href="https://www.youtube.com/watch?v=-c1RsydH2nA">C# Variables and Functions</a>:<ul>
+<li>How to declare and initialise a variable?</li>
+<li>How to write and call a custom method function?</li>
+<li>Event functions -- <code>void Start()</code> and <code>void Update()</code></li>
+</ul>
+</li>
+</ul>
+<hr />
+<h2 id="exercise-from-last-class">Exercise from last class</h2>
+<p><strong>Can you write a script that forces a GameObject to start at a specific position in the scene?</strong></p>
+<iframe width="100%" height="315" src="https://www.youtube.com/embed/eUbot2p48bo?si=4u45b6wa8BAhVXpU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+<hr />
+<h2 id="transforms">Transforms</h2>
+<blockquote>
+<p>Read about <a href="https://docs.unity3d.com/Manual/class-Transform.html">Transforms</a> in the Unity Manual.</p>
+</blockquote>
+<p>Every GameObject has a Transform component, which can be accessed via scripts using <code>gameObject.GetComponent&lt;Transform&gt;()</code> or <code>gameObject.transform</code>.</p>
+<p><br></p>
+<p>Using the Transform component, you may access the following properties:</p>
+<ul>
+<li><strong>Position</strong>, <strong>Rotation</strong>, and <strong>Scale</strong></li>
+<li><strong>Parent-Child</strong> Hierarchy</li>
+<li><strong>Global</strong> and <strong>Local</strong> Transforms</li>
+</ul>
+<hr />
+<h2 id="vectors">Vectors</h2>
+<blockquote>
+<p>Read about <a href="https://docs.unity3d.com/ScriptReference/Vector3.html">Vector3</a> in the Unity Manual.</p>
+</blockquote>
+<p>A vector is a group of numbers -- a 2D vector contains two values (x, y), and a 3D vector contains three values (x, y, z). </p>
+<p>In Unity, 3D vectors are represented by a data structure called <a href="https://docs.unity3d.com/ScriptReference/Vector3.html">Vector3</a>, which contains three float values represented by x, y, and z respectively.</p>
+<pre><code class="language-csharp">Vector3(float x, float y, float z)
+</code></pre>
+<p>When handling spatial and directional information in three dimensional contexts, we are typically working with Vector3 data structures.</p>
+<h3 id="vector3-variables-and-properties">Vector3 variables and properties</h3>
+<p><strong>To declare and initialise a Vector3 variable:</strong></p>
+<pre><code class="language-csharp">Vector3 someVector = new Vector3(2,4,5);
+// &quot;Vector3&quot; on the LEFT declares what type of variable &quot;someVector&quot; is;
+// &quot;new Vector3()&quot; on the RIGHT acts as a constructor method 
+// that creates and initialises a new Vector3 with xyz-values (2, 4, and 5).
+</code></pre>
+<p>Note: Even in 2D projects, transform properties are still stored as Vector3 data. In this context, you could choose to declare Vector3 variables in this way:</p>
+<pre><code class="language-csharp">someVector = new Vector3(2,4);
+// which is the same as &quot;new Vector3(2,4,0)&quot; (ie. z-value is 0)
+</code></pre>
+<p></br></p>
+<p><strong>To access x, y, and z components of a Vector3:</strong></p>
+<pre><code class="language-csharp">Debug.Log(someVector.x);
+Debug.Log(someVector.y);
+Debug.Log(someVector.z);
+</code></pre>
+<p></br></p>
+<p>In Unity, you can also use <strong>shorthands</strong> for calling specific 3D vectors.</p>
+<pre><code class="language-csharp">Vector3.zero //Vector3(0,0,0)
+Vector3.one //Vector3(1,1,1)
+Vector3.forward //Vector3(0,0,1)
+Vector3.right //Vector3(1,0,0)
+Vector3.up //Vector3(0,1,0)
+//etc.
+</code></pre>
+<p></br></p>
+<h3 id="using-vectors-in-unity">Using Vectors in Unity</h3>
+<p>Vectors can represent <em>position</em>, <em>scale</em>, <em>rotation</em>, and <em>direction</em> of an object in space, relative to X, Y, and Z axes. </p>
+<p><br></p>
+<h4 id="position">Position</h4>
+<p>Vector3 as spatial coordinates.
+Origin is at (0,0,0).</p>
+<p><img alt="Position as Vector3" src="../img/position-2.gif" /></p>
+<p><br></p>
+<h4 id="scale">Scale</h4>
+<p>Vector3 as relative scale.</p>
+<p><img alt="Scale as Vector3" src="../img/scale-5.gif" /></p>
+<p><br></p>
+<h4 id="rotation">Rotation</h4>
+<p>Vector3 as rotational configuration.</p>
+<p>In Unity, rotation values are internally processed as <a href="https://docs.unity3d.com/ScriptReference/Quaternion.html"><em>Quarternion</em></a> values, which are more convenient for the computer to work with. In the inspector, we are reading <em>eulerAngle</em> representations of rotation in degrees along the X, Y, and Z axes.</p>
+<p><img alt="Rotation as Vector3" src="../img/rotation-4.gif" /></p>
+<p><br></p>
+<h4 id="direction">Direction</h4>
+<p>Vector3 as relative direction.</p>
+<p><img alt="Vector as Direction in 2D" src="../img/direction%202D-small-grid.gif" /></p>
+<p><img alt="Vector as Direction in 3D" src="../img/direction-2.gif" /></p>
+<p><br></p>
+<h3 id="vector-math-operations">Vector Math Operations</h3>
+<h4 id="addition">Addition (+)</h4>
+<div class="container">
+    <div style="width: 30%">
+        <img src="../img/addition+of+vectors.PNG">
+    </div>
+    <div style="width: 65%">
+        <img src="../img/addvectormath.jpg">
+    </div>
+</div>
+
+<p><br></p>
+<h5 id="make-an-object-move-at-a-given-velocity">Make an object move at a given velocity</h5>
+<pre><code class="language-csharp">position += velocity * Time.deltaTime;
+</code></pre>
+<p><img alt="Fixed Velocity Demo" src="../img/vel.gif" /></p>
+<p><br></p>
+<h5 id="make-an-object-move-at-an-accelerated-velocity">Make an object move at an accelerated velocity</h5>
+<pre><code class="language-csharp">velocity += acceleration * Time.deltaTime;
+position += velocity * Time.deltaTime;
+</code></pre>
+<p><img alt="Acceleration Demo" src="../img/velaccel.gif" /></p>
+<p><br></p>
+<h5 id="make-an-object-eg-camera-follow-another-object-at-a-given-offset">Make an object (e.g. camera) follow another object at a given offset</h5>
+<p>Usually it's easier to do this by parenting one object to another, but sometimes that configuration just doesn't work for your purposes... </p>
+<p>In that case, you may consider using vector math! </p>
+<p><a href="https://learn.unity.com/tutorial/moving-the-camera?uv=6&amp;projectId=5f158f1bedbc2a0020e51f0d#64ecddc9edbc2a25ce535b81">Unity's Roll-a-ball tutorial</a> uses a similar technique for setting up a camera that follows the player object.</p>
+<pre><code class="language-csharp">//LateUpdate is another event function
+//that is called every frame, but after Update()
+void LateUpdate()
+{
+    //follow target position at offset
+    //AFTER target position changes in Update()
+    gameObject.transform.position = target.position + offset;
+}
+</code></pre>
+<p><br></p>
+<h5 id="spawn-objects-at-regular-intervals">Spawn objects at regular intervals</h5>
+<p><em>We'll discuss this next class when we get into arrays and instantiation!</em></p>
+<p><br></p>
+<h4 id="subtraction-">Subtraction (-)</h4>
+<div class="container">
+    <div style="width: 45%">
+        <img src="../img/subtraction+of+vectors.PNG">
+    </div>
+    <div style="width: 50%">
+        <img src="../img/subtractvectormath.jpg">
+    </div>
+</div>
+
+<p><br></p>
+<h5 id="determine-direction-from-one-point-to-another">Determine direction from one point to another</h5>
+<pre><code class="language-csharp">fromAToB = B - A;
+//and if we just need the unit of this direction vector
+//we can normalize it.
+unitDirection = fromAToB.normalized;
+</code></pre>
+<p><br></p>
+<h5 id="determine-the-distance-between-2-points">Determine the distance between 2 points</h5>
+<pre><code class="language-csharp">fromAToB = B - A;
+float distanceAB = fromAToB.magnitude;
+
+//OR we can use the Vector3 method &quot;Distance()&quot;
+float distanceAB = Vector3.Distance(A,B);
+</code></pre>
+<p><br></p>
+<h4 id="multiplication">Multiplication (*)</h4>
+<p><img alt="Multiply vector demo" src="../img/multiplyvector.gif" /></p>
+<p><br></p>
+<h5 id="scale-the-size-length-of-a-vector">Scale the size / length of a vector</h5>
+<pre><code class="language-csharp">someVector *= multiplier;
+</code></pre>
+<p><br></p>
+<h5 id="flipping-a-vectors-direction">Flipping a vector's direction</h5>
+<pre><code class="language-csharp">someVector *= -1;
+</code></pre>
+<p><br></p>
+<h5 id="normalizing-vectors">Normalizing Vectors</h5>
+<p>Normalized vectors always have a magnitude of 1. This is useful for when you're using vectors only for its directional orientation.</p>
+<pre><code class="language-csharp">normalizedVector = someVector.normalized;
+</code></pre>
+<p><br></p>
+<h4 id="dot-product">Dot Product</h4>
+<blockquote>
+<p>Read about <a href="https://docs.unity3d.com/ScriptReference/Vector3.Dot.html">Vector3.Dot</a> in the Unity Manual.</p>
+</blockquote>
+<p>Dot product is useful for comparing the directions of two different vectors. </p>
+<pre><code class="language-csharp">float dotProductAB = Vector3.Dot(A,B);
+
+if (dotProductAB==0){
+    //A and B are perpendicular 
+} else if (dotProductAB==1){
+    //A and B are pointing in exactly the same direction
+} else if (dotProductAB==-1){
+    //A and B are pointing in completely opposite directions
+}
+</code></pre>
+<p><br></p>
+<h4 id="cross-product">Cross Product</h4>
+<blockquote>
+<p>Read about <a href="https://docs.unity3d.com/ScriptReference/Vector3.Cross.html">Vector3.Cross</a> in the Unity Manual.</p>
+</blockquote>
+<p>Cross product can produce a new vector that is perpendicular to two vectors.</p>
+<p><img alt="Cross Product Diagram" src="../img/LeftHandRuleDiagram.png" /></p>
+<pre><code class="language-csharp">Vector3 OA = A - O;
+Vector3 OB = B = O;
+
+Vector3 crossAB = Vector3.Cross(OA,OB);
+//crossAB is perpendcular to both vectors OA and OB.
+</code></pre>
+<p><br></p>
+<h3 id="other-vector-methods-that-may-be-useful">Other vector methods that may be useful</h3>
+<ul>
+<li><a href="https://docs.unity3d.com/ScriptReference/Vector3.MoveTowards.html">MoveTowards()</a></li>
+<li><a href="https://docs.unity3d.com/ScriptReference/Vector3.RotateTowards.html">RotateTowards()</a></li>
+<li><a href="https://docs.unity3d.com/ScriptReference/Vector3.Reflect.html">Reflect()</a></li>
+</ul>
+<p><br></p>
+<hr />
+<h2 id="in-class-exercise">In-class Exercise</h2>
+<p>In Unity, build a solar system in orbit with a sun, planets, and moons.</p>
+<p><em>(Hint: Try using <a href="https://docs.unity3d.com/ScriptReference/Transform.RotateAround.html">RotateAround()</a>.)</em></p>
+<p><img alt="Sample Solar System in Unity" src="../img/solarsystem.gif" /></p>
+<hr />
+<h2 id="exercise-for-next-class">Exercise for next class</h2>
+<p>How do we make a solar system that dynamically generates at the start of the scene:</p>
+<ol>
+<li>a random number of planets and moons; </li>
+<li>a material that lerps from one color to another depending on its distance from the Sun;</li>
+<li>a set distance interval between each consecutive sibling planet?</li>
+</ol>
+<hr />
+<h2 id="some-course-reminders">Some course reminders</h2>
+<ul>
+<li>Fill up the <a href="https://forms.gle/UtwGfebgKcHRvMCP7">preliminary course survey</a>, if you haven't already.</li>
+<li><a href="../readings-and-homeplays/#reading-response-1">Reading Response 1</a> is due next class.</li>
+<li>Sign up for <a href="../readings-and-homeplays/#homeplay-1">Homeplay 1</a>! </li>
+</ul></p>
+    </article>
+</section>
+<!-- endblock -->
+            </main>
+
+            
+                    <!-- block preview -->
+<!-- endblock -->
+            
+
+            
+                    <!-- block footer -->
+<footer class="pt-4 my-md-5 pt-md-5 border-top" id="component-footer">
+    <div class="row">
+        <div class="col-12 col-md">
+                <!-- block copyright -->
+
+    <small class="d-block mb-3">
+        Made with
+        <a href="https://github.com/FernandoCelmer/mkdocs-simple-blog" target="_blank" rel="noopener">
+            Simple Blog for MkDocs
+        </a>
+    </small>
+
+<!-- endblock -->
+        </div>
+    </div>
+</footer>
+<!-- endblock -->
+            
+        </div>
+
+            <script>var base_url = '..';</script>
+            <script src="../assets/js/jquery-3.3.1.slim.min.js""></script>
+            <script src="../assets/js/bootstrap.bundle.min.js""></script>
+            <script src="../assets/js/main.min.js""></script>
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js" defer></script>
+                <script src="../javascripts/config.js" defer></script>
+                <script src="../search/main.js" defer></script>
+
+    </body>
+
+</html>

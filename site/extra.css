@@ -16,6 +16,10 @@ md-footer__inner { display: none !important; }
         font-size:0.9em !important;
     }
 
+    h5{
+        font-size:0.8em !important;
+    }
+
     hr{
         margin: 1em 0em !important;
     }
@@ -46,6 +50,10 @@ md-footer__inner { display: none !important; }
     }
 }
 
+.container>div {
+    display: inline-block;
+}
+  
 mark{
     background-color:darkorange;
 }
@@ -61,7 +69,7 @@ figcaption{
     color:teal;
 }
 
-p,li{
+p,li, code{
     font-size:0.875em;
     line-height:1.75em;
 }
@@ -160,6 +168,12 @@ h4{
     line-height:1.5em;
 }
 
+h5{
+    padding-top:0.1em;
+    font-size:1.15em;
+    line-height:1.5em;
+}
+
 li{
     padding:0 0 0 0.8rem;
     margin-top: 2rem;
@@ -186,4 +200,67 @@ td{
 
 pre{
     font-size:1em;
+}
+
+.hljs-built_in,
+.hljs-selector-tag,
+.hljs-section,
+.hljs-link {
+  color: #8be9fd;
+}
+
+.hljs-keyword {
+    color: #cc99cc;
+}
+
+.hljs,
+.hljs-subst {
+  color: #f8f8f2;
+}
+
+.hljs-title,
+.hljs-attr,
+.hljs-meta-keyword {
+  font-style: italic;
+  color: #ffcc66;
+}
+
+.hljs-string,
+.hljs-meta,
+.hljs-name,
+.hljs-type,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition,
+.hljs-variable,
+.hljs-template-tag,
+.hljs-template-variable {
+    color: #f2777a;
+}
+
+.hljs-comment,
+.hljs-quote,
+.hljs-deletion {
+    color: #999999;
+}
+
+.hljs-keyword,
+.hljs-selector-tag,
+.hljs-literal,
+.hljs-title,
+.hljs-section,
+.hljs-doctag,
+.hljs-type,
+.hljs-name,
+.hljs-strong {
+  font-weight: bold;
+}
+
+.hljs-literal,
+.hljs-number {
+    color: #f99157;
+}
+
+.hljs-emphasis {
+  font-style: italic;
 }
