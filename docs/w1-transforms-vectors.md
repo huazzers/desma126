@@ -329,7 +329,7 @@ Vector3 crossAB = Vector3.Cross(OA,OB);
 
 ## In-class Exercise
 
-In Unity, build a solar system in orbit with a sun, planets, and moons.
+In Unity, build a solar system in orbit with a sun, planets, and moons... and only use scripts for animations!
 
 *(Hint: Try using [RotateAround()](https://docs.unity3d.com/ScriptReference/Transform.RotateAround.html).)*
 
