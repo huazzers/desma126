@@ -15,8 +15,12 @@
         index.md  # The documentation homepage.
         ...       # Other markdown pages, images and other files. -->
 
+---
+
 ## Reading Responses
 <!--Brief description on what reading responses are.-->
+
+Read the assigned material, and submit your response to the given questions **in your own words.**
 
 ### Reading Response 1
 
@@ -85,7 +89,7 @@ Plan to spend about 30 ~ 60 minutes playing the game(s) with your group members,
     - Do the generated results feel meaningful, memorable, merely distinguishable, or pretty much the same?
     - Was there something else about the project that was notable in your experience of it -- the camera, gameplay, interface, etc. ?
 
-<br>
+
 
 **Please share a link to any presentation materials** in the sign up sheet next to your group names. You will share your responses with the rest of the class during lesson time on the due date.
 

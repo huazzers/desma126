@@ -48,6 +48,10 @@ md-footer__inner { display: none !important; }
     figcaption{
         font-size:x-small !important;
     }
+
+    ul,ol{
+        margin-bottom:1.75rem !important;
+    }
 }
 
 .container>div {
@@ -89,6 +93,10 @@ div.duedate>p{
 div.duedate>p>a{
     font-weight:bold;
     font-style:italic;
+}
+
+ul,ol{
+    margin-bottom:2.5rem;
 }
 
 ul>li{
