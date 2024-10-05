@@ -5,7 +5,7 @@
 
 📦 **Unity packages from today's class:**
 > 
-> - Exercise from last class: [**Solar System Generator**](https://drive.google.com/file/d/1xjOoIX3iqXzK77oMmES5nmPFK0mZ30gJ/view?usp=drive_link)
+> - Exercise from last class: [**Solar System Generator**](https://drive.google.com/file/d/1uBBVTtAAEvbKtbLRWtLmyPOb0eR1-lsm/view?usp=sharing)
 > - In-class exercise solution: [**Spawn Random Prefab at Random Position**](https://drive.google.com/file/d/1xR83VQw-ZQqmZih9ZSWRj2UKqHl56O44/view?usp=sharing)
 >     - Spawn at random position within set maximum distance.
 >     - Spawn at random position within set min-max range along X Y and Z axes.
