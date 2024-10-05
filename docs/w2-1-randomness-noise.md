@@ -1,15 +1,14 @@
 <script>hljs.highlightAll();</script>
 
-# Prefabs, Loops, Arrays
+# Randomness and Noise
 
+TBD
+<!--
+---
 
 📦 **Unity packages from today's class:**
 > 
-> - Exercise from last class: [**Solar System Generator**](https://drive.google.com/file/d/1xjOoIX3iqXzK77oMmES5nmPFK0mZ30gJ/view?usp=drive_link)
-> - In-class exercise solution: [**Spawn Random Prefab at Random Position**](https://drive.google.com/file/d/1xR83VQw-ZQqmZih9ZSWRj2UKqHl56O44/view?usp=sharing)
->     - Spawn at random position within set maximum distance.
->     - Spawn at random position within set min-max range along X Y and Z axes.
->     - Spawn at random position selected from a given array of positions.
+
 
 ---
 
@@ -19,10 +18,13 @@ Before we begin...
 
 ## Review from last class
 
-- [Transform component](https://docs.unity3d.com/Manual/GameObjects.html) and its properties
-- [Vectors](https://docs.unity3d.com/Manual/UsingComponents.html) and how to use them
-    - Vector math operations and method functions
-    - Using vectors for procedural animation
+- Prefabs and Instantiation
+    - Creating a prefab
+    - Instantiate() method
+- Arrays
+    - How to declare and initialise arrays
+    - How to get an element from an array
+- Random.Range()
 
 
 ---
@@ -205,3 +207,4 @@ GameObject[] respawns = GameObject.FindGameObjectsWithTag("Respawn");</code></pr
 ## Some course reminders
 
 - [Homeplay 1](./readings-and-homeplays.md/#homeplay-1) and [Project 1 Sketch](./project-1.md/) are both due next class.
+-->

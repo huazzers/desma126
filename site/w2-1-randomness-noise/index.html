@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
     <head>
-                <title>W1 2 prefabs loops arrays - 👾 DESMA126 Game Engine</title>
+                <title>W2 1 randomness noise - 👾 DESMA126 Game Engine</title>
 
             <meta charset="utf-8">
             <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -146,61 +146,82 @@
         </header>
         <p><script>hljs.highlightAll();</script>
 
-<h1 id="prefabs-loops-arrays">Prefabs, Loops, Arrays</h1>
-<p>📦 <strong>Unity packages from today's class:</strong></p>
-<blockquote>
-<ul>
-<li>Exercise from last class: <a href="https://drive.google.com/file/d/1xjOoIX3iqXzK77oMmES5nmPFK0mZ30gJ/view?usp=drive_link"><strong>Solar System Generator</strong></a></li>
-<li>In-class exercise solution: <a href="https://drive.google.com/file/d/1xR83VQw-ZQqmZih9ZSWRj2UKqHl56O44/view?usp=sharing"><strong>Spawn Random Prefab at Random Position</strong></a><ul>
-<li>Spawn at random position within set maximum distance.</li>
-<li>Spawn at random position within set min-max range along X Y and Z axes.</li>
-<li>Spawn at random position selected from a given array of positions.</li>
-</ul>
-</li>
-</ul>
-</blockquote>
-<hr />
-<p>Before we begin...</p>
-<p><br></p>
-<h2 id="review-from-last-class">Review from last class</h2>
-<ul>
-<li><a href="https://docs.unity3d.com/Manual/GameObjects.html">Transform component</a> and its properties</li>
-<li><a href="https://docs.unity3d.com/Manual/UsingComponents.html">Vectors</a> and how to use them<ul>
-<li>Vector math operations and method functions</li>
-<li>Using vectors for procedural animation</li>
-</ul>
-</li>
-</ul>
-<hr />
-<h2 id="exercise-from-last-class">Exercise from last class</h2>
-<p><strong>How do we make a solar system that dynamically generates at the start of the scene:</strong></p>
-<ol>
-<li><strong>a random number of planets and moons;</strong></li>
-<li><strong>a set distance interval between each consecutive sibling planet?</strong></li>
-</ol>
+<h1 id="randomness-and-noise">Randomness and Noise</h1>
+<p>TBD</p>
+<!--
+---
+
+📦 **Unity packages from today's class:**
+> 
+
+
+---
+
+Before we begin...
+
+<br>
+
+## Review from last class
+
+- Prefabs and Instantiation
+    - Creating a prefab
+    - Instantiate() method
+- Arrays
+    - How to declare and initialise arrays
+    - How to get an element from an array
+- Random.Range()
+
+
+---
+
+## Exercise from last class
+
+**How do we make a solar system that dynamically generates at the start of the scene:**
+
+1. **a random number of planets and moons;**
+2. **a set distance interval between each consecutive sibling planet?**
+
+
 <iframe width="100%" height="315" src="https://www.youtube-nocookie.com/embed/GFa_E9BCoUg?si=qQja99oKoHmzb9t-&amp;controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 <iframe width="100%" height="315" src="https://www.youtube-nocookie.com/embed/2_GG6TGaoII?si=wz_ArkzXmQFZcVxl&amp;controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-<hr />
-<h2 id="prefabs">Prefabs</h2>
-<blockquote>
-<p>Read about <a href="https://docs.unity3d.com/Manual/Prefabs.html">Prefabs</a> in the Unity Manual.</p>
-</blockquote>
-<p>Prefabs allow you to <strong>store a GameObject and its information</strong> (including its components, property values, child objects, etc.) into your Unity project folder <strong>as a reusable Asset</strong>. </p>
-<p>This Prefab Asset can be used as a base template from which you can create and modify new Prefab instances in the scene.</p>
-<p><br></p>
-<h3 id="how-to-create-a-prefab-from-an-existing-gameobject-in-the-scene">How to create a Prefab from an existing GameObject in the scene</h3>
-<p><strong>Click and drag the GameObject from the Scene Hierarchy into your project folder panel.</strong></p>
-<p>The GameObject should now be marked with a blue icon, and have an arrow button to the right of its name that leads you to the Prefab editor.</p>
-<p><img alt="How To Make A GameObject Prefab" src="../img/makeprefab.gif" /></p>
-<p><br></p>
-<h3 id="how-to-instantiate-a-gameobject">How to Instantiate a GameObject</h3>
-<p>We use the <a href="https://docs.unity3d.com/ScriptReference/Object.Instantiate.html">Instantiate()</a> method function to <strong>spawn new instances of a GameObject</strong> in our scene.</p>
+---
+
+## Prefabs
+
+> Read about [Prefabs](https://docs.unity3d.com/Manual/Prefabs.html) in the Unity Manual.
+
+Prefabs allow you to **store a GameObject and its information** (including its components, property values, child objects, etc.) into your Unity project folder **as a reusable Asset**. 
+
+This Prefab Asset can be used as a base template from which you can create and modify new Prefab instances in the scene.
+
+<br>
+
+### How to create a Prefab from an existing GameObject in the scene
+
+**Click and drag the GameObject from the Scene Hierarchy into your project folder panel.**
+
+The GameObject should now be marked with a blue icon, and have an arrow button to the right of its name that leads you to the Prefab editor.
+
+![How To Make A GameObject Prefab](./img/makeprefab.gif)
+
+<br>
+
+### How to Instantiate a GameObject
+
+We use the [Instantiate()](https://docs.unity3d.com/ScriptReference/Object.Instantiate.html) method function to **spawn new instances of a GameObject** in our scene.
+
+
 <pre><code class="language-csharp">Instantiate(someGameObject);
 </code></pre>
-<p><br></p>
-<p>You could also <strong>pass a GameObject instance into a GameObject variable</strong>. This allows you to reference it later in your script. </p>
+
+
+<br>
+
+You could also **pass a GameObject instance into a GameObject variable**. This allows you to reference it later in your script. 
+
+
 <pre><code class="language-csharp">GameObject obj = Instantiate(someGameObject);
 
 //let's say we want to change the position of this instance
@@ -210,10 +231,17 @@ obj.transform.position = someVector;
 obj.transform.parent = someParentObject;
 
 </code></pre>
-<p><br></p>
-<p>The Instantiate() method can also be called in other ways that allow you to <strong>pass multiple parameters at once</strong>. </p>
-<p>The Unity Scripting API lists all the different ways you can declare the <a href="https://docs.unity3d.com/ScriptReference/Object.Instantiate.html">Instantiate()</a> function.</p>
-<p>For example:</p>
+
+
+<br>
+
+The Instantiate() method can also be called in other ways that allow you to **pass multiple parameters at once**. 
+
+The Unity Scripting API lists all the different ways you can declare the [Instantiate()](https://docs.unity3d.com/ScriptReference/Object.Instantiate.html) function.
+
+For example:
+
+
 <pre><code class="language-csharp">GameObject obj = Instantiate(
     spawnThisGameObject, //GameObject
     atSomePosition, //Vector3
@@ -221,55 +249,82 @@ obj.transform.parent = someParentObject;
     underSomeParent); //Transform
 
 </code></pre>
-<hr />
-<h2 id="loops">Loops</h2>
-<p>Loop functions allow you to repeat an action multiple times. </p>
-<p>Watch the Unity Tutorial below to learn about: </p>
-<ul>
-<li><strong>While loops</strong></li>
-<li><strong>Do-while Loops</strong></li>
-<li><strong>For Loops</strong></li>
-</ul>
+
+
+---
+
+## Loops
+
+Loop functions allow you to repeat an action multiple times. 
+
+Watch the Unity Tutorial below to learn about: 
+
+- **While loops**
+- **Do-while Loops**
+- **For Loops**
+
 <iframe width="100%" height="315" src="https://www.youtube.com/embed/Jefkb3Gm7vE?si=tyLETphQQTI-FwwH" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-<p><br></p>
-<p>... and one more video about <strong>Foreach Loops</strong>.</p>
+<br>
+
+... and one more video about **Foreach Loops**.
+
 <iframe width="100%" height="315" src="https://www.youtube-nocookie.com/embed/WhACXlObR8s?si=vHWChlqbapALZ_Of&amp;controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-<hr />
-<h2 id="arrays">Arrays</h2>
-<blockquote>
-<p>Read about <a href="https://docs.unity3d.com/2020.1/Documentation/ScriptReference/Array.html">Arrays</a> in the Unity Manual.</p>
-</blockquote>
-<p>Arrays allow you to <strong>store multiple objects in a single variable</strong>. </p>
-<p>Each object in an array is attached to <strong>an index number, starting from 0</strong>. This index number is used when calling this object from the array. </p>
+---
+
+## Arrays
+
+> Read about [Arrays](https://docs.unity3d.com/2020.1/Documentation/ScriptReference/Array.html) in the Unity Manual.
+
+Arrays allow you to **store multiple objects in a single variable**. 
+
+Each object in an array is attached to **an index number, starting from 0**. This index number is used when calling this object from the array. 
+
+
 <pre><code class="language-csharp">string[] fruits = {&quot;apples&quot;, &quot;pears&quot;, &quot;oranges&quot;};
 
 // string[0] will return &quot;apples&quot;
 // string[1] ... &quot;pears&quot;
 // string[2] ... &quot;oranges&quot;
 </code></pre>
-<p><br> </p>
-<p>Every array has a <strong>Length</strong> property, which gives you the number elements in the array.</p>
+
+
+<br> 
+
+Every array has a **Length** property, which gives you the number elements in the array.
+
+
 <pre><code class="language-csharp">string[] fruits = {&quot;apples&quot;, &quot;pears&quot;, &quot;oranges&quot;};
 
 Debug.Log(&quot;Length of fruits array: &quot;+ fruits.Length); 
 // console will print &quot;Length of fruits array: 3&quot;.
 </code></pre>
-<p><br></p>
-<p><strong>Arrays cannot be resized while the project is running.</strong> If you need to resize a container of objects, either recreate the array to resize it, or use a <a href="https://learn.unity.com/tutorial/lists-and-dictionaries#63561975edbc2a0cf1ad33b2">List</a> instead.</p>
-<p><br></p>
-<h3 id="how-to-declare-an-array">How to declare an array</h3>
-<p><strong>Declare the type of variable</strong> that is being stored in the array, followed by <strong>square brackets</strong> [] . </p>
+
+
+<br>
+
+**Arrays cannot be resized while the project is running.** If you need to resize a container of objects, either recreate the array to resize it, or use a [List](https://learn.unity.com/tutorial/lists-and-dictionaries#63561975edbc2a0cf1ad33b2) instead.
+
+<br>
+
+### How to declare an array
+
+**Declare the type of variable** that is being stored in the array, followed by **square brackets** [] . 
+
+
 <pre><code class="language-csharp">float[] someFloats; // a private float array
 private Transform[] someTransforms; // a private Transform array
 public Vector3[] someVectors; // a public Vector3 array
 [SerializeField] GameObject[] someGameObjects; // a private GameObject array that is visible in the Inspector.
 </code></pre>
-<p><br></p>
-<p>You can initialise the array by:</p>
-<ul>
-<li><strong>using an array constructor method in your scripts;</strong> </br><pre><code class="language-csharp hljs">// Creates an array with 5 empty elements
+
+
+<br>
+
+You can initialise the array by:
+
+- **using an array constructor method in your scripts;** </br><pre><code class="language-csharp hljs">// Creates an array with 5 empty elements
 int[] numbers = new int[5]; 
 <br>
 // Initialises array with elements
@@ -277,30 +332,33 @@ numbers = {1, 2, 3, 4, 5};
 <br>
 //OR declare and initialise at once
 int[] numbers = new int[] {1,2,3,4,5};
-</code></pre><br></li>
-<li><strong>storing elements in the Inspector</strong>, if your array is either public OR private with a [SerializeField] attribute;<br><br><figure><img src ="../img/Int-Array-with-5-elements.webp"><figcaption></figcaption></figure><br></li>
-<li><strong>using a method that sets the contents of an array</strong> </br><pre><code class="language-csharp hljs">//stores all GameObjects in the scene with tag "Respawn" into the array
-GameObject[] respawns = GameObject.FindGameObjectsWithTag("Respawn");</code></pre></li>
-</ul>
-<hr />
-<h2 id="in-class-exercise">In-class exercise</h2>
-<p><strong>Write a script that instantiates multiple prefabs that are:</strong></p>
-<ol>
-<li><strong>chosen at random from an array; AND</strong></li>
-<li><strong>each set at a random position within a given scope.</strong> (i.e. nothing should be "out of bounds", OR objects should only spawn at very specific positions.)</li>
-</ol>
-<p><em>(Hint: Try using:</em></p>
-<ul>
-<li><em>array.Length;</em> </li>
-<li><em><a href="https://docs.unity3d.com/ScriptReference/Random.Range.html">Random.Range()</a>;</em></li>
-<li><em><a href="https://docs.unity3d.com/ScriptReference/Vector3.Distance.html">Vector3.Distance()</a>; AND/OR</em></li>
-<li><em>empty GameObjects as positional references.)</em></li>
-</ul>
-<hr />
-<h2 id="some-course-reminders">Some course reminders</h2>
-<ul>
-<li><a href="../readings-and-homeplays/#homeplay-1">Homeplay 1</a> and <a href="../project-1/">Project 1 Sketch</a> are both due next class.</li>
-</ul></p>
+</code></pre><br>
+- **storing elements in the Inspector**, if your array is either public OR private with a [SerializeField] attribute;<br><br><figure><img src ="../img/Int-Array-with-5-elements.webp"><figcaption></figcaption></figure><br>
+- **using a method that sets the contents of an array** </br><pre><code class="language-csharp hljs">//stores all GameObjects in the scene with tag "Respawn" into the array
+GameObject[] respawns = GameObject.FindGameObjectsWithTag("Respawn");</code></pre>
+
+---
+
+## In-class exercise
+
+**Write a script that instantiates multiple prefabs that are:**
+
+1. **chosen at random from an array; AND**
+2. **each set at a random position within a given scope.** (i.e. nothing should be "out of bounds", OR objects should only spawn at very specific positions.)
+
+*(Hint: Try using:*
+
+- *array.Length;* 
+- *[Random.Range()](https://docs.unity3d.com/ScriptReference/Random.Range.html);*
+- *[Vector3.Distance()](https://docs.unity3d.com/ScriptReference/Vector3.Distance.html); AND/OR*
+- *empty GameObjects as positional references.)*
+
+---
+
+## Some course reminders
+
+- [Homeplay 1](./readings-and-homeplays.md/#homeplay-1) and [Project 1 Sketch](./project-1.md/) are both due next class.
+--></p>
     </article>
 </section>
 <!-- endblock -->
