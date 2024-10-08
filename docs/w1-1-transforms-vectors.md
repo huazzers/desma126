@@ -6,7 +6,7 @@
 
 📦 **Unity packages from today's class:**
 > 
-> - In-class exercise solution: [**Solar System**](https://drive.google.com/file/d/1xjOoIX3iqXzK77oMmES5nmPFK0mZ30gJ/view?usp=drive_link)
+> - In-class exercise: [**Solar System**](https://drive.google.com/file/d/1xjOoIX3iqXzK77oMmES5nmPFK0mZ30gJ/view?usp=drive_link)
 > - [**Transform and Vector Demos**](https://drive.google.com/file/d/1y8mqSyMuRD07H86_vb1oCa_PWLzPAdMl/view?usp=drive_link), including examples of:
 >     - Forcing object to start at a given position
 >     - Moving an object at constant velocity and at accelerating velocity
@@ -163,7 +163,7 @@ Vector3 as relative direction.
 
 #### Addition (+) 
 
-<div class="container">
+<div class="div-container">
     <div style="width: 30%">
         <img src="../img/addition+of+vectors.PNG">
     </div>
@@ -225,7 +225,7 @@ void LateUpdate()
 
 #### Subtraction (-)
 
-<div class="container">
+<div class="div-container">
     <div style="width: 45%">
         <img src="../img/subtraction+of+vectors.PNG">
     </div>

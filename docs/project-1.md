@@ -1,7 +1,11 @@
 # Project 1: Auto-Generator
 
-Final Submission Due: Week 3 Tuesday, October 15
----
+## Final Submission Due: Week 3 Tuesday, October 15
+
+<div class="duedate">
+<p><a href="https://forms.gle/pfApXHdPduNFZF9R7">Submit Here</a></p>
+<blockquote>Please read the <a href="../how-to-submit.md">How To Submit</a> page for more detailed instructions.</blockquote>
+</div>
 
 ### Prompt
 

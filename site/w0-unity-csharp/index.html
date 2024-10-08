@@ -244,12 +244,14 @@ Consider the following definitions from the Wikitionary page for <a href ="https
 <p>Compared to most other game engines, Unity also tries to avoid being aesthetically identifiable and not be tied to a particular genre of game. </p>
 <p>Other industries use Unity for things like <a href="https://unity.com/solutions/architecture-engineering-construction">Architectural</a> and <a href="https://unity.com/solutions/automotive-and-transportation">Auto</a> rendering, <a href="https://unity.com/solutions/real-time-filmmaking-explained">Film and TV production</a>, <a href="https://unity.com/products/machine-learning-agents">AI training</a> and <a href="https://unity.com/products/computer-vision">computer vision</a>.</p>
 <p>Unity also contracts with the US Department of Defense for <a href="https://www.vice.com/en/article/y3d4jy/unity-workers-question-company-ethics-as-it-expands-from-video-games-to-war">military training</a> and <a href="https://www.youtube-nocookie.com/embed/0lLBnGe6Ecc?si=DGJKtpGZ18pKe-Dr">simulation.</a></p>
+<p><br></p>
 <h3 id="anatomy-of-the-unity-editor">Anatomy of the Unity Editor</h3>
 <figure>
 <img src ="https://docs.unity3d.com/uploads/Main/using-editor-window.png" alt="Unity Editor in default layout with each panel labelled with an Alphabet.">
 <figcaption>-- Unity Editor window in default workspace layout</figcaption>
 </figure>
 
+<p><br></p>
 <p>Read the following articles from the Unity User Manual:</p>
 <ul>
 <li><a href="https://docs.unity3d.com/Manual/UsingTheEditor.html">Unity's interface</a></li>
@@ -257,6 +259,7 @@ Consider the following definitions from the Wikitionary page for <a href ="https
 <li><a href="https://docs.unity3d.com/Manual/class-Transform.html">Transforms</a></li>
 <li><a href="https://docs.unity3d.com/Manual/UsingComponents.html">Using Components</a></li>
 </ul>
+<p><br></p>
 <h3 id="unity-c">Unity C&#35;</h3>
 <p>Unity uses <mark>C#, a type of object-oriented language</mark>, as one of its primary scripting languages.</p>
 <p>We typically write Unity C# scripts to make customised blueprints for accessing, organising, and implementing data inside our game project. This is helpful for:</p>
@@ -264,33 +267,57 @@ Consider the following definitions from the Wikitionary page for <a href ="https
 <li>storing information such as <strong>variables</strong> and <strong>functions</strong> inside an <strong>object</strong> or <strong>class</strong>;</li>
 <li>programming interactive / dynamic behaviour in objects;</li>
 </ol>
+<p><br></p>
+<h4 id="monobehaviours">MonoBehaviours</h4>
 <p>Most of the time, we're working with a class called <a href="https://docs.unity3d.com/ScriptReference/MonoBehaviour.html">MonoBehaviour</a> which behaves like a component that can be attached to any gameobject in our scene.</p>
+<p>Whenever we make a new C# script in Unity, we are creating custom classes that inherit from another class called MonoBehaviour by default. This allows us to use the methods and functionality from the MonoBehaviour class.</p>
+<pre><code class="language-csharp">public class NewBehaviour : Monobehaviour{...}
+</code></pre>
+<p><br> </p>
 <h3 id="lets-create-a-unity-c-script">Let's create a Unity C&#35; script!</h3>
-<p>Here's the general thought process when figuring out what to put in our script:</p>
+<p>When writing any sort of code, here's the general thought process:</p>
 <ol>
 <li><strong>OUTPUT</strong> -- <em>"I need my script to do </em>THIS<em>..."</em></li>
 <li><strong>INPUT</strong> -- <em>"... so I need to access </em>THESE VARIABLES<em>..."</em></li>
 <li><strong>METHOD</strong> -- <em>"... and call </em>THESE FUNCTIONS<em> in order of </em>THIS SEQUENCE<em>."</em> </li>
 </ol>
+<p>It is very common to start by looking for solutions on Unity's Documentation page or other community forums. <strong>There is no expectation to memorise every single thing</strong> -- the longer you work in Unity, the more familiar you become with its interface and workflow, and you'll eventually find yourself not needing to look things up as often as you used to. </p>
+<p><br></p>
 <h3 id="anatomy-of-a-c-script">Anatomy of a C&#35; Script</h3>
-<p>Watch this video for a brief introduction to <a href="https://www.youtube.com/watch?v=-c1RsydH2nA">C# Variables and Functions</a> in Unity.</p>
-<h4 id="script-name">Script Name</h4>
+<blockquote>
+<p><strong>If you are new to coding in C#</strong>, watch this video for a brief introduction to <a href="https://www.youtube.com/watch?v=-c1RsydH2nA">C# Variables and Functions</a> in Unity.</p>
+</blockquote>
+<p><br></p>
+<h4 id="naming-your-c-scripts">Naming your C# Scripts</h4>
 <ul>
-<li>use pascal case, <em>e.g. MyScript.cs</em></li>
-<li>the file name of the script and the name of the MonoBehaviour must be exactly the same (case-sensitive).<ul>
+<li>use <strong>pascal case</strong>, (i.e. first alphabetical letter is capitalised, and every new word is marked with a capitalised case, no spaces.) <em>e.g. MyScript.cs</em></li>
+<li>the file name of the script and the name of the MonoBehaviour must be <strong>exactly the same (case-sensitive)</strong>.<ul>
 <li>e.g. if your C# file name is "ScoreManager.cs", then the line declaring your Monobehaviour class in that script file should look like this: </br><pre><code>public class ScoreManager : MonoBehaviour
 {...}</code></pre></li>
 </ul>
 </li>
-<li>the name must be unique -- no two MonoBehaviours should have the same name.</li>
+<li>the name must be <strong>unique</strong> -- no two MonoBehaviours should have the same name.</li>
 </ul>
-<h4 id="namespace">Namespace</h4>
-<p>A reference library containing all the methods and classes for a specific context.
+<p><br></p>
+<h4 id="namespaces">Namespaces</h4>
+<p>A C# script typically starts with a list of namespaces, which are reference libraries containing all the methods and classes for a specific context. The name of each namespace is typically placed after <code>using</code>.
 </br><pre><code>using UnityEngine</code></pre></p>
-<h4 id="variables">Variables</h4>
-<p>Variables are labelled data containers that can be assigned values, and whose read/write access can be set by declaring them as public or private.</p>
-<p>If a variable property exists somewhere in a component, there's likely some way to access it via scripting (to learn more, <a href="https://docs.unity3d.com/ScriptReference/index.html">Unity scripting reference</a> is your best friend!)</p>
-<p>When creating variables:</p>
+<p><br></p>
+<h4 id="variables-and-functions">Variables and Functions</h4>
+<p>Each class has a block of code that defines what its properties (aka variables) and methods (aka functions) are. <strong>These properties and methods should be enclosed within the curly braces for that class.</strong></p>
+<pre><code class="language-csharp">public class MyNewScript : MonoBehaviour
+{
+    public int someProperty;
+    void SomeMethod()
+    {
+    }
+}
+</code></pre>
+<p><br></p>
+<h5 id="variables">Variables</h5>
+<p>Variables are labelled data containers that represent properties for that class. These variables can be assigned values, and whose read/write access can be set by declaring them as public or private.</p>
+<p>Most properties in a component are likely accessible in some way via scripting (to learn more, <a href="https://docs.unity3d.com/ScriptReference/index.html">Unity scripting reference</a> is your best friend!)</p>
+<p><strong>When creating variables:</strong></p>
 <ol>
 <li>declare access permissions in lowercase (default: <code>private</code>)</li>
 <li>declare what type of variable it is<ul>
@@ -313,19 +340,21 @@ private static int s_winScore;</code></pre></li>
 </ul>
 </li>
 </ol>
-<h4 id="functions">Functions</h4>
+<p><br></p>
+<h5 id="functions">Functions</h5>
 <p>There are two main types of functions: </p>
 <ul>
 <li><strong>method functions</strong> -- a way to group lines of code under one name; good for if you need to call a specific set of codes multiple times;</li>
 <li><strong>event functions</strong> -- automatically tells Unity what to do at very particular instances in the game.</li>
 </ul>
-<p>Functions may take in variables as arguments.</p>
-<p>When creating functions:</p>
+<p>Functions may take in variables as arguments, which can be passed in parentheses () and each separated by a comma.</p>
+<p><strong>When creating functions:</strong></p>
 <ol>
 <li>declare access permissions in lowercase  (default: <code>private</code>)</li>
 <li>what type of value it returns in lowercase (if any) -- <code>void</code> returns no value.</li>
 <li>name of the function in pascal case, followed by parenthesis containing any argument variables. </br><pre><code>float MultiplyByTwo(float initialFloat){...}</code></pre></li>
 </ol>
+<p><br></p>
 <h3 id="key-principles-of-programming-in-unity-c">Key principles of Programming in Unity C&#35;</h3>
 <ul>
 <li><strong>Single Responsibility</strong> -- Every module of code (class, function, etc.) should have a one and only purpose in the software functionality. This will be very helpful for:<ul>
@@ -344,6 +373,7 @@ private static int s_winScore;</code></pre></li>
 </li>
 <li><strong>Use comments to contextualise your lines of code</strong></li>
 </ul>
+<p><br></p>
 <hr />
 <h2 id="exercise-before-next-class">Exercise before next class</h2>
 <p>Can you write a script that forces a GameObject to start at a specific position in the scene? </p></p>

@@ -145,23 +145,95 @@
             
         </header>
         <p><h1 id="how-to-submit">How to Submit</h1>
-<!-- For full documentation visit [mkdocs.org](https://www.mkdocs.org).
-
-## Commands
-
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs -h` - Print help message and exit.
-
-## Project layout
-
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files. -->
-
-<p>TBD</p></p>
+<h2 id="important-notes">Important Notes</h2>
+<p>⚠️ Do <strong>NOT</strong> show the Unity Editor in your visual documentation. </p>
+<p>⚠️ <strong>Build early and play test your builds.</strong> Some bugs will only reveal themselves in a build, so make sure to catch those in advance of the deadline. A broken game will affect your project grade. </p>
+<p><br></p>
+<hr />
+<h2 id="submission-checklist">Submission Checklist</h2>
+<p>You should include the following documentation of your project by <strong>11:59PM on the day of the project deadline</strong>:</p>
+<ol>
+<li><strong>Visual documentation</strong>:<ul>
+<li><strong>at least ONE animated GIF</strong> of your project in motion, roughly 600 pixels wide, ideally under 5MB in size.</li>
+<li><strong>at least TWO stills</strong> from your project (1920x1080)</li>
+<li><strong>(Optional) Recording of gameplay.</strong> Roughly 60 seconds, long enough to demonstrate how your game is played (1920x1080, mp4/h.264)</li>
+</ul>
+</li>
+<li><strong>Text description</strong> that would be useful for someone viewing your project for the first time:<ul>
+<li>The basic premise of the game -- what is it about?</li>
+<li>How to play the game -- how do you interact with the project?</li>
+</ul>
+</li>
+<li><strong>Project build for WINDOWS</strong></li>
+<li><strong>Exported Unity package</strong></li>
+</ol>
+<p><br></p>
+<hr />
+<h2 id="tools-for-visual-documentation">Tools for Visual Documentation</h2>
+<h3 id="animated-gifs">Animated GIFs</h3>
+<p>Animated GIFs are durable and easy to view (though not always small in size). In this course we will use animated GIFs as a quasi-archival format for animated visual material. Preferably, they should be 600 pixels wide and under 5MB in file size.</p>
+<p>I personally use and recommend <a href="https://www.screentogif.com/">ScreenToGif</a>, which is a good tool for quickly making a gif. Photoshop, Premiere, AfterEffects, or other video editors can also export gifs. You may also find the following free tools helpful:</p>
+<ul>
+<li><a href="https://ezgif.com/">EzGif.com</a> is an online GIF maker, editor, and compressor. Great for reducing the file size of GIFs.</li>
+<li><a href="https://www.cockos.com/licecap/">LICEcap</a> is a badly-named free OSX app which can capture an area of your screen and save it directly to an animated GIF.</li>
+<li><a href="https://www.online-convert.com/">Online-convert.com</a> offers a browser tool for converting videos into GIFs.</li>
+</ul>
+<p><br></p>
+<h3 id="screenshots-and-screen-recordings">Screenshots and Screen Recordings</h3>
+<p><strong>Make a build first and run it full screen</strong> to capture images and video of your project. </p>
+<p>For screen recordings, <a href="https://obsproject.com/">OBS</a> works very well. </p>
+<p>You may also use the <a href="https://learn.unity.com/tutorial/working-with-unity-recorder">Unity Recorder</a> to capture single frames and videos from within the Unity Editor.</p>
+<p><br></p>
+<h4 id="built-in-os-screenshot-shortcuts">Built-in OS screenshot shortcuts:</h4>
+<h5 id="windows">Windows</h5>
+<p>To take a screenshot and automatically save the file, press the <strong>Windows key + PrtScn</strong>. Your screen will go dim and a screenshot of your entire screen will save to the <strong>Pictures &gt; Screenshots folder</strong>.</p>
+<p>Also consider the snipping tool, which is a convenient way to capture a portion of your screen.</p>
+<p><br></p>
+<h5 id="mac">Mac</h5>
+<ol>
+<li>To take a screenshot, press <strong>Shift + Command + 3</strong>.</li>
+<li>If you see a thumbnail in the corner of your screen, click it to edit the screenshot. Or wait for the screenshot to save to your desktop.</li>
+</ol>
+<p>By default, screenshots save to your <strong>desktop</strong> with the name ”Screen Shot [date] at [time].png.”</p>
+<p><br></p>
+<hr />
+<h2 id="how-to-export-projects-from-unity">How to export projects from Unity</h2>
+<h3 id="building-your-project">Building your project</h3>
+<p>Start by opening the build settings under <strong>File &gt; Build Settings</strong>.</p>
+<p><img alt="" src="../img/build_settings_1.gif" /></p>
+<p><br></p>
+<p>Add all the scenes you want to include in your project by clicking and dragging them from your assets folder to “Scenes in Build” (also remove any scenes you don’t want to include). The topmost scene in this list will be the first to play when starting the game.</p>
+<p><img alt="" src="../img/build_settings_2.gif" /></p>
+<p><br></p>
+<p>Create a Windows build by changing Target Platform to “Windows” and clicking build.</p>
+<p><img alt="" src="../img/build_settings_3.gif" /></p>
+<p><br></p>
+<p>After the build has finished, create a zipped folder containing all of the files and folders that unity created. <strong>The build needs all these folders, exes, and dlls to run properly.</strong></p>
+<p><img alt="" src="../img/Unity%20Build%20zip.png" /></p>
+<p><br></p>
+<h3 id="unity-packages">Unity Packages</h3>
+<blockquote>
+<p>Read the official documentation for <a href="https://docs.unity3d.com/Manual/AssetPackagesCreate.html">exporting and importing Unity packages</a>.</p>
+</blockquote>
+<p>Rather than creating a zip file of your entire Unity project folder, you can save a lot of time (and space) by exporting only the assets for the scenes, materials, prefabs, etc. that you want to share. This is called exporting an asset package.</p>
+<p><br></p>
+<h4 id="exporting-unity-packages">Exporting Unity Packages</h4>
+<p>You have two options:</p>
+<ul>
+<li>Find your scene file in the Project tab, right click the scene, and click “Export Package…” <br> <img alt="" src="../img/export-package-1.gif" /> <br><br></li>
+<li>OR Click <strong>Assets &gt; Export Package…</strong> <br> <img alt="" src="../img/export-package-2.gif" /></li>
+</ul>
+<p><br></p>
+<p>In the window that opens, de-select any assets that you don’t want to include. Be careful that you don’t exclude anything required to run your scene. If you only had your scene selected when clicking <strong>Export Package…</strong>, the window will only display the assets directly used in that scene. You can select entire folders, or even the top level Assets folder to bring up more assets to include in the export.</p>
+<p>Make sure the <strong>Include dependencies</strong> box is checked and click <strong>Export…</strong> to save your unitypackage file.</p>
+<p><img alt="" src="../img/export-package-3.gif" /></p>
+<p><br></p>
+<h4 id="importing-unity-packages">Importing Unity Packages</h4>
+<p>To import a package into another project, double click the “.unitypackage” file with a project open and an import window will appear.</p>
+<p><img alt="" src="../img/import-package-1.gif" /></p>
+<p><br></p>
+<p>You can also click <strong>Assets &gt; Import Package &gt; Custom Package…</strong> to select the unitypackage file via explorer/finder.</p>
+<p>Select the assets you want to import and click <strong>Import</strong>.</p></p>
     </article>
 </section>
 <!-- endblock -->

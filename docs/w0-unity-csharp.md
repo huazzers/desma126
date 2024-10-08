@@ -128,6 +128,8 @@ Other industries use Unity for things like [Architectural](https://unity.com/sol
 
 Unity also contracts with the US Department of Defense for [military training](https://www.vice.com/en/article/y3d4jy/unity-workers-question-company-ethics-as-it-expands-from-video-games-to-war) and [simulation.](https://www.youtube-nocookie.com/embed/0lLBnGe6Ecc?si=DGJKtpGZ18pKe-Dr)
 
+<br>
+
 ### Anatomy of the Unity Editor
 
 <figure>
@@ -135,12 +137,16 @@ Unity also contracts with the US Department of Defense for [military training](h
 <figcaption>-- Unity Editor window in default workspace layout</figcaption>
 </figure>
 
+<br>
+
 Read the following articles from the Unity User Manual:
 
 - [Unity's interface](https://docs.unity3d.com/Manual/UsingTheEditor.html)
 - [GameObjects](https://docs.unity3d.com/Manual/GameObjects.html)
 - [Transforms](https://docs.unity3d.com/Manual/class-Transform.html)
 - [Using Components](https://docs.unity3d.com/Manual/UsingComponents.html)
+
+<br>
 
 ### Unity C&#35;
 
@@ -151,39 +157,77 @@ We typically write Unity C# scripts to make customised blueprints for accessing,
 1. storing information such as **variables** and **functions** inside an **object** or **class**;
 2. programming interactive / dynamic behaviour in objects;
 
+<br>
+
+#### MonoBehaviours
+
 Most of the time, we're working with a class called <a href="https://docs.unity3d.com/ScriptReference/MonoBehaviour.html">MonoBehaviour</a> which behaves like a component that can be attached to any gameobject in our scene.
+
+Whenever we make a new C# script in Unity, we are creating custom classes that inherit from another class called MonoBehaviour by default. This allows us to use the methods and functionality from the MonoBehaviour class.
+
+```csharp
+public class NewBehaviour : Monobehaviour{...}
+```
+
+<br> 
 
 ### Let's create a Unity C&#35; script!
 
-Here's the general thought process when figuring out what to put in our script:
+When writing any sort of code, here's the general thought process:
 
 1. **OUTPUT** -- *"I need my script to do *THIS*..."*
 2. **INPUT** -- *"... so I need to access *THESE VARIABLES*..."*
 3. **METHOD** -- *"... and call *THESE FUNCTIONS* in order of *THIS SEQUENCE*."* 
 
+It is very common to start by looking for solutions on Unity's Documentation page or other community forums. **There is no expectation to memorise every single thing** -- the longer you work in Unity, the more familiar you become with its interface and workflow, and you'll eventually find yourself not needing to look things up as often as you used to. 
+
+<br>
+
 ### Anatomy of a C&#35; Script
 
-Watch this video for a brief introduction to [C# Variables and Functions](https://www.youtube.com/watch?v=-c1RsydH2nA) in Unity.
+> **If you are new to coding in C#**, watch this video for a brief introduction to [C# Variables and Functions](https://www.youtube.com/watch?v=-c1RsydH2nA) in Unity.
 
-#### Script Name
-- use pascal case, *e.g. MyScript.cs*
-- the file name of the script and the name of the MonoBehaviour must be exactly the same (case-sensitive).
+<br>
+
+#### Naming your C# Scripts
+- use **pascal case**, (i.e. first alphabetical letter is capitalised, and every new word is marked with a capitalised case, no spaces.) *e.g. MyScript.cs*
+- the file name of the script and the name of the MonoBehaviour must be **exactly the same (case-sensitive)**.
     - e.g. if your C# file name is "ScoreManager.cs", then the line declaring your Monobehaviour class in that script file should look like this: </br><pre><code>public class ScoreManager : MonoBehaviour
     {...}</code></pre>
-- the name must be unique -- no two MonoBehaviours should have the same name.
+- the name must be **unique** -- no two MonoBehaviours should have the same name.
 
-#### Namespace
+<br>
 
-A reference library containing all the methods and classes for a specific context.
+#### Namespaces
+
+A C# script typically starts with a list of namespaces, which are reference libraries containing all the methods and classes for a specific context. The name of each namespace is typically placed after `using`.
 </br><pre><code>using UnityEngine</code></pre>
 
-#### Variables
+<br>
 
-Variables are labelled data containers that can be assigned values, and whose read/write access can be set by declaring them as public or private.
+#### Variables and Functions
 
-If a variable property exists somewhere in a component, there's likely some way to access it via scripting (to learn more, [Unity scripting reference](https://docs.unity3d.com/ScriptReference/index.html) is your best friend!)
+Each class has a block of code that defines what its properties (aka variables) and methods (aka functions) are. **These properties and methods should be enclosed within the curly braces for that class.**
 
-When creating variables:
+```csharp
+public class MyNewScript : MonoBehaviour
+{
+	public int someProperty;
+	void SomeMethod()
+	{
+	}
+}
+```
+
+<br>
+
+##### Variables
+
+Variables are labelled data containers that represent properties for that class. These variables can be assigned values, and whose read/write access can be set by declaring them as public or private.
+
+Most properties in a component are likely accessible in some way via scripting (to learn more, [Unity scripting reference](https://docs.unity3d.com/ScriptReference/index.html) is your best friend!)
+
+**When creating variables:**
 
 1. declare access permissions in lowercase (default: `private`)
 2. declare what type of variable it is
@@ -200,20 +244,24 @@ When creating variables:
     - use prefixes with an underscore to differentiate private member variables from public ones.</br><pre><code>private bool _currentHealth; 
     private static int s_winScore;</code></pre>
 
-#### Functions
+<br>
+
+##### Functions
 
 There are two main types of functions: 
 
 - **method functions** -- a way to group lines of code under one name; good for if you need to call a specific set of codes multiple times;
 - **event functions** -- automatically tells Unity what to do at very particular instances in the game.
 
-Functions may take in variables as arguments.
+Functions may take in variables as arguments, which can be passed in parentheses () and each separated by a comma.
 
-When creating functions:
+**When creating functions:**
 
 1. declare access permissions in lowercase  (default: `private`)
 2. what type of value it returns in lowercase (if any) -- `void` returns no value.
 3. name of the function in pascal case, followed by parenthesis containing any argument variables. </br><pre><code>float MultiplyByTwo(float initialFloat){...}</code></pre>
+
+<br>
 
 ### Key principles of Programming in Unity C&#35;
 
@@ -226,6 +274,8 @@ When creating functions:
     - if your script absolutely needs a type of component, precede your Monobehaviour declaration with `[RequireComponent(typeof(ComponentName))]`
     - use `Debug.Log` and `Debug.Error` to check for incorrect / null references. 
 - **Use comments to contextualise your lines of code**
+
+<br>
 
 ---
 

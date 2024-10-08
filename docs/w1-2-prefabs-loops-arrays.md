@@ -6,7 +6,7 @@
 📦 **Unity packages from today's class:**
 > 
 > - Exercise from last class: [**Solar System Generator**](https://drive.google.com/file/d/1uBBVTtAAEvbKtbLRWtLmyPOb0eR1-lsm/view?usp=sharing)
-> - In-class exercise solution: [**Spawn Random Prefab at Random Position**](https://drive.google.com/file/d/1xR83VQw-ZQqmZih9ZSWRj2UKqHl56O44/view?usp=sharing)
+> - In-class exercise: [**Spawn Random Prefab at Random Position**](https://drive.google.com/file/d/1xR83VQw-ZQqmZih9ZSWRj2UKqHl56O44/view?usp=sharing)
 >     - Spawn at random position within set maximum distance.
 >     - Spawn at random position within set min-max range along X Y and Z axes.
 >     - Spawn at random position selected from a given array of positions.
@@ -134,9 +134,9 @@ Each object in an array is attached to **an index number, starting from 0**. Thi
 ```csharp
 string[] fruits = {"apples", "pears", "oranges"};
 
-// string[0] will return "apples"
-// string[1] ... "pears"
-// string[2] ... "oranges"
+// fruits[0] will return "apples"
+// fruits[1] ... "pears"
+// fruits[2] ... "oranges"
 ```
 
 <br> 
