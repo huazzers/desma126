@@ -57,6 +57,12 @@ md-footer__inner { display: none !important; }
         padding:0 !important;
     }
 
+    .div-container>div{
+        width:100% !important;
+        margin-left:0;
+        margin-right:0;
+    }
+
     div.duedate>blockquote{
         font-size:small !important;
         margin-bottom:1.6rem !important;

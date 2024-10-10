@@ -418,5 +418,5 @@ public class ColorScheme
 
 ## Some course reminders
 
-- [Project 1](./project-1.md) is due next Monday.
+- [Project 1](./project-1.md) is due next Tuesday.
 - Instructions on [How To Submit](./how-to-submit.md) your Projects are now updated. 

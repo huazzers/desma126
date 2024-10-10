@@ -272,7 +272,7 @@ Functions may take in variables as arguments, which can be passed in parentheses
     - if a variable just needs to be visible in the Inspector but does not need to be publicly accessible, you should keep it private then add [SerializeField] before it. </br><pre><code>[SerializeField] bool _currentIndex;</code></pre>
 - **Anticipate errors, and help your script help you catch them**
     - if your script absolutely needs a type of component, precede your Monobehaviour declaration with `[RequireComponent(typeof(ComponentName))]`
-    - use `Debug.Log` and `Debug.Error` to check for incorrect / null references. 
+    - use `Debug.Log` and `Debug.LogError` to check for incorrect / null references. 
 - **Use comments to contextualise your lines of code**
 
 <br>
