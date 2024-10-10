@@ -35,9 +35,9 @@ We can use the [Input](https://docs.unity3d.com/Manual/Input.html) class to acce
 
 ### Using KeyCode
 
-**Key codes map directly to a physical key on the keyboard, mouse buttons and joystick buttons.** By passing key codes into our input method functions, we can tell Unity which inputs to detect.
+> Read the full documentation for Unity's list of key codes [here](https://docs.unity3d.com/ScriptReference/KeyCode.html).
 
-Read the full documentation for Unity's list of key codes [here](https://docs.unity3d.com/ScriptReference/KeyCode.html).
+**Key codes map directly to a physical key on the keyboard, mouse buttons and joystick buttons.** By passing key codes into our input method functions, we can tell Unity which inputs to detect.
 
 <br>
 
@@ -326,7 +326,7 @@ Once you're ready, click **Save**. You can now use this Font Asset in your TextM
 
 ### Buttons
 
-> Read about [UI Buttons](https://docs.unity3d.com/2022.3/Documentation/Manual/script-Button.html) in the Unity manual.
+> Read about [Buttons](https://docs.unity3d.com/2019.1/Documentation/ScriptReference/UI.Button.html) in the Unity Scripting API. 
 
 A button element will come with the following things:
 
