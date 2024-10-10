@@ -9,6 +9,7 @@
 > - [**UI Demo: Buttons and TextMeshPro**](https://drive.google.com/file/d/11NiH96VQSo0i4-ezlEJgN35MxKmKTAWc/view?usp=drive_link)
 >       - Setting up Interactivity for Button component
 >       - Change TextMeshPro using scripts, with custom style tags.
+> - [**Using Buttons to Instantiate new object and Destroy old object instance**](https://drive.google.com/file/d/1Kvlhx5w7Vvp2_088Kd8DM8unlnHniuPk/view?usp=drive_link)
 
 ---
 
@@ -375,6 +376,57 @@ If you want to add a **custom function** as an event listener through the Inspec
     <img src="../img/button-onclick-addlisten.gif">
     <figcaption>-- In this example, I'm selecting a Cube object that has a ColorRandomizer script, and adding a SetRandomColor() function as an event listener.</figcaption>
 </figure>
+
+<br>
+
+#### Creating a Button to Instantiate New Object and Destroy Previous Object
+
+To replace an existing object in the scene with a new instantiation, you will need to use the [Destroy()](https://docs.unity3d.com/ScriptReference/Object.Destroy.html) method to remove it from the scene. 
+
+Destroy() can be used to destroy GameObjects and components. 
+
+![](./img/instantiate-destroy.gif)
+
+```csharp
+public GameObject[] prefabs;
+
+GameObject obj; //this will store the most recently spawned object
+int previousIndex; //our array index reference of the previously spawned object
+
+void Start()
+{
+    SpawnObj(); // spawn new object at start of scene
+}
+
+// add this as a listener to the button's OnClick() event in the inspector.
+public void SpawnObj() 
+{
+    //get a random index from prefabs
+    int randomObj = Random.Range(0, prefabs.Length);
+    
+    if (obj != null) //if there is an existing obj in the scene
+                        //(i.e. it's not our first time spawning an object)
+    {
+        while (randomObj == previousIndex) // as long as our random index is the same as our previous index
+        {
+            randomObj = Random.Range(0, prefabs.Length); 
+            //continue randomising until we get a new index that's different from the previous one.
+        }
+
+        Destroy(obj); //destroy the old object
+    }
+
+    previousIndex = randomObj; // update previous index to current index.
+
+
+    // spawn the random object and assign it to "obj" variable
+    obj = Instantiate(prefabs[randomObj]); 
+}
+```
+
+<br>
+
+**If you don't want to completely destroy that instance of the GameObject or component from your scene**, you may consider using [SetActive()](https://docs.unity3d.com/ScriptReference/GameObject.SetActive.html) for GameObjects, and [.enabled](https://docs.unity3d.com/ScriptReference/Behaviour-enabled.html) for components instead. This would just "switch off" your objects or components, but keeps them available in the scene so you can switch them back on again.
 
 <br>
 

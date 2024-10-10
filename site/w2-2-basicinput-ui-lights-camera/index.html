@@ -1,0 +1,554 @@
+<!doctype html>
+<html>
+    <head>
+                <title>W2 2 basicinput ui lights camera - 👾 DESMA126 Game Engine</title>
+
+            <meta charset="utf-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+            
+            
+            
+
+            
+                <link  rel="icon" type="image/x-icon" href="../assets/img/favicon.ico">
+            
+                    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+                        <script>hljs.initHighlightingOnLoad();</script>
+            <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fira+Mono:400,700">
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+            <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+            <link rel="stylesheet" href="../assets/css/main.min.css">
+                <link href="../extra.css" rel="stylesheet">
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+                <script src="../javascripts/config.js"></script>
+                <script src="../search/main.js"></script>
+
+            
+                
+            
+    </head>
+
+    <body>
+        <div class="container py-3">
+            <header>
+                    <!-- block header -->
+<nav class="navbar navbar-expand-xl border-bottom">
+    <div class="container-fluid">
+        
+
+        
+            <span class=" fs-4 title-color site-name" id="component-site-name" style="text-transform: uppercase;">👾 DESMA126 Game Engine</span>
+        
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsMenu"
+            aria-controls="navbarsMenu" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse flex-column ml-auto" id="navbarsMenu">
+            <ul class="navbar-nav">
+
+                <!-- block menu -->
+                <li class="nav-item">
+                    <!-- block menu -->
+    
+        <li class="nav-item" id="component-menu">
+            <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="
+                            nav-link text-gray text-decoration-none" href="..">[🏠 Home]</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="
+                            nav-link text-gray text-decoration-none" href="../syllabus/">[📜 Syllabus]</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="
+                            nav-link text-gray text-decoration-none" href="../schedule/">[📅 Schedule]</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="
+                            nav-link dropdown-toggle text-decoration-none" href="#" data-bs-toggle="dropdown">[📌 Assignments]</a>
+                            <ul class="dropdown-menu">
+                                    <!-- block dropdown-menu -->
+    <li>
+        <a href="../how-to-submit/" class="dropdown-item text-decoration-none ">How To Submit</a>
+    </li>
+<!-- endblock -->
+                                    <!-- block dropdown-menu -->
+    <li>
+        <a href="../readings-and-homeplays/" class="dropdown-item text-decoration-none ">Readings & Homeplays</a>
+    </li>
+<!-- endblock -->
+                                    <!-- block dropdown-menu -->
+    <li>
+        <a href="../project-1/" class="dropdown-item text-decoration-none ">Project 1</a>
+    </li>
+<!-- endblock -->
+                                    <!-- block dropdown-menu -->
+    <li>
+        <a href="../project-2/" class="dropdown-item text-decoration-none ">Project 2</a>
+    </li>
+<!-- endblock -->
+                                    <!-- block dropdown-menu -->
+    <li>
+        <a href="../project-3/" class="dropdown-item text-decoration-none ">Project 3</a>
+    </li>
+<!-- endblock -->
+                            </ul>
+                        </li>
+            </ul>
+        </li>
+<!-- endblock -->
+                </li>
+                <!-- endblock -->
+
+                <!-- block search -->
+                <li class="nav-item">
+                    <a class="collapsed" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+                        <div class="md-search-icon">
+                            <i class="fa fa-search" aria-hidden="true"></i>
+                        </div>
+                    </a>
+                </li>
+                <!--  endblock -->
+
+                <!-- block source -->
+                <li class="nav-item">
+                    
+                </li>
+                <!--  endblock -->
+            </ul>
+        </div>
+    </div>
+</nav>
+<!--  endblock -->
+            </header>
+
+            <main><!-- block search -->
+<div class="collapse" id="collapseExample">
+    <div role="search" class="search-box">
+        <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+            <input type="text" name="q" class="search-query"
+            placeholder="Search docs" title="Type search term here" />
+        </form>
+    </div>
+</div>
+<!-- endblock -->
+                    <!-- block content -->
+<section class="container post">
+    <article>
+        <header>
+            
+            
+        </header>
+        <p><script>hljs.highlightAll();</script>
+
+<h1 id="basic-input-ui-lights-and-camera-settings">Basic Input, UI, Lights and Camera Settings</h1>
+<hr />
+<p>📦 <strong>Unity packages from today's class:</strong></p>
+<blockquote>
+<ul>
+<li><a href="https://drive.google.com/file/d/11NiH96VQSo0i4-ezlEJgN35MxKmKTAWc/view?usp=drive_link"><strong>UI Demo: Buttons and TextMeshPro</strong></a><ul>
+<li>Setting up Interactivity for Button component</li>
+<li>Change TextMeshPro using scripts, with custom style tags.</li>
+</ul>
+</li>
+<li><a href="https://drive.google.com/file/d/1Kvlhx5w7Vvp2_088Kd8DM8unlnHniuPk/view?usp=drive_link"><strong>Using Buttons to Instantiate new object and Destroy old object instance</strong></a></li>
+</ul>
+</blockquote>
+<hr />
+<p>Before we begin...</p>
+<p><br></p>
+<h2 id="review-from-last-class">Review from last class</h2>
+<ul>
+<li>Using Random.Range() and conditional statements to set probability of multiple outcomes.</li>
+<li>Noise<ul>
+<li>Difference between random noise and Perlin noise</li>
+<li>Mathf.PerlinNoise for animations and terrain generation</li>
+</ul>
+</li>
+<li>Using custom classes to store data about properties in our scene</li>
+</ul>
+<p><br></p>
+<hr />
+<h2 id="basic-input">Basic Input</h2>
+<p>We can use the <a href="https://docs.unity3d.com/Manual/Input.html">Input</a> class to access methods for mapping key or button inputs. </p>
+<h3 id="using-keycode">Using KeyCode</h3>
+<p><strong>Key codes map directly to a physical key on the keyboard, mouse buttons and joystick buttons.</strong> By passing key codes into our input method functions, we can tell Unity which inputs to detect.</p>
+<p>Read the full documentation for Unity's list of key codes <a href="https://docs.unity3d.com/ScriptReference/KeyCode.html">here</a>.</p>
+<p><br></p>
+<h4 id="inputgetkey">Input.GetKey</h4>
+<p>Returns true while the user holds down the key identified.</p>
+<pre><code class="language-csharp">void Update(){
+    if (Input.GetKey(KeyCode.Space)){
+        Debug.Log(&quot;Spacebar is held down.&quot;);
+        //will keep sending console message
+        //for as long as player holds down the spacebar.
+    }
+}
+</code></pre>
+<p><br></p>
+<h4 id="inputgetkeydown">Input.GetKeyDown</h4>
+<p>Returns true during the frame the user starts pressing down the key identified.</p>
+<pre><code class="language-csharp">void Update(){
+    if (Input.GetKeyDown(KeyCode.Mouse0)){
+        Debug.Log(&quot;Left mouse button pressed.&quot;);
+        //only sends console message once
+        //even if player continues to hold down the spacebar.
+    }
+}
+</code></pre>
+<p><br></p>
+<h4 id="inputgetkeyup">Input.GetKeyUp</h4>
+<p>Returns true during the frame the user releases the key identified.</p>
+<pre><code class="language-csharp">void Update(){
+    if (Input.GetKeyUp(KeyCode.Mouse1)){
+        Debug.Log(&quot;Right mouse button released.&quot;);
+    }
+}
+</code></pre>
+<p><br></p>
+<p>These are very simple and straightforward methods for mapping inputs to custom actions, but certainly isn't the only one available! Unity has more organised systems in place for setting up our inputs -- we will discuss those later in the quarter.</p>
+<p></br> </p>
+<!--
+### Using Unity's Legacy Input Manager
+
+> Read more about the [Input Manager](https://docs.unity3d.com/Manual/class-InputManager.html) in Unity's Manual.
+
+Unity has two Input modules, **the legacy version** (default) and **the new Input system** (which is a separate package that requires installation.) We'll just be covering the legacy Input module for now.
+
+The legacy Input Manager allows you to **define inputs and their associated actions** for your Projects. This lets us call our inputs using the names of these actions (as strings) and map multiple types of input under the same action. 
+
+Go to **Edit** > **Project Settings** > **Input Manager**, and expand the **Axes** dropdown list. 
+
+Another more elaborate method for setting up input systems uses Unity's new Input System -- we'll cover this later in the quarter.
+
+-->
+
+<h2 id="ui">UI</h2>
+<p>For games it's often useful to add <strong>user interface elements</strong> like text and images on top of what the camera is seeing. Unity features a UI system, which we can use to add elements to our game like clickable buttons, meters, images, and text. </p>
+<p>To start with, we'll look at how to add text elements to your project.</p>
+<p><br></p>
+<h3 id="create-a-new-textmeshpro-tmp-ui-object">Create a New TextMeshPro (TMP) UI Object</h3>
+<p>Create a new TMP element by <strong>right-clicking in the Scene Hierarchy panel</strong> &gt; <strong>UI</strong> &gt; <strong>Text - TextMeshPro</strong>.</p>
+<p><img alt="Create TMP Element" src="../img/create-tmp.gif" /></p>
+<p><br></p>
+<blockquote>
+<p><strong>TextMeshPro</strong> is an improved version of Unity's legacy text element. I recommend just starting with that whenever you're working with text.</p>
+<p>The first time you make a TMP element in your project, it will prompt you to import TMP Essential Resources and Examples &amp; Extras. <strong>You only need to import Essential Resources to continue using TMP.</strong></p>
+<p>Read more about Unity's documentation of TextMeshPro <a href="https://docs.unity3d.com/Packages/com.unity.textmeshpro@4.0/manual/index.html">here</a>.</p>
+</blockquote>
+<p><br></p>
+<p>When you create your first UI element in your scene, Unity automatically adds two other objects -- a <strong>Canvas</strong> (inside which our TMP element is nested) and an <strong>EventSystem</strong>.</p>
+<p><br></p>
+<h4 id="canvas">Canvas</h4>
+<div class="div-container">
+    <div style="width:60%;margin-right:2.5%;">
+        <p style="margin-top:0 !important">
+        <b>The Canvas is the container which will hold our UI elements.</b> By default it comes with three components:
+        </p>
+        <ul>
+            <li>The <b>Canvas</b>, which determines how and where the UI elements are drawn. The size of the canvas corresponds to the screen.</li>
+            <li>The <b>Canvas Scaler</b>, which controls how individual UI elements scale to fit different screen sizes. I like to change <b>UI Scale Mode</b> from <b>"Constant Pixel Size"</b> to <b>"Scale With Screen size"</b>, so that UI elements appear the same size no matter what resolution screen the player views your work on.</li>
+            <li>the <b>Graphic Raycaster</b>, which helps with certain interactive UI elements. We can ignore this component for now.</li>
+        </ul>
+    </div>
+    <div style="width:35%;">
+        <img src="../img/ui-canvas.jpg">
+    </div>
+</div>
+
+<p><br></p>
+<h4 id="event-system">Event System</h4>
+<div class="div-container">
+    <div style="width:60%;margin-right:2.5%;">
+        <p style="margin-top:0 !important">
+        <b>The Event System helps make UI elements navigable with both keyboard/mouse, and joystick controls.</b> For now we can ignore this object.
+        </p>
+        <p>
+        If you are not planning to make your UI elements clickable, it is okay to delete this object.
+        </p>
+    </div>
+    <div style="width:35%;">
+        <img src="../img/ui-eventsystem.jpg">
+    </div>
+</div>
+
+<p><br></p>
+<h4 id="ui-element-components">UI Element Components</h4>
+<p>All UI elements will have these two components: </p>
+<ul>
+<li><strong>Rect Transform</strong> -- a special kind of transform designed to work with canvases.</li>
+<li><strong>Canvas Renderer</strong> -- a component used to render graphics to the canvas. </li>
+</ul>
+<p><br> </p>
+<h3 id="using-rect-transforms">Using Rect Transforms</h3>
+<blockquote>
+<p>Read more about Rect Transforms and its properties, including pivots and anchors, in the Unity Manual <a href="https://docs.unity3d.com/Packages/com.unity.ugui@3.0/manual/UIBasicLayout.html">here</a>.</p>
+</blockquote>
+<p><br></p>
+<p><img alt="" src="../img/rect-transform-properties.jpg" /></p>
+<p><br></p>
+<h4 id="positioning-ui-elements">Positioning UI Elements</h4>
+<p><img alt="" src="../img/position-ui.gif" /></p>
+<p>Use the <strong>Rect Transform tool</strong> (shortcut [T]) to adjust the position and size of UI elements within the canvas. Find it in the tool bar at the upper right of the screen.</p>
+<p><img alt="" src="../img/rect-transform-tool.webp" /></p>
+<p><br></p>
+<p>With the rect tool, you can adjust the anchor position of a UI element by dragging these triangles around the screen. This text element is now anchored to the bottom center of the canvas.</p>
+<p><img alt="" src="../img/anchor-edit-1.gif" /></p>
+<p><br></p>
+<p>You can anchor UI elements to different positions on the screen. For instance, sometimes you might want a health meter to always appear in the lower left corner of the screen, or a dialogue box to always appear in the upper center.</p>
+<p>Try changing the size of the game view to see how your text elements change position.</p>
+<p><img alt="" src="../img/anchors%20example-2.gif" /></p>
+<p><br></p>
+<p>Anchors can also be stretched across an area so that the UI element resizes relative to the canvas size. </p>
+<p><img alt="" src="../img/UI_Anchored4.gif" /></p>
+<p><br></p>
+<p>You can also edit the anchor point by using this dropdown in the inspector. Hold down SHIFT to set the position and ALT to set the pivot at the same time.</p>
+<p><img alt="" src="../img/anchor-preset.gif" /></p>
+<p><br></p>
+<h3 id="canvas-size-aspect-ratio">Canvas Size &amp; Aspect Ratio</h3>
+<p><img alt="" src="../img/anchors%20example-4.gif" /></p>
+<p><strong>By default, your Game preview panel's aspect ratio is set to "Free Aspect."</strong> Notice that the canvas changes its size to match the dimensions of the screen! This can cause a lot of confusion when working with UI elements.</p>
+<p><br></p>
+<p>To fix this problem, Use the dropdown in the Game window to set a fixed aspect ratio or pixel size. <strong>I recommend setting it to 1920x1080.</strong> You may need to increase the font size of your text, or find the canvas scaler component and change it to "Scale With Screen Size"</p>
+<p><img alt="" src="../img/screen%20aspect.gif" /></p>
+<p><br></p>
+<p>You may also notice that <strong>the canvas is way larger than anything else in your scene</strong>. That is OK!</p>
+<p><br></p>
+<h3 id="controlling-ui-elements-with-scripts">Controlling UI Elements with Scripts</h3>
+<p>UI elements are components, just like anything else in Unity. You can set their properties when the game is running with code! <strong>To work with UI elements</strong>, you typically need to include the following statement at the top of your script:</p>
+<pre><code class="language-csharp">using UnityEngine;
+using UnityEngine.UI; //include this line to work with UI elements
+</code></pre>
+<p><br></p>
+<p>Once you do, you can work with UI elements like any other component.</p>
+<p><br></p>
+<h4 id="scripting-for-textmeshpro">Scripting for TextMeshPro</h4>
+<p>TextMeshPro is an exceptional case, because <strong>its methods and properties are stored in its own namespace called <code>TMPro</code></strong>. For TextMeshPro elements, you will need to add this line at the top of your script, instead of <code>using UnityEngine.UI</code>. </p>
+<pre><code class="language-csharp">using TMPro;
+</code></pre>
+<p><br></p>
+<p><strong>To declare TextMeshPro components</strong>, you will need to decide which class name to use depending on whether the TextMeshPro component is used as a <strong>UI element nested inside a canvas</strong>, or a <strong>mesh in 3D world space</strong>.</p>
+<pre><code class="language-csharp">public TextMeshProUGUI tmpUI; //if tmp is inside the UI canvas.
+public TextMeshPro tmp; //if tmp is outside the UI canvas.
+</code></pre>
+<p><br></p>
+<p>You can also <strong>style your text</strong> using style tags in arrow brackets &lt;&gt;. I recommend looking at <a href="https://learn.unity.com/tutorial/textmesh-pro-style-sheets-and-styles#5f3f63beedbc2a176bb3ff97">Unity's tutorial on styling TMPro elements</a> to learn more. </p>
+<p><img alt="" src="../img/tmp-random-color.gif" /></p>
+<pre><code class="language-csharp">//Note: the code below does not include other functions
+//like checking whether to use &quot;a&quot; or &quot;an&quot; before the color name
+//nor color randomizer functions for the cube's material.
+
+using UnityEngine;
+using TMPro;
+
+public class UpdateText : MonoBehaviour
+{
+    public TextMeshProUGUI uiTmp;
+    public Color col;
+    public string colorName;
+
+    //map this function to a button click event.
+    public void SetText(){
+        string colorHex = ColorUtility.ToHtmlStringRGB(col); // returns color as hexademical string in the format of &quot;RRGGBB&quot;
+        uiTmp.text = &quot;This is a &lt;color=#&quot; + colorHex + &quot;&gt;&quot;+colorName+&quot;&lt;/color&gt; cube.&quot;;
+    }
+
+}
+</code></pre>
+<p><br></p>
+<h3 id="custom-font-assets-for-textmeshpro">Custom Font Assets for TextMeshPro</h3>
+<p>You can add custom .ttf and .otf font files into your asset folder, and convert them into a TextMeshPro Font Asset. </p>
+<p>Go to <strong>Window</strong> &gt; <strong>TextMeshPro</strong> &gt; <strong>Font Asset Creator</strong>.</p>
+<p>Add your .ttf and .otf font file into Source Font File. Click <strong>Generate Font Asset</strong>. Unity will tell you if there are any characters missing or excluded from the selected font (this depends on what you put as your <strong>Character Set</strong> in the Font Asset Creator.)</p>
+<p>Once you're ready, click <strong>Save</strong>. You can now use this Font Asset in your TextMeshPro components.</p>
+<p><img alt="" src="../img/tmp-custom-font.gif" /></p>
+<p><br></p>
+<h3 id="buttons">Buttons</h3>
+<blockquote>
+<p>Read about <a href="https://docs.unity3d.com/2022.3/Documentation/Manual/script-Button.html">UI Buttons</a> in the Unity manual.</p>
+</blockquote>
+<p>A button element will come with the following things:</p>
+<ul>
+<li>an <strong>Image</strong> component, which determines the button's sprite.</li>
+<li>a <strong>Button</strong> component, which determines the interactive aspects of the button (including color and transition settings for different button states)</li>
+<li><strong>a nested Text element</strong> in the scene hierarchy, which determines what the button's label reads.</li>
+</ul>
+<div class="div-container">
+    <div style="width:42.5%;margin-right:2.5%;">
+    <figure>
+        <img src="../img/button-components.jpg">
+        <figcaption>-- Button components in Inspector</figcaption>
+    </figure>
+    </div>
+    <div style="width:42.5%;">
+    <figure>
+        <img src="../img/button-nested-text.jpg">
+        <figcaption>-- Nested TextMeshPro component in Inspector</figcaption>
+    </figure>
+    </div>
+</div>
+
+<p><br></p>
+<h4 id="assigning-functions-to-onclick-event">Assigning Functions to OnClick() Event</h4>
+<p>Whenever we click a button, it triggers a UnityEvent called <strong>OnClick()</strong>. In the inspector, we can tell Unity which method functions should "listen" for this event so they can be called once the event is "invoked" (ie. when the event happens.)</p>
+<p>We can add <strong>multiple event listeners</strong> to the a single UnityEvent, allowing us to simultaneously call as many functions as we want once an event is invoked.</p>
+<p><br></p>
+<p><strong>To add a method function as an event listener in the Inspector panel:</strong></p>
+<ol>
+<li>In the <strong>On Click ()</strong> event box, click <strong>+</strong> to add a new listener to the list. </li>
+<li>Select the relevant GameObject that contains the component with our desired method function.</li>
+<li>In the dropdown, look for the method function that we want to run when the event happens. </li>
+</ol>
+<p><br></p>
+<p>If you want to add a <strong>custom function</strong> as an event listener through the Inspector panel:</p>
+<ul>
+<li>The function must be declared <strong>public</strong>.</li>
+<li>The function must be nested within a <strong>MonoBehaviour</strong> class that is <strong>attached to a GameObject in your scene</strong> as a script component.</li>
+</ul>
+<figure>
+    <img src="../img/button-onclick-addlisten.gif">
+    <figcaption>-- In this example, I'm selecting a Cube object that has a ColorRandomizer script, and adding a SetRandomColor() function as an event listener.</figcaption>
+</figure>
+
+<p><br></p>
+<h4 id="creating-a-button-to-instantiate-new-object-and-destroy-previous-object">Creating a Button to Instantiate New Object and Destroy Previous Object</h4>
+<p>To replace an existing object in the scene with a new instantiation, you will need to use the <a href="https://docs.unity3d.com/ScriptReference/Object.Destroy.html">Destroy()</a> method to remove it from the scene. </p>
+<p>Destroy() can be used to destroy GameObjects and components. </p>
+<p><img alt="" src="../img/instantiate-destroy.gif" /></p>
+<pre><code class="language-csharp">public GameObject[] prefabs;
+
+GameObject obj; //this will store the most recently spawned object
+int previousIndex; //our array index reference of the previously spawned object
+
+void Start()
+{
+    SpawnObj(); // spawn new object at start of scene
+}
+
+// add this as a listener to the button's OnClick() event in the inspector.
+public void SpawnObj() 
+{
+    //get a random index from prefabs
+    int randomObj = Random.Range(0, prefabs.Length);
+
+    if (obj != null) //if there is an existing obj in the scene
+                        //(i.e. it's not our first time spawning an object)
+    {
+        while (randomObj == previousIndex) // as long as our random index is the same as our previous index
+        {
+            randomObj = Random.Range(0, prefabs.Length); 
+            //continue randomising until we get a new index that's different from the previous one.
+        }
+
+        Destroy(obj); //destroy the old object
+    }
+
+    previousIndex = randomObj; // update previous index to current index.
+
+
+    // spawn the random object and assign it to &quot;obj&quot; variable
+    obj = Instantiate(prefabs[randomObj]); 
+}
+</code></pre>
+<p><br></p>
+<p><strong>If you don't want to completely destroy that instance of the GameObject or component from your scene</strong>, you may consider using <a href="https://docs.unity3d.com/ScriptReference/GameObject.SetActive.html">SetActive()</a> for GameObjects, and <a href="https://docs.unity3d.com/ScriptReference/Behaviour-enabled.html">.enabled</a> for components instead. This would just "switch off" your objects or components, but keeps them available in the scene so you can switch them back on again.</p>
+<p><br></p>
+<p>There are also workflows for <a href="https://docs.unity3d.com/ScriptReference/Events.UnityEvent.AddListener.html">setting up UnityEvents and Listeners using scripts</a>, but we'll get to that in a later lesson!</p>
+<p><br></p>
+<hr />
+<h2 id="lights-and-camera-settings">Lights and Camera Settings</h2>
+<p>Here is a basic overview of some elements you can consider using to easily establish the atmosphere and setting of your project. </p>
+<p><br></p>
+<h3 id="light-component">Light Component</h3>
+<blockquote>
+<p>Read more about <a href="https://docs.unity3d.com/Packages/com.unity.render-pipelines.universal@14.0/manual/light-component.html">URP's light component</a> in Unity's documentation.</p>
+</blockquote>
+<p><br></p>
+<p>Add a Light object to your scene by <strong>right-clicking in the Hierarchy panel</strong> &gt; <strong>Light</strong> &gt; <strong>choice of Light type</strong> (you can change the type in the Light component later on.)</p>
+<p><br></p>
+<figure>
+    <img src="../img/light-component.png">
+    <figcaption>-- Light component in the Inspector panel.</figcaption>
+</figure>
+
+<p>Some sections you can focus on now are (depending on the type of light you're using): </p>
+<ul>
+<li><strong>Type</strong>: Directional, Point, Spot, Area (baked only) – see examples of each here </li>
+<li><strong>Light Appearance / Color</strong>: Set color of the light based on color or temperature</li>
+<li><strong>Intensity</strong>: Amount to multiply the light color to control the brightness of the light</li>
+<li><strong>Indirect Multiplier</strong>: Intensity of indirect lighting</li>
+<li><strong>Shadow Type</strong>: None, Soft, Hard </li>
+</ul>
+<p><br></p>
+<h3 id="environment-lighting">Environment Lighting</h3>
+<p><img alt="" src="../img/environment-lighting.gif" /></p>
+<p>In the Unity Editor, go to <strong>Window</strong> &gt; <strong>Lighting</strong> &gt; <strong>Environment</strong>. Here, you can customize some of the following settings:</p>
+<ul>
+<li><strong>Skybox Material</strong>: The skybox itself is a material that uses a special type of shader to create the impression of an image or color that surrounds the entire scene, which can contribute to the overall color and brightness of a scene. <br> <img alt="" src="../img/skybox.png" /><br><br>If you are going to use a skybox for your project, I recommend changing the default Unity skybox to a different material. <br><br> An easy way to do this is to import <a href="https://docs.unity3d.com/Manual/skybox-shaders.html">a custom texture that is compatible for skyboxes</a> (e.g. 360 HDR images or Cubmemaps), and put it in a material asset with a Skybox shader. <br><br>The <a href="https://assetstore.unity.com/">Unity Asset store</a> also has plenty of options, many of which are free.<br><br></li>
+<li><strong>Realtime Shadow Colours</strong>: Assign an ambient color to your realtime shadows. <br><br></li>
+<li><strong>Environment Lighting Source</strong>: You can have your scene be lit with either a skybox material, a gradient, or a solid colour.<br><br> </li>
+<li><strong>Fog</strong> (nested in "Other Settings"): Adds a fog effect for your game, with customizable colour, distribution, and density.</li>
+</ul>
+<p><br></p>
+<h3 id="camera">Camera</h3>
+<p>Try exploring these settings for your Main Camera object. </p>
+<ul>
+<li><strong>Projection</strong>: You can set your camera to be either Perspective or Orthogonal, and decide how far/close your camera's lens is able to capture (<em>Field of View</em> for Perspective camera; <em>Size</em> for Orthogonal camera.)<br><br><figure>
+    <img src="../img/CameraPerspectiveAndOrtho.jpg">
+    <figcaption>-- The same scene shown in perspective mode (left) and orthographic mode (right).</figcaption>
+</figure></li>
+<li><strong>Background Type</strong> (under Environment section): You can decide between having a Skybox or Solid colour as the background material that your camera renders.</li>
+</ul>
+<p><br></p>
+<h2 id="some-course-reminders">Some course reminders</h2>
+<ul>
+<li><a href="../project-1/">Project 1</a> is due next Tuesday.</li>
+</ul></p>
+    </article>
+</section>
+<!-- endblock -->
+            </main>
+
+            
+                    <!-- block preview -->
+<!-- endblock -->
+            
+
+            
+                    <!-- block footer -->
+<footer class="pt-4 my-md-5 pt-md-5 border-top" id="component-footer">
+    <div class="row">
+        <div class="col-12 col-md">
+                <!-- block copyright -->
+
+    <small class="d-block mb-3">
+        Made with
+        <a href="https://github.com/FernandoCelmer/mkdocs-simple-blog" target="_blank" rel="noopener">
+            Simple Blog for MkDocs
+        </a>
+    </small>
+
+<!-- endblock -->
+        </div>
+    </div>
+</footer>
+<!-- endblock -->
+            
+        </div>
+
+            <script>var base_url = '..';</script>
+            <script src="../assets/js/jquery-3.3.1.slim.min.js""></script>
+            <script src="../assets/js/bootstrap.bundle.min.js""></script>
+            <script src="../assets/js/main.min.js""></script>
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js" defer></script>
+                <script src="../javascripts/config.js" defer></script>
+                <script src="../search/main.js" defer></script>
+
+    </body>
+
+</html>
