@@ -775,6 +775,39 @@ When adapting from an existing game, you may choose to reference, exclude, or mo
 
 <br>
 
+### Mechanical Properties
+
+Are there any obstacles, features, or affordances of the game's levels that affect play? Examples might include:
+
+- different material types of tennis court (clay, grass, etc)
+- animated or dynamic obstacles
+- how the players or game could change the landscape over time.
+
+<br>
+
+Consider the "rambunctiousness" of your levels
+
+<figure>
+<blockquote>
+<ol>
+<li>Game worlds should be substrates, not vessels.</li>
+<li>Games should suggest the power of nonhuman agency.</li>
+<li>Game worlds ought to surprise us.</li>
+<li>Games should entangle us.</li>
+<li>Games should support a wider range of player-environment interactions.</li>
+<li>Games should leverage scale.</li>
+<li>The people who make games should take into account the energy and resource demands of their games. </li>
+<li>Games should take us outdoors.</li>
+<li>Graphics shouldn’t be everything. </li>
+<li>Games should help us mourn. 
+</li>
+</ol>
+</blockquote>
+<figcaption>-- Alenda Y. Cheng - Rambunctious Games: A Manifesto for Environmental Game Design </figcaption>
+</figure>
+
+<br>
+
 ### Ideas and Inspiration
 
 - [No Clip Website](https://noclip.website/) - online library of digital maps from various notable video games.
@@ -819,7 +852,6 @@ You may consider what sort of agency is given to your player(s), and what that a
 <figcaption>-- HELO100 - <a href="https://brenda.games/train">(that really) Boils My Piss</a></figcaption>
 </figure>
 
-
 ### Skill VS Chance
 
 Aspects of your game that relies on the mastery of one's **ability**, and others that are left to the unpredictable hands of **fate** and **random probability**.
@@ -833,6 +865,18 @@ Another way of viewing chance is in terms of "risk" level -- in game design, a s
 
 Risk assessments can become part of strategic play.
 
+
+### Strategy
+
+What does the player need to do to win?
+
+What decisions does the player make on a moment to moment basis? 
+
+How do they make those choices meaningfully?
+
+Why would they make one choice over another?
+
+<br>
 
 ### Thematic Treatment
 
