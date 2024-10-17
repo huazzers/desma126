@@ -27,7 +27,7 @@ Adapt **one of the following** ball-based games into a digital game.
 
 <br>
 
-For an **extra** challenge, consider adding an interesting twist to your game. 
+... AND add **an interesting twist** to your game. 
 
 <br>
 
@@ -113,6 +113,8 @@ For your *digital* game:
             <li>What are the properties and affordances of those tools?
             </li>
             <li>What ways can you think of adapting the physical affordances and properties to the digital?
+            </li>
+            <li>What are some affordances that only the digital game can have?
             </li>
         </ul>
 
