@@ -4,7 +4,7 @@
 
 <div class="duedate">
 <p><a href="https://forms.gle/pfApXHdPduNFZF9R7">Submit Here</a></p>
-<blockquote>Please read the <a href="../how-to-submit.md">How To Submit</a> page for more detailed instructions.</blockquote>
+<blockquote>Please read the <a href="../how-to-submit">How To Submit</a> page for more detailed instructions.</blockquote>
 </div>
 
 ### Prompt
@@ -35,7 +35,7 @@ Create a generator in Unity that only requires 1 ~ 2 button controls to run.
 
 Project 1 contains TWO COMPONENTS: 
 > - **PART 1 (2.5%): SKETCH OF PROJECT PROPOSAL** </br>*Due: Week 2 Tuesday, October 8* </br>A sketch and/or in-progress prototype of your project. Bring this to class for discussion! </br><ul><li>*What are you generating? How are you generating it?*</li></ul>
-> - **PART 2 (12.5%): FINAL PROJECT BUILD WITH DOCUMENTATION** </br>*Due: Week 3 Tuesday, October 15* </br>Refer to [submission guidelines](./how-to-submit.md), and submit your final project here (link TBD.) 
+> - **PART 2 (12.5%): FINAL PROJECT BUILD WITH DOCUMENTATION** </br>*Due: Week 3 Tuesday, October 15* </br>Refer to [submission guidelines](./how-to-submit.md), and submit your final project.
 > 
 > **Total contribution to final course grade: 15%**
 

@@ -45,6 +45,26 @@ If you're hungry for more, below are some recommended talks on more methods and 
 
 ### Reading Response 2
 
+<div class="duedate">
+<p>Due: Week 4 Thursday, October 24
+</br><a href="https://forms.gle/5MGvd2UREeXwi8oP7">Submit Your Response Here</a></p>
+</div>
+
+Read these two writings by Steve Swink:
+
+- [***Game Feel: The Secret Ingredient***](https://www.gamedeveloper.com/design/game-feel-the-secret-ingredient)
+- Then read **Chapter 17** of [***Game Feel: A Game Designer's Guide to Virtual Sensation***](https://gamifique.wordpress.com/wp-content/uploads/2011/11/2-game-feel.pdf) (pg. 316 of the PDF).
+
+Respond to the questions in the form **in your own words**. 
+
+For this reading response, it helps to have some idea(s) for what you'd like to do for Project 2 beforehand -- some questions will ask you to apply concepts that introduced in the writing to your plans for Project 2. 
+
+</br>
+
+***Optional***: 
+
+Watch [***Juice it or lose it - a talk by Martin Jonasson & Petri Purho***](https://youtu.be/Fy0aCDmgnxg) for a live demonstration of how to get juiciness with tweening, particles, and other visual design decisions.
+
 <br>
 
 ---
@@ -94,11 +114,3 @@ Plan to spend about 30 ~ 60 minutes playing the game(s) with your group members,
 **Please share a link to any presentation materials** in the sign up sheet next to your group names. You will share your responses with the rest of the class during lesson time on the due date.
 
 <br>
-
-### Homeplay 2
-
-<!--
-
-YNGLET- https://triple-topping.itch.io/ynglet Level + Physics
-
--->

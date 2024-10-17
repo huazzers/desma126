@@ -69,6 +69,22 @@ md-footer__inner { display: none !important; }
     }
 }
 
+div.scroll {
+    margin: 4px, 4px;
+    padding: 0 2rem;
+    width: 500px;
+    height: 315px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    text-align: justify;
+    background-color:beige;
+}
+
+div.scroll>p{
+    color:darkslategray;
+    font-family:serif;
+}
+
 .div-container>div {
     display: inline-block;
     vertical-align: top;
