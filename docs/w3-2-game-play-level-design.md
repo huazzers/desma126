@@ -583,7 +583,7 @@ For your projects, consider layering your level with your own intentions for:
 - how objects are revealed to the player
 - what the objects or places can represent
 - how time and space unfolds for the player
-- how you can work *with* the player's imagination through sensual affect, perception, and cognition / consciousness... or what we call the "phenomenology" of the player.
+- how you can work *with* the player's imagination through sensory affect, perception, and cognition / consciousness... or what we call the "phenomenology" of the player.
 
 <br>
 
