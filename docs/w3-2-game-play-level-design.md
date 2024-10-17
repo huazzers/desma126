@@ -468,7 +468,7 @@ And when describing a conditional event or state change:
     <div style="width:47.5%">
         <figure>
             <img src="https://img.itch.zone/aW1hZ2UvMjM0NDQyNS8xMzg4OTAxNi5wbmc=/794x1000/CjDksn.png">
-            <figcaption>-- zamsire - <a href="https://zamsire.itch.io/eggdog-extend">Eggdog Extended]</a></figcaption>
+            <figcaption>-- zamsire - <a href="https://zamsire.itch.io/eggdog-extend">Eggdog Extended</a></figcaption>
         </figure>
     </div>
     <div style="width:47.5%">
