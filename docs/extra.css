@@ -4,6 +4,7 @@ md-footer__inner { display: none !important; }
 .nav-link[rel="prev"] {display: none;}
 
 @media only screen and (max-width: 780px) {
+
     h1{
         font-size:1.5em !important;
     }
@@ -67,6 +68,10 @@ md-footer__inner { display: none !important; }
         font-size:small !important;
         margin-bottom:1.6rem !important;
     }
+
+    td, thead{
+        font-size:small !important;
+    }
 }
 
 div.scroll {
@@ -106,7 +111,7 @@ figcaption{
     color:teal;
 }
 
-p,li, code{
+p,li, code, pre>code, td{
     font-size:0.875em;
     line-height:1.75em;
 }

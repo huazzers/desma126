@@ -1,0 +1,508 @@
+<!doctype html>
+<html>
+    <head>
+                <title>W4 1 physics engine - 👾 DESMA126 Game Engine</title>
+
+            <meta charset="utf-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+            
+            
+            
+
+            
+                <link  rel="icon" type="image/x-icon" href="../assets/img/favicon.ico">
+            
+                    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+                        <script>hljs.initHighlightingOnLoad();</script>
+            <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fira+Mono:400,700">
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+            <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+            <link rel="stylesheet" href="../assets/css/main.min.css">
+                <link href="../extra.css" rel="stylesheet">
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+                <script src="../javascripts/config.js"></script>
+                <script src="../search/main.js"></script>
+
+            
+                
+            
+    </head>
+
+    <body>
+        <div class="container py-3">
+            <header>
+                    <!-- block header -->
+<nav class="navbar navbar-expand-xl border-bottom">
+    <div class="container-fluid">
+        
+
+        
+            <span class=" fs-4 title-color site-name" id="component-site-name" style="text-transform: uppercase;">👾 DESMA126 Game Engine</span>
+        
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsMenu"
+            aria-controls="navbarsMenu" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse flex-column ml-auto" id="navbarsMenu">
+            <ul class="navbar-nav">
+
+                <!-- block menu -->
+                <li class="nav-item">
+                    <!-- block menu -->
+    
+        <li class="nav-item" id="component-menu">
+            <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="
+                            nav-link text-gray text-decoration-none" href="..">[🏠 Home]</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="
+                            nav-link text-gray text-decoration-none" href="../syllabus/">[📜 Syllabus]</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="
+                            nav-link text-gray text-decoration-none" href="../schedule/">[📅 Schedule]</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="
+                            nav-link dropdown-toggle text-decoration-none" href="#" data-bs-toggle="dropdown">[📌 Assignments]</a>
+                            <ul class="dropdown-menu">
+                                    <!-- block dropdown-menu -->
+    <li>
+        <a href="../how-to-submit/" class="dropdown-item text-decoration-none ">How To Submit</a>
+    </li>
+<!-- endblock -->
+                                    <!-- block dropdown-menu -->
+    <li>
+        <a href="../readings-and-homeplays/" class="dropdown-item text-decoration-none ">Readings & Homeplays</a>
+    </li>
+<!-- endblock -->
+                                    <!-- block dropdown-menu -->
+    <li>
+        <a href="../project-1/" class="dropdown-item text-decoration-none ">Project 1</a>
+    </li>
+<!-- endblock -->
+                                    <!-- block dropdown-menu -->
+    <li>
+        <a href="../project-2/" class="dropdown-item text-decoration-none ">Project 2</a>
+    </li>
+<!-- endblock -->
+                                    <!-- block dropdown-menu -->
+    <li>
+        <a href="../project-3/" class="dropdown-item text-decoration-none ">Project 3</a>
+    </li>
+<!-- endblock -->
+                            </ul>
+                        </li>
+            </ul>
+        </li>
+<!-- endblock -->
+                </li>
+                <!-- endblock -->
+
+                <!-- block search -->
+                <li class="nav-item">
+                    <a class="collapsed" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+                        <div class="md-search-icon">
+                            <i class="fa fa-search" aria-hidden="true"></i>
+                        </div>
+                    </a>
+                </li>
+                <!--  endblock -->
+
+                <!-- block source -->
+                <li class="nav-item">
+                    
+                </li>
+                <!--  endblock -->
+            </ul>
+        </div>
+    </div>
+</nav>
+<!--  endblock -->
+            </header>
+
+            <main><!-- block search -->
+<div class="collapse" id="collapseExample">
+    <div role="search" class="search-box">
+        <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+            <input type="text" name="q" class="search-query"
+            placeholder="Search docs" title="Type search term here" />
+        </form>
+    </div>
+</div>
+<!-- endblock -->
+                    <!-- block content -->
+<section class="container post">
+    <article>
+        <header>
+            
+            
+        </header>
+        <p><script>hljs.highlightAll();</script>
+
+<h1 id="physics-engine-rigidbody-collider-collisions-triggers">Physics Engine: Rigidbody, Collider, Collisions, Triggers</h1>
+<hr />
+<p>📦 <strong>Unity packages from today's class:</strong></p>
+<blockquote>
+<ul>
+<li>Class Demo: <a href="https://drive.google.com/file/d/1CtX8i419p3Tt_ZFlw0ZkOT6jcIpQsatI/view?usp=drive_link">Rocketship</a></li>
+<li>The previous instructor for the Game Engine course, John Brumley made a wonderful sandbox to illustrate how Rigidbodies, collisions, triggers, and object tags can be used. You may find the package link <a href="https://drive.google.com/file/d/1UKYuFHLns5P9PLSVDJrkA37vGY1rEMjh/view?usp=sharing">here</a>. <br><br><img alt="" src="../img/physicsdemo_john.png" /></li>
+</ul>
+</blockquote>
+<p><br></p>
+<hr />
+<p>Remember when we used Transforms and vector math to move objects? </p>
+<p>In our accelerated velocity example, we used vector math to achieve an ease-in ease-out transition of the cube's change in position over time. This gave our cube the illusion of mass and physicality. </p>
+<pre><code class="language-csharp">velocity += acceleration * Time.deltaTime;
+position += velocity * Time.deltaTime;
+</code></pre>
+<p><img alt="Acceleration Demo" src="../img/velaccel.gif" /></p>
+<p><br></p>
+<p>But what if we were to consider other factors like an object's <strong>physical properties</strong> (e.g. mass, torque, bounciness) or other <strong>external forces</strong> (e.g. gravity, friction, collisions with other objects...)? </p>
+<p>Using pure vector math to simulate physically "realistic" movement would still be possible -- it would just become more complicated!</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>What if I told you Unity has an entire system in place for <strong>simulating physics-based motion</strong>? 👀</p>
+<hr />
+<h2 id="physics-engine">Physics Engine</h2>
+<p>The two main components you will work with are the <strong>Rigidbody</strong> and the <strong>Collider</strong></p>
+<h3 id="rigidbody">Rigidbody</h3>
+<blockquote>
+<p>Read Unity's overview of <a href="https://docs.unity3d.com/2022.3/Documentation/Manual/RigidbodiesOverview.html">Rigidbody physics</a> and their documentation on the Rigidbody class in the <a href="https://docs.unity3d.com/2022.3/Documentation/Manual/class-Rigidbody.html">Unity Manual</a> and <a href="https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Rigidbody.html">Scripting API</a>.</p>
+</blockquote>
+<p><br></p>
+<div class="div-container">
+    <div style="width:47.5%">
+        <img src="../img/rb.jpg">
+    </div>
+    <div style="width:47.5%">
+        <ul>
+            <li style="margin-top:0">Responsible for making an object move with physics
+            </li>
+            <li>Has properties like <b>mass</b>, <b>drag</b>, and <b>angular drag</b>, which affect the way an object responds to collisions and forces
+            </li>
+            <li>Movement and rotation can be constrained along the X, Y, and Z axes
+            </li>
+            <li>Moves independently, regardless of parent-child relationship.
+            </li>
+        </ul>
+    </div>
+</div>
+
+<h4 id="kinematic-rigidbodies">Kinematic Rigidbodies</h4>
+<p>When isKinematic is "true", the rigidbody will <strong>not</strong> be affected by physics (i.e. animations have to be done by changing transform position in scripts or animation clips).</p>
+<p>However, they can affect the motion of other rigidbodies through <strong>collisions</strong> (if detectCollisions is "true") or <strong>joints</strong> (if connected to a non-kinematic rigidbody with a joint.) </p>
+<h3 id="collider">Collider</h3>
+<div class="div-container">
+    <div style="width:47.5%">
+        <img src="../img/collidercapsule.jpg"><br><br><img src="../img/editcollider.jpg">
+    </div>
+    <div style="width:47.5%">
+        <ul>
+            <li style="margin-top:0">A shape that the physics engine uses to detect when objects touch
+            </li>
+            <li>Comes in several shapes like <b>sphere</b>, <b>box</b>, and <b>capsule</b>*.<br><br><i>(*Note: There are also <b>mesh</b> colliders that take the shape of any custom mesh of choice -- these offer more accurate details in collider shapes, but have some <a href="https://docs.unity3d.com/2022.3/Documentation/Manual/mesh-colliders-introduction.html">limitations</a> with their range of use.)</i> 
+            </li>
+            <li>Multiple can be combined to make more complex shapes.
+            </li>
+            <li>Optionally can add a <b>Physic Material</b> to change bounciness and friction of an object.
+            </li>
+            <li>In the scene view, colliders are visualized with a green outline, and can have its scale, position, and sometimes orientation transformed using <b>Edit Collider</b> or the <b>Edit Bounding Volume</b> tool.
+            </li>
+        </ul>
+    </div>
+</div>
+
+<p><br></p>
+<h2 id="moving-a-rigidbody">Moving a Rigidbody</h2>
+<h3 id="using-with-forces-torque">Using with Forces &amp; Torque</h3>
+<blockquote>
+<p>Read about <a href="https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Rigidbody.AddForce.html">Rigidbody.AddForce()</a> and <a href="https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Rigidbody.AddTorque.html">Rigidbody.AddTorque()</a> method functions in Unity's Scripting API.</p>
+</blockquote>
+<p><br></p>
+<p><img src="../img/physics-spaceship.gif"></p>
+<p>This simple spacecraft is controlled in 2D using <strong>force</strong> and <strong>torque</strong>.</p>
+<p>We can "push" rigidbodies by applying force to them, and make them spin by applying torque. This technique makes for <strong>more physically realistic</strong> motion, but can be <strong>difficult</strong> to control.</p>
+<p>Use <code>FixedUpdate()</code> to update physics-based methods like <code>AddForce()</code> and <code>AddTorque()</code>.</p>
+<pre><code class="language-csharp">using UnityEngine;
+
+public class Rocketship : MonoBehaviour
+{
+    Rigidbody rbody;
+    bool rocketBoost = false;
+    float spin = 0f;
+
+    // Start is called before the first frame update
+    void Start()
+    {
+        rbody = GetComponent&lt;Rigidbody&gt;();
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        //get input in the update function!
+        rocketBoost = Input.GetKey(KeyCode.Space);
+
+        spin = Input.GetAxis(&quot;Horizontal&quot;); //-1 : 1
+    }
+
+    //use fixedupdate to update physics
+        //its more consistent than update!
+    private void FixedUpdate()
+    {
+        if (rocketBoost == true)
+        {
+            //pushes the rigidbody
+            rbody.AddForce(transform.up * 100);
+            //transform.up gives us up relative to this object's oriention
+        }
+
+        //spins the rigidbody
+        rbody.AddTorque(new Vector3(0, 0, 1) * spin * 30f);
+    }
+}
+</code></pre>
+<p><br></p>
+<h3 id="moveposition">MovePosition</h3>
+<blockquote>
+<p>Read about <a href="https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Rigidbody.MovePosition.html">Rigidbody.MovePosition()</a> in Unity's Scripting API.</p>
+</blockquote>
+<p><br></p>
+<p>Sometimes, we want an object to be able to move in a <strong>more controlled</strong> way, while still affecting other rigidbodies. This is where <strong>MovePosition</strong> comes in. </p>
+<p>The move position function automatically calculates what forces to apply to a rigidbody to move it to a given position. This offers more control over the object's motion.</p>
+<p>To make it so an object like this is less affected by other objects and forces, make sure to <strong>increase its mass and drag</strong>.</p>
+<p><img src="../img/bounce game demo.gif"></p>
+<pre><code class="language-csharp">using UnityEngine;
+
+public class MovePositionDemo : MonoBehaviour
+{
+    Rigidbody rbody;
+    float h;
+    public float speed = 4f;
+
+    // Start is called before the first frame update
+    void Start()
+    {
+        rbody = GetComponent&lt;Rigidbody&gt;();
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        h = Input.GetAxis(&quot;Horizontal&quot;);
+    }
+
+    private void FixedUpdate()
+    {
+        Vector3 newPosition = transform.position;
+        newPosition += Vector3.right * h * speed * Time.deltaTime;
+        //move the rigidbody to a given position
+        rbody.MovePosition(newPosition);
+    }
+}
+</code></pre>
+<p><br></p>
+<h2 id="collision-detection">Collision Detection</h2>
+<p>Use the following functions to detect when a collision occurs.</p>
+<pre><code class="language-csharp">public class CollisionDemo:MonoBehaviour
+{
+    void OnCollisionEnter(Collision collision)
+    {
+        //occurs the moment a collision begins
+        Debug.Log(&quot;collision began with &quot; + collision.gameObject.name);
+    }
+    void OnCollisionStay(Collision collision)
+    {
+        //occurs continuously while two objects touch
+            Debug.Log(&quot;touching &quot; + collision.gameObject.name);
+    }
+    void OnCollisionExit(Collision collision)
+    {
+            //occurs the moment two objects stop touching
+        Debug.Log(&quot;collision with &quot; + collision.gameObject.name + &quot; ended&quot;);
+    }
+}
+</code></pre>
+<p><br></p>
+<p>Note that these functions only work in a script attached to a game object with a rigidbody and a collider. The variable <code>collision</code> provides information about what was hit.</p>
+<p><br></p>
+<p>For example, you could get the <a href="https://docs.unity3d.com/Manual/Tags.html">tag</a> belonging to the collider's GameObject.</p>
+<pre><code class="language-csharp">void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.tag == &quot;Enemy&quot;){
+            Debug.Log(&quot;Enemy hit!&quot;);
+        }
+    }
+</code></pre>
+<p><br></p>
+<h4 id="collision-detection-modes">Collision Detection Modes</h4>
+<p><strong>Discrete</strong> (default mode) is the least computationally demanding mode of collision detection, it's good for detecting slow collisions. </p>
+<p>If you have fast-moving rigidbody collisions, try setting it to <strong>Continuous Speculative</strong>.</p>
+<p>If you notice some missed or inaccurate collisions, try using <strong>Continuous</strong> for collisions with static objects, or <strong>Continuous Dynamic</strong> for collisions with other fast-moving objects. </p>
+<p><br></p>
+<h2 id="triggers">Triggers</h2>
+<p>You can also use the physics engine to detect when one collider enters the space of another without creating a collision. </p>
+<p>A collider configured as a Trigger (using the <strong>isTrigger</strong> property) does not behave as a solid object and will simply allow other colliders to pass through. This is useful for doors, collectables, and more.</p>
+<p><img alt="" src="../img/triggercollider.png" /></p>
+<p><br></p>
+<p>When a collider enters its space, a trigger will call the <code>OnTriggerEnter</code> function on the trigger object’s scripts.</p>
+<pre><code class="language-csharp">public class TriggerDemo:MonoBehaviour
+{
+    void OnTriggerEnter(Collider other)
+    {
+        //occurs the moment an object enters the trigger
+        Debug.Log(other.gameObject.name + &quot; entered the trigger&quot;);
+    }
+    void OnTriggerStay(Collider other)
+    {
+        //occurs while an object is in the trigger
+        Debug.Log(other.gameObject.name + &quot; remains in the trigger&quot;);
+    }
+    void OnTriggerExit(Collider other)
+    {
+        //occurs the moment an object leaves the trigger
+        Debug.Log(other.gameObject.name + &quot; left the trigger&quot;);
+    }
+}
+</code></pre>
+<p><br></p>
+<hr />
+<h2 id="2d-physics">2D Physics</h2>
+<p>Adapting the above scripts and examples to <a href="https://docs.unity3d.com/2022.3/Documentation/ScriptReference/UnityEngine.Physics2DModule.html"><strong>2D physics</strong></a> requires switching out certain component and function names to their 2D equivalents... which usually just involves <strong>adding “2D” to the end</strong>. </p>
+<p><br></p>
+<table>
+    <thead>
+        <tr>
+            <th></th>
+            <th>3D Physics</th>
+            <th>2D Physics</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td rowspan=3>Components</td>
+            <td>Rigidbody</td>
+            <td>Rigidbody2D</td>
+        </tr>
+        <tr>
+            <td>Collider</td>
+            <td>Collider2D</td>
+        </tr>
+        <tr>
+            <td>Collision</td>
+            <td>Collision2D</td>
+        </tr>
+        <tr>
+            <td rowspan=6 style="border-bottom: none;">Functions</td>
+            <td>OnCollisionEnter</td>
+            <td>OnCollisionEnter2D</td>
+        </tr>
+        <tr>
+            <td>OnCollisionExit</td>
+            <td>OnCollisionExit2D</td>
+        </tr>
+        <tr>
+            <td>OnCollisionStay</td>
+            <td>OnCollisionStay2D</td>
+        </tr>
+        <tr>
+            <td>OnTriggerEnter</td>
+            <td>OnTriggerEnter2D</td>
+        </tr>
+        <tr>
+            <td>OnTriggerExit</td>
+            <td>OnTriggerExit2D</td>
+        </tr>
+        <tr>
+            <td>OnTriggerStay</td>
+            <td>OnTriggerStay2D</td>
+        </tr>
+    </tbody>
+</table>
+
+<p><br></p>
+<pre><code class="language-csharp">private void OnTriggerEnter2D(Collider2D other)
+    {
+        Debug.Log(&quot;2D trigger entered.&quot;);
+    }
+</code></pre>
+<p><br></p>
+<hr />
+<h2 id="exercise">Exercise</h2>
+<p>In preparation for Project 2...</p>
+<h3 id="option-a-player-movement"><strong>OPTION A</strong>: Player Movement</h3>
+<p>Make a player character placeholder (capsule, cube, sphere) that moves along a plane using <strong>forces</strong>, <strong>torque</strong>, or <strong>MovePosition</strong>. </p>
+<ul>
+<li>what are the directions in which your player can move?</li>
+<li>how much friction should your player movement have?</li>
+<li>how is your character's motion affected by gravity, if at all? </li>
+</ul>
+<p>You could also try using <a href="https://docs.unity3d.com/ScriptReference/Input.GetAxis.html">Input.GetAxis</a> to map to arrowkeys, WASD, or MouseX/Y; </p>
+<p><br></p>
+<p>OR</p>
+<h3 id="option-b-ball-movement"><strong>OPTION B</strong>: Ball Movement</h3>
+<p>Make a simple prototype of the <strong>ball interaction</strong> for your game.</p>
+<ul>
+<li>a paddle or club hitting a ball? </li>
+<li>a ball throwing mechanic? </li>
+<li>how bouncy or heavy should the ball be?</li>
+</ul>
+<p><br></p>
+<p>For both exercise options, focus on getting the <em>feeling</em> of the interaction right! </p>
+<p><br></p>
+<hr />
+<h2 id="some-course-reminders">Some course reminders</h2>
+<ul>
+<li>Reading Response 2 is due on Thursday. </li>
+</ul></p>
+    </article>
+</section>
+<!-- endblock -->
+            </main>
+
+            
+                    <!-- block preview -->
+<!-- endblock -->
+            
+
+            
+                    <!-- block footer -->
+<footer class="pt-4 my-md-5 pt-md-5 border-top" id="component-footer">
+    <div class="row">
+        <div class="col-12 col-md">
+                <!-- block copyright -->
+
+    <small class="d-block mb-3">
+        Made with
+        <a href="https://github.com/FernandoCelmer/mkdocs-simple-blog" target="_blank" rel="noopener">
+            Simple Blog for MkDocs
+        </a>
+    </small>
+
+<!-- endblock -->
+        </div>
+    </div>
+</footer>
+<!-- endblock -->
+            
+        </div>
+
+            <script>var base_url = '..';</script>
+            <script src="../assets/js/jquery-3.3.1.slim.min.js""></script>
+            <script src="../assets/js/bootstrap.bundle.min.js""></script>
+            <script src="../assets/js/main.min.js""></script>
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js" defer></script>
+                <script src="../javascripts/config.js" defer></script>
+                <script src="../search/main.js" defer></script>
+
+    </body>
+
+</html>
