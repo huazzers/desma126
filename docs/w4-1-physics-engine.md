@@ -7,7 +7,14 @@
 📦 **Unity packages from today's class:**
 > 
 > - Class Demo: [Rocketship](https://drive.google.com/file/d/1CtX8i419p3Tt_ZFlw0ZkOT6jcIpQsatI/view?usp=drive_link)
+
+<br>
+
+📚 **Other relevant resources to today's topic:**
+>
 > - The previous instructor for the Game Engine course, John Brumley made a wonderful sandbox to illustrate how Rigidbodies, collisions, triggers, and object tags can be used. You may find the package link [here](https://drive.google.com/file/d/1UKYuFHLns5P9PLSVDJrkA37vGY1rEMjh/view?usp=sharing). <br><br>![](./img/physicsdemo_john.png)
+> - Unity Collision Matrix: a reference table for troubleshooting collisions and triggers <br> ![](./img/unitycollisionmatrix.png)
+> - [Ultimate Frame Data](https://ultimateframedata.com/): archive of how video games like Super Smash Bros and Street Fighter have set up timed hit boxes for character attack sequences. <br> ![](./img/YoshiEggLay.gif)
 
 <br>
 
