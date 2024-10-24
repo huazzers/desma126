@@ -1,0 +1,654 @@
+<!doctype html>
+<html>
+    <head>
+                <title>W4 2 inputsystem statemachine event - 👾 DESMA126 Game Engine</title>
+
+            <meta charset="utf-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+            
+            
+            
+
+            
+                <link  rel="icon" type="image/x-icon" href="../assets/img/favicon.ico">
+            
+                    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+                        <script>hljs.initHighlightingOnLoad();</script>
+            <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fira+Mono:400,700">
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+            <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+            <link rel="stylesheet" href="../assets/css/main.min.css">
+                <link href="../extra.css" rel="stylesheet">
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+                <script src="../javascripts/config.js"></script>
+                <script src="../search/main.js"></script>
+
+            
+                
+            
+    </head>
+
+    <body>
+        <div class="container py-3">
+            <header>
+                    <!-- block header -->
+<nav class="navbar navbar-expand-xl border-bottom">
+    <div class="container-fluid">
+        
+
+        
+            <span class=" fs-4 title-color site-name" id="component-site-name" style="text-transform: uppercase;">👾 DESMA126 Game Engine</span>
+        
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsMenu"
+            aria-controls="navbarsMenu" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse flex-column ml-auto" id="navbarsMenu">
+            <ul class="navbar-nav">
+
+                <!-- block menu -->
+                <li class="nav-item">
+                    <!-- block menu -->
+    
+        <li class="nav-item" id="component-menu">
+            <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="
+                            nav-link text-gray text-decoration-none" href="..">[🏠 Home]</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="
+                            nav-link text-gray text-decoration-none" href="../syllabus/">[📜 Syllabus]</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="
+                            nav-link text-gray text-decoration-none" href="../schedule/">[📅 Schedule]</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="
+                            nav-link dropdown-toggle text-decoration-none" href="#" data-bs-toggle="dropdown">[📌 Assignments]</a>
+                            <ul class="dropdown-menu">
+                                    <!-- block dropdown-menu -->
+    <li>
+        <a href="../how-to-submit/" class="dropdown-item text-decoration-none ">How To Submit</a>
+    </li>
+<!-- endblock -->
+                                    <!-- block dropdown-menu -->
+    <li>
+        <a href="../readings-and-homeplays/" class="dropdown-item text-decoration-none ">Readings & Homeplays</a>
+    </li>
+<!-- endblock -->
+                                    <!-- block dropdown-menu -->
+    <li>
+        <a href="../project-1/" class="dropdown-item text-decoration-none ">Project 1</a>
+    </li>
+<!-- endblock -->
+                                    <!-- block dropdown-menu -->
+    <li>
+        <a href="../project-2/" class="dropdown-item text-decoration-none ">Project 2</a>
+    </li>
+<!-- endblock -->
+                                    <!-- block dropdown-menu -->
+    <li>
+        <a href="../project-3/" class="dropdown-item text-decoration-none ">Project 3</a>
+    </li>
+<!-- endblock -->
+                            </ul>
+                        </li>
+            </ul>
+        </li>
+<!-- endblock -->
+                </li>
+                <!-- endblock -->
+
+                <!-- block search -->
+                <li class="nav-item">
+                    <a class="collapsed" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+                        <div class="md-search-icon">
+                            <i class="fa fa-search" aria-hidden="true"></i>
+                        </div>
+                    </a>
+                </li>
+                <!--  endblock -->
+
+                <!-- block source -->
+                <li class="nav-item">
+                    
+                </li>
+                <!--  endblock -->
+            </ul>
+        </div>
+    </div>
+</nav>
+<!--  endblock -->
+            </header>
+
+            <main><!-- block search -->
+<div class="collapse" id="collapseExample">
+    <div role="search" class="search-box">
+        <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+            <input type="text" name="q" class="search-query"
+            placeholder="Search docs" title="Type search term here" />
+        </form>
+    </div>
+</div>
+<!-- endblock -->
+                    <!-- block content -->
+<section class="container post">
+    <article>
+        <header>
+            
+            
+        </header>
+        <p><script>hljs.highlightAll();</script>
+
+<h1 id="input-systems-state-machines-events">Input Systems, State Machines, Events</h1>
+<hr />
+<p>📦 <strong>Unity packages from today's class:</strong></p>
+<blockquote>
+<p>Before importing both packages, make sure to install the Input System package on your Editor as well.
+- <a href="https://drive.google.com/file/d/1fxOu-Rvy_G3shZh2Rm6OedAWwUqqYJ8M/view?usp=drive_link">Cursor Input for World Space and Raycast</a>
+- <a href="https://drive.google.com/file/d/1f43f0bme2UTEzqcRk4T30ldGEymuVnJH/view?usp=drive_link">New Input System Demo</a></p>
+</blockquote>
+<p><br></p>
+<p>📚 <strong>Other relevant resources to today's topic:</strong></p>
+<blockquote>
+<ul>
+<li><a href="https://hardwaretester.com/gamepad">Gamepad Tester</a>: Online tool for testing gamepad input; useful for understanding how joystick buttons are mapped.</li>
+<li><a href="https://learn.unity.com/tutorial/moving-the-player?uv=2022.3&amp;projectId=5f158f1bedbc2a0020e51f0d#650b1ec9edbc2a263aa43ebd">Unity's Rollaball Tutorial: Moving the Player</a>: A simple example of how to set up player movement using Unity's new Input System. </li>
+</ul>
+</blockquote>
+<hr />
+<p>To recap, we've already learned how to map inputs to certain lines of code <a href="../w2-2-basicinput-ui-lights-camera/#basic-input">using KeyCodes and GetKey</a>. </p>
+<p>However, as we get more ambitious with our projects, it makes sense to use a more organised solution for mapping input controls to specific actions. </p>
+<hr />
+<h2 id="legacy-input-solution-the-input-manager">Legacy Input Solution: the Input Manager</h2>
+<p>From the most recent version of Unity's Manual (Unity 6, 6.000)</p>
+<blockquote>
+<p>Unity has a built-in legacy input solution called the Input Manager. This is not the recommended workflow, as it is less flexible than the Input System Package, and will be removed in future versions of Unity.</p>
+</blockquote>
+<p><br></p>
+<p>As of now, Unity legacy input system is still their default solution. </p>
+<p><br></p>
+<h3 id="input-manager">Input Manager</h3>
+<p>Go to <strong>Edit</strong> &gt; <strong>Project Settings</strong> &gt; <strong>Input Manager</strong>.</p>
+<p><img alt="" src="../img/inputmanager.png" /></p>
+<p><br></p>
+<p>The Input Manager comes with a default set of actions that are already mapped to keyboard and joystick controls. These actions can be called using their names. </p>
+<p><br></p>
+<h3 id="directional-input-from-keyboard-and-joysticks">Directional Input from Keyboard and Joysticks</h3>
+<p>Use <a href="https://docs.unity3d.com/ScriptReference/Input.GetAxis.html">Input.GetAxis</a> to read analog values from a gamepad. The output range would be from -1 to 1 along both horizontal and vertical axes.</p>
+<p>The joystick is mapped to the axes <strong>Horizontal</strong> and <strong>Vertical</strong> by default, which also read the WASD and Arrow keys. </p>
+<p><img alt="" src="../img/joystickaxes.gif" /></p>
+<p><br></p>
+<pre><code class="language-csharp">float moveX = Input.GetAxis(&quot;Horizontal&quot;);
+float moveY = Input.GetAxis(&quot;Vertical&quot;);
+</code></pre>
+<p><br></p>
+<p>It's sometimes useful to convert these inputs into a vector, for instance if you are using directional input to change a character's velocity:</p>
+<pre><code class="language-csharp">Vector3 heading = new Vector3(Input.GetAxis(&quot;Horizontal&quot;), 0, Input.GetAxis(&quot;Vertical&quot;));
+</code></pre>
+<p><br></p>
+<h3 id="directional-input-from-mouse">Directional Input from Mouse</h3>
+<p>You can also use the axes <strong>Mouse X</strong> and <strong>Mouse Y</strong> to get information about how the mouse is moving. </p>
+<p>Note that this does <em>NOT</em> give you the position of the cursor on screen, but tells you the <strong>direction</strong> and <strong>speed</strong> the player is moving the mouse. </p>
+<p>This is often used to aim the camera in first person games.</p>
+<pre><code class="language-csharp">float sensitivity = 8f;
+public GameObject camera;
+
+void Update()
+{
+    float mouseX = Input.GetAxis(&quot;Mouse X&quot;);
+    camera.transform.Rotate(Vector3.up, mouseX * sensitivity * Time.deltaTime);
+}
+</code></pre>
+<p><br></p>
+<h3 id="get-button-presses-from-keyboards-and-gamepads">Get Button Presses from Keyboards and Gamepads</h3>
+<p>The GetKey functions are great for getting keyboard input, but Unity also lets us detect keyboard and gamepad inputs all at once using the <strong>GetButton</strong> functions.</p>
+<pre><code class="language-csharp">if(Input.GetButton(&quot;Jump&quot;))
+{
+    Debug.Log(&quot;space or joystick button 3 are pressed&quot;);
+}
+
+if(Input.GetButtonDown(&quot;Fire1&quot;))
+{
+    Debug.Log(&quot;left ctrl or left mb or joystick button 0 was just pressed down&quot;);
+}
+
+if(Input.GetButtonUp(&quot;Fire2&quot;))
+{
+    Debug.Log(&quot;left alt or right mb or joystick button 1 was just released&quot;);
+}
+</code></pre>
+<p><br></p>
+<p>You can customize which string values and button mappings the input system uses for these functions in the Input Manager, but in most cases the default settings work well. You have access to <strong>Jump</strong>, <strong>Fire 1</strong>, <strong>Fire 2</strong>, <strong>Fire 3</strong>, which map to the four face buttons on a gamepad, to several commonly used keys on the keyboard, and in some cases to the buttons on the mouse.</p>
+<p><Br></p>
+<h3 id="cursor-input">Cursor Input</h3>
+<h4 id="screem-space-and-world-space">Screem Space and World Space</h4>
+<p>It's easy enough to read the screen coordinates of the cursor.</p>
+<p>Use <strong>Input.mousePosition</strong> to get the current position of the cursor in screen space.</p>
+<pre><code class="language-csharp">Vector3 mousePos = Input.mousePosition;
+//x is the x coordinate of the cursor in screenspace
+//y is the y coordinate of the cursor in screenspace
+//z is always 0.
+</code></pre>
+<p><br></p>
+<p>In screen space, the <strong>bottom-left of the screen or window</strong> is at <strong>(0, 0)</strong>. The <strong>top-right of the screen or window</strong> is the <strong>height</strong> and <strong>width</strong> of the screen in pixels, at (<a href="https://docs.unity3d.com/ScriptReference/Screen-width.html">Screen.width</a>, <a href="https://docs.unity3d.com/ScriptReference/Screen-height.html">Screen.height</a>).</p>
+<p>The trick is to convert from screen space to the game's world coordinates (aka "<strong>world space</strong>"). </p>
+<p>How a position in screen space corresponds to world space depends on where the camera is looking, whether the camera uses perspective or orthographic projection, and how "deep" into the scene you want the cursor to be.</p>
+<p>If you get a reference to the camera in your scene, you can convert from a screen coordinate to a world coordinate with <strong>Camera.ScreenToWorldPoint</strong>.</p>
+<pre><code class="language-csharp">Camera camera;
+void Start()
+{
+    camera = GetComponent&lt;Camera&gt;();
+}
+
+void Update()
+{
+    Vector3 mousePos = Input.mousePosition;
+    mousePos.z = 1; //the z component of the vector will
+    //determine the distance of our new position from the camera
+    Vector3 worldPos = camera.ScreenToWorldPoint(mousePos);
+}
+</code></pre>
+<p>In this case, ScreenToWorldPoint gives us a point one unit in front of the camera, with the same apparent position on screen as the cursor.</p>
+<p><br></p>
+<h4 id="raycasting-from-the-camera">Raycasting from the camera</h4>
+<p>If you want to interact with objects in a 3D scene using the mouse, at some point you will have to use <strong>raycasting</strong>.</p>
+<p>First, you need to get a Ray that passes from the camera, through your cursor, into the scene.</p>
+<p>A Ray contains <strong>two vectors</strong>, which represent the ray's <strong>origin point in space</strong> and its <strong>direction vector</strong>.</p>
+<pre><code class="language-csharp">Camera camera;
+void Start()
+{
+    camera = GetComponent&lt;Camera&gt;();
+}
+
+void Update()
+{
+    Vector3 mousePos = Input.mousePosition;
+    Ray cursorRay = camera.ScreenPointToRay(mousePos);
+}
+</code></pre>
+<p><br></p>
+<p>Then, you can use the ray to <strong>raycast</strong> against the ground or other objects in your scene.</p>
+<pre><code class="language-csharp">RaycastHit hitInfo
+if(Physics.Raycast(cursorRay, out hitInfo))
+{
+    Debug.Log(hitInfo.point); //prints the position in the scene that the raycast hit...
+
+    //or do something else, depending on what you hit!
+    if (hitInfo.collider.CompareTag(&quot;Enemy&quot;)){
+        Debug.Log(&quot;Found Enemy!&quot;);
+    }
+}
+</code></pre>
+<hr />
+<h2 id="unitys-new-input-system-package">Unity's (New) Input System Package</h2>
+<p>The Input System is Unity's latest solution for binding controls to actions. It's meant to consolidate everything input-related in a single interface, so you can do the following from the Input Action Editor:</p>
+<ul>
+<li>map actions across different types of control devices;</li>
+<li>organise action maps for different contexts (e.g. player controls, UI controls)</li>
+<li>determine how input values should be processed, and how buttons should be interacted with.</li>
+<li>managing inputs for local multiplayer projects.</li>
+</ul>
+<h3 id="installing-the-input-system">Installing the Input System</h3>
+<p>Go to <strong>Window</strong> &gt; <strong>Package Manager</strong> &gt; look for <strong>"Input System"</strong> in the <strong>Unity Registry</strong>, and click <strong>Install</strong>. The Unity Editor will ask you to restart your project, so make sure to save any changes beforehand!</p>
+<p><img alt="" src="../img/inputsystempackage.jpg" /></p>
+<p><br></p>
+<p>It's still possible to use both the old Input Manager and the new Input System package at the same time (most use cases for this are to help ease the transition across both input solutions.) </p>
+<p>You can set the method for handling input in <strong>Edit</strong> &gt; <strong>Project Settings</strong> &gt; in the <strong>Player</strong> tab, look in <strong>"Other Settings"</strong>, and scroll down to <strong>Active Input Handling</strong>.</p>
+<p><img alt="" src="../img/activeinputhandling.jpg" /></p>
+<p><br></p>
+<h3 id="making-an-input-action-asset-for-player-controls">Making an Input Action Asset for Player Controls</h3>
+<p>First, add a <strong>Player Input component</strong> to your Player GameObject. </p>
+<p>Next, create an new <strong>Input Action Asset</strong>. You can click the "<strong>Create Actions...</strong>" button from the Player Input component to create an asset with Unity's presets; or start from scratch by right clicking in your <strong>Project asset tab</strong> &gt; <strong>Create</strong> &gt; <strong>Input Actions</strong>.</p>
+<p><br> </p>
+<h4 id="input-action-asset">Input Action Asset</h4>
+<p>Double click on your Input Action Asset to open up the <strong>Input Action Editor</strong> window. </p>
+<p>This is where you can store and manage the following information: </p>
+<ul>
+<li><strong>Action Map</strong>: separates a set of actions for a specific context (eg. Player movement, UI controls)</li>
+<li><strong>Actions</strong>: contained within Action Maps; single events that can be triggered with the assigned inputs. </li>
+<li><strong>Bindings</strong>: contained within Actions; determines which physical controls will trigger the Action. </li>
+<li><strong>Control Scheme</strong>: which device contains the specific controls that players can use; could also be used to assign player controls in local multiplayer settings. </li>
+</ul>
+<p><br></p>
+<p>Changes in this editor have to be saved regularly. You could also toggle "<strong>Auto Save</strong>" at the top of the window. </p>
+<p><br></p>
+<h4 id="action-callback-functions">Action Callback Functions</h4>
+<p>One easy way to access action events in scripts is to use the callback functions for each action.</p>
+<p>For example, if you create an Action called "Jump", the Input System will map the name of this action to a callback function called "OnJump". </p>
+<p>The same rule applies for any action of any name:</p>
+<ul>
+<li>"Move" gets mapped to "OnMove"</li>
+<li>"Fire" gets mapped to "OnFire"</li>
+<li>"CustomAction" gets mapped to "OnCustomAction"</li>
+</ul>
+<p>... and so forth!</p>
+<p><br></p>
+<p>This means we can decide what happens when the action gets triggered by calling the function in scripts. </p>
+<p>Before we can access these functions, we must include the Input System namespace at the top of our script:</p>
+<pre><code class="language-csharp">using UnityEngine.InputSystem;
+</code></pre>
+<p>For a button type action called Jump:</p>
+<pre><code class="language-csharp">void OnJump(){
+    // write a code for the player jump motion here! 
+}
+</code></pre>
+<p><br></p>
+<p>If we need to use the values from our action inputs, we can pass them as arguments for our functions in this way: </p>
+<pre><code class="language-csharp">Vector2 movement;
+
+void OnMove(InputValue moveValue) 
+{
+    // move takes an input value of type Vector2
+    // so we should get a Vector2 value. 
+
+    movement = moveValue.Get&lt;Vector2&gt;() * speed;
+}
+</code></pre>
+<p>You may also check whether a button is pressed using InputValue.isPressed -- though this will only work if the Action triggers on both the <strong>Press and Release</strong>, which can be done with a <strong>Press</strong> Interaction for that Action or by using a Value Action Type.</p>
+<pre><code class="language-csharp">bool modifierPressed;
+
+void OnModifier(InputValue value)
+{
+    modifierPressed = value.isPressed;
+}
+</code></pre>
+<hr />
+<h2 id="state-machines">State Machines</h2>
+<blockquote>
+<p>adapted from <a href="https://gameprogrammingpatterns.com/state.html">Game Programming Patterns</a> by Robert Nystrom.</p>
+</blockquote>
+<h3 id="the-problem">The Problem</h3>
+<p>We have a player character that jumps. Push the jump button, and they should jump. Simple enough: </p>
+<pre><code class="language-csharp">void Update()
+{
+    if(Input.GetButtonDown(&quot;Jump&quot;))
+    {
+        yVelocity = JUMP_VELOCITY;
+    setGraphics(IMAGE_JUMP);
+    }
+}
+</code></pre>
+<p><br></p>
+<p>Spot the bug?</p>
+<p>There’s nothing to prevent “air jumping” — keep hammering Jump while the player is in the air, and they will float forever. The simple fix is to add an <code>isJumping</code> boolean field to our player that tracks when they're jumping, and then do:</p>
+<pre><code class="language-csharp">void Update()
+{
+    if(Input.GetButtonDown(&quot;Jump&quot;) &amp;&amp; isJumping == false)
+    {
+        yVelocity = JUMP_VELOCITY;
+        setGraphics(IMAGE_JUMP);
+        isJumping = true;
+    }
+}
+</code></pre>
+<p><br></p>
+<h3 id="another-problem">Another Problem</h3>
+<p>Next, we want the player to duck if the down button is pressed while they're on the ground and stand back up when the button is released:</p>
+<pre><code class="language-csharp">void Update()
+{
+  if (Input.GetButtonDown(&quot;B&quot;) &amp;&amp; isJumping == false)
+  {
+    // Jump if not jumping...
+  }
+  else if (Input.GetButtonDown(&quot;Crouch&quot;))
+  {
+    if (isJumping == false)
+    {
+      setGraphics(IMAGE_DUCK);
+    }
+  }
+  else if (Input.GetButtonUp(&quot;Crouch&quot;))
+  {
+    setGraphics(IMAGE_STAND);
+  }
+}
+</code></pre>
+<p><br></p>
+<p>Spot the bug this time?</p>
+<p>With this code, the player could:</p>
+<ol>
+<li>Press <strong>down</strong> to duck.</li>
+<li>Press <strong>Jump</strong> to jump from a ducking position.</li>
+<li>Release <strong>down</strong> while still in the air.</li>
+</ol>
+<p>The player will switch to their standing graphic in the middle of the jump. Time for another Boolean variable…</p>
+<pre><code class="language-csharp">void Update()
+{
+  if (Input.GetButtonDown(&quot;Jump&quot;))
+  {
+    if (!isJumping &amp;&amp; !isDucking)
+    {
+      // Jump...
+    }
+  }
+  else if (Input.GetButtonDown(&quot;Crouch&quot;))
+  {
+    if (!isJumping)
+    {
+      isDucking = true;
+      setGraphics(IMAGE_DUCK);
+    }
+  }
+  else if (Input.GetButtonUp(&quot;Crouch&quot;))
+  {
+    if (isDucking)
+    {
+      isDucking = false;
+      setGraphics(IMAGE_STAND);
+    }
+  }
+}
+</code></pre>
+<p><br></p>
+<p>Suppose we want to add other moves, like a cool dive attack if the player presses down in the middle of a jump, or a dash that's only available on the ground. To add these features with this approach, we would need to add more Boolean variables, and keep adding onto our increasingly complicated series of if / else statements...</p>
+<p>Clearly, we need another approach!</p>
+<p><br></p>
+<h3 id="finite-state-machines">Finite State Machines</h3>
+<p>Grab a pen and paper, then draw a flow chart that maps out each and every possible action the player could be doing in a <strong>box</strong>: standing, jumping, ducking, and diving. </p>
+<p>When the player can respond to a button press in one of those states, draw an <strong>arrow</strong> from that box, label it with that button, and connect it to the state they change to. </p>
+<p>...and you've just created a <em>finite state machine</em>!</p>
+<p><img alt="" src="../img/state-flowchart.png" /></p>
+<p>Finite state machines (FSM) came out of a branch of computer science called automata theory, whose family of data structures also includes the famous Turing machine. FSMs are the simplest member of that family.</p>
+<p>The gist is:</p>
+<ul>
+<li><strong>You have a fixed <em>set of states</em> that the machine can be in.</strong> For our example, that’s standing, jumping, ducking, and diving.</li>
+<li><strong>The machine can only be in <em>one</em> state at a time.</strong> Our heroine can’t be jumping and standing simultaneously. In fact, preventing that is one reason we’re going to use an FSM.</li>
+<li><strong>A sequence of <em>inputs</em> or <em>events</em> is sent to the machine.</strong> In our example, that’s the raw button presses and releases.</li>
+<li><strong>Each state has a <em>set of transitions</em>, each associated with an input and pointing to a state.</strong> When an input comes in, if it matches a transition for the current state, the machine changes to the state that transition points to.</li>
+</ul>
+<p>For example, pressing down while standing transitions to the ducking state. Pressing down while jumping transitions to diving. If no transition is defined for an input on the current state, the input is ignored.</p>
+<p>In their pure form, that’s the whole banana: states, inputs, and transitions. You can draw it out like a little flowchart. Unfortunately, the compiler doesn’t recognize our scribbles, so how do we go about implementing one?</p>
+<p><br></p>
+<h3 id="implementing-a-state-machine">Implementing a State Machine</h3>
+<p>Lets start simple with strings and <code>if</code> statements...</p>
+<pre><code class="language-csharp">string state = &quot;ground&quot;
+
+void Update()
+{
+    if(state == &quot;ground&quot;)
+    {
+        GroundUpdate();
+    }
+    else if(state == &quot;jumping&quot;)
+    {
+        JumpUpdate();
+    }
+    else if(state == &quot;dive&quot;)
+    {
+        DiveUpdate();
+    }
+}
+</code></pre>
+<p><br></p>
+<p>We write a function to encapsulate each state: <code>GroundUpdate</code>, <code>JumpUpdate</code>, and <code>DiveUpdate</code>. For now, this function can handle transitions as well. Our <code>GroundUpdate</code> function could look like this:</p>
+<pre><code class="language-csharp">void GroundUpdate()
+{
+    //if pressing jump,
+    if(Input.GetButtonDown(&quot;Jump&quot;))
+    {
+        //transition to jump state
+        state = &quot;jumping&quot;;
+    }
+    else
+    {
+        //control ground movement here
+    }
+}
+</code></pre>
+<p><br></p>
+<p>This solution basically works, but is vulnerable to typos. If we ever misspell or capitalize one of our state names, the game will stop working.</p>
+<p>Consider using an <a href="https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/enum"><strong>enum</strong></a> to prevent this problem!</p>
+<p><br></p>
+<h3 id="enumerations">Enumerations</h3>
+<blockquote>
+<p>Read Microsoft's documentation for <a href="https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/enum">C# Enumerations</a>.</p>
+</blockquote>
+<pre><code class="language-csharp">enum State{Ground, Jump, Dive}; //define the members of the enum type State here
+State currentState = State.Ground;
+
+void Update()
+{
+    if(currentState == State.Ground)
+        GroundUpdate();
+    else if(currentState == State.Jump)
+        JumpUpdate();
+    else if(currentState == State.Dive)
+        DiveUpdate();
+}
+</code></pre>
+<p>With an <code>enum</code>, we can define specific values with clear names. Your text editor will autocomplete the names of each member of the <code>enum</code> for you, which prevents errors from typos.</p>
+<p>In many cases, an <code>enum</code> and a series of <code>if / else</code> statements will be totally adequate to implement a simple state machine. It's good not to over-engineer if you can help it.</p>
+<p>You might also use a <code>switch</code> statement instead of a series of <code>if</code> statements, which looks like this:</p>
+<pre><code class="language-csharp">enum State{Ground, Jump, Dive}; 
+State currentState = State.Ground;
+
+void Update()
+{
+    switch(currentState)
+    {
+        case State.Ground: GroundUpdate(); break;
+        case State.Jump: JumpUpdate(); break;
+        case State.Dive: DiveUpdate(); break;
+    }
+}
+</code></pre>
+<p><br></p>
+<h3 id="state-machines-and-game-logic">State Machines and Game Logic</h3>
+<p>There are many other cases in which it is useful to think in terms of discreet states and transitions between them.</p>
+<p>States can be useful for structuring the overall logic or turn order of a game. Suppose we are creating a bowling game. On a player's turn, the player should be able to choose:</p>
+<ul>
+<li>their initial position,</li>
+<li>the direction they are aiming at,</li>
+<li>the spin of the ball,</li>
+<li>the amount of force the ball is thrown with</li>
+</ul>
+<p><br></p>
+<p>Then, once the ball is thrown, the following should happen automatically:</p>
+<ul>
+<li>the player watches the ball as it travels down the lane towards the pins</li>
+<li>once the pins are knocked down, score is evaluated and displayed</li>
+<li>If the player has used both throws, the pins are reset for the next player</li>
+</ul>
+<p><br></p>
+<p>Although this is mostly a linear sequence, we can still think in terms of states to describe the order of events in our game. Plotting our bowling game as a flow chart reveals a surprising level of complexity:</p>
+<p><img alt="" src="../img/state-bowling.png" /></p>
+<p>It's important to remember that there is no single best way to implement a state machine. <strong>A state machine is simply a pattern you can use to think through organizing your code.</strong></p>
+<p>The state machine describing our bowling game is significantly more complicated than our jump example, controlling sound, physics, animation, input, timers, different menus and screens and more.</p>
+<p>Rather than encapsulate the logic for our entire game inside one script, like our earlier example, we could break each state out into it's own script, on a different game object. </p>
+<p>Each state GameObject could contain a canvas with UI elements nested inside. Then we can activate and deactivate each game object to begin and end it's state.</p>
+<p>We might also think of Position, Aim, Spin, and Force as sub-states of a larger state called "Player Turn". The Player Turn state could have it's own script, which stores the values chosen during the Position, Aim, Spin, and Force sub-states, and applies them to the ball only at the end of the turn....</p>
+<p><br></p>
+<h3 id="animation-states">Animation States</h3>
+<p>Finally it's worth noting that Unity controls animations using a kind of state machine called an animator controller. We'll discuss this more in another week, but the editor for this should look familiar.</p>
+<p><img alt="" src="../img/animator%20image.png" /></p>
+<p><br></p>
+<hr />
+<h2 id="unityevent">UnityEvent</h2>
+<p>Remember our OnClick() event for setting up interactivity with UI Buttons? </p>
+<p>OnClick() is a <strong>UnityEvent</strong> that belongs to the Button component class. We add <strong>listeners</strong> through the inspector, so when the event is <strong>invoked</strong> (ie. the event happens), the button calls the functions that are listening to this event at the same time.</p>
+<p>We can set up <strong>customised UnityEvents</strong> for other objects and scripts (such as triggers, collisions, etc.) UnityEvents uses the namespace <code>using UnityEngine.Events;</code> -- make sure to include this at the top of your script. </p>
+<pre><code class="language-csharp">using UnityEngine;
+using UnityEngine.Events;
+
+public class EventHandler : MonoBehaviour
+{
+    public UnityEvent onTriggerEnter, onTriggerExit;
+
+    void OnTriggerEnter(Collider other){
+        onTriggerEnter.Invoke();
+    }
+
+    void OnTriggerExit(Collider other){
+        onTriggerExit.Invoke();
+    }
+}
+</code></pre>
+<p><br></p>
+<p>UnityEvents can be useful for connecting different scripts in your game, and executing multiple functions at the same time upon a game state change. </p>
+<p>For example, when your player dies, the following scripts need to be run: </p>
+<ul>
+<li>play the player character's lose animation.</li>
+<li>update UI to show lose screen UI elements.</li>
+<li>stop receiving player input.</li>
+<li>the player score needs to be reset.</li>
+<li>the scene needs to be changed.</li>
+</ul>
+<p>UnityEvents also keeps your game programming architecture modular using something called the <a href="https://unity.com/how-to/create-modular-and-maintainable-code-observer-pattern"><strong>Observer Pattern</strong></a>. Our event listeners are <strong>observers</strong> that passively observe whether the event has been invoked or not, and can act in response to an event, but they don't interfere with other listeners, nor do they depend on each other. </p>
+<p>The observer pattern keeps things manageable and organised when we want to set up complex event systems! This allows your objects to communicate but stay loosely coupled using <strong>a “one-to-many” dependency</strong>. When one object changes states, all dependent objects get notified automatically.</p>
+<p><img alt="" src="../img/observerpattern.avif" /></p>
+<p><br></p>
+<hr />
+<h2 id="some-course-reminders">Some course reminders</h2>
+<ul>
+<li><strong>Project 2 Prototype Playtest</strong> is due next Thursday.</li>
+</ul></p>
+    </article>
+</section>
+<!-- endblock -->
+            </main>
+
+            
+                    <!-- block preview -->
+<!-- endblock -->
+            
+
+            
+                    <!-- block footer -->
+<footer class="pt-4 my-md-5 pt-md-5 border-top" id="component-footer">
+    <div class="row">
+        <div class="col-12 col-md">
+                <!-- block copyright -->
+
+    <small class="d-block mb-3">
+        Made with
+        <a href="https://github.com/FernandoCelmer/mkdocs-simple-blog" target="_blank" rel="noopener">
+            Simple Blog for MkDocs
+        </a>
+    </small>
+
+<!-- endblock -->
+        </div>
+    </div>
+</footer>
+<!-- endblock -->
+            
+        </div>
+
+            <script>var base_url = '..';</script>
+            <script src="../assets/js/jquery-3.3.1.slim.min.js""></script>
+            <script src="../assets/js/bootstrap.bundle.min.js""></script>
+            <script src="../assets/js/main.min.js""></script>
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js" defer></script>
+                <script src="../javascripts/config.js" defer></script>
+                <script src="../search/main.js" defer></script>
+
+    </body>
+
+</html>
