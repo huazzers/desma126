@@ -150,9 +150,11 @@
 <hr />
 <p>📦 <strong>Unity packages from today's class:</strong></p>
 <blockquote>
-<p>Before importing both packages, make sure to install the Input System package on your Editor as well.
-- <a href="https://drive.google.com/file/d/1fxOu-Rvy_G3shZh2Rm6OedAWwUqqYJ8M/view?usp=drive_link">Cursor Input for World Space and Raycast</a>
-- <a href="https://drive.google.com/file/d/1f43f0bme2UTEzqcRk4T30ldGEymuVnJH/view?usp=drive_link">New Input System Demo</a></p>
+<p>Before importing both packages, make sure to install the Input System package on your Editor as well.</p>
+<ul>
+<li><a href="https://drive.google.com/file/d/1fxOu-Rvy_G3shZh2Rm6OedAWwUqqYJ8M/view?usp=drive_link">Cursor Input for World Space and Raycast</a></li>
+<li><a href="https://drive.google.com/file/d/1f43f0bme2UTEzqcRk4T30ldGEymuVnJH/view?usp=drive_link">New Input System Demo</a></li>
+</ul>
 </blockquote>
 <p><br></p>
 <p>📚 <strong>Other relevant resources to today's topic:</strong></p>
@@ -318,6 +320,7 @@ if(Physics.Raycast(cursorRay, out hitInfo))
 </ul>
 <p><br></p>
 <p>Changes in this editor have to be saved regularly. You could also toggle "<strong>Auto Save</strong>" at the top of the window. </p>
+<p><img alt="" src="../img/inputactionasset.jpg" /></p>
 <p><br></p>
 <h4 id="action-callback-functions">Action Callback Functions</h4>
 <p>One easy way to access action events in scripts is to use the callback functions for each action.</p>
@@ -574,19 +577,20 @@ void Update()
 <p>Remember our OnClick() event for setting up interactivity with UI Buttons? </p>
 <p>OnClick() is a <strong>UnityEvent</strong> that belongs to the Button component class. We add <strong>listeners</strong> through the inspector, so when the event is <strong>invoked</strong> (ie. the event happens), the button calls the functions that are listening to this event at the same time.</p>
 <p>We can set up <strong>customised UnityEvents</strong> for other objects and scripts (such as triggers, collisions, etc.) UnityEvents uses the namespace <code>using UnityEngine.Events;</code> -- make sure to include this at the top of your script. </p>
+<p><img alt="" src="../img/eventscollisions.jpg" /></p>
 <pre><code class="language-csharp">using UnityEngine;
 using UnityEngine.Events;
 
 public class EventHandler : MonoBehaviour
 {
-    public UnityEvent onTriggerEnter, onTriggerExit;
+    public UnityEvent onCollisionEnter, onCollisionExit;
 
-    void OnTriggerEnter(Collider other){
-        onTriggerEnter.Invoke();
+    void OnCollisionEnter(Collision col){
+        onCollisionEnter.Invoke();
     }
 
-    void OnTriggerExit(Collider other){
-        onTriggerExit.Invoke();
+    void OnCollisionExit(Collision col){
+        onCollisionExit.Invoke();
     }
 }
 </code></pre>

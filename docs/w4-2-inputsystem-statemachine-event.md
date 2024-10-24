@@ -5,13 +5,16 @@
 ---
 
 📦 **Unity packages from today's class:**
+
 > Before importing both packages, make sure to install the Input System package on your Editor as well.
+> 
 > - [Cursor Input for World Space and Raycast](https://drive.google.com/file/d/1fxOu-Rvy_G3shZh2Rm6OedAWwUqqYJ8M/view?usp=drive_link)
 > - [New Input System Demo](https://drive.google.com/file/d/1f43f0bme2UTEzqcRk4T30ldGEymuVnJH/view?usp=drive_link)
 
 <br>
 
 📚 **Other relevant resources to today's topic:**
+
 > - [Gamepad Tester](https://hardwaretester.com/gamepad): Online tool for testing gamepad input; useful for understanding how joystick buttons are mapped.
 > - [Unity's Rollaball Tutorial: Moving the Player](https://learn.unity.com/tutorial/moving-the-player?uv=2022.3&projectId=5f158f1bedbc2a0020e51f0d#650b1ec9edbc2a263aa43ebd): A simple example of how to set up player movement using Unity's new Input System. 
 
@@ -253,6 +256,8 @@ This is where you can store and manage the following information:
 <br>
 
 Changes in this editor have to be saved regularly. You could also toggle "**Auto Save**" at the top of the window. 
+
+![](./img/inputactionasset.jpg)
 
 <br>
 
@@ -606,20 +611,22 @@ OnClick() is a **UnityEvent** that belongs to the Button component class. We add
 
 We can set up **customised UnityEvents** for other objects and scripts (such as triggers, collisions, etc.) UnityEvents uses the namespace `using UnityEngine.Events;` -- make sure to include this at the top of your script. 
 
+![](./img/eventscollisions.jpg)
+
 ```csharp
 using UnityEngine;
 using UnityEngine.Events;
 
 public class EventHandler : MonoBehaviour
 {
-    public UnityEvent onTriggerEnter, onTriggerExit;
+    public UnityEvent onCollisionEnter, onCollisionExit;
 
-    void OnTriggerEnter(Collider other){
-        onTriggerEnter.Invoke();
+    void OnCollisionEnter(Collision col){
+        onCollisionEnter.Invoke();
     }
 
-    void OnTriggerExit(Collider other){
-        onTriggerExit.Invoke();
+    void OnCollisionExit(Collision col){
+        onCollisionExit.Invoke();
     }
 }
 ```
