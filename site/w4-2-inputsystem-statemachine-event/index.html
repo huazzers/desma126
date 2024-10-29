@@ -362,6 +362,89 @@ void OnModifier(InputValue value)
     modifierPressed = value.isPressed;
 }
 </code></pre>
+<p><br></p>
+<hr />
+<h2 id="local-multiplayer-input-setup">Local Multiplayer Input Setup</h2>
+<h3 id="local-multiplayer-for-legacy-input-manager">Local Multiplayer for Legacy Input Manager</h3>
+<h4 id="two-players-on-one-keyboard">Two Players on One Keyboard</h4>
+<p>To set up input for multiple players using the keyboard, start by opening the <strong>first</strong> "Horizontal" axis. This axis has a positive and negative button, as well as an alternate positive and negative button. This means that this single axis reads from both left/right arrows AND from A and D at the same time.</p>
+<p><img alt="" src="../img/2p1keyboard_0.png" /></p>
+<p><br></p>
+<p>Right click on the horizontal axis and select "<strong>Duplicate Array Element</strong>", and then modify both versions of the horizontal axis. </p>
+<p>I've set it up so that player 1's horizontal axis is called "Horizontal1" and player2's is called "Horizontal2". Horizontal1 corresponds to A and D, and Horizontal2 corresponds to the left/right arrow keys.</p>
+<p>Repeat this process for the vertical axes.</p>
+<p><img alt="" src="../img/2p1keyboard_1.gif" /></p>
+<p><br></p>
+<p>Now we need to write a script that reads from a given input axis depending on the player.</p>
+<p>Here I use a public int to represent which player the script should be controlled by. I add the int to the end of "Horizontal" and "Vertical" to read from the correct input axis.</p>
+<pre><code class="language-csharp">public class PlayerCharacter: MonoBehaviour
+{
+    public int playerNum;
+    void Update()
+    {
+        float h = Input.GetAxis(&quot;Horizontal&quot; + playerNum);
+        float v = Input.GetAxis(&quot;Vertical&quot; + playerNum);
+    }
+}
+</code></pre>
+<p><br></p>
+<h4 id="two-players-with-two-controllers">Two Players with Two Controllers</h4>
+<p>Find the <strong>second</strong> set of Horizontal and Vertical inputs and open them up. These correspond to joysticks.</p>
+<p>Notice that these have slightly different settings than the first pair of axes.</p>
+<p><img alt="" src="../img/2p2controler_0.png" /></p>
+<p><br></p>
+<p>Repeat the process we did for the keyboard bindings: <strong>duplicate each axis</strong> so that there is a separate Horizontal1 and Horizontal2, and a Vertical1 and Vertical2</p>
+<p><img alt="" src="../img/2p2controler_1.png" /></p>
+<p><br></p>
+<p>Finally, for each axis find the dropdown next to "Joy Num" and change it from "Get Motion From All Joysticks" to the <strong>correct joystick</strong> for that axis. Vertical1 should read from Joystick1 etc.</p>
+<p><img alt="" src="../img/2p2controler_2.png" /></p>
+<p><br></p>
+<h4 id="reading-buttons-from-two-joysticks">Reading Buttons from two joysticks</h4>
+<p>You can repeat the same process as our other input axes, duplicating and renaming the jump button field. However, for buttons you need to also need to specify which joystick the axis reads from in the field "positive button"</p>
+<p><img alt="" src="../img/2p2joystickbuttons.png" /></p>
+<p><br></p>
+<p>You can read the button inputs like so:</p>
+<pre><code class="language-csharp">public class PlayerCharacter: MonoBehaviour
+{
+    public int playerNum;
+    void Update()
+    {
+        float h = Input.GetAxis(&quot;Horizontal&quot;+playerNum);
+        float v = Input.GetAxis(&quot;Vertical&quot; + playerNum);
+        //true the MOMENT the button is pressed
+        bool jumpPressed = Input.GetButtonDown(&quot;Jump&quot; + playerNum);
+        //true WHILE the button is held down
+        bool jumpHeld = Input.GetButton(&quot;Jump&quot; + playerNum);
+        //true the MOMENT the button is RELEASED
+        bool jumpReleased = Input.GetButtonUp(&quot;Jump&quot; + playerNum);
+    }
+}
+</code></pre>
+<p><br></p>
+<h3 id="local-multiplayer-for-new-input-system">Local Multiplayer for New Input System</h3>
+<p>In your Input Action Asset for the Player Input component, create a new control scheme for each player. Here, I've labelled them P1 and P2. </p>
+<p><img alt="" src="../img/2pNewInput-0.jpg" /></p>
+<p><br></p>
+<p>When you create a new control scheme, you may also specify which control device is required for each player controller. </p>
+<p><img alt="" src="../img/2pNewInput-1.jpg" /></p>
+<p><br></p>
+<p>Once you start binding keys to each action for every player controller device, you can select which control scheme this binding is for on the right column.</p>
+<p><img alt="" src="../img/2pNewInput-2.jpg" /></p>
+<p><br></p>
+<p>In your Scene Hierarchy, duplicate your player GameObject (the one that contains the PlayerInput component) to make a second player. For each player object, set the Default Scheme in the PlayerInput component to the correct player. </p>
+<p><img alt="" src="../img/2pNewInput-3.jpg" /></p>
+<p><br></p>
+<h3 id="player-input-manager-for-local-multiplayer">Player Input Manager for Local Multiplayer</h3>
+<p><em>(Note: At this point, I haven't had any luck setting this up successfully, so no guarantees as to whether this will work!)</em></p>
+<p>The New Input system also has a built-in local multiplayer functionality using their <strong>Player Input Manager</strong> component. </p>
+<p>As a challenge, you could try looking into articles and video tutorials online that demonstrate methods for </p>
+<ul>
+<li>having new players join <em>while</em> the game is running;</li>
+<li>setting up split screen view for local multiplayer settings.</li>
+</ul>
+<p>Remember that there are also other methods for setting up the above features <em>without</em> having to use the Player Input Manager (this is one of Unity's attempts to automate or standardise workflows for achieving standard results... ) </p>
+<p>If you're getting nowhere with this approach, I recommend looking for another workaround strategy!</p>
+<p><br></p>
 <hr />
 <h2 id="state-machines">State Machines</h2>
 <blockquote>
@@ -462,7 +545,7 @@ void OnModifier(InputValue value)
 <p>The gist is:</p>
 <ul>
 <li><strong>You have a fixed <em>set of states</em> that the machine can be in.</strong> For our example, that’s standing, jumping, ducking, and diving.</li>
-<li><strong>The machine can only be in <em>one</em> state at a time.</strong> Our heroine can’t be jumping and standing simultaneously. In fact, preventing that is one reason we’re going to use an FSM.</li>
+<li><strong>The machine can only be in <em>one</em> state at a time.</strong> Our player can’t be jumping and standing simultaneously. In fact, preventing that is one reason we’re going to use an FSM.</li>
 <li><strong>A sequence of <em>inputs</em> or <em>events</em> is sent to the machine.</strong> In our example, that’s the raw button presses and releases.</li>
 <li><strong>Each state has a <em>set of transitions</em>, each associated with an input and pointing to a state.</strong> When an input comes in, if it matches a transition for the current state, the machine changes to the state that transition points to.</li>
 </ul>

@@ -320,6 +320,145 @@ void OnModifier(InputValue value)
 }
 ```
 
+<br>
+
+---
+
+## Local Multiplayer Input Setup
+
+### Local Multiplayer for Legacy Input Manager
+
+#### Two Players on One Keyboard
+
+To set up input for multiple players using the keyboard, start by opening the **first** "Horizontal" axis. This axis has a positive and negative button, as well as an alternate positive and negative button. This means that this single axis reads from both left/right arrows AND from A and D at the same time.
+
+![](./img/2p1keyboard_0.png)
+
+<br>
+
+Right click on the horizontal axis and select "**Duplicate Array Element**", and then modify both versions of the horizontal axis. 
+
+I've set it up so that player 1's horizontal axis is called "Horizontal1" and player2's is called "Horizontal2". Horizontal1 corresponds to A and D, and Horizontal2 corresponds to the left/right arrow keys.
+
+Repeat this process for the vertical axes.
+
+![](./img/2p1keyboard_1.gif)
+
+<br>
+
+Now we need to write a script that reads from a given input axis depending on the player.
+
+Here I use a public int to represent which player the script should be controlled by. I add the int to the end of "Horizontal" and "Vertical" to read from the correct input axis.
+
+```csharp
+public class PlayerCharacter: MonoBehaviour
+{
+	public int playerNum;
+	void Update()
+	{
+		float h = Input.GetAxis("Horizontal" + playerNum);
+		float v = Input.GetAxis("Vertical" + playerNum);
+	}
+}
+```
+
+<br>
+
+#### Two Players with Two Controllers
+
+Find the **second** set of Horizontal and Vertical inputs and open them up. These correspond to joysticks.
+
+Notice that these have slightly different settings than the first pair of axes.
+
+![](./img/2p2controler_0.png)
+
+<br>
+
+Repeat the process we did for the keyboard bindings: **duplicate each axis** so that there is a separate Horizontal1 and Horizontal2, and a Vertical1 and Vertical2
+
+![](./img/2p2controler_1.png)
+
+<br>
+
+Finally, for each axis find the dropdown next to "Joy Num" and change it from "Get Motion From All Joysticks" to the **correct joystick** for that axis. Vertical1 should read from Joystick1 etc.
+
+![](./img/2p2controler_2.png)
+
+<br>
+
+#### Reading Buttons from two joysticks
+
+You can repeat the same process as our other input axes, duplicating and renaming the jump button field. However, for buttons you need to also need to specify which joystick the axis reads from in the field "positive button"
+
+![](./img/2p2joystickbuttons.png)
+
+<br>
+
+You can read the button inputs like so:
+
+```csharp
+public class PlayerCharacter: MonoBehaviour
+{
+	public int playerNum;
+	void Update()
+	{
+		float h = Input.GetAxis("Horizontal"+playerNum);
+		float v = Input.GetAxis("Vertical" + playerNum);
+		//true the MOMENT the button is pressed
+		bool jumpPressed = Input.GetButtonDown("Jump" + playerNum);
+		//true WHILE the button is held down
+		bool jumpHeld = Input.GetButton("Jump" + playerNum);
+		//true the MOMENT the button is RELEASED
+		bool jumpReleased = Input.GetButtonUp("Jump" + playerNum);
+	}
+}
+```
+
+<br>
+
+### Local Multiplayer for New Input System
+
+In your Input Action Asset for the Player Input component, create a new control scheme for each player. Here, I've labelled them P1 and P2. 
+
+![](./img/2pNewInput-0.jpg)
+
+<br>
+
+When you create a new control scheme, you may also specify which control device is required for each player controller. 
+
+![](./img/2pNewInput-1.jpg)
+
+<br>
+
+Once you start binding keys to each action for every player controller device, you can select which control scheme this binding is for on the right column.
+
+![](./img/2pNewInput-2.jpg)
+
+<br>
+
+In your Scene Hierarchy, duplicate your player GameObject (the one that contains the PlayerInput component) to make a second player. For each player object, set the Default Scheme in the PlayerInput component to the correct player. 
+
+![](./img/2pNewInput-3.jpg)
+
+<br>
+
+### Player Input Manager for Local Multiplayer
+
+*(Note: At this point, I haven't had any luck setting this up successfully, so no guarantees as to whether this will work!)*
+
+The New Input system also has a built-in local multiplayer functionality using their **Player Input Manager** component. 
+
+As a challenge, you could try looking into articles and video tutorials online that demonstrate methods for 
+
+- having new players join *while* the game is running;
+- setting up split screen view for local multiplayer settings.
+
+Remember that there are also other methods for setting up the above features *without* having to use the Player Input Manager (this is one of Unity's attempts to automate or standardise workflows for achieving standard results... ) 
+
+If you're getting nowhere with this approach, I recommend looking for another workaround strategy!
+
+<br>
+
 ---
 
 ## State Machines
@@ -451,7 +590,7 @@ Finite state machines (FSM) came out of a branch of computer science called auto
 The gist is:
 
 - **You have a fixed *set of states* that the machine can be in.** For our example, that’s standing, jumping, ducking, and diving.
-- **The machine can only be in *one* state at a time.** Our heroine can’t be jumping and standing simultaneously. In fact, preventing that is one reason we’re going to use an FSM.
+- **The machine can only be in *one* state at a time.** Our player can’t be jumping and standing simultaneously. In fact, preventing that is one reason we’re going to use an FSM.
 - **A sequence of *inputs* or *events* is sent to the machine.** In our example, that’s the raw button presses and releases.
 - **Each state has a *set of transitions*, each associated with an input and pointing to a state.** When an input comes in, if it matches a transition for the current state, the machine changes to the state that transition points to.
 
