@@ -4,6 +4,15 @@
 
 ---
 
+📦 **Unity packages from today's class:**
+
+> Before importing both packages, make sure to install the Input System package on your Editor as well.
+> 
+> - [Class Demo for Statics, Scenes, Sounds, and VFX](https://drive.google.com/file/d/10p7wFrZ4eyjThy15fe7DrPpGkY_OGE7I/view?usp=sharing)
+> - [Singleton Game Manager Example](https://drive.google.com/file/d/1oE19e2Zh5RWHFG0369eGgh9tfJQq5--1/view?usp=sharing)
+
+---
+
 ## Static Variables and Methods
 
 > Take a look at Unity's tutorial on [Statics](https://learn.unity.com/tutorial/statics-l#).
@@ -330,9 +339,9 @@ public class GameManager : MonoBehaviour
 
 <br>
 
-Because this GameManager uses `DontDestroyOnLoad`, you can attach things as children to the manager that you want to stay on every scene. For example. background music.
+Because this GameManager uses `DontDestroyOnLoad`, you can add components to the manager that you want to stay on every scene. For example. background music!
 
-We'll revisit this singleton script again next class!
+Take a look at the demo package for [SingletonGameManager](https://drive.google.com/file/d/1oE19e2Zh5RWHFG0369eGgh9tfJQq5--1/view?usp=sharing) (also linked at the top of this page!) and this [short introductory article about Singletons](https://levelup.gitconnected.com/tip-of-the-day-manager-classes-singleton-pattern-in-unity-1bf3aafe9430) if you are interested in using this for your project.
 
 <br>
 
@@ -556,6 +565,8 @@ One notable feature in the Trail renderer is the **Time** (which determines the 
 You can create a particle system by adding a pre-made GameObject (**GameObject** > **Effects** > **Particle System**) or adding the Particle System component to an existing GameObject.
 
 Try adjusting the **general parameters** (top most section) as well as settings for **Emission**, **Shape**, **Trails**, and **Renderer**.
+
+<br>
 
 ---
 

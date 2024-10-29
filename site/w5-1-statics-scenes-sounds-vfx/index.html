@@ -148,6 +148,15 @@
 
 <h1 id="statics-scenes-sounds-vfx">Statics, Scenes, Sounds, VFX</h1>
 <hr />
+<p>📦 <strong>Unity packages from today's class:</strong></p>
+<blockquote>
+<p>Before importing both packages, make sure to install the Input System package on your Editor as well.</p>
+<ul>
+<li><a href="https://drive.google.com/file/d/10p7wFrZ4eyjThy15fe7DrPpGkY_OGE7I/view?usp=sharing">Class Demo for Statics, Scenes, Sounds, and VFX</a></li>
+<li><a href="https://drive.google.com/file/d/1oE19e2Zh5RWHFG0369eGgh9tfJQq5--1/view?usp=sharing">Singleton Game Manager Example</a></li>
+</ul>
+</blockquote>
+<hr />
 <h2 id="static-variables-and-methods">Static Variables and Methods</h2>
 <blockquote>
 <p>Take a look at Unity's tutorial on <a href="https://learn.unity.com/tutorial/statics-l#">Statics</a>.</p>
@@ -414,8 +423,8 @@ public class GameManager : MonoBehaviour
 }
 </code></pre>
 <p><br></p>
-<p>Because this GameManager uses <code>DontDestroyOnLoad</code>, you can attach things as children to the manager that you want to stay on every scene. For example. background music.</p>
-<p>We'll revisit this singleton script again next class!</p>
+<p>Because this GameManager uses <code>DontDestroyOnLoad</code>, you can add components to the manager that you want to stay on every scene. For example. background music!</p>
+<p>Take a look at the demo package for <a href="https://drive.google.com/file/d/1oE19e2Zh5RWHFG0369eGgh9tfJQq5--1/view?usp=sharing">SingletonGameManager</a> (also linked at the top of this page!) and this <a href="https://levelup.gitconnected.com/tip-of-the-day-manager-classes-singleton-pattern-in-unity-1bf3aafe9430">short introductory article about Singletons</a> if you are interested in using this for your project.</p>
 <p><br></p>
 <hr />
 <h2 id="scene-management">Scene Management</h2>
@@ -587,6 +596,7 @@ public class ExampleClass : MonoBehaviour
 <p><br></p>
 <p>You can create a particle system by adding a pre-made GameObject (<strong>GameObject</strong> &gt; <strong>Effects</strong> &gt; <strong>Particle System</strong>) or adding the Particle System component to an existing GameObject.</p>
 <p>Try adjusting the <strong>general parameters</strong> (top most section) as well as settings for <strong>Emission</strong>, <strong>Shape</strong>, <strong>Trails</strong>, and <strong>Renderer</strong>.</p>
+<p><br></p>
 <hr />
 <h2 id="some-course-reminders">Some course reminders</h2>
 <ul>
