@@ -145,6 +145,34 @@ For your *digital* game:
 
 <br>
 
+#### Prototype Playtest
+
+> **If this is your first time running a playtest**, I recommend reading [this set of suggestions and guidelines](https://mycours.es/gamedesign2018/files/2018/11/playtesting-primer.pdf) beforehand to have some idea of what to expect.
+
+<br>
+
+When showing your piece, consider the following:
+
+1. **what you'd like to learn** from this playtest -- what questions or concerns would you like addressed from this test?
+2. **what sort of information you'd like playtesters to have before / while / after** interacting with your project (description, instructions, game rules, specific aspects you'd like feedback on.) <br><br>You may benefit from a **cold read** of your project (i.e. playtesters will enter your project with minimal to no prior briefing.) You may choose to reveal your intentions at the end to see how they compare with playtesters' "authentic" responses to your project.
+3. be prepared to **take notes** on how playtesters respond to your project (including their behaviours and emotions while playing the game -- not just verbal comments!)
+
+<br>
+
+Some general guidelines for playtesting projects:
+
+- one speaker at a time; be mindful of taking space and making space for others. 
+- critique the work, not the artist.
+- use "i" statements.
+- think out loud while playing the project.
+- avoid judgemental comments like "i like..." or "i don't like..."; instead: describe, analyse, and interpret -- tell us what you see, and explain how that shapes your experience of the project. 
+- try to break the project -- catch any bugs or loopholes you can find! 
+- consider where the artist would like to go from here, and how they can pursue their goals.
+
+<br>
+
+<br>
+
 #### Final Submission
 
 Your final project should have the following elements:
