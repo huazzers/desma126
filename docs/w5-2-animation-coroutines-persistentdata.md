@@ -20,7 +20,7 @@
 
 ## Coroutines
 
-> Read Unity's documentation for [Coroutines](https://docs.unity3d.com/2022.3/Documentation/Manual/Coroutines.html).
+> Read Unity's [documentation](https://docs.unity3d.com/2022.3/Documentation/Manual/Coroutines.html) and their [introductory video tutorial](https://www.youtube.com/watch?v=5L9ksCs6MbE) to coroutines.
 
 In most situations, when we call a method, Unity runs it to completion within a single frame update. 
 
@@ -522,4 +522,4 @@ public class Player : MonoBehaviour
 
 ## Some course reminders
 
-- **Project 2** is due next Thursday! 
+- **Project 2** is due next Thursday! The submission form is now uploaded to the [project page](./project-2.md).
