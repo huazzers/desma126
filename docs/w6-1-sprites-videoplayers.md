@@ -4,6 +4,20 @@
 
 ---
 
+📦 **Unity packages from today's class:**
+> 
+> - Class Demo: [Sprites](https://drive.google.com/file/d/1Vezjb72HZ63HmDyYfX9SFHXkUTSRs_M_/view?usp=sharing) (continuation from demo on [statics, scenes, sounds, and vfx](./w5-1-statics-scenes-sounds-vfx.md)) and [Video Player](https://drive.google.com/file/d/118rMSklqyxJz00-TkoGh_F1lcFIpvJm1/view?usp=drive_link)
+
+<br>
+
+📚 **Other relevant resources to today's topic:**
+>
+> - [Example character Sprite Sheet for Class Demo](https://drive.google.com/file/d/1KSmyTj-9Q5NIcUfgZNh-W-xuZoH1emmC/view?usp=drive_link).
+
+<br>
+
+---
+
 Here are some workflows for adding still and moving images to your scene. 
 
 ## Add a texture material to a 3D Plane
