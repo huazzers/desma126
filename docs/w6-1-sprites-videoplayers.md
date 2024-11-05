@@ -114,8 +114,8 @@ If you're applying a sprite to a moving 3D object (let's say a player gameobject
 
 In my package example, here is how my enemy object is arranged in my scene hierarchy:
 
-> - Parent object with Rigidbody, colliders, and physics-based movement script. 
->   - Child object with Sprite component and sprite-related scripts (eg. rotating towards player camera, sprite switcher)
+> - **Parent Gameobject** with Rigidbody, colliders, and physics-based movement script. 
+>       - **Child Gameobject** with Sprite component and sprite-related scripts (eg. rotating towards player camera, sprite switcher)
 
 ![](./img/goalieparentsprite.jpg)
 
