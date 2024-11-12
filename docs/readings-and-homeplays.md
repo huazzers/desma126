@@ -118,7 +118,7 @@ Plan to spend about 30 ~ 60 minutes playing the game(s) with your group members,
 ### Homeplay 2 (Extra Credit)
 
 <div class="duedate">
-<p>Due: Week 8 Tuesday, October 8
+<p>Due: Week 8 Tuesday, November 19
 </br><a href="https://docs.google.com/spreadsheets/d/1x4n8uIGx_rXHAzmBcC_ezYw_YON5d0jG7F7Ui2UBXsk/edit?usp=sharing">Sign Up Here + Submit Presentations Here</a></p>
 </div>
 
