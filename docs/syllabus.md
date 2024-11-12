@@ -43,7 +43,7 @@ By the end of this course, you will be able to create a real-time, interactive s
 Using generative design to create random/unique/dynamic ecosystems, worlds, characters, and events in Unity. 
 
 > **Week 0-3**
-</br>Intro to Unity Game Engine and C#<!--Navigating Unity, Importing Assets, C# script anatomy + conventions + basics, basic camera + ui + lighting + materials-->, Vector fundamentals<!--Transforms, Player Controller-->, Prefabs and Instantiation<!--Sprites-->, Arrays and Randomness, UI
+</br>Intro to Unity Game Engine and C#, Vector fundamentals, Prefabs and Instantiation, Arrays and Randomness, UI
 > 
 > **Project 1: Auto-Generator**
 
@@ -51,7 +51,7 @@ Using generative design to create random/unique/dynamic ecosystems, worlds, char
 Using physics, math, and other game engine tools to design environments and mechanics for interactive gameplay.
 
 > **Week 4-6**
-</br>Level Design<!--Grayboxing, Terrain, Post-processing-->, Input Systems<!--New Input System-->, Physics Simulations<!--Collision/Trigger-->, Static Variables and Singletons, Sound
+</br>Level Design, Input Systems, Physics Simulations, Static Variables and Singletons, Sound, Coroutines, Persistent Data
 > 
 > **Project 2: Ball Game Remix**
 
@@ -62,12 +62,12 @@ Explore other tiny game engines!
 </br>Micro Game Jam(s) -- Make an entire game in a single class.
 
 ### Unit 3: Save && Scene
-Using persistent data, effects, and cinematic affordances of the game engine to revise and refine your projects.
+Using dialogue systems, inventory data, and cinematic affordances of the game engine to stage and contextualise your play experiences. 
 
 > **Week 8-10**
-</br>Cinemachine, Animation, Coroutines, Persistent Data
+</br>Cinemachine, Interactive Fiction, Inventory and Collections
 > 
-> **Project 3: Final Project (TBD)**
+> **Project 3: Game as Engine**
 
 ---
 

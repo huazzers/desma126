@@ -114,3 +114,22 @@ Plan to spend about 30 ~ 60 minutes playing the game(s) with your group members,
 **Please share a link to any presentation materials** in the sign up sheet next to your group names. You will share your responses with the rest of the class during lesson time on the due date.
 
 <br>
+
+### Homeplay 2 (Extra Credit)
+
+<div class="duedate">
+<p>Due: Week 8 Tuesday, October 8
+</br><a href="https://docs.google.com/spreadsheets/d/1x4n8uIGx_rXHAzmBcC_ezYw_YON5d0jG7F7Ui2UBXsk/edit?usp=sharing">Sign Up Here + Submit Presentations Here</a></p>
+</div>
+
+Plan to spend about 30 ~ 60 minutes playing the game(s) with your group members, then **prepare a short 5 ~ 7 minute presentation** in response to the following:
+
+1. Tell us about the project
+    - What is the project about? What aspects of the project offer you context - the writing? the objects in space? the player interaction? the game rules? the sound? the visual language? the camera perspective?
+    - Any notable features of this project that affected your experience
+2. Consider your experience of the project -- what works, what doesn't, and why?
+    - overall feelings, reactions, thoughts about the game's subject matter, before/during/after playing.
+    - anything you're interested in applying to your own projects? 
+
+
+**Please share a link to any presentation materials** in the sign up sheet next to your group names. You will share your responses with the rest of the class during lesson time on the due date.
