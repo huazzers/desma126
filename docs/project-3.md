@@ -242,7 +242,7 @@ game mechanics based on real experiences
 
 ### Requirements
 
-There will be a **project sketch** due on **Week 8 Thurday, November 14**. Please bring your ideas / prototypes to class for discussion.
+There will be a **project sketch** due on **Week 8 Thurday, November 21**. Please bring your ideas / prototypes to class for discussion.
 
 Your project must address the prompt above, and must have sound.
 
