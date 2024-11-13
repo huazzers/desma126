@@ -44,7 +44,9 @@ We’ll return to this in a moment. But first how do you do things in bitsy?
 
 ## Intro to Bitsy
 
-Get to the engine here: [https://make.bitsy.org/](https://make.bitsy.org/)
+![](./img/bitsy.jpg)
+
+Get to the engine here: [https://ledoux.itch.io/bitsy](https://ledoux.itch.io/bitsy)
 
 We’ll take a stroll through the engine using this [bitsy pdf handout](https://zeroday.camp/wp-content/uploads/2018/09/Bitsy-Guides.pdf)
 
@@ -56,9 +58,16 @@ Look at what others have made: [https://itch.io/games/tag-bitsy](https://itch.io
 
 If you want to look at even more tutorials / info / hacks/ etc…
 
+- bitsy docs has the latest information about how to do things in the editor: [https://make.bitsy.org/docs/](https://make.bitsy.org/docs/)
 - [Another tutorial](https://www.shimmerwitch.space/bitsyTutorial.html) (also in [Chinese](https://zhuanlan.zhihu.com/p/527178844) and [Japanese](https://gamewriter.jp/2022/11/15/bitsy%e3%81%ae%e3%83%81%e3%83%a5%e3%83%bc%e3%83%88%e3%83%aa%e3%82%a2%e3%83%ab/)):
 - bitsy handout (lots of links to other things): [https://rahji.github.io/bitsy-handout/web/](https://rahji.github.io/bitsy-handout/web/)
 - bitsy tools map (also lots of links): [https://haraiva.neocities.org/bitsytools#1,4](https://haraiva.neocities.org/bitsytools#1,4)
+
+<figure>
+    <img src="../img/endlessscroll.gif">
+    <figcaption>-- <a href="https://haraiva.itch.io/endless-scroll">Endless Scroll</a>. Cecile Richard (haraiva).</figcaption>
+</figure>
+
 
 <br>
 
@@ -86,6 +95,11 @@ Read through the ideas. Place a star **✰** on your favorite ones.
 ![](./img/start-line.gif)
 
 We’ll take the top 4-5 ideas and write them on the board!
+
+<figure>
+    <img src="../img/antifieldguide.gif">
+    <figcaption>-- <a href="https://hellodri.itch.io/anti-field-guide">Anti-Guide to Field Guides</a>. Dri Chiu Tattersfield (hellodri).</figcaption>
+</figure>
 
 <br>
 
@@ -123,6 +137,11 @@ To share bitsy projects online, you can embed it on your website using an iframe
 <br>
 
 You can also upload it directly to itch.io and make a project page!
+
+<figure>
+    <img src="../img/novena.gif">
+    <figcaption>-- <a href="https://haraiva.itch.io/novena">Novena</a>. Cecile Richard (haraiva).</figcaption>
+</figure>
 
 <br>
 
