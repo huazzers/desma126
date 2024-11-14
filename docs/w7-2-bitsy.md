@@ -29,8 +29,8 @@ By the end of class, we'd have made a Bitsy game in groups of 2-3 and (hopefully
 | 1430 | 🗳️ Voting for Ideas |
 | 1440 | 🤝 Form Groups |
 | 1450 | ⚒️ WORK WORK WORK |
-| 1610 | ⏱️ TIMES UP -- Submit and Present ! |
-| 1640 | 🏁 Game Jam end ! |
+| 1620 | ⏱️ TIMES UP -- Submit and Present ! |
+| 1650 | 🏁 Game Jam end ! |
 
 ### Prompt
 
