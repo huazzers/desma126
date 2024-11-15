@@ -147,9 +147,10 @@ You can also upload it directly to itch.io and make a project page!
 
 ---
 
-<!--
+
 <embed type="text/html" src="../bitsyjam/museum/index.html" width="100%" height="500">
--->
+
+
 ---
 
 ## Some course reminders
