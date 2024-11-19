@@ -147,8 +147,11 @@ You can also upload it directly to itch.io and make a project page!
 
 ---
 
+## ... THE MOMENT YOU'VE ALL BEEN WAITING FOR!
 
 <embed type="text/html" src="../bitsyjam/museum/index.html" width="100%" height="500">
+
+<br>
 
 
 ---
