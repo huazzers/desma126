@@ -687,7 +687,7 @@ Horse: Hey. Got any apples?
 
 #### Functions
 
-Yarn Spinner has a set of built-in functions that allow you to **randomize numbers in a given range**, **count the number of times a node has been visited**, etc. They are all listed on [their documentation page here](https://docs.yarnspinner.dev/getting-started/writing-in-yarn/functions#custom-functions). 
+Yarn Spinner has a set of built-in functions that allow you to **randomize numbers in a given range**, **count the number of times a node has been visited**, etc. They are all listed on [their documentation page here](https://docs.yarnspinner.dev/getting-started/writing-in-yarn/functions). 
 
 How do we call custom functions from our Unity C# scripts in Yarn Spinner? 
 
