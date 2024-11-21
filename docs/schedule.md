@@ -11,6 +11,6 @@
 | W5  | **10/29**</br><p>Tutorial: [Statics, Scenes, Sounds, VFX](./w5-1-statics-scenes-sounds-vfx.md)</p> | **10/31**</br><p>Due: Project 2 Prototype Playtest</p><p>Tutorial: [Animation, Coroutines, Persistent Data](./w5-2-animation-coroutines-persistentdata.md)</p>|
 | W6  | **11/05**</br><p>Tutorial: [Sprites and Video Players](./w6-1-sprites-videoplayers.md)</p><p>Studio Time</p> | **11/07**</br><p>Studio Time</p>|
 | W7  | **11/12**</br><p>Project 2 Crit</p><p>Assign: [Project 3](./project-3.md), [Homeplay 2 (Extra Credit)](./readings-and-homeplays.md/#homeplay-2-extra-credit)</p> | **11/14**</br><p>[ALT-Engine Micro Game Jam](./w7-2-bitsy.md)</p>|
-| W8  | **11/19**</br><p>Due: Homeplay 2 Extra Credit</p><p>Tutorial: [Interactive Text](./w8-1-interactive-text.md)</p> | **11/21**</br><p>Due: Project 3 Sketch</p><p>Tutorial: Inventory and Collections</p>|
+| W8  | **11/19**</br><p>Due: Homeplay 2 Extra Credit</p><p>Tutorial: [Interactive Text](./w8-1-interactive-text.md)</p> | **11/21**</br><p>Due: Project 3 Sketch</p><p>Tutorial: [Inventory and Collections](./w8-2-inventory-collections.md)</p>|
 | W9  | **11/26**</br><p>Tutorial: More Cameras, Cinemachine</p> | **11/28**</br><p>Thanksgiving - No class.</p> |
 | W10  | **12/03**</br><p>Studio Time</p> | **12/05**</br><p>Due: Project 3</p>|
