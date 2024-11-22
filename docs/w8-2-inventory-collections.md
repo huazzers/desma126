@@ -4,6 +4,8 @@
 
 ---
 
+
+
 📦 **Unity packages from today's class:**
 > 
 > - Class Demo: [**Inventory System (Fixed and Dynamic) using Scriptable Objects, Lists, and/or Arrays**](https://drive.google.com/file/d/1aHxO1kaaCEIQI3RIN5HpIUQEYFpmUEQH/view?usp=sharing)
@@ -18,7 +20,28 @@
 
 <br>
 
+**Recording 1: Lecture component**
+
+<figure>
+<iframe width="100%" height="500" src="https://www.youtube-nocookie.com/embed/YYIy4m6pxU0?si=-RF8uIbONa_A7DUi" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<figcaption>-- "Contemporary Collecting: DIY Publishing", a webinar with Miarosa Ciallella and Jose Guerrero. Hosted by the Bibliographical Society of America (2020).
+</figcaption>
+</figure>
+
+<br>
+
+**Recording 2: Tutorial Demo component**
+
+<figure>
+<iframe width="100%" height="500" src="https://www.youtube-nocookie.com/embed/3RWoBZAZ4Ho?si=xWujJM92cxWgbeDB" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<figcaption>-- "Contemporary Collecting: DIY Publishing", a webinar with Miarosa Ciallella and Jose Guerrero. Hosted by the Bibliographical Society of America (2020).
+</figcaption>
+</figure>
+
+<br>
+
 ---
+
 
 **Zines as archival technology; containers of information and ideology**
 
@@ -259,11 +282,13 @@ listName.RemoveAt(0);
     //using an integer index
     //removes the first item
     //watch out for out of range errors.
-listName.RemoveRnage(1,2);
+listName.RemoveRange(1,2);
     //removes 2 values starting at index 1
 listName.RemoveAll(x => x.CompareTag("Pickup"));
     //removes all items in the list
     //that match the condition listed.
+listName.Clear()
+    //removes all items in your list.
 ```
 
 <br>
@@ -352,13 +377,10 @@ public class InventoryArrayManager : ScriptableObject
     //initialise array, if not yet already done so.
     public void ResetInventory()
     {
-        if (inventory.Length == 0)
+        inventory = new ItemInstance[allPossibleItems.Length];
+        for (int i =0; i < inventory.Length; i++)
         {
-            inventory = new ItemInstance[allPossibleItems.Length];
-            for (int i =0; i < inventory.Length; i++)
-            {
-                inventory[i] = new ItemInstance(allPossibleItems[i]);
-            }
+            inventory[i] = new ItemInstance(allPossibleItems[i]);
         }
     }
 
