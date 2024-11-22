@@ -24,7 +24,7 @@
 
 <figure>
 <iframe width="100%" height="500" src="https://www.youtube-nocookie.com/embed/YYIy4m6pxU0?si=-RF8uIbONa_A7DUi" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-<figcaption>-- "Contemporary Collecting: DIY Publishing", a webinar with Miarosa Ciallella and Jose Guerrero. Hosted by the Bibliographical Society of America (2020).
+<figcaption>
 </figcaption>
 </figure>
 
@@ -34,7 +34,7 @@
 
 <figure>
 <iframe width="100%" height="500" src="https://www.youtube-nocookie.com/embed/3RWoBZAZ4Ho?si=xWujJM92cxWgbeDB" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-<figcaption>-- "Contemporary Collecting: DIY Publishing", a webinar with Miarosa Ciallella and Jose Guerrero. Hosted by the Bibliographical Society of America (2020).
+<figcaption>
 </figcaption>
 </figure>
 
