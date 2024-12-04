@@ -3,7 +3,7 @@
 ## Final Submission Due: Week 10 Thursday, December 5
 
 <div class="duedate">
-<p>Submit Here (TBD)</p>
+<p><a href="https://forms.gle/Ynd8THMzx2U4KwSo9">Submit Here</a></p>
 <blockquote>Please read the <a href="../how-to-submit">How To Submit</a> page for more detailed instructions.</blockquote>
 </div>
 
@@ -19,7 +19,7 @@ To conclude this course, our final project will focus on this definition of the 
 
 <br>
 
-Build a **zine game** that acts as **an engine for containing, transfering, and transforming ideas, beliefs, and principles.** 
+Build a **zine game** that acts as **an engine for containing, transferring, and transforming ideas, beliefs, and principles.** 
 
 <br>
 
