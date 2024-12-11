@@ -67,7 +67,7 @@ Using dialogue systems, inventory data, and cinematic affordances of the game en
 > **Week 8-10**
 </br>Cinemachine, Interactive Fiction, Inventory and Collections
 > 
-> **Project 3: Game as Engine**
+> **Project 3: Zine Game**
 
 ---
 
