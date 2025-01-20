@@ -24,10 +24,12 @@ Read the assigned material, and submit your response to the given questions **in
 
 ### Reading Response 1
 
+<!--
 <div class="duedate">
 <p>Due: Week 1 Thursday, October 3
 </br><a href="https://forms.gle/TJzdPgYr1zuRAtCQ6">Submit Your Response Here</a></p>
 </div>
+-->
 
 Read Kate Compton's "So you want to build a generator" 
 [https://galaxykate0.tumblr.com/post/139774965871/so-you-want-to-build-a-generator](https://galaxykate0.tumblr.com/post/139774965871/so-you-want-to-build-a-generator)
@@ -45,10 +47,12 @@ If you're hungry for more, below are some recommended talks on more methods and 
 
 ### Reading Response 2
 
+<!--
 <div class="duedate">
 <p>Due: Week 4 Thursday, October 24
 </br><a href="https://forms.gle/5MGvd2UREeXwi8oP7">Submit Your Response Here</a></p>
 </div>
+-->
 
 Read these two writings by Steve Swink:
 
@@ -94,10 +98,14 @@ PC / HTML games will also be available in the PC work stations next to the 4th f
 
 ### Homeplay 1
 
+<!--
+
 <div class="duedate">
 <p>Due: Week 2 Tuesday, October 8
 </br><a href="https://docs.google.com/spreadsheets/d/1HrWVxhsBU-uBiyhZhQHnOK0SR3rnjlIrp7U_yHa5O1g/edit?usp=sharing">Sign Up + Submit Presentations Here</a></p>
 </div>
+
+-->
 
 Plan to spend about 30 ~ 60 minutes playing the game(s) with your group members, then **prepare a short 5 ~ 7 minute presentation** in response to the following:
 
@@ -117,10 +125,12 @@ Plan to spend about 30 ~ 60 minutes playing the game(s) with your group members,
 
 ### Homeplay 2 (Extra Credit)
 
+<!--
 <div class="duedate">
 <p>Due: Week 8 Tuesday, November 19
 </br><a href="https://docs.google.com/spreadsheets/d/1x4n8uIGx_rXHAzmBcC_ezYw_YON5d0jG7F7Ui2UBXsk/edit?usp=sharing">Sign Up Here + Submit Presentations Here</a></p>
 </div>
+-->
 
 Plan to spend about 30 ~ 60 minutes playing the game(s) with your group members, then **prepare a short 5 ~ 7 minute presentation** in response to the following:
 

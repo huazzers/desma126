@@ -2,10 +2,10 @@
 
 ## Final Submission Due: Week 3 Tuesday, October 15
 
-<div class="duedate">
+<!--<div class="duedate">
 <p><a href="https://forms.gle/pfApXHdPduNFZF9R7">Submit Here</a></p>
 <blockquote>Please read the <a href="../how-to-submit">How To Submit</a> page for more detailed instructions.</blockquote>
-</div>
+</div>-->
 
 ### Prompt
 

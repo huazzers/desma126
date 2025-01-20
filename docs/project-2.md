@@ -2,10 +2,10 @@
 
 ## Final Submission Due: Week 6 Thursday, November 7
 
-<div class="duedate">
+<!--<div class="duedate">
 <p><a href="https://forms.gle/qHWAFQe68h4tVBcE9">Submit Here</a></p>
 <blockquote>Please read the <a href="../how-to-submit">How To Submit</a> page for more detailed instructions.</blockquote>
-</div>
+</div>-->
 
 <figure>
     <img src="../img/wiiplay.png" width=100%>

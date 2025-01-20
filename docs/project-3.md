@@ -2,10 +2,10 @@
 
 ## Final Submission Due: Week 10 Thursday, December 5
 
-<div class="duedate">
+<!--<div class="duedate">
 <p><a href="https://forms.gle/Ynd8THMzx2U4KwSo9">Submit Here</a></p>
 <blockquote>Please read the <a href="../how-to-submit">How To Submit</a> page for more detailed instructions.</blockquote>
-</div>
+</div>-->
 
 ### Prompt
 
