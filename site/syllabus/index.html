@@ -1,5 +1,5 @@
 <!doctype html>
-<html>
+<html data-bs-theme="light">
     <head>
                 <title>📜 Syllabus - 👾 DESMA126 Game Engine</title>
 
@@ -14,15 +14,16 @@
             
                 <link  rel="icon" type="image/x-icon" href="../assets/img/favicon.ico">
             
-                    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
-                        <script>hljs.initHighlightingOnLoad();</script>
             <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fira+Mono:400,700">
             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
             <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+            <link rel="stylesheet" href="../assets/css/root.min.css">
             <link rel="stylesheet" href="../assets/css/main.min.css">
+            <link rel="stylesheet" href="../assets/css/media.min.css">
+            <link rel="stylesheet" href="../assets/css/mkdocstrings.min.css">
                 <link href="../extra.css" rel="stylesheet">
                 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
-                <script src="../javascripts/config.js"></script>
                 <script src="../search/main.js"></script>
 
             
@@ -137,24 +138,103 @@
     </div>
 </div>
 <!-- endblock -->
-                    <!-- block content -->
-<section class="container post">
+
+                
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-3 d-none d-md-block" id="component-sidebar">
+                                    <!-- block sidebar -->
+<div class="navbar-expand-md" role="complementary">
+    
+    <div class="sidebar navbar-collapse collapse card">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="1"><a href="#syllabus" class="nav-link">📜 Syllabus</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#course-description" class="nav-link">Course Description</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#course-prerequisites" class="nav-link">Course Prerequisites</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#learning-outcomes" class="nav-link">Learning Outcomes</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#course-outline" class="nav-link">Course Outline</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#assignments-and-grading" class="nav-link">Assignments and Grading</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#resources" class="nav-link">Resources</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#campus-wide-resources-and-information" class="nav-link">Campus-wide resources and information</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div>
+<!-- endblock -->
+                            </div>
+                            <div class="col-md-9 col-12" id="component-content">
+                                    <!-- block content -->
+<section class="container post" id="component-content">
     <article>
         <header>
             
             
         </header>
-        <p><h1 id="syllabus">📜 Syllabus</h1>
-<h2 id="fall-2024">Fall 2024</h2>
-<p>Broad 4240<br/>
-Tuesdays and Thursdays, 2 p.m. - 4:50 p.m.</p>
-<p><strong>INSTRUCTOR</strong> - Hua Chai (he/they)<br/>
-Office hours: By appointment only; Thursdays, 12:30 p.m. - 1:30 p.m. @ Game Lab (Broad 3252)<br/>
-Email: huazzers@g.ucla.edu</p>
-<p><strong>TEACHING ASSISTANT</strong> - Sagan Yee (he/they)<br/>
-Office hours: By appointment only; Tuesdays, 12:30 p.m. - 1:30 p.m. @ Game Lab (Broad 3252)<br/>
-Email: saganyee@ucla.edu</p>
+        <p><!--jump to anchor tag adjusted to header height offset-->
+<script>
+// Get the header element
+let header = document.querySelector('header');
+
+// Get the height of the header
+document.querySelectorAll('a[href^="#"]')
+.forEach(function (anchor) {
+    anchor.addEventListener('click', 
+    function (event) {
+        event.preventDefault();
+
+        // Get the target element that 
+        // the anchor link points to
+        let target = document.querySelector(
+            this.getAttribute('href')
+        );
+
+        let headerHeight = header.offsetHeight*2;
+
+        let targetPosition = target
+            .getBoundingClientRect().top - headerHeight;
+
+        window.scrollTo({
+            top: targetPosition + window.scrollY,
+            behavior: 'smooth'
+        });
+    });
+});
+</script>
+
+<h1 id="syllabus">📜 Syllabus</h1>
 <hr />
+<p><strong>LOCATION:</strong> Broad 4240<br/>
+<strong>TIME:</strong> Tuesdays and Thursdays, 9 a.m. - 11:50 a.m.</p>
+<p><strong>INSTRUCTOR</strong> - Hua Chai (he/they)<br/>
+Office hours: By appointment only; Tuesdays, 12:30 p.m. - 1:30 p.m. @ Game Lab (Broad 3252)<br/>
+Email: huazzers@g.ucla.edu</p>
+<p><strong>TEACHING ASSISTANT</strong> - Xiner Lan (she/they)<br/>
+Office hours: By appointment only; Thursdays, 12:30 p.m. - 1:30 p.m. @ 3rd floor studio (Broad 3241)<br/>
+Email: lanxinerrr@gmail.com</p>
 <h2 id="course-description">Course Description</h2>
 <p>This course introduces the fundamentals of programming interactive projects in game development software. </p>
 <p>Classwork focuses on familiarizing students with game engines, computer programming concepts, player experience, and other skills that are foundational to making digital games.</p>
@@ -175,16 +255,16 @@ Email: saganyee@ucla.edu</p>
 <h3 id="unit-1-generative-computation">Unit 1: Generative Computation</h3>
 <p>Using generative design to create random/unique/dynamic ecosystems, worlds, characters, and events in Unity. </p>
 <blockquote>
-<p><strong>Week 0-3</strong>
+<p><strong>Week 1-3</strong>
 </br>Intro to Unity Game Engine and C#, Vector fundamentals, Prefabs and Instantiation, Arrays and Randomness, UI</p>
 <p><strong>Project 1: Auto-Generator</strong></p>
 </blockquote>
 <h3 id="unit-2-playing-with-physics">Unit 2: Playing with Physics</h3>
-<p>Using physics, math, and other game engine tools to design environments and mechanics for interactive gameplay.</p>
+<p>Using physics, math, gamepad mapping tools to design environments and mechanics for interactive gameplay.</p>
 <blockquote>
-<p><strong>Week 4-6</strong>
+<p><strong>Week 4-7</strong>
 </br>Level Design, Input Systems, Physics Simulations, Static Variables and Singletons, Sound, Coroutines, Persistent Data</p>
-<p><strong>Project 2: Ball Game Remix</strong></p>
+<p><strong>Project 2: TBD -- Make a physics-based video game to be played on the Arcade Cabinet / Table!</strong></p>
 </blockquote>
 <h3 id="intermission-alt-engines">Intermission: Alt-Engines</h3>
 <p>Explore other tiny game engines!</p>
@@ -230,9 +310,9 @@ Email: saganyee@ucla.edu</p>
 <h4 id="readings-homeplays">Readings / Homeplays</h4>
 <p>You will be assigned occasional readings and games that are related to this course, accompanied by a questionnaire for you to complete and bring to class. These are graded pass/fail -- if you did the work, you will get full credit.</p>
 <h4 id="participation-attendance">Participation / Attendance</h4>
-<p>This is an <strong>in-person course</strong>, so please come to class on time. We will be covering a lot of content quickly, so it is <em>very</em> important that you are present for each day. </p>
-<p>If you are more than 15 minutes late, you will be marked as late. Three late marks results in an unexcused absence. <strong>Any disputes should be discussed with the TA within two weeks</strong></p>
-<p><strong>If you anticipate having to miss class, email the TA prior to the class.</strong> Absences will not be excused after the fact, except in extreme circumstances. You get <strong>one</strong> unexcused absence before it starts affecting your grade. Each unexcused absence that follows will result in one full letter grade deduction from your participation score. </p>
+<p>This is an <strong>in-person course</strong>, so please come to class on time. We will be covering a lot of content quickly, so it is <em>very</em> important that you are present for each lesson.</p>
+<p>If you are more than 15 minutes late, you will be marked as late. Three late marks results in an unexcused absence. </p>
+<p><strong>If you anticipate having to miss class, email the TA as soon as possible.</strong> You get <strong>two</strong> unexcused absences before it starts affecting your grade. Every unexcused absence that follows will result in one full letter grade deduction from your participation score. </p>
 <p>Your participation grade will also be determined by your level of engagement in class. If you seem disengaged or are disruptive in class, we will reach out and discuss the matter with you. If a pattern of disruption or disengagement continues, we will be taking note and it will be reflected in your grade.</p>
 <h3 id="other-assignment-related-rules">Other assignment-related rules</h3>
 <h4 id="late-work">Late Work</h4>
@@ -244,9 +324,9 @@ Email: saganyee@ucla.edu</p>
 <p>After the due date, a full letter grade will be deducted from the project grade for each class day that the assignment is late. </p>
 <p><strong>If you anticipate that you won’t be able to complete the work by the due date, please contact us <em>before</em> the due date so we can discuss options.</strong></p>
 <h4 id="appropriation-fair-use-and-generated-content">Appropriation, Fair Use, and Generated Content</h4>
-<p><strong>You should strive to develop your own assets for your project submissions.</strong> </p>
-<p>The use of existing prompt-based AI generation programs, including but not limited to ChatGPT, DALLE, Stable Diffusion, and Midjourney, is not allowed in this class. You may consider this to be one of the limitations of this class -- you are here to learn a specific set of technical skills, and the most advisable way to engage with this course is to not use these programs at all. There are <a href="#recommended-tools">many other reliable solutions and resources</a> available to you, please use this opportunity to explore them.</p>
-<p>If you're planning to borrow or generate assets from somewhere else, you must consult the instructor beforehand AND be able to justify your decision for doing so. While developing early stage prototypes and testing mechanics, it is acceptable to use placeholder assets.</p>
+<p><strong>You are expected to develop your own assets for your project submissions.</strong> </p>
+<p>The use of existing prompt-based AI generation programs, including but not limited to ChatGPT, DALLE, Stable Diffusion, and Midjourney, is not allowed in this class. There are <a href="#recommended-tools">many other reliable solutions and resources</a> available to you, please use this opportunity to explore them.</p>
+<p>If you're planning to borrow or generate assets from somewhere else, please consult the instructor beforehand AND be able to justify your decision for doing so. While developing early stage prototypes and testing mechanics, it is acceptable to use placeholder assets.</p>
 <p><strong>No credit will be awarded for plagiarised work.</strong> All submitted projects should be original and developed within the duration of this class. Remember to acknowledge / cite your tools and sources appropriately in your submission.</p>
 <hr />
 <h2 id="resources">Resources</h2>
@@ -254,7 +334,7 @@ Email: saganyee@ucla.edu</p>
 <p>All assigned readings and games will be provided for you -- no need to purchase textbooks for this class. (see <a href="../readings-and-homeplays/"><em>Readings &amp; Homeplays</em></a> for more details.)</p>
 <h3 id="required-tools">Required Tools</h3>
 <ul>
-<li><strong>Unity</strong> -- Please install <a href="https://unity.com/download">Unity Hub</a> and get the latest LTS version of Unity Editor (currently 2022.3.43f1). Other editor versions may differ slightly from each other, but anything 2021 or later should be ok.</li>
+<li><strong>Unity</strong> -- Please install <a href="https://unity.com/download">Unity Hub</a> and get the latest LTS version of Unity Editor (currently 6000.0.43f1). Other editor versions may differ slightly from each other, but anything 2021 or later should be ok.</li>
 <li><strong>Visual Studio</strong> -- Install Microsoft Visual Studio or Visual Studio Code, you should have the option to do this when installing Unity.</li>
 </ul>
 <h3 id="recommended-tools">Recommended Tools</h3>
@@ -296,6 +376,9 @@ We're all living in the meta-game engine called the occupational forces of the U
 <li><a href="https://online.ucpress.edu/ch/article/100/4/3/197683/Respecting-the-AncestorsOn-Repatriating-American"><strong>California History (Winter 2023), Respecting the Ancestors: On Repatriating American Indian Remains</strong></a> -- 2023 essay report on the history of repatriating indigenous peoples remains (mostly a lack thereof), including UC-specific case studies. </li>
 <li><a href="https://www.semanticscholar.org/paper/Decolonization-is-not-a-metaphor-Tuck-Yang/9e908da74710ecdcac794a847564939390008374"><strong>Decolonization is not a metaphor</strong></a> -- article on what is unsettling about decolonisation as a caution against the loose use of the term in advocacy and scholarship. </li>
 </ul>
+<h3 id="know-your-rights-ice-on-campus">Know your Rights - ICE on Campus</h3>
+<p>This classroom is a place that honors the experiences of all students regardless of nationality, immigration status, or other factors. I understand that this quarter is likely to be a particularly challenging time for students navigating issues related to immigrant and international student rights. I pledge instructional flexibility including flexible deadlines, online documentation of course materials, and options for remote participation. You do not need to disclose your immigration or visa status to me to access these flexibilities. If you would like to request these accommodations, just let me know.</p>
+<p>Students who have concerns about their legal rights as immigrants or international students may seek resources via the Undocumented Students Program, IDEAS, and the Dream Resource Center. You may also approach me for advice or help connecting to these resources. In particular, the Undocumented Student Program Legal Services provides legal advice and representation for undocumented UC students or UC students with undocumented family members. You can reach Gina Pech, the Supervising Attorney for the Legal Services Team at <a href="mailto:gpech@saonet.ucla.edu">gpech@saonet.ucla.edu</a>. If you are detained, or need urgent immigration related legal counsel, you may call Ms. Pech at 424-832-0977. </p>
 <h3 id="commitment-to-diversity-safer-spaces">Commitment to Diversity &amp; Safer Spaces</h3>
 <p>We understand the classroom as a space for practicing freedom; where one may challenge psychic, social, and cultural borders and create meaningful artistic expressions. To do so we must acknowledge and embrace the different identities and backgrounds we inhabit. This means that we will use preferred pronouns, respect self-identifications, and be mindful of special needs. Disagreement is encouraged and supported, however our differences affect our conceptualization and experience of reality, and it is extremely important to remember that certain gender, race, sex, and class identities are more privileged while others are undermined and marginalized. Consequently, this makes some people feel more protected or vulnerable during debates and discussions. A collaborative effort between the students, TA, and instructor is needed to create a supportive learning environment. While everyone should feel free to experiment creatively and conceptually, if a class member points out that something you have said or shared with the group is offensive, avoid being defensive; instead approach the discussion as a valuable opportunity for us to grow and learn from one another. Alternatively, if you feel that something said in discussion or included in a piece of work is harmful, you are encouraged to speak with the instructor or TA. </p>
 <p><em>(Statement adopted from voidLab at <a href="https://github.com/voidlab/diversity-statement">https://github.com/voidlab/diversity-statement</a>)</em></p>
@@ -335,23 +418,28 @@ We're all living in the meta-game engine called the occupational forces of the U
     </article>
 </section>
 <!-- endblock -->
+                            </div>
+                        </div>
+                    </div>
+                
+                
             </main>
 
             
                     <!-- block preview -->
-        <div class="row row-cols-md-3 text-center pt-md-3" id="component-preview">
-            <div class="col themed-grid-col">
-                <a rel="prev" href=".." class="nav-link">
-                    <i class="fa fa-arrow-left"></i> Previous
-                </a>
-            </div>
-            <div class="col themed-grid-col"></div>
-            <div class="col themed-grid-col">
-                <a rel="next" href="../schedule/" class="nav-link">
-                    Next <i class="fa fa-arrow-right"></i>
-                </a>
-            </div>
+    <div class="preview row row-cols-md-3 text-center pt-md-3" id="component-preview">
+        <div class="col themed-grid-col">
+            <a rel="prev" href=".." class="nav-link">
+                <i class="fa fa-arrow-left"></i> Previous
+            </a>
         </div>
+        <div class="col themed-grid-col"></div>
+        <div class="col themed-grid-col">
+            <a rel="next" href="../schedule/" class="nav-link">
+                Next <i class="fa fa-arrow-right"></i>
+            </a>
+        </div>
+    </div>
 <!-- endblock -->
             
 
@@ -382,7 +470,6 @@ We're all living in the meta-game engine called the occupational forces of the U
             <script src="../assets/js/bootstrap.bundle.min.js""></script>
             <script src="../assets/js/main.min.js""></script>
                 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js" defer></script>
-                <script src="../javascripts/config.js" defer></script>
                 <script src="../search/main.js" defer></script>
 
     </body>

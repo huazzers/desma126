@@ -1,17 +1,51 @@
+
+<!--jump to anchor tag adjusted to header height offset-->
+<script>
+// Get the header element
+let header = document.querySelector('header');
+
+// Get the height of the header
+document.querySelectorAll('a[href^="#"]')
+.forEach(function (anchor) {
+    anchor.addEventListener('click', 
+    function (event) {
+        event.preventDefault();
+
+        // Get the target element that 
+        // the anchor link points to
+        let target = document.querySelector(
+            this.getAttribute('href')
+        );
+        
+        let headerHeight = header.offsetHeight*2;
+        
+        let targetPosition = target
+            .getBoundingClientRect().top - headerHeight;
+
+        window.scrollTo({
+            top: targetPosition + window.scrollY,
+            behavior: 'smooth'
+        });
+    });
+});
+</script>
+
 # 📜 Syllabus
-## Fall 2024
-Broad 4240<br/>
-Tuesdays and Thursdays, 2 p.m. - 4:50 p.m.
-
-**INSTRUCTOR** - Hua Chai (he/they)<br/>
-Office hours: By appointment only; Thursdays, 12:30 p.m. - 1:30 p.m. @ Game Lab (Broad 3252)<br/>
-Email: huazzers@g.ucla.edu
-
-**TEACHING ASSISTANT** - Sagan Yee (he/they)<br/>
-Office hours: By appointment only; Tuesdays, 12:30 p.m. - 1:30 p.m. @ Game Lab (Broad 3252)<br/>
-Email: saganyee@ucla.edu
 
 ---
+
+**LOCATION:** Broad 4240<br/>
+**TIME:** Tuesdays and Thursdays, 9 a.m. - 11:50 a.m.
+
+**INSTRUCTOR** - Hua Chai (he/they)<br/>
+Office hours: By appointment only; Tuesdays, 12:30 p.m. - 1:30 p.m. @ Game Lab (Broad 3252)<br/>
+Email: huazzers@g.ucla.edu
+
+**TEACHING ASSISTANT** - Xiner Lan (she/they)<br/>
+Office hours: By appointment only; Thursdays, 12:30 p.m. - 1:30 p.m. @ 3rd floor studio (Broad 3241)<br/>
+Email: lanxinerrr@gmail.com
+
+
 
 ## Course Description
 This course introduces the fundamentals of programming interactive projects in game development software. 
@@ -42,18 +76,18 @@ By the end of this course, you will be able to create a real-time, interactive s
 ### Unit 1: Generative Computation
 Using generative design to create random/unique/dynamic ecosystems, worlds, characters, and events in Unity. 
 
-> **Week 0-3**
+> **Week 1-3**
 </br>Intro to Unity Game Engine and C#, Vector fundamentals, Prefabs and Instantiation, Arrays and Randomness, UI
 > 
 > **Project 1: Auto-Generator**
 
 ### Unit 2: Playing with Physics
-Using physics, math, and other game engine tools to design environments and mechanics for interactive gameplay.
+Using physics, math, gamepad mapping tools to design environments and mechanics for interactive gameplay.
 
-> **Week 4-6**
+> **Week 4-7**
 </br>Level Design, Input Systems, Physics Simulations, Static Variables and Singletons, Sound, Coroutines, Persistent Data
 > 
-> **Project 2: Ball Game Remix**
+> **Project 2: TBD -- Make a physics-based video game to be played on the Arcade Cabinet / Table!**
 
 ### Intermission: Alt-Engines
 Explore other tiny game engines!
@@ -100,11 +134,11 @@ You will be assigned occasional readings and games that are related to this cour
 
 
 #### Participation / Attendance
-This is an **in-person course**, so please come to class on time. We will be covering a lot of content quickly, so it is *very* important that you are present for each day. 
+This is an **in-person course**, so please come to class on time. We will be covering a lot of content quickly, so it is *very* important that you are present for each lesson.
 
-If you are more than 15 minutes late, you will be marked as late. Three late marks results in an unexcused absence. **Any disputes should be discussed with the TA within two weeks**
+If you are more than 15 minutes late, you will be marked as late. Three late marks results in an unexcused absence. 
 
-**If you anticipate having to miss class, email the TA prior to the class.** Absences will not be excused after the fact, except in extreme circumstances. You get **one** unexcused absence before it starts affecting your grade. Each unexcused absence that follows will result in one full letter grade deduction from your participation score. 
+**If you anticipate having to miss class, email the TA as soon as possible.** You get **two** unexcused absences before it starts affecting your grade. Every unexcused absence that follows will result in one full letter grade deduction from your participation score. 
 
 Your participation grade will also be determined by your level of engagement in class. If you seem disengaged or are disruptive in class, we will reach out and discuss the matter with you. If a pattern of disruption or disengagement continues, we will be taking note and it will be reflected in your grade.
 
@@ -122,11 +156,11 @@ After the due date, a full letter grade will be deducted from the project grade 
 
 #### Appropriation, Fair Use, and Generated Content
 
-**You should strive to develop your own assets for your project submissions.** 
+**You are expected to develop your own assets for your project submissions.** 
 
-The use of existing prompt-based AI generation programs, including but not limited to ChatGPT, DALLE, Stable Diffusion, and Midjourney, is not allowed in this class. You may consider this to be one of the limitations of this class -- you are here to learn a specific set of technical skills, and the most advisable way to engage with this course is to not use these programs at all. There are [many other reliable solutions and resources](#recommended-tools) available to you, please use this opportunity to explore them.
+The use of existing prompt-based AI generation programs, including but not limited to ChatGPT, DALLE, Stable Diffusion, and Midjourney, is not allowed in this class. There are [many other reliable solutions and resources](#recommended-tools) available to you, please use this opportunity to explore them.
 
-If you're planning to borrow or generate assets from somewhere else, you must consult the instructor beforehand AND be able to justify your decision for doing so. While developing early stage prototypes and testing mechanics, it is acceptable to use placeholder assets.
+If you're planning to borrow or generate assets from somewhere else, please consult the instructor beforehand AND be able to justify your decision for doing so. While developing early stage prototypes and testing mechanics, it is acceptable to use placeholder assets.
 
 **No credit will be awarded for plagiarised work.** All submitted projects should be original and developed within the duration of this class. Remember to acknowledge / cite your tools and sources appropriately in your submission.
 
@@ -138,7 +172,7 @@ If you're planning to borrow or generate assets from somewhere else, you must co
 All assigned readings and games will be provided for you -- no need to purchase textbooks for this class. (see [*Readings & Homeplays*](./readings-and-homeplays.md) for more details.)
 
 ### Required Tools
-- **Unity** -- Please install [Unity Hub](https://unity.com/download) and get the latest LTS version of Unity Editor (currently 2022.3.43f1). Other editor versions may differ slightly from each other, but anything 2021 or later should be ok.
+- **Unity** -- Please install [Unity Hub](https://unity.com/download) and get the latest LTS version of Unity Editor (currently 6000.0.43f1). Other editor versions may differ slightly from each other, but anything 2021 or later should be ok.
 - **Visual Studio** -- Install Microsoft Visual Studio or Visual Studio Code, you should have the option to do this when installing Unity.
 
 ### Recommended Tools
@@ -183,6 +217,13 @@ Other resources on land repatriation:
 * [**UCLA Mapping Indigenous LA**](https://mila.ss.ucla.edu/) -- an online archive of a storymapping research project about indigenous Los Angeles peoples, histories, and geographies from past and present.
 * [**California History (Winter 2023), Respecting the Ancestors: On Repatriating American Indian Remains**](https://online.ucpress.edu/ch/article/100/4/3/197683/Respecting-the-AncestorsOn-Repatriating-American) -- 2023 essay report on the history of repatriating indigenous peoples remains (mostly a lack thereof), including UC-specific case studies. 
 * [**Decolonization is not a metaphor**](https://www.semanticscholar.org/paper/Decolonization-is-not-a-metaphor-Tuck-Yang/9e908da74710ecdcac794a847564939390008374) -- article on what is unsettling about decolonisation as a caution against the loose use of the term in advocacy and scholarship. 
+
+### Know your Rights - ICE on Campus
+
+This classroom is a place that honors the experiences of all students regardless of nationality, immigration status, or other factors. I understand that this quarter is likely to be a particularly challenging time for students navigating issues related to immigrant and international student rights. I pledge instructional flexibility including flexible deadlines, online documentation of course materials, and options for remote participation. You do not need to disclose your immigration or visa status to me to access these flexibilities. If you would like to request these accommodations, just let me know.
+ 
+Students who have concerns about their legal rights as immigrants or international students may seek resources via the Undocumented Students Program, IDEAS, and the Dream Resource Center. You may also approach me for advice or help connecting to these resources. In particular, the Undocumented Student Program Legal Services provides legal advice and representation for undocumented UC students or UC students with undocumented family members. You can reach Gina Pech, the Supervising Attorney for the Legal Services Team at [gpech@saonet.ucla.edu](mailto:gpech@saonet.ucla.edu). If you are detained, or need urgent immigration related legal counsel, you may call Ms. Pech at 424-832-0977. 
+
 
 ### Commitment to Diversity & Safer Spaces
 We understand the classroom as a space for practicing freedom; where one may challenge psychic, social, and cultural borders and create meaningful artistic expressions. To do so we must acknowledge and embrace the different identities and backgrounds we inhabit. This means that we will use preferred pronouns, respect self-identifications, and be mindful of special needs. Disagreement is encouraged and supported, however our differences affect our conceptualization and experience of reality, and it is extremely important to remember that certain gender, race, sex, and class identities are more privileged while others are undermined and marginalized. Consequently, this makes some people feel more protected or vulnerable during debates and discussions. A collaborative effort between the students, TA, and instructor is needed to create a supportive learning environment. While everyone should feel free to experiment creatively and conceptually, if a class member points out that something you have said or shared with the group is offensive, avoid being defensive; instead approach the discussion as a valuable opportunity for us to grow and learn from one another. Alternatively, if you feel that something said in discussion or included in a piece of work is harmful, you are encouraged to speak with the instructor or TA. 

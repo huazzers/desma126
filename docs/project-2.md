@@ -1,3 +1,34 @@
+<!--jump to anchor tag adjusted to header height offset-->
+<script>
+// Get the header element
+let header = document.querySelector('header');
+
+// Get the height of the header
+document.querySelectorAll('a[href^="#"]')
+.forEach(function (anchor) {
+    anchor.addEventListener('click', 
+    function (event) {
+        event.preventDefault();
+
+        // Get the target element that 
+        // the anchor link points to
+        let target = document.querySelector(
+            this.getAttribute('href')
+        );
+        
+        let headerHeight = header.offsetHeight*2;
+        
+        let targetPosition = target
+            .getBoundingClientRect().top - headerHeight;
+
+        window.scrollTo({
+            top: targetPosition + window.scrollY,
+            behavior: 'smooth'
+        });
+    });
+});
+</script>
+
 # Project 2: Ball Game Remix
 
 ## Final Submission Due: Week 6 Thursday, November 7
@@ -6,6 +37,9 @@
 <p><a href="https://forms.gle/qHWAFQe68h4tVBcE9">Submit Here</a></p>
 <blockquote>Please read the <a href="../how-to-submit">How To Submit</a> page for more detailed instructions.</blockquote>
 </div>-->
+
+<!--
+
 
 <figure>
     <img src="../img/wiiplay.png" width=100%>
@@ -85,27 +119,8 @@ For the *actual physical* game:
         </ul>
     </div>
 </div>
-<!--
-<div class="div-container">
-    <div style="width:47.5%;">
-        <figure>
-        <img src="https://img.itch.zone/aW1hZ2UvMjI5MTgvMTA2MjA4LmdpZg==/794x1000/6m2Fy8.gif">
-        <figcaption>-- sparking vinegar - Super Cricket Fighter Turbo
-        </figcaption>
-        </figure>
-    </div>
-    <div style="width:47.5%;">
-        <ul>
-            <li style="margin-top:0;">What tools or appendages does the player use to play your <i>digital</i> game?
-            </li>
-            <li>What are the properties and affordances of those tools?
-            </li>
-            <li>What ways can you think of adapting the physical affordances and properties to the digital?
-            </li>
-        </ul>
-    </div>
-</div>
--->
+
+
 For your *digital* game:
 <ul>
             <li style="margin-top:0;">What tools or appendages does the player use to play your <i>digital</i> game?
@@ -368,6 +383,8 @@ Consider increasing the **volume** and **pitch** of a sound effect based on how 
 ### Evaluation
 
 Your final project will be evaluated according to the guidelines listed in the [course syllabus](./syllabus.md/#evaluation-criteria).
+
+-->
 
 <!--
 ?? ball game remix

@@ -1,19 +1,35 @@
+<!--jump to anchor tag adjusted to header height offset-->
+<script>
+// Get the header element
+let header = document.querySelector('header');
+
+// Get the height of the header
+document.querySelectorAll('a[href^="#"]')
+.forEach(function (anchor) {
+    anchor.addEventListener('click', 
+    function (event) {
+        event.preventDefault();
+
+        // Get the target element that 
+        // the anchor link points to
+        let target = document.querySelector(
+            this.getAttribute('href')
+        );
+        
+        let headerHeight = header.offsetHeight*2;
+        
+        let targetPosition = target
+            .getBoundingClientRect().top - headerHeight;
+
+        window.scrollTo({
+            top: targetPosition + window.scrollY,
+            behavior: 'smooth'
+        });
+    });
+});
+</script>
+
 # Readings and Homeplays
-<!-- For full documentation visit [mkdocs.org](https://www.mkdocs.org).
-
-## Commands
-
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs -h` - Print help message and exit.
-
-## Project layout
-
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files. -->
 
 ---
 
@@ -24,12 +40,10 @@ Read the assigned material, and submit your response to the given questions **in
 
 ### Reading Response 1
 
-<!--
 <div class="duedate">
-<p>Due: Week 1 Thursday, October 3
-</br><a href="https://forms.gle/TJzdPgYr1zuRAtCQ6">Submit Your Response Here</a></p>
+<p>📌 <b>DUE: Week 2 Tuesday, April 8</b>
+</br><a href="https://forms.gle/8B5VJyHGwea7qNRP7">Submit Your Response Here</a></p>
 </div>
--->
 
 Read Kate Compton's "So you want to build a generator" 
 [https://galaxykate0.tumblr.com/post/139774965871/so-you-want-to-build-a-generator](https://galaxykate0.tumblr.com/post/139774965871/so-you-want-to-build-a-generator)
@@ -47,13 +61,13 @@ If you're hungry for more, below are some recommended talks on more methods and 
 
 ### Reading Response 2
 
-<!--
 <div class="duedate">
-<p>Due: Week 4 Thursday, October 24
-</br><a href="https://forms.gle/5MGvd2UREeXwi8oP7">Submit Your Response Here</a></p>
+<p>📌 <b>DUE: Week 4 Thursday, April 24</b></p>
 </div>
--->
 
+TBD
+
+<!--
 Read these two writings by Steve Swink:
 
 - [***Game Feel: The Secret Ingredient***](https://www.gamedeveloper.com/design/game-feel-the-secret-ingredient)
@@ -71,16 +85,9 @@ Watch [***Juice it or lose it - a talk by Martin Jonasson & Petri Purho***](http
 
 <br>
 
----
-
-<!--Other stuff...
-
-Cellular Automata: https://tatasz.github.io/compound_ca/
-AND
-Writing Interesting AI (pg6 of Seeds Issue #3) https://www.procjam.com/seeds/issues/3/issue3.pdf 
-
 -->
 
+---
 
 
 ## Homeplays
@@ -98,14 +105,19 @@ PC / HTML games will also be available in the PC work stations next to the 4th f
 
 ### Homeplay 1
 
+<div class="duedate">
+<p>📌 <b>DUE: Week 2 Thursday, April 10</b></p>
+</div>
+
+TBD
+
 <!--
 
 <div class="duedate">
 <p>Due: Week 2 Tuesday, October 8
-</br><a href="https://docs.google.com/spreadsheets/d/1HrWVxhsBU-uBiyhZhQHnOK0SR3rnjlIrp7U_yHa5O1g/edit?usp=sharing">Sign Up + Submit Presentations Here</a></p>
+</br><a href="https://docs.google.com/spreadsheets/d/1AiUgLQjXvfYdugF8H9iqIldoyj6m6JJZAEK97xzko9s/edit?usp=sharing">Sign Up + Submit Presentations Here</a></p>
 </div>
 
--->
 
 Plan to spend about 30 ~ 60 minutes playing the game(s) with your group members, then **prepare a short 5 ~ 7 minute presentation** in response to the following:
 
@@ -117,14 +129,17 @@ Plan to spend about 30 ~ 60 minutes playing the game(s) with your group members,
     - Do the generated results feel meaningful, memorable, merely distinguishable, or pretty much the same?
     - Was there something else about the project that was notable in your experience of it -- the camera, gameplay, interface, etc. ?
 
-
-
 **Please share a link to any presentation materials** in the sign up sheet next to your group names. You will share your responses with the rest of the class during lesson time on the due date.
 
-<br>
+-->
 
-### Homeplay 2 (Extra Credit)
+### Homeplay 2
 
+<div class="duedate">
+<p>📌 <b>DUE: Week 5 Tuesday, April 29</b></p>
+</div>
+
+TBD 
 <!--
 <div class="duedate">
 <p>Due: Week 8 Tuesday, November 19
@@ -132,6 +147,7 @@ Plan to spend about 30 ~ 60 minutes playing the game(s) with your group members,
 </div>
 -->
 
+<!--
 Plan to spend about 30 ~ 60 minutes playing the game(s) with your group members, then **prepare a short 5 ~ 7 minute presentation** in response to the following:
 
 1. Tell us about the project
@@ -143,3 +159,13 @@ Plan to spend about 30 ~ 60 minutes playing the game(s) with your group members,
 
 
 **Please share a link to any presentation materials** in the sign up sheet next to your group names. You will share your responses with the rest of the class during lesson time on the due date.
+
+-->
+
+### Homeplay 3
+
+<div class="duedate">
+<p>📌 <b>DUE: Week 8 Thursday, May 22</b></p>
+</div>
+
+TBD

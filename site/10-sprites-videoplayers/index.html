@@ -1,0 +1,485 @@
+<!doctype html>
+<html data-bs-theme="light">
+    <head>
+                <title>Sprites and Video players - 👾 DESMA126 Game Engine</title>
+
+            <meta charset="utf-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+            
+            
+            
+
+            
+                <link  rel="icon" type="image/x-icon" href="../assets/img/favicon.ico">
+            
+            <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fira+Mono:400,700">
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+            <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+            <link rel="stylesheet" href="../assets/css/root.min.css">
+            <link rel="stylesheet" href="../assets/css/main.min.css">
+            <link rel="stylesheet" href="../assets/css/media.min.css">
+            <link rel="stylesheet" href="../assets/css/mkdocstrings.min.css">
+                <link href="../extra.css" rel="stylesheet">
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+                <script src="../search/main.js"></script>
+
+            
+                
+            
+    </head>
+
+    <body>
+        <div class="container py-3">
+            <header>
+                    <!-- block header -->
+<nav class="navbar navbar-expand-xl border-bottom">
+    <div class="container-fluid">
+        
+
+        
+            <span class=" fs-4 title-color site-name" id="component-site-name" style="text-transform: uppercase;">👾 DESMA126 Game Engine</span>
+        
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsMenu"
+            aria-controls="navbarsMenu" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse flex-column ml-auto" id="navbarsMenu">
+            <ul class="navbar-nav">
+
+                <!-- block menu -->
+                <li class="nav-item">
+                    <!-- block menu -->
+    
+        <li class="nav-item" id="component-menu">
+            <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="
+                            nav-link text-gray text-decoration-none" href="..">[🏠 Home]</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="
+                            nav-link text-gray text-decoration-none" href="../syllabus/">[📜 Syllabus]</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="
+                            nav-link text-gray text-decoration-none" href="../schedule/">[📅 Schedule]</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="
+                            nav-link dropdown-toggle text-decoration-none" href="#" data-bs-toggle="dropdown">[📌 Assignments]</a>
+                            <ul class="dropdown-menu">
+                                    <!-- block dropdown-menu -->
+    <li>
+        <a href="../how-to-submit/" class="dropdown-item text-decoration-none ">How To Submit</a>
+    </li>
+<!-- endblock -->
+                                    <!-- block dropdown-menu -->
+    <li>
+        <a href="../readings-and-homeplays/" class="dropdown-item text-decoration-none ">Readings & Homeplays</a>
+    </li>
+<!-- endblock -->
+                                    <!-- block dropdown-menu -->
+    <li>
+        <a href="../project-1/" class="dropdown-item text-decoration-none ">Project 1</a>
+    </li>
+<!-- endblock -->
+                                    <!-- block dropdown-menu -->
+    <li>
+        <a href="../project-2/" class="dropdown-item text-decoration-none ">Project 2</a>
+    </li>
+<!-- endblock -->
+                                    <!-- block dropdown-menu -->
+    <li>
+        <a href="../project-3/" class="dropdown-item text-decoration-none ">Project 3</a>
+    </li>
+<!-- endblock -->
+                            </ul>
+                        </li>
+            </ul>
+        </li>
+<!-- endblock -->
+                </li>
+                <!-- endblock -->
+
+                <!-- block search -->
+                <li class="nav-item">
+                    <a class="collapsed" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+                        <div class="md-search-icon">
+                            <i class="fa fa-search" aria-hidden="true"></i>
+                        </div>
+                    </a>
+                </li>
+                <!--  endblock -->
+
+                <!-- block source -->
+                <li class="nav-item">
+                    
+                </li>
+                <!--  endblock -->
+            </ul>
+        </div>
+    </div>
+</nav>
+<!--  endblock -->
+            </header>
+
+            <main><!-- block search -->
+<div class="collapse" id="collapseExample">
+    <div role="search" class="search-box">
+        <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+            <input type="text" name="q" class="search-query"
+            placeholder="Search docs" title="Type search term here" />
+        </form>
+    </div>
+</div>
+<!-- endblock -->
+
+                
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-3 d-none d-md-block" id="component-sidebar">
+                                    <!-- block sidebar -->
+<div class="navbar-expand-md" role="complementary">
+    
+    <div class="sidebar navbar-collapse collapse card">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="1"><a href="#sprites-and-video-players" class="nav-link">Sprites and Video players</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#add-a-texture-material-to-a-3d-plane" class="nav-link">Add a texture material to a 3D Plane</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#sprite-renderer-component" class="nav-link">Sprite Renderer Component</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#video-player-component" class="nav-link">Video Player Component</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#some-course-reminders" class="nav-link">Some course reminders</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div>
+<!-- endblock -->
+                            </div>
+                            <div class="col-md-9 col-12" id="component-content">
+                                    <!-- block content -->
+<section class="container post" id="component-content">
+    <article>
+        <header>
+            
+            
+        </header>
+        <p><script>hljs.highlightAll();</script>
+<!--jump to anchor tag adjusted to header height offset-->
+<script>
+// Get the header element
+let header = document.querySelector('header');
+
+// Get the height of the header
+document.querySelectorAll('a[href^="#"]')
+.forEach(function (anchor) {
+    anchor.addEventListener('click', 
+    function (event) {
+        event.preventDefault();
+
+        // Get the target element that 
+        // the anchor link points to
+        let target = document.querySelector(
+            this.getAttribute('href')
+        );
+
+        let headerHeight = header.offsetHeight*2;
+
+        let targetPosition = target
+            .getBoundingClientRect().top - headerHeight;
+
+        window.scrollTo({
+            top: targetPosition + window.scrollY,
+            behavior: 'smooth'
+        });
+    });
+});
+</script>
+<h1 id="sprites-and-video-players">Sprites and Video players</h1>
+<hr />
+<p>📦 <strong>Unity packages from today's class:</strong></p>
+<blockquote>
+<ul>
+<li>Class Demo: <a href="https://drive.google.com/file/d/1Vezjb72HZ63HmDyYfX9SFHXkUTSRs_M_/view?usp=sharing">Sprites</a> (continuation from demo on <a href="../8-statics-scenes-sounds-vfx/">statics, scenes, sounds, and vfx</a>) and <a href="https://drive.google.com/file/d/118rMSklqyxJz00-TkoGh_F1lcFIpvJm1/view?usp=drive_link">Video Player</a></li>
+</ul>
+</blockquote>
+<p><br></p>
+<p>📚 <strong>Other relevant resources to today's topic:</strong></p>
+<blockquote>
+<ul>
+<li><a href="https://drive.google.com/file/d/1KSmyTj-9Q5NIcUfgZNh-W-xuZoH1emmC/view?usp=drive_link">Example character Sprite Sheet for Class Demo</a>.</li>
+</ul>
+</blockquote>
+<p><br></p>
+<hr />
+<p>Here are some workflows for adding still and moving images to your scene. </p>
+<h2 id="add-a-texture-material-to-a-3d-plane">Add a texture material to a 3D Plane</h2>
+<h3 id="lit-vs-unlit-shaders">Lit VS Unlit shaders</h3>
+<p>When creating a new material in the Universal 3D pipeline, the default shader used for this material is a <strong>Universal Render Pipeline (URP) Lit shader</strong>. This means your material render will account for lighting in your scene. </p>
+<p>If you change this to an <strong>URP unlit shader</strong>, the material renders independently of the surrounding lighting. </p>
+<figure>
+<img src="../img/litvsunlit.gif">
+<figcaption>-- Lit shader (left) and unlit shader (right).
+</figcaption>
+</figure>
+
+<p><br></p>
+<p>URP also has shaders that are specific to sprite textures. In the <strong>shader drop down</strong>, go to <strong>URP</strong> &gt; <strong>2D</strong> &gt; select a <strong>Sprite shader</strong>. </p>
+<p><img alt="" src="../img/urp2dspriteshader.gif" /></p>
+<p><br></p>
+<h3 id="material-properties">Material Properties</h3>
+<p><em>(Note: The following properties may or may not be available depending on what material shader you're using. Pictured below are properties available in the URP Lit shader.)</em></p>
+<p><img alt="" src="../img/materialproperties.jpg" /></p>
+<p>Here are some notable properties you may consider adjusting for your material asset:</p>
+<ul>
+<li><strong>Workflow Mode</strong>: Choose between <a href="https://docs.unity3d.com/2021.3/Documentation/Manual/StandardShaderMetallicVsSpecular.html">metallic or specular</a>.</li>
+<li><strong>Surface type</strong>: Opaque by default. If your texture has transparent areas, you may need to change this to Transparent to reflect the alpha channel. </li>
+<li><strong>Render face</strong>: Front (only) by default. In 3D meshes, each face has a normal vector which determines which side the material should render on. If you want your texture to be visible on both sides of your mesh surface, you may need to change this to be "Both".</li>
+<li><strong>Texture maps</strong>: Add a texture asset in the box to the left of "Base Map". </li>
+<li><strong>Emission</strong>: Emit light across the material surface (you may also add an image texture here as an emission map). If you have Global Volume, this will add a glow effect to your material surface at a positive-value intensity. </li>
+<li><strong>Tiling and Offset</strong>: Determines how your texture is scaled / positioned along the mesh surface. </li>
+<li><strong>Specular Highlights and Environment Reflections</strong> (under Advanced Options): Toggle these checkboxes and see how they affect the way your material is lit. </li>
+</ul>
+<p><br></p>
+<h3 id="watch-out-for-z-fighting-in-intersecting-mesh-surfaces">Watch out for Z-fighting in intersecting mesh surfaces!</h3>
+<figure>
+    <img src="../img/zfighting.gif">
+    <figcaption>-- Comparison between a bush of 3 intersecting planes which has z-fighting and strange overlap renders (left) and a bush made of 6 non-intersecting planes joined at the center (right).
+    </figcaption>
+</figure>
+
+<p>When meshes intersect with other mesh objects, especially if they're overlapping on top of one another, you may encounter a bug that flickers between the two meshes as your camera moves past it. This may be due to <strong>Z-fighting</strong>, which happens when the camera confuses the depth levels of intersecting mesh objects, and can't determine which to render on top of the other. </p>
+<p>The best practice is to <strong>keep your mesh objects separate</strong> from each other, and avoid intersecting mesh objects altogether. </p>
+<p><br></p>
+<hr />
+<h2 id="sprite-renderer-component">Sprite Renderer Component</h2>
+<p>This component allows you to use 2D sprites in GameObjects without using any meshes. </p>
+<p>First, make sure your image is <strong>imported as a "Sprite (2D and UI)" texture type</strong>. This allows you to select this image for the Sprite component for objects in your scene, and for UI Images. </p>
+<p><img alt="" src="../img/texturetosprite2dui.gif" /></p>
+<p><br></p>
+<p>If you're importing <strong>a sprite sheet</strong> containing multiple sprites, you will also need to do the following:</p>
+<ol>
+<li>Set the <strong>Sprite Mode</strong> to "Multiple"</li>
+<li>Install the <strong>2D Sprite package</strong> from Unity's package manager -- this will enable the Sprite Editor that you can use to slice your sprite sheet into individual sprites.</li>
+<li>When opening up the Sprite Editor, you may choose to <strong>Slice Grid by Cell Size or Cell Count</strong>. Click "Apply". Now you will have access to individual sprites when you click the expand arrow on your sprite sheet asset.</li>
+</ol>
+<p><img alt="" src="../img/spritesheet.gif" /></p>
+<p><br></p>
+<p>Once you have your texture correctly imported, create a new empty GameObject and add a Sprite Renderer component. </p>
+<p><img alt="" src="../img/spriterend.jpg" /></p>
+<p>Consider adjusting the following properties according to your needs: </p>
+<ul>
+<li><strong>Sprite</strong>: Set this to the sprite texture you imported.</li>
+<li><strong>Color</strong>: Change the tint of your sprite material. </li>
+<li><strong>Order in Layer</strong> (under Additional Settings): Determines the order in which overlapping sprites are rendered (higher order values render above sprites with lower order values.)</li>
+</ul>
+<p><br></p>
+<h3 id="using-the-sprite-component-on-a-3d-moving-rigidbody">Using the Sprite Component on a 3D Moving Rigidbody</h3>
+<p>If you're applying a sprite to a moving 3D object (let's say a player gameobject), I recommend attaching the sprite component <strong>inside a separate gameobject</strong>, then <strong>parent it to your player GameObject</strong> that has your Rigidbody, collider components, and player movement scripts.</p>
+<p>In my package example, here is how my enemy object is arranged in my scene hierarchy:</p>
+<blockquote>
+<ul>
+<li><strong>Parent Gameobject</strong> with Rigidbody, colliders, and physics-based movement script. <ul>
+<li><strong>Child Gameobject</strong> with Sprite component and sprite-related scripts (eg. rotating towards player camera, sprite switcher)</li>
+</ul>
+</li>
+</ul>
+</blockquote>
+<p><img alt="" src="../img/goalieparentsprite.jpg" /></p>
+<p><br></p>
+<h3 id="change-sprite-using-scripts">Change Sprite using Scripts</h3>
+<pre><code class="language-csharp">public Sprite sprIdle, sprAction; // attach your sprite textures in the inspector
+SpriteRenderer sprRend; // attach this script to the same object containing your sprite renderer
+
+void Start()
+{
+    sprRend = GetComponent&lt;SpriteRenderer&gt;();
+    ChangeSprite(sprIdle); 
+}
+
+//you could also call this function in a public UnityEvent
+//and attach the Sprite as an argument in the inspector. 
+public void ChangeSprite(Sprite toThisSprite)
+{
+    sprRend.sprite = toThisSprite;
+}
+
+//you could also consider using a coroutine function
+//to reset the sprite back to its idle state after a set duration
+
+</code></pre>
+<h3 id="rotate-sprite-towards-camera">Rotate Sprite Towards Camera</h3>
+<p>This method uses the <a href="https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector3.RotateTowards.html">Vector3.RotateTowards()</a> function to rotate sprites towards the camera. </p>
+<pre><code class="language-csharp">public class RotateTowardsPlayer : MonoBehaviour
+{
+    public float rotationSpeed;
+
+    private void LateUpdate()
+    {
+        //Camera.main is a method for getting your camera that's tagged &quot;MainCamera&quot; 
+        //typically only a single MainCamera exists in your scene
+        //make sure to tag your player camera as MainCamera.
+
+        //first get directional vector3 from this object to camera position.
+        Vector3 targetDirection = Camera.main.transform.position - transform.position;
+
+        float step = rotationSpeed * Time.deltaTime;
+
+        //Rotate the forward vector towards the target direction by one step
+        Vector3 newDirection = Vector3.RotateTowards(transform.forward, targetDirection, step, 0.0f);
+
+        //rotate our object along this new direction.
+        //here, i'm setting the y-vector as 0 so it rotates along the world Y-axis.
+        transform.rotation = Quaternion.LookRotation(new Vector3(newDirection.x,0,newDirection.z));
+    }
+}
+</code></pre>
+<hr />
+<h2 id="video-player-component">Video Player Component</h2>
+<blockquote>
+<p>Read the documentation for the video player component on <a href="https://docs.unity3d.com/2022.3/Documentation/Manual/class-VideoPlayer.html">Unity's Manual</a>.</p>
+</blockquote>
+<h3 id="importing-a-video-into-your-assets-folder">Importing a Video into your Assets folder.</h3>
+<blockquote>
+<p>Check out the following documentation on Unity's Manual: </p>
+<ul>
+<li><a href="https://docs.unity3d.com/2022.3/Documentation/Manual/VideoSources-FileCompatibility.html">video file compatibilities</a> across different target platforms;</li>
+<li><a href="https://docs.unity3d.com/2022.3/Documentation/Manual/VideoTransparency.html">video transparency support</a>, if you're using videos with alpha channel renders. </li>
+</ul>
+</blockquote>
+<p>Select the video clip in your assets folder. Make sure to tick the checkbox for <strong>"Transcode"</strong> in the Inspector panel, and then hit <strong>Apply</strong>.</p>
+<p><img alt="" src="../img/videotranscode.jpg" /></p>
+<p><br></p>
+<p>The simplest way of attaching a video onto a mesh object is to add a video player component, then attach the transcoded video clip asset inside the video player as a "Video Clip". </p>
+<p>The default render mode should be set to "Material Override", which replaces the current material base texture with the video. </p>
+<figure>
+    <img src="../img/videoplayermaterialoverridelit.gif">
+    <figcaption>-- Video Player on different 3D primitive objects.
+    </figcaption>
+</figure>
+
+<p><br></p>
+<h3 id="video-player-properties">Video Player Properties</h3>
+<p><img alt="" src="../img/videoplayer.jpg" /></p>
+<p>Here are some notable properties to take note of when setting up your video player:</p>
+<ul>
+<li><strong>Source</strong>: Defaults to "Video Clip." You may change this to URL if you want to paste an online video link -- note that you may need Wi-fi access during runtime for your video to play. </li>
+<li><strong>Play On Awake</strong>: Automatically plays the video at the start of the scene. To manually trigger the video playback, call the <a href="https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Video.VideoPlayer.Play.html">Play()</a> command from the Video Player class in a C# script. </li>
+<li><strong>Loop</strong>: loops the video playback.</li>
+<li><strong>Playback speed</strong>: Defaults at 1. Change this number if you want the video to play faster (higher float) or slower (lower float).</li>
+<li><strong>Render Mode</strong>: Defaults to "Material Override". More info about using other render modes are listed in the sections below. </li>
+<li><strong>Alpha</strong>: Defaults to 1. Transparency level of the video. </li>
+<li><strong>Audio Output Mode</strong>: Defaults to "Audio Source". You may set a different Audio Source, or set the Audio Output Mode to "None" if you want the video to play without any audio tracks. </li>
+</ul>
+<p><br></p>
+<h3 id="video-to-render-texture-workflow">Video to Render Texture workflow</h3>
+<p>If you want to further customise how the video renders onto a material, you may consider setting the video player output to a <strong>render texture</strong> instead. </p>
+<p>The following demonstrates the workflow of this method: </p>
+<table>
+<thead>
+<tr>
+<th>Video Player</th>
+<th>→</th>
+<th>Render Texture</th>
+<th>→</th>
+<th>Texture Map on Material</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Takes a video clip and renders its playback according to the selected render mode, which in this case would be "Render Texture".</td>
+<td></td>
+<td>An asset that receives the video player's output as a texture</td>
+<td></td>
+<td>Render texture can be plugged into a material's base colour, normal, emission, etc.</td>
+</tr>
+</tbody>
+</table>
+<p><br></p>
+<p><strong>STEP BY STEP INSTRUCTIONS:</strong></p>
+<ol>
+<li>Create a video player component in an empty GameObject in your scene. You will only need <strong>one video player component per video clip</strong> in your scene, i.e. you don't need a video player component on every mesh object that's rendering the video. 
+<br><br>Set the <strong>render mode</strong> to "Render Texture."<br><br><img src="../img/rendertexture.jpg"><br><br></li>
+<li>In your assets folder, create a <strong>Render Texture</strong> asset. You may set the size of the texture to match your video clip's resolution or aspect ratio.<br><br><img src="../img/rendertexture-1.gif"><br><br></li>
+<li>Attach this render texture to the <strong>Target Texture</strong> property in the video player component. <br><br><img src="../img/rendertexture-2.jpg"><br><br></li>
+<li>Create a new <strong>Material</strong> asset, then attach your render texture asset as a texture for the material's base colour property. This workflow also allows you the option to plug in the video texture to other material properties besides the base colour. 
+<br><br><img src="../img/rendertexture-3.gif"><br><br></li>
+</ol>
+<p><br></p>
+<h3 id="video-to-camera-plane">Video to Camera Plane</h3>
+<p>Setting the video player's render mode to <strong>"Camera Far Plane"</strong> allows you to project the video along the far plane of the selected camera view. This could be an option for playing a video in the camera's background.</p>
+<p><img alt="" src="../img/camerafarplane.gif" /></p>
+<p><br></p>
+<p>Setting the video player's render mode to <strong>"Camera Near Plane"</strong> allows you to project the video along the nearest plane of the selected camera view. This could be an option for playing a video over other objects in the scene. </p>
+<p><img alt="" src="../img/cameranearplane.gif" /></p>
+<p><br></p>
+<hr />
+<h2 id="some-course-reminders">Some course reminders</h2>
+<ul>
+<li><strong>Project 2</strong> is due Thursday! </li>
+</ul></p>
+    </article>
+</section>
+<!-- endblock -->
+                            </div>
+                        </div>
+                    </div>
+                
+                
+            </main>
+
+            
+                    <!-- block preview -->
+<!-- endblock -->
+            
+
+            
+                    <!-- block footer -->
+<footer class="pt-4 my-md-5 pt-md-5 border-top" id="component-footer">
+    <div class="row">
+        <div class="col-12 col-md">
+                <!-- block copyright -->
+
+    <small class="d-block mb-3">
+        Made with
+        <a href="https://github.com/FernandoCelmer/mkdocs-simple-blog" target="_blank" rel="noopener">
+            Simple Blog for MkDocs
+        </a>
+    </small>
+
+<!-- endblock -->
+        </div>
+    </div>
+</footer>
+<!-- endblock -->
+            
+        </div>
+
+            <script>var base_url = '..';</script>
+            <script src="../assets/js/jquery-3.3.1.slim.min.js""></script>
+            <script src="../assets/js/bootstrap.bundle.min.js""></script>
+            <script src="../assets/js/main.min.js""></script>
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js" defer></script>
+                <script src="../search/main.js" defer></script>
+
+    </body>
+
+</html>

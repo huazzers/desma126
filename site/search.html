@@ -1,5 +1,5 @@
 <!doctype html>
-<html>
+<html data-bs-theme="light">
     <head>
                 <title>👾 DESMA126 Game Engine</title>
 
@@ -14,15 +14,16 @@
             
                 <link  rel="icon" type="image/x-icon" href="./assets/img/favicon.ico">
             
-                    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
-                        <script>hljs.initHighlightingOnLoad();</script>
             <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fira+Mono:400,700">
             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
             <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+            <link rel="stylesheet" href="./assets/css/root.min.css">
             <link rel="stylesheet" href="./assets/css/main.min.css">
+            <link rel="stylesheet" href="./assets/css/media.min.css">
+            <link rel="stylesheet" href="./assets/css/mkdocstrings.min.css">
                 <link href="./extra.css" rel="stylesheet">
                 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
-                <script src="./javascripts/config.js"></script>
                 <script src="./search/main.js"></script>
 
             
@@ -137,27 +138,50 @@
     </div>
 </div>
 <!-- endblock -->
-    <!-- block search -->
-	<section class="p-md-5 content-search">
-		<article class="search-box">
-			<p></p>
-			<h1 id="search">Search Results</h1>
-			<hr>
 
-			<form id="content_search" action="search.html">
-				<span role="status" aria-live="polite" class="ui-helper-hidden-accessible"></span>
-				<input name="q" id="mkdocs-search-query" type="text" class="search-query search_input search-query ui-autocomplete-input"
-					placeholder="Search the Docs" autocomplete="off" autofocus title="Type search term here">
-			</form>
+                
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-3 d-none d-md-block" id="component-sidebar">
+                                    <!-- block sidebar -->
+<div class="navbar-expand-md" role="complementary">
+    
+    <div class="sidebar navbar-collapse collapse card">
+        <ul class="nav flex-column">
+        </ul>
+    </div>
+</div>
+<!-- endblock -->
+                            </div>
+                            <div class="col-md-9 col-12" id="component-content">
+				
+<!-- block search -->
+<section class="p-md-5 content-search">
+	<article class="search-box">
+		<p></p>
+		<h1 id="search">Search Results</h1>
+		<hr>
 
-			<div id="mkdocs-search-results" class="search-results" data-no-results-text="No results found">
-				Searching...
-			</div>
+		<form id="content_search" action="./search.html">
+			<span role="status" aria-live="polite" class="ui-helper-hidden-accessible"></span>
+			<input name="q" id="mkdocs-search-query" type="text" class="search-query search_input search-query ui-autocomplete-input"
+				placeholder="Search the Docs" autocomplete="off" autofocus title="Type search term here">
+		</form>
 
-		</article>
-	</section>
-    <!-- endblock -->
+		<div id="mkdocs-search-results" class="search-results" data-no-results-text="No results found">
+			Searching...
+		</div>
 
+	</article>
+</section>
+<!-- endblock -->
+
+
+                            </div>
+                        </div>
+                    </div>
+                
+                
             </main>
 
             
@@ -192,7 +216,6 @@
             <script src="./assets/js/bootstrap.bundle.min.js""></script>
             <script src="./assets/js/main.min.js""></script>
                 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js" defer></script>
-                <script src="./javascripts/config.js" defer></script>
                 <script src="./search/main.js" defer></script>
 
     </body>

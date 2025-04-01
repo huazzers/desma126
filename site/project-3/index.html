@@ -1,5 +1,5 @@
 <!doctype html>
-<html>
+<html data-bs-theme="light">
     <head>
                 <title>Project 3 - 👾 DESMA126 Game Engine</title>
 
@@ -14,15 +14,16 @@
             
                 <link  rel="icon" type="image/x-icon" href="../assets/img/favicon.ico">
             
-                    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
-                        <script>hljs.initHighlightingOnLoad();</script>
             <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fira+Mono:400,700">
             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
             <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+            <link rel="stylesheet" href="../assets/css/root.min.css">
             <link rel="stylesheet" href="../assets/css/main.min.css">
+            <link rel="stylesheet" href="../assets/css/media.min.css">
+            <link rel="stylesheet" href="../assets/css/mkdocstrings.min.css">
                 <link href="../extra.css" rel="stylesheet">
                 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
-                <script src="../javascripts/config.js"></script>
                 <script src="../search/main.js"></script>
 
             
@@ -137,56 +138,122 @@
     </div>
 </div>
 <!-- endblock -->
-                    <!-- block content -->
-<section class="container post">
+
+                
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-3 d-none d-md-block" id="component-sidebar">
+                                    <!-- block sidebar -->
+<div class="navbar-expand-md" role="complementary">
+    
+    <div class="sidebar navbar-collapse collapse card">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="1"><a href="#project-3-zine-game" class="nav-link">Project 3: Zine Game</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div>
+<!-- endblock -->
+                            </div>
+                            <div class="col-md-9 col-12" id="component-content">
+                                    <!-- block content -->
+<section class="container post" id="component-content">
     <article>
         <header>
             
             
         </header>
-        <p><h1 id="project-3-zine-game">Project 3: Zine Game</h1>
-<h2 id="final-submission-due-week-10-thursday-december-5">Final Submission Due: Week 10 Thursday, December 5</h2>
+        <p><!--jump to anchor tag adjusted to header height offset-->
+<script>
+// Get the header element
+let header = document.querySelector('header');
+
+// Get the height of the header
+document.querySelectorAll('a[href^="#"]')
+.forEach(function (anchor) {
+    anchor.addEventListener('click', 
+    function (event) {
+        event.preventDefault();
+
+        // Get the target element that 
+        // the anchor link points to
+        let target = document.querySelector(
+            this.getAttribute('href')
+        );
+
+        let headerHeight = header.offsetHeight*2;
+
+        let targetPosition = target
+            .getBoundingClientRect().top - headerHeight;
+
+        window.scrollTo({
+            top: targetPosition + window.scrollY,
+            behavior: 'smooth'
+        });
+    });
+});
+</script>
+
+<h1 id="project-3-zine-game">Project 3: Zine Game</h1>
+<p>TBD</p>
 <!--<div class="duedate">
 <p><a href="https://forms.gle/Ynd8THMzx2U4KwSo9">Submit Here</a></p>
 <blockquote>Please read the <a href="../how-to-submit">How To Submit</a> page for more detailed instructions.</blockquote>
 </div>-->
 
-<h3 id="prompt">Prompt</h3>
-<p>At the start of the quarter, we unpacked the <a href="../w0-unity-csharp/#what-is-an-engine">many possible meanings</a> of the term "engine." </p>
-<p>To conclude this course, our final project will focus on this definition of the "engine": </p>
-<blockquote>
-<p>"A person or group of people which influence a larger group; a driving force." </p>
-<p>"Anything used to effect a purpose; any device or contrivance; an agent."</p>
-</blockquote>
-<p><br></p>
-<p>Build a <strong>zine game</strong> that acts as <strong>an engine for containing, transferring, and transforming ideas, beliefs, and principles.</strong> </p>
-<p><br></p>
-<p>Consider the following options:</p>
-<ul>
-<li>An original game inspired by a personal experience;</li>
-<li>A personal response to an existing piece (a film, a manifesto, an article, an event...);</li>
-<li>A gift or letter exchange addressed to someone, or a group of people.</li>
-<li>A metacritique of what a game engine can do, or what games could be. </li>
-</ul>
-<p><br></p>
-<p>You may also consider extending upon or remixing a previous project as long as it meets the project prompt and requirements. <strong>Your project proposal must be approved by an instructor / TA prior to the submission.</strong></p>
-<p>You are also welcome to work in groups of 2-3, please consult the instructor / TA for further directions beforehand. </p>
-<p><br></p>
-<h4 id="what-is-a-zine">What is a zine?</h4>
-<blockquote>
-<p>A zine is a small-circulation booklet or magazine, often created by hand or using digital tools through self-publishing. Unlike traditional magazines, zines are characterized by their <strong>DIY ethos</strong> and <strong>independent spirit</strong>. They cover a vast array of topics, from personal stories to art, poetry, and music. They’re standout pieces of print media because they can be as varied as the creators behind them.</p>
-</blockquote>
+<!--
+### Prompt
+
+At the start of the quarter, we unpacked the [many possible meanings](./0-unity-csharp.md/#what-is-an-engine) of the term "engine." 
+
+To conclude this course, our final project will focus on this definition of the "engine": 
+
+> "A person or group of people which influence a larger group; a driving force." 
+>
+> "Anything used to effect a purpose; any device or contrivance; an agent."
+
+<br>
+
+Build a **zine game** that acts as **an engine for containing, transferring, and transforming ideas, beliefs, and principles.** 
+
+<br>
+
+Consider the following options:
+
+- An original game inspired by a personal experience;
+- A personal response to an existing piece (a film, a manifesto, an article, an event...);
+- A gift or letter exchange addressed to someone, or a group of people.
+- A metacritique of what a game engine can do, or what games could be. 
+
+<br>
+
+You may also consider extending upon or remixing a previous project as long as it meets the project prompt and requirements. **Your project proposal must be approved by an instructor / TA prior to the submission.**
+
+You are also welcome to work in groups of 2-3, please consult the instructor / TA for further directions beforehand. 
+
+<br>
+
+#### What is a zine?
+
+> A zine is a small-circulation booklet or magazine, often created by hand or using digital tools through self-publishing. Unlike traditional magazines, zines are characterized by their **DIY ethos** and **independent spirit**. They cover a vast array of topics, from personal stories to art, poetry, and music. They’re standout pieces of print media because they can be as varied as the creators behind them.
+
 <figure>
     <img src="../img/zine-fire.jpg">
     <figcaption>-- One of the earliest zines was published in 1926 during the Harlem Rennaisance. FIRE!! was an African American literary magazine that explored controversial issues in the Black community at the time, such as homosexuality, bisexuality, interracial relationships, promiscuity, prostitution, and color prejudice.
     </figcaption>
 </figure>
 
-<p><br></p>
+<br>
+
 <iframe width="100%" height="315" src="https://www.youtube.com/embed/mp-VI9KUvBw?si=8oJHhdFP1cNx7HV-" title="Riot Grrrl Activism through Art and Zines | ALIEN SHE AT YBCA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-<p><br></p>
-<p>A zine can also be thought of as a form of participatory culture, which has low barriers for artistic expression and civic engagement. Considering the tools we have today, blogging, website building, and game-making can be tools for zine-making as well. </p>
+<br>
+
+A zine can also be thought of as a form of participatory culture, which has low barriers for artistic expression and civic engagement. Considering the tools we have today, blogging, website building, and game-making can be tools for zine-making as well. 
+
 <figure>
 <iframe scrolling="no" width="570" height="800" srcdoc="&lt;html&gt;&lt;head&gt;&lt;script src=&quot;https://kickscondor.github.io/js/slaptrash.js&quot;&gt;&lt;/script&gt;&lt;/head&gt;&lt;body&gt;&lt;div class=&quot;slaptrash&quot;&gt;&lt;solid color&#x3D;&quot;black #335&quot;&gt;&lt;&#x2F;solid&gt;
 &lt;pic&gt;https:&#x2F;&#x2F;media.giphy.com&#x2F;media&#x2F;2uI9e8ARLIH8XJKy2c&#x2F;giphy.gif&lt;&#x2F;pic&gt;
@@ -284,16 +351,21 @@ dozens of fingerprints and organic bits smatter its well-worn hyperlinks.&lt;&#x
 </figcaption>
 </figure>
 
-<p><br></p>
-<p>Ultimately, zines allow creators to explore topics close to their hearts, share their perspectives, and connect with like-minded individuals. They often challenge convention, offering alternative viewpoints and fostering a sense of empowerment among readers and creators alike.</p>
-<p><br></p>
-<p>Some examples / inspirations: </p>
-<ul>
-<li><a href="https://itch.io/jam/zig-jam/entries">Submissions</a> to the <a href="https://zcmag.xyz/zine-idea-generator/?type=90&amp;action=52&amp;topic=99&amp;nomature=1&amp;plainmode=0&amp;classroom=1">Zine Idea Generator</a> game jam.</li>
-<li><a href="https://itch.io/c/1535486/ezm-reader-zines">A collection of interactive zines</a> on itch.io using <a href="https://jeremyoduber.itch.io/js-zine">HTML5 Reader for Electric Zine Maker</a></li>
-</ul>
-<p><br></p>
-<h4 id="what-is-a-zine-game">What is a zine game?</h4>
+<br>
+
+Ultimately, zines allow creators to explore topics close to their hearts, share their perspectives, and connect with like-minded individuals. They often challenge convention, offering alternative viewpoints and fostering a sense of empowerment among readers and creators alike.
+
+<br>
+
+Some examples / inspirations: 
+
+- [Submissions](https://itch.io/jam/zig-jam/entries) to the [Zine Idea Generator](https://zcmag.xyz/zine-idea-generator/?type=90&action=52&topic=99&nomature=1&plainmode=0&classroom=1) game jam.
+- [A collection of interactive zines](https://itch.io/c/1535486/ezm-reader-zines) on itch.io using [HTML5 Reader for Electric Zine Maker](https://jeremyoduber.itch.io/js-zine)
+
+<br>
+
+#### What is a zine game?
+
 <figure>
     <blockquote><p>When an individual or pair is solely responsible for a work you can watch an individual style develop: you can trace themes, both mechanical and otherwise, across a creator's work. [...] And being able (or learning to) identify the individual style, and growth, of individual authors leads to better criticism and a critical understanding of games. Not to mention, like I said, more personal games, more relevant games, more games with something to say. I want a world where everyone is capable of sitting down at a computer and making a game by herself. This is not to say that all games need to be made that way, but as a paradigm, I think the individual author has more to offer us than the team, especially at a time when videogames are so seemingly creatively bankrupt.</p>
     </blockquote>
@@ -301,30 +373,44 @@ dozens of fingerprints and organic bits smatter its well-worn hyperlinks.&lt;&#x
     </figcaption>
 </figure>
 
-<p><br></p>
-<p>Just like how zines (or small-scale, self-published works) offer avenues for communication, expression, and knowledge circulation amongst niche and marginalised communities, zine games emerged from the desire to reclaim <strong>individual authorship</strong> and <strong>creative autonomy</strong> in videogame development from mainstream industries. </p>
-<p><br></p>
-<p>If games could be whatever and however you wanted them to be, what ideas, stories, and play experiences would you like to include? </p>
-<p>What sort of games could emerge <em>only</em> if they were authored by an individual or small group of people, uninhibited by the interests of external forces and stakeholders? </p>
-<p><br></p>
-<p><strong>Personal Zines (Perzines)</strong></p>
-<p>autobiographical, sharing personal stories, experiences, and reflections.</p>
+<br>
+
+Just like how zines (or small-scale, self-published works) offer avenues for communication, expression, and knowledge circulation amongst niche and marginalised communities, zine games emerged from the desire to reclaim **individual authorship** and **creative autonomy** in videogame development from mainstream industries. 
+
+<br>
+
+If games could be whatever and however you wanted them to be, what ideas, stories, and play experiences would you like to include? 
+
+What sort of games could emerge *only* if they were authored by an individual or small group of people, uninhibited by the interests of external forces and stakeholders? 
+
+<br>
+
+**Personal Zines (Perzines)**
+
+autobiographical, sharing personal stories, experiences, and reflections.
+
 <figure>
     <img src="../img/npckc-yourejustimaginingit.png">
     <figcaption>-- <a href="https://npckc.itch.io/youre-just-imagining-it">you're just imagining it</a>. npckc.
     </figcaption>
 </figure>
 
-<p><br></p>
-<p>game mechanics based on real experiences</p>
+<br>
+
+game mechanics based on real experiences
+
 <figure>
     <img src="../img/likeanormalfish.jpg">
     <figcaption>-- <a href="https://axellfontaine.itch.io/like-a-normal-fish">Like a Normal Fish</a>. Axell.
     </figcaption>
 </figure>
 
-<p><br></p>
-<p><strong>Postcards</strong></p>
+<br>
+
+
+**Postcards**
+
+
 <figure>
     <img src="https://img.itch.zone/aW1hZ2UvNDI3ODMxLzIxMzk5MzEucG5n/original/P8LqAl.png">
     <blockquote><p> A videogame is a hotel is a machine for framing an experience which never actually occurs. Wonderful! You climb inside the shell of someone else’s excavated and inscrutable desires, you drop off your bags, you crawl around the litter where consciousness has passed, chairs, tables, boxes, doors, and then you leave and buy a postcard to remind you where you’ve been.
@@ -333,8 +419,10 @@ dozens of fingerprints and organic bits smatter its well-worn hyperlinks.&lt;&#x
     </figcaption>
 </figure>
 
-<p><br></p>
-<p><strong>Poetry / Literary / Essays</strong></p>
+<br>
+
+**Poetry / Literary / Essays**
+
 <figure>
     <img src="../img/the-day-i-couldnt-write-a-poem.jpg">
     <figcaption>-- <a href="https://sunsetdandan.itch.io/the-day-i-couldnt-write-a-poem">The day I couldn't write a poem</a>. Zennyan and mikyokyuji.</figcaption>
@@ -346,14 +434,22 @@ dozens of fingerprints and organic bits smatter its well-worn hyperlinks.&lt;&#x
     </figcaption>
 </figure>
 
-<p><br></p>
-<hr />
-<h3 id="requirements">Requirements</h3>
-<p>There will be a <strong>project sketch</strong> due on <strong>Week 8 Thurday, November 21</strong>. Please bring your ideas / prototypes to class for discussion.</p>
-<p>Your project must address the prompt above, and must have sound.</p>
-<p>AND include <strong>at least two</strong> of the following aspects into your project:</p>
-<h4 id="interactive-text">Interactive Text</h4>
-<p>A linear journey. A branching dialogue system. A visual novel. Text is an easy way to set the tone and context of your piece. If you're interested in getting into the weeds of writing, consider implementing a system for interacting with your text. </p>
+<br>
+
+---
+
+### Requirements
+
+There will be a **project sketch** due on **Week 8 Thurday, November 21**. Please bring your ideas / prototypes to class for discussion.
+
+Your project must address the prompt above, and must have sound.
+
+AND include **at least two** of the following aspects into your project:
+
+#### Interactive Text
+
+A linear journey. A branching dialogue system. A visual novel. Text is an easy way to set the tone and context of your piece. If you're interested in getting into the weeds of writing, consider implementing a system for interacting with your text. 
+
 <figure>
     <img src="../img/queersattheendoftheworld.jpg">
     <figcaption>-- <a href="https://w.itch.io/end-of-the-world">Queers at the End of the World</a>. Anna Anthropy.
@@ -366,9 +462,12 @@ dozens of fingerprints and organic bits smatter its well-worn hyperlinks.&lt;&#x
     </figcaption>
 </figure>
 
-<p><br></p>
-<h4 id="camera-systems">Camera Systems</h4>
-<p>Consider the perspective and point of view of the players. Include multiple camera perspectives in your project. This could be set up using overlay cameras, camera switching, or a more elaborate camera sytem like Cinemachine. </p>
+<br>
+
+#### Camera Systems
+
+Consider the perspective and point of view of the players. Include multiple camera perspectives in your project. This could be set up using overlay cameras, camera switching, or a more elaborate camera sytem like Cinemachine. 
+
 <figure>
     <img src="../img/gurngroupapril192024.gif">
     <figcaption>-- <a href="https://gurnburial.itch.io/april-19-2024">april 19 2024</a>. GURNGROUP.
@@ -381,10 +480,14 @@ dozens of fingerprints and organic bits smatter its well-worn hyperlinks.&lt;&#x
     </figcaption>
 </figure>
 
-<p><br></p>
-<h4 id="inventory-collections-save-system">Inventory / Collections / Save System</h4>
-<p><img alt="" src="../img/carrier%20bag%20of%20fiction.jpg" /></p>
-<p>The inventory as metaphor or device for storytelling can be seen as an alternative and, as Le Guin argues, precursor to linear, heroic modes of fiction.</p>
+<br>
+
+#### Inventory / Collections / Save System
+
+![](./img/carrier%20bag%20of%20fiction.jpg)
+
+The inventory as metaphor or device for storytelling can be seen as an alternative and, as Le Guin argues, precursor to linear, heroic modes of fiction.
+
 <figure>
     <blockquote><p>If it is a human thing to do to put something you want, because it’s useful, edible, or beautiful, into a bag, or a basket, or a bit of rolled bark or leaf, or a net woven of your own hair, or what have you, and then take it home with you, home being another, larger kind of pouch or bag, a container for people, and then later on you take it out and eat it or share it or store it up for winter in a solider container or put it in the medicine bundle or the shrine or the museum, the holy place, the area that contains what is sacred, and then next day you probably do much the same again–if to do that is human, if that’s what it takes, then I am a human being after all. Fully, freely, gladly, for the first time.</p>
     </blockquote>
@@ -392,16 +495,20 @@ dozens of fingerprints and organic bits smatter its well-worn hyperlinks.&lt;&#x
     </figcaption>
 </figure>
 
-<p><br></p>
-<p>Through design, inventory items carry meaning, further solidifying an invented world, elaborating on relationships, alluding to narrative futures.</p>
+<br>
+
+Through design, inventory items carry meaning, further solidifying an invented world, elaborating on relationships, alluding to narrative futures.
+
 <figure>
     <img src="../img/bloodborne.png">
     <figcaption>-- Bloodborne (2015). Worldbuilding lore, filling in details and connections.
     </figcaption>
 </figure>
 
-<p><br></p>
-<p>While a jump is immediate, items have potential and an inventory holds the branching possibilities from which your player-character can select.</p>
+<br>
+
+While a jump is immediate, items have potential and an inventory holds the branching possibilities from which your player-character can select.
+
 <figure>
     <img src="../img/stardewvalley.png">
     <figcaption>-- Stardew Valley (2016). More information about items, detailed images, hints on what to use them for.
@@ -414,8 +521,10 @@ dozens of fingerprints and organic bits smatter its well-worn hyperlinks.&lt;&#x
     </figcaption>
 </figure>
 
-<p><br></p>
-<p>As a prosthetic extension of the player character's form, inventory items also change how a player engages with the surrounding territory.</p>
+<br>
+
+As a prosthetic extension of the player character's form, inventory items also change how a player engages with the surrounding territory.
+
 <figure>
     <img src="../img/zork.png">
     <figcaption>-- Zork (1977). Simply a list of the items you've picked up.
@@ -428,29 +537,37 @@ dozens of fingerprints and organic bits smatter its well-worn hyperlinks.&lt;&#x
     </figcaption>
 </figure>
 
-<p><br></p>
-<h3 id="evaluation">Evaluation</h3>
-<p>Your final project will be evaluated according to the guidelines listed in the <a href="../syllabus/#evaluation-criteria">course syllabus</a>.</p></p>
+<br>
+
+### Evaluation
+
+Your final project will be evaluated according to the guidelines listed in the [course syllabus](./syllabus.md/#evaluation-criteria).
+--></p>
     </article>
 </section>
 <!-- endblock -->
+                            </div>
+                        </div>
+                    </div>
+                
+                
             </main>
 
             
                     <!-- block preview -->
-        <div class="row row-cols-md-3 text-center pt-md-3" id="component-preview">
-            <div class="col themed-grid-col">
-                <a rel="prev" href="../project-2/" class="nav-link">
-                    <i class="fa fa-arrow-left"></i> Previous
-                </a>
-            </div>
-            <div class="col themed-grid-col"></div>
-            <div class="col themed-grid-col">
-                <a rel="next" class="nav-link disabled">
-                    Next <i class="fa fa-arrow-right"></i>
-                </a>
-            </div>
+    <div class="preview row row-cols-md-3 text-center pt-md-3" id="component-preview">
+        <div class="col themed-grid-col">
+            <a rel="prev" href="../project-2/" class="nav-link">
+                <i class="fa fa-arrow-left"></i> Previous
+            </a>
         </div>
+        <div class="col themed-grid-col"></div>
+        <div class="col themed-grid-col">
+            <a rel="next" class="nav-link disabled">
+                Next <i class="fa fa-arrow-right"></i>
+            </a>
+        </div>
+    </div>
 <!-- endblock -->
             
 
@@ -481,7 +598,6 @@ dozens of fingerprints and organic bits smatter its well-worn hyperlinks.&lt;&#x
             <script src="../assets/js/bootstrap.bundle.min.js""></script>
             <script src="../assets/js/main.min.js""></script>
                 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js" defer></script>
-                <script src="../javascripts/config.js" defer></script>
                 <script src="../search/main.js" defer></script>
 
     </body>

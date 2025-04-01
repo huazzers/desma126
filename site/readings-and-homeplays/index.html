@@ -1,5 +1,5 @@
 <!doctype html>
-<html>
+<html data-bs-theme="light">
     <head>
                 <title>Readings & Homeplays - 👾 DESMA126 Game Engine</title>
 
@@ -14,15 +14,16 @@
             
                 <link  rel="icon" type="image/x-icon" href="../assets/img/favicon.ico">
             
-                    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
-                        <script>hljs.initHighlightingOnLoad();</script>
             <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fira+Mono:400,700">
             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
             <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+            <link rel="stylesheet" href="../assets/css/root.min.css">
             <link rel="stylesheet" href="../assets/css/main.min.css">
+            <link rel="stylesheet" href="../assets/css/media.min.css">
+            <link rel="stylesheet" href="../assets/css/mkdocstrings.min.css">
                 <link href="../extra.css" rel="stylesheet">
                 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
-                <script src="../javascripts/config.js"></script>
                 <script src="../search/main.js"></script>
 
             
@@ -137,42 +138,84 @@
     </div>
 </div>
 <!-- endblock -->
-                    <!-- block content -->
-<section class="container post">
+
+                
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-3 d-none d-md-block" id="component-sidebar">
+                                    <!-- block sidebar -->
+<div class="navbar-expand-md" role="complementary">
+    
+    <div class="sidebar navbar-collapse collapse card">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="1"><a href="#readings-and-homeplays" class="nav-link">Readings and Homeplays</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#reading-responses" class="nav-link">Reading Responses</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#homeplays" class="nav-link">Homeplays</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div>
+<!-- endblock -->
+                            </div>
+                            <div class="col-md-9 col-12" id="component-content">
+                                    <!-- block content -->
+<section class="container post" id="component-content">
     <article>
         <header>
             
             
         </header>
-        <p><h1 id="readings-and-homeplays">Readings and Homeplays</h1>
-<!-- For full documentation visit [mkdocs.org](https://www.mkdocs.org).
+        <p><!--jump to anchor tag adjusted to header height offset-->
+<script>
+// Get the header element
+let header = document.querySelector('header');
 
-## Commands
+// Get the height of the header
+document.querySelectorAll('a[href^="#"]')
+.forEach(function (anchor) {
+    anchor.addEventListener('click', 
+    function (event) {
+        event.preventDefault();
 
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs -h` - Print help message and exit.
+        // Get the target element that 
+        // the anchor link points to
+        let target = document.querySelector(
+            this.getAttribute('href')
+        );
 
-## Project layout
+        let headerHeight = header.offsetHeight*2;
 
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files. -->
+        let targetPosition = target
+            .getBoundingClientRect().top - headerHeight;
 
+        window.scrollTo({
+            top: targetPosition + window.scrollY,
+            behavior: 'smooth'
+        });
+    });
+});
+</script>
+
+<h1 id="readings-and-homeplays">Readings and Homeplays</h1>
 <hr />
 <h2 id="reading-responses">Reading Responses</h2>
 <!--Brief description on what reading responses are.-->
 
 <p>Read the assigned material, and submit your response to the given questions <strong>in your own words.</strong></p>
 <h3 id="reading-response-1">Reading Response 1</h3>
-<!--
 <div class="duedate">
-<p>Due: Week 1 Thursday, October 3
-</br><a href="https://forms.gle/TJzdPgYr1zuRAtCQ6">Submit Your Response Here</a></p>
+<p>📌 <b>DUE: Week 2 Tuesday, April 8</b>
+</br><a href="https://forms.gle/8B5VJyHGwea7qNRP7">Submit Your Response Here</a></p>
 </div>
--->
 
 <p>Read Kate Compton's "So you want to build a generator" 
 <a href="https://galaxykate0.tumblr.com/post/139774965871/so-you-want-to-build-a-generator">https://galaxykate0.tumblr.com/post/139774965871/so-you-want-to-build-a-generator</a></p>
@@ -185,33 +228,32 @@
 </ul>
 <p><br></p>
 <h3 id="reading-response-2">Reading Response 2</h3>
-<!--
 <div class="duedate">
-<p>Due: Week 4 Thursday, October 24
-</br><a href="https://forms.gle/5MGvd2UREeXwi8oP7">Submit Your Response Here</a></p>
+<p>📌 <b>DUE: Week 4 Thursday, April 24</b></p>
 </div>
+
+<p>TBD</p>
+<!--
+Read these two writings by Steve Swink:
+
+- [***Game Feel: The Secret Ingredient***](https://www.gamedeveloper.com/design/game-feel-the-secret-ingredient)
+- Then read **Chapter 17** of [***Game Feel: A Game Designer's Guide to Virtual Sensation***](https://gamifique.wordpress.com/wp-content/uploads/2011/11/2-game-feel.pdf) (pg. 316 of the PDF).
+
+Respond to the questions in the form **in your own words**. 
+
+For this reading response, it helps to have some idea(s) for what you'd like to do for Project 2 beforehand -- some questions will ask you to apply concepts that introduced in the writing to your plans for Project 2. 
+
+</br>
+
+***Optional***: 
+
+Watch [***Juice it or lose it - a talk by Martin Jonasson & Petri Purho***](https://youtu.be/Fy0aCDmgnxg) for a live demonstration of how to get juiciness with tweening, particles, and other visual design decisions.
+
+<br>
+
 -->
 
-<p>Read these two writings by Steve Swink:</p>
-<ul>
-<li><a href="https://www.gamedeveloper.com/design/game-feel-the-secret-ingredient"><strong><em>Game Feel: The Secret Ingredient</em></strong></a></li>
-<li>Then read <strong>Chapter 17</strong> of <a href="https://gamifique.wordpress.com/wp-content/uploads/2011/11/2-game-feel.pdf"><strong><em>Game Feel: A Game Designer's Guide to Virtual Sensation</em></strong></a> (pg. 316 of the PDF).</li>
-</ul>
-<p>Respond to the questions in the form <strong>in your own words</strong>. </p>
-<p>For this reading response, it helps to have some idea(s) for what you'd like to do for Project 2 beforehand -- some questions will ask you to apply concepts that introduced in the writing to your plans for Project 2. </p>
-<p></br></p>
-<p><strong><em>Optional</em></strong>: </p>
-<p>Watch <a href="https://youtu.be/Fy0aCDmgnxg"><strong><em>Juice it or lose it - a talk by Martin Jonasson &amp; Petri Purho</em></strong></a> for a live demonstration of how to get juiciness with tweening, particles, and other visual design decisions.</p>
-<p><br></p>
 <hr />
-<!--Other stuff...
-
-Cellular Automata: https://tatasz.github.io/compound_ca/
-AND
-Writing Interesting AI (pg6 of Seeds Issue #3) https://www.procjam.com/seeds/issues/3/issue3.pdf 
-
--->
-
 <h2 id="homeplays">Homeplays</h2>
 <ul>
 <li>Sign up for game(s) to play in groups of 2~3;</li>
@@ -223,32 +265,39 @@ Writing Interesting AI (pg6 of Seeds Issue #3) https://www.procjam.com/seeds/iss
 <p><img src ="../img/20240927_153604.jpg" alt="Log into your DMA account user, or dma, password: dma1. Open File Explorer, then go to This PC, C drive, ProgramFiles, GameEngine Homeplays folder."></p>
 <p><br></p>
 <h3 id="homeplay-1">Homeplay 1</h3>
+<div class="duedate">
+<p>📌 <b>DUE: Week 2 Thursday, April 10</b></p>
+</div>
+
+<p>TBD</p>
 <!--
 
 <div class="duedate">
 <p>Due: Week 2 Tuesday, October 8
-</br><a href="https://docs.google.com/spreadsheets/d/1HrWVxhsBU-uBiyhZhQHnOK0SR3rnjlIrp7U_yHa5O1g/edit?usp=sharing">Sign Up + Submit Presentations Here</a></p>
+</br><a href="https://docs.google.com/spreadsheets/d/1AiUgLQjXvfYdugF8H9iqIldoyj6m6JJZAEK97xzko9s/edit?usp=sharing">Sign Up + Submit Presentations Here</a></p>
 </div>
+
+
+Plan to spend about 30 ~ 60 minutes playing the game(s) with your group members, then **prepare a short 5 ~ 7 minute presentation** in response to the following:
+
+1. Tell us about the project
+    - What is being generated?
+    - What generation method, properties, and constraints (do you think) are being used?
+    - How do you interact with it?
+2. Consider the effectiveness of this generator and your experience of it -- what works, what doesn't, and why? 
+    - Do the generated results feel meaningful, memorable, merely distinguishable, or pretty much the same?
+    - Was there something else about the project that was notable in your experience of it -- the camera, gameplay, interface, etc. ?
+
+**Please share a link to any presentation materials** in the sign up sheet next to your group names. You will share your responses with the rest of the class during lesson time on the due date.
 
 -->
 
-<p>Plan to spend about 30 ~ 60 minutes playing the game(s) with your group members, then <strong>prepare a short 5 ~ 7 minute presentation</strong> in response to the following:</p>
-<ol>
-<li>Tell us about the project<ul>
-<li>What is being generated?</li>
-<li>What generation method, properties, and constraints (do you think) are being used?</li>
-<li>How do you interact with it?</li>
-</ul>
-</li>
-<li>Consider the effectiveness of this generator and your experience of it -- what works, what doesn't, and why? <ul>
-<li>Do the generated results feel meaningful, memorable, merely distinguishable, or pretty much the same?</li>
-<li>Was there something else about the project that was notable in your experience of it -- the camera, gameplay, interface, etc. ?</li>
-</ul>
-</li>
-</ol>
-<p><strong>Please share a link to any presentation materials</strong> in the sign up sheet next to your group names. You will share your responses with the rest of the class during lesson time on the due date.</p>
-<p><br></p>
-<h3 id="homeplay-2-extra-credit">Homeplay 2 (Extra Credit)</h3>
+<h3 id="homeplay-2">Homeplay 2</h3>
+<div class="duedate">
+<p>📌 <b>DUE: Week 5 Tuesday, April 29</b></p>
+</div>
+
+<p>TBD </p>
 <!--
 <div class="duedate">
 <p>Due: Week 8 Tuesday, November 19
@@ -256,40 +305,52 @@ Writing Interesting AI (pg6 of Seeds Issue #3) https://www.procjam.com/seeds/iss
 </div>
 -->
 
-<p>Plan to spend about 30 ~ 60 minutes playing the game(s) with your group members, then <strong>prepare a short 5 ~ 7 minute presentation</strong> in response to the following:</p>
-<ol>
-<li>Tell us about the project<ul>
-<li>What is the project about? What aspects of the project offer you context - the writing? the objects in space? the player interaction? the game rules? the sound? the visual language? the camera perspective?</li>
-<li>Any notable features of this project that affected your experience</li>
-</ul>
-</li>
-<li>Consider your experience of the project -- what works, what doesn't, and why?<ul>
-<li>overall feelings, reactions, thoughts about the game's subject matter, before/during/after playing.</li>
-<li>anything you're interested in applying to your own projects? </li>
-</ul>
-</li>
-</ol>
-<p><strong>Please share a link to any presentation materials</strong> in the sign up sheet next to your group names. You will share your responses with the rest of the class during lesson time on the due date.</p></p>
+<!--
+Plan to spend about 30 ~ 60 minutes playing the game(s) with your group members, then **prepare a short 5 ~ 7 minute presentation** in response to the following:
+
+1. Tell us about the project
+    - What is the project about? What aspects of the project offer you context - the writing? the objects in space? the player interaction? the game rules? the sound? the visual language? the camera perspective?
+    - Any notable features of this project that affected your experience
+2. Consider your experience of the project -- what works, what doesn't, and why?
+    - overall feelings, reactions, thoughts about the game's subject matter, before/during/after playing.
+    - anything you're interested in applying to your own projects? 
+
+
+**Please share a link to any presentation materials** in the sign up sheet next to your group names. You will share your responses with the rest of the class during lesson time on the due date.
+
+-->
+
+<h3 id="homeplay-3">Homeplay 3</h3>
+<div class="duedate">
+<p>📌 <b>DUE: Week 8 Thursday, May 22</b></p>
+</div>
+
+<p>TBD</p></p>
     </article>
 </section>
 <!-- endblock -->
+                            </div>
+                        </div>
+                    </div>
+                
+                
             </main>
 
             
                     <!-- block preview -->
-        <div class="row row-cols-md-3 text-center pt-md-3" id="component-preview">
-            <div class="col themed-grid-col">
-                <a rel="prev" href="../how-to-submit/" class="nav-link">
-                    <i class="fa fa-arrow-left"></i> Previous
-                </a>
-            </div>
-            <div class="col themed-grid-col"></div>
-            <div class="col themed-grid-col">
-                <a rel="next" href="../project-1/" class="nav-link">
-                    Next <i class="fa fa-arrow-right"></i>
-                </a>
-            </div>
+    <div class="preview row row-cols-md-3 text-center pt-md-3" id="component-preview">
+        <div class="col themed-grid-col">
+            <a rel="prev" href="../how-to-submit/" class="nav-link">
+                <i class="fa fa-arrow-left"></i> Previous
+            </a>
         </div>
+        <div class="col themed-grid-col"></div>
+        <div class="col themed-grid-col">
+            <a rel="next" href="../project-1/" class="nav-link">
+                Next <i class="fa fa-arrow-right"></i>
+            </a>
+        </div>
+    </div>
 <!-- endblock -->
             
 
@@ -320,7 +381,6 @@ Writing Interesting AI (pg6 of Seeds Issue #3) https://www.procjam.com/seeds/iss
             <script src="../assets/js/bootstrap.bundle.min.js""></script>
             <script src="../assets/js/main.min.js""></script>
                 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js" defer></script>
-                <script src="../javascripts/config.js" defer></script>
                 <script src="../search/main.js" defer></script>
 
     </body>

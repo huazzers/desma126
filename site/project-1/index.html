@@ -1,5 +1,5 @@
 <!doctype html>
-<html>
+<html data-bs-theme="light">
     <head>
                 <title>Project 1 - 👾 DESMA126 Game Engine</title>
 
@@ -14,15 +14,16 @@
             
                 <link  rel="icon" type="image/x-icon" href="../assets/img/favicon.ico">
             
-                    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
-                        <script>hljs.initHighlightingOnLoad();</script>
             <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fira+Mono:400,700">
             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
             <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+            <link rel="stylesheet" href="../assets/css/root.min.css">
             <link rel="stylesheet" href="../assets/css/main.min.css">
+            <link rel="stylesheet" href="../assets/css/media.min.css">
+            <link rel="stylesheet" href="../assets/css/mkdocstrings.min.css">
                 <link href="../extra.css" rel="stylesheet">
                 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
-                <script src="../javascripts/config.js"></script>
                 <script src="../search/main.js"></script>
 
             
@@ -137,21 +138,86 @@
     </div>
 </div>
 <!-- endblock -->
-                    <!-- block content -->
-<section class="container post">
+
+                
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-3 d-none d-md-block" id="component-sidebar">
+                                    <!-- block sidebar -->
+<div class="navbar-expand-md" role="complementary">
+    
+    <div class="sidebar navbar-collapse collapse card">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="1"><a href="#project-1-auto-generator" class="nav-link">Project 1: Auto-Generator</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#prompt" class="nav-link">Prompt</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#requirements" class="nav-link">Requirements</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#evaluation" class="nav-link">Evaluation</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div>
+<!-- endblock -->
+                            </div>
+                            <div class="col-md-9 col-12" id="component-content">
+                                    <!-- block content -->
+<section class="container post" id="component-content">
     <article>
         <header>
             
             
         </header>
-        <p><h1 id="project-1-auto-generator">Project 1: Auto-Generator</h1>
-<h2 id="final-submission-due-week-3-tuesday-october-15">Final Submission Due: Week 3 Tuesday, October 15</h2>
-<!--<div class="duedate">
-<p><a href="https://forms.gle/pfApXHdPduNFZF9R7">Submit Here</a></p>
-<blockquote>Please read the <a href="../how-to-submit">How To Submit</a> page for more detailed instructions.</blockquote>
-</div>-->
+        <p><!--jump to anchor tag adjusted to header height offset-->
+<script>
+// Get the header element
+let header = document.querySelector('header');
 
-<h3 id="prompt">Prompt</h3>
+// Get the height of the header
+document.querySelectorAll('a[href^="#"]')
+.forEach(function (anchor) {
+    anchor.addEventListener('click', 
+    function (event) {
+        event.preventDefault();
+
+        // Get the target element that 
+        // the anchor link points to
+        let target = document.querySelector(
+            this.getAttribute('href')
+        );
+
+        let headerHeight = header.offsetHeight*2;
+
+        let targetPosition = target
+            .getBoundingClientRect().top - headerHeight;
+
+        window.scrollTo({
+            top: targetPosition + window.scrollY,
+            behavior: 'smooth'
+        });
+    });
+});
+</script>
+
+<h1 id="project-1-auto-generator">Project 1: Auto-Generator</h1>
+<div class="duedate">
+<p>📌 <b>SKETCH/PROPOSAL DUE: Week 2 Thursday, April 10</b></p>
+<p>📌 <b>FINAL PROJECT BUILD + DOCUMENTATION DUE: Week 3 Thursday, April 17</b></p>
+<p>Submit Final Submission Here (Link TBD)</p>
+<blockquote>Please read the <a href="../how-to-submit">How To Submit</a> page for more detailed instructions.</blockquote>
+</div>
+
+<h2 id="prompt">Prompt</h2>
 <p>Create a generator in Unity that only requires 1 ~ 2 button controls to run. </p>
 <p></br>
 <strong>Consider the following options:</strong></p>
@@ -173,12 +239,13 @@
 <li>You may work in 2D or 3D. Lean into your strengths as a visual designer / artist as much as possible with this project! (And also remember you don't have much time!)</li>
 <li>Consider how a viewer will see / experience your generative designs. Can they orbit the camera around? Can they press a button to generate new objects?</li>
 </ul>
-<h3 id="requirements">Requirements</h3>
-<p>Project 1 contains TWO COMPONENTS: </p>
+<p><br></p>
+<h2 id="requirements">Requirements</h2>
+<p>Project 1 contains <strong>TWO COMPONENTS</strong>: </p>
 <blockquote>
 <ul>
-<li><strong>PART 1 (2.5%): SKETCH OF PROJECT PROPOSAL</strong> </br><em>Due: Week 2 Tuesday, October 8</em> </br>A sketch and/or in-progress prototype of your project. Bring this to class for discussion! </br><ul><li><em>What are you generating? How are you generating it?</em></li></ul></li>
-<li><strong>PART 2 (12.5%): FINAL PROJECT BUILD WITH DOCUMENTATION</strong> </br><em>Due: Week 3 Tuesday, October 15</em> </br>Refer to <a href="../how-to-submit/">submission guidelines</a>, and submit your final project.</li>
+<li><strong>PART 1 (2.5%): SKETCH OF PROJECT PROPOSAL</strong> </br>📌 <em>Due: Week 2 Thursday, April 10</em> </br>A sketch and/or in-progress prototype of your project. Bring this to class for discussion! </br><ul><li><em>What are you generating? How are you generating it?</em></li></ul></li>
+<li><strong>PART 2 (12.5%): FINAL PROJECT BUILD WITH DOCUMENTATION</strong> </br>📌 <em>Due: Week 3 Thursday, April 17</em> </br>Refer to <a href="../how-to-submit/">submission guidelines</a>, and submit your final project.</li>
 </ul>
 <p><strong>Total contribution to final course grade: 15%</strong></p>
 </blockquote>
@@ -188,29 +255,35 @@
 <li>be a traditional video game;</li>
 <li>have sound / audio.</li>
 </ul>
-<h3 id="evaluation">Evaluation</h3>
+<p><br></p>
+<h2 id="evaluation">Evaluation</h2>
 <p>Your final project will be evaluated according to the guidelines listed in the <a href="../syllabus/#evaluation-criteria">course syllabus</a>.</p>
 <hr /></p>
     </article>
 </section>
 <!-- endblock -->
+                            </div>
+                        </div>
+                    </div>
+                
+                
             </main>
 
             
                     <!-- block preview -->
-        <div class="row row-cols-md-3 text-center pt-md-3" id="component-preview">
-            <div class="col themed-grid-col">
-                <a rel="prev" href="../readings-and-homeplays/" class="nav-link">
-                    <i class="fa fa-arrow-left"></i> Previous
-                </a>
-            </div>
-            <div class="col themed-grid-col"></div>
-            <div class="col themed-grid-col">
-                <a rel="next" href="../project-2/" class="nav-link">
-                    Next <i class="fa fa-arrow-right"></i>
-                </a>
-            </div>
+    <div class="preview row row-cols-md-3 text-center pt-md-3" id="component-preview">
+        <div class="col themed-grid-col">
+            <a rel="prev" href="../readings-and-homeplays/" class="nav-link">
+                <i class="fa fa-arrow-left"></i> Previous
+            </a>
         </div>
+        <div class="col themed-grid-col"></div>
+        <div class="col themed-grid-col">
+            <a rel="next" href="../project-2/" class="nav-link">
+                Next <i class="fa fa-arrow-right"></i>
+            </a>
+        </div>
+    </div>
 <!-- endblock -->
             
 
@@ -241,7 +314,6 @@
             <script src="../assets/js/bootstrap.bundle.min.js""></script>
             <script src="../assets/js/main.min.js""></script>
                 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js" defer></script>
-                <script src="../javascripts/config.js" defer></script>
                 <script src="../search/main.js" defer></script>
 
     </body>

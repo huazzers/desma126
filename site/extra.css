@@ -3,7 +3,7 @@ md-footer__inner { display: none !important; }
 .nav-link[rel="next"] {display: none;}
 .nav-link[rel="prev"] {display: none;}
 
-@media only screen and (max-width: 780px) {
+@media only screen and (max-width: 767.9px) {
 
     .site-name{
         font-size:1em !important;
@@ -14,27 +14,24 @@ md-footer__inner { display: none !important; }
     }
 
     h2{
-        font-size:1.25em !important;
+        font-size:1.35em !important;
     }
 
     h3{
-        font-size:1em !important;
+        font-size:1.35em !important;
     }
 
-    p{
-        font-size:0.75em !important;
+    p,li{
+        font-size:1em !important;
+        margin: 1.15em 0 !important;
     }
 
     h5{
-        font-size:0.8em !important;
+        font-size:1em !important;
     }
 
     hr{
         margin: 1em 0em !important;
-    }
-
-    li{
-        padding:0em !important;
     }
 
     div.duedate>p{
@@ -55,7 +52,7 @@ md-footer__inner { display: none !important; }
     }
 
     figcaption{
-        font-size:x-small !important;
+        font-size:small !important;
     }
 
     ul,ol{
@@ -102,6 +99,20 @@ md-footer__inner { display: none !important; }
 
     td, thead{
         font-size:small !important;
+    }
+}
+
+#component-sidebar{
+    position:fixed;
+}
+
+@media only screen and (min-width: 768px) {
+    #component-content{
+        margin-left:15%;
+    }
+
+    .col-md-3 {
+        max-width: 450px;
     }
 }
 
@@ -193,23 +204,33 @@ div.scroll>p{
 }
   
 mark{
-    background-color:darkorange;
+    background-color:#fbeac7;
+}
+
+mark.due{
+    background-color:#f1bdbe;
+}
+
+mark.assign{
+    background-color: #fbeac7;
 }
 
 figcaption{
     font-weight:normal;
     font-style:italic;
     text-align:left;
-    /*font-size:0.65em;*/
+    font-size:0.85em;
     margin-top:1rem;
     margin-bottom:1.5rem;
     line-height:175%;
     color:teal;
 }
 
-p,li, code, pre>code, td{
-    font-size:0.875em;
-    line-height:1.75em;
+@media only screen and (min-width: 768px) {
+    p,li, code, pre>code, td{
+        font-size:1.05em !important;
+        line-height:1.75em;
+    }
 }
 
 div.duedate{

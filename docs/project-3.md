@@ -1,15 +1,47 @@
+<!--jump to anchor tag adjusted to header height offset-->
+<script>
+// Get the header element
+let header = document.querySelector('header');
+
+// Get the height of the header
+document.querySelectorAll('a[href^="#"]')
+.forEach(function (anchor) {
+    anchor.addEventListener('click', 
+    function (event) {
+        event.preventDefault();
+
+        // Get the target element that 
+        // the anchor link points to
+        let target = document.querySelector(
+            this.getAttribute('href')
+        );
+        
+        let headerHeight = header.offsetHeight*2;
+        
+        let targetPosition = target
+            .getBoundingClientRect().top - headerHeight;
+
+        window.scrollTo({
+            top: targetPosition + window.scrollY,
+            behavior: 'smooth'
+        });
+    });
+});
+</script>
+
 # Project 3: Zine Game
 
-## Final Submission Due: Week 10 Thursday, December 5
+TBD
 
 <!--<div class="duedate">
 <p><a href="https://forms.gle/Ynd8THMzx2U4KwSo9">Submit Here</a></p>
 <blockquote>Please read the <a href="../how-to-submit">How To Submit</a> page for more detailed instructions.</blockquote>
 </div>-->
 
+<!--
 ### Prompt
 
-At the start of the quarter, we unpacked the [many possible meanings](./w0-unity-csharp.md/#what-is-an-engine) of the term "engine." 
+At the start of the quarter, we unpacked the [many possible meanings](./0-unity-csharp.md/#what-is-an-engine) of the term "engine." 
 
 To conclude this course, our final project will focus on this definition of the "engine": 
 
@@ -344,3 +376,4 @@ As a prosthetic extension of the player character's form, inventory items also c
 ### Evaluation
 
 Your final project will be evaluated according to the guidelines listed in the [course syllabus](./syllabus.md/#evaluation-criteria).
+-->

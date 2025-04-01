@@ -1,10 +1,41 @@
+<!--jump to anchor tag adjusted to header height offset-->
+<script>
+// Get the header element
+let header = document.querySelector('header');
+
+// Get the height of the header
+document.querySelectorAll('a[href^="#"]')
+.forEach(function (anchor) {
+    anchor.addEventListener('click', 
+    function (event) {
+        event.preventDefault();
+
+        // Get the target element that 
+        // the anchor link points to
+        let target = document.querySelector(
+            this.getAttribute('href')
+        );
+        
+        let headerHeight = header.offsetHeight*2;
+        
+        let targetPosition = target
+            .getBoundingClientRect().top - headerHeight;
+
+        window.scrollTo({
+            top: targetPosition + window.scrollY,
+            behavior: 'smooth'
+        });
+    });
+});
+</script>
+
 # How to Submit
 
 ## Important Notes
 
-⚠️ Do **NOT** show the Unity Editor in your visual documentation. 
+⚠️ **DO NOT SHOW THE UNITY EDITOR IN YOUR VISUAL DOCUMENTATION.** 
 
-⚠️ **Build early and play test your builds.** Some bugs will only reveal themselves in a build, so make sure to catch those in advance of the deadline. A broken game will affect your project grade. 
+⚠️ **BUILD EARLY AND PLAY TEST YOUR BUILDS.** Some bugs will only reveal themselves in a build, so make sure to catch those in advance of the deadline. A broken game will affect your project grade. 
 
 <br>
 
@@ -12,17 +43,24 @@
 
 ## Submission Checklist
 
-You should include the following documentation of your project by **11:59PM on the day of the project deadline**:
+Create an [itch.io](https://itch.io) page for your project. You will submit a link to this project page via the project submission form. 
 
-1. **Visual documentation**:
-    - **at least ONE animated GIF** of your project in motion, roughly 600 pixels wide, ideally under 5MB in size.
-    - **at least TWO stills** from your project (1920x1080)
-    - **(Optional) Recording of gameplay.** Roughly 60 seconds, long enough to demonstrate how your game is played (1920x1080, mp4/h.264)
-2. **Text description** that would be useful for someone viewing your project for the first time:
+**On the day of the project deadline:**
+
+The following items should be available on your project page and ready to be presented **before class starts**: 
+
+1. **Text description** that would be useful for someone viewing your project for the first time:
     - The basic premise of the game -- what is it about?
     - How to play the game -- how do you interact with the project?
-3. **Project build for WINDOWS**
-4. **Exported Unity package**
+2. **Project build for WINDOWS**
+3. **Exported Unity package**
+
+You should include the following visual documentation of your project by **11:59PM on the same day**:
+
+- **at least ONE animated GIF** of your project in motion, roughly 600 pixels wide, ideally under 5MB in size.
+- **at least TWO stills** from your project (1920x1080).
+- **(Optional) Recording of gameplay.** Roughly 60 seconds, long enough to demonstrate how your game is played (1920x1080, mp4/h.264)
+
 
 <br>
 

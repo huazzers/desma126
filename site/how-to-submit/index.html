@@ -1,5 +1,5 @@
 <!doctype html>
-<html>
+<html data-bs-theme="light">
     <head>
                 <title>How To Submit - 👾 DESMA126 Game Engine</title>
 
@@ -14,15 +14,16 @@
             
                 <link  rel="icon" type="image/x-icon" href="../assets/img/favicon.ico">
             
-                    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
-                        <script>hljs.initHighlightingOnLoad();</script>
             <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fira+Mono:400,700">
             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
             <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+            <link rel="stylesheet" href="../assets/css/root.min.css">
             <link rel="stylesheet" href="../assets/css/main.min.css">
+            <link rel="stylesheet" href="../assets/css/media.min.css">
+            <link rel="stylesheet" href="../assets/css/mkdocstrings.min.css">
                 <link href="../extra.css" rel="stylesheet">
                 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
-                <script src="../javascripts/config.js"></script>
                 <script src="../search/main.js"></script>
 
             
@@ -137,28 +138,92 @@
     </div>
 </div>
 <!-- endblock -->
-                    <!-- block content -->
-<section class="container post">
+
+                
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-3 d-none d-md-block" id="component-sidebar">
+                                    <!-- block sidebar -->
+<div class="navbar-expand-md" role="complementary">
+    
+    <div class="sidebar navbar-collapse collapse card">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="1"><a href="#how-to-submit" class="nav-link">How to Submit</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#important-notes" class="nav-link">Important Notes</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#submission-checklist" class="nav-link">Submission Checklist</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#tools-for-visual-documentation" class="nav-link">Tools for Visual Documentation</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#how-to-export-projects-from-unity" class="nav-link">How to export projects from Unity</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div>
+<!-- endblock -->
+                            </div>
+                            <div class="col-md-9 col-12" id="component-content">
+                                    <!-- block content -->
+<section class="container post" id="component-content">
     <article>
         <header>
             
             
         </header>
-        <p><h1 id="how-to-submit">How to Submit</h1>
+        <p><!--jump to anchor tag adjusted to header height offset-->
+<script>
+// Get the header element
+let header = document.querySelector('header');
+
+// Get the height of the header
+document.querySelectorAll('a[href^="#"]')
+.forEach(function (anchor) {
+    anchor.addEventListener('click', 
+    function (event) {
+        event.preventDefault();
+
+        // Get the target element that 
+        // the anchor link points to
+        let target = document.querySelector(
+            this.getAttribute('href')
+        );
+
+        let headerHeight = header.offsetHeight*2;
+
+        let targetPosition = target
+            .getBoundingClientRect().top - headerHeight;
+
+        window.scrollTo({
+            top: targetPosition + window.scrollY,
+            behavior: 'smooth'
+        });
+    });
+});
+</script>
+
+<h1 id="how-to-submit">How to Submit</h1>
 <h2 id="important-notes">Important Notes</h2>
-<p>⚠️ Do <strong>NOT</strong> show the Unity Editor in your visual documentation. </p>
-<p>⚠️ <strong>Build early and play test your builds.</strong> Some bugs will only reveal themselves in a build, so make sure to catch those in advance of the deadline. A broken game will affect your project grade. </p>
+<p>⚠️ <strong>DO NOT SHOW THE UNITY EDITOR IN YOUR VISUAL DOCUMENTATION.</strong> </p>
+<p>⚠️ <strong>BUILD EARLY AND PLAY TEST YOUR BUILDS.</strong> Some bugs will only reveal themselves in a build, so make sure to catch those in advance of the deadline. A broken game will affect your project grade. </p>
 <p><br></p>
 <hr />
 <h2 id="submission-checklist">Submission Checklist</h2>
-<p>You should include the following documentation of your project by <strong>11:59PM on the day of the project deadline</strong>:</p>
+<p>Create an <a href="https://itch.io">itch.io</a> page for your project. You will submit a link to this project page via the project submission form. </p>
+<p><strong>On the day of the project deadline:</strong></p>
+<p>The following items should be available on your project page and ready to be presented <strong>before class starts</strong>: </p>
 <ol>
-<li><strong>Visual documentation</strong>:<ul>
-<li><strong>at least ONE animated GIF</strong> of your project in motion, roughly 600 pixels wide, ideally under 5MB in size.</li>
-<li><strong>at least TWO stills</strong> from your project (1920x1080)</li>
-<li><strong>(Optional) Recording of gameplay.</strong> Roughly 60 seconds, long enough to demonstrate how your game is played (1920x1080, mp4/h.264)</li>
-</ul>
-</li>
 <li><strong>Text description</strong> that would be useful for someone viewing your project for the first time:<ul>
 <li>The basic premise of the game -- what is it about?</li>
 <li>How to play the game -- how do you interact with the project?</li>
@@ -167,6 +232,12 @@
 <li><strong>Project build for WINDOWS</strong></li>
 <li><strong>Exported Unity package</strong></li>
 </ol>
+<p>You should include the following visual documentation of your project by <strong>11:59PM on the same day</strong>:</p>
+<ul>
+<li><strong>at least ONE animated GIF</strong> of your project in motion, roughly 600 pixels wide, ideally under 5MB in size.</li>
+<li><strong>at least TWO stills</strong> from your project (1920x1080).</li>
+<li><strong>(Optional) Recording of gameplay.</strong> Roughly 60 seconds, long enough to demonstrate how your game is played (1920x1080, mp4/h.264)</li>
+</ul>
 <p><br></p>
 <hr />
 <h2 id="tools-for-visual-documentation">Tools for Visual Documentation</h2>
@@ -237,23 +308,28 @@
     </article>
 </section>
 <!-- endblock -->
+                            </div>
+                        </div>
+                    </div>
+                
+                
             </main>
 
             
                     <!-- block preview -->
-        <div class="row row-cols-md-3 text-center pt-md-3" id="component-preview">
-            <div class="col themed-grid-col">
-                <a rel="prev" href="../schedule/" class="nav-link">
-                    <i class="fa fa-arrow-left"></i> Previous
-                </a>
-            </div>
-            <div class="col themed-grid-col"></div>
-            <div class="col themed-grid-col">
-                <a rel="next" href="../readings-and-homeplays/" class="nav-link">
-                    Next <i class="fa fa-arrow-right"></i>
-                </a>
-            </div>
+    <div class="preview row row-cols-md-3 text-center pt-md-3" id="component-preview">
+        <div class="col themed-grid-col">
+            <a rel="prev" href="../schedule/" class="nav-link">
+                <i class="fa fa-arrow-left"></i> Previous
+            </a>
         </div>
+        <div class="col themed-grid-col"></div>
+        <div class="col themed-grid-col">
+            <a rel="next" href="../readings-and-homeplays/" class="nav-link">
+                Next <i class="fa fa-arrow-right"></i>
+            </a>
+        </div>
+    </div>
 <!-- endblock -->
             
 
@@ -284,7 +360,6 @@
             <script src="../assets/js/bootstrap.bundle.min.js""></script>
             <script src="../assets/js/main.min.js""></script>
                 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js" defer></script>
-                <script src="../javascripts/config.js" defer></script>
                 <script src="../search/main.js" defer></script>
 
     </body>
