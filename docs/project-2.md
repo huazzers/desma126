@@ -29,9 +29,7 @@ document.querySelectorAll('a[href^="#"]')
 });
 </script>
 
-# Project 2: Ball Game Remix
-
-## Final Submission Due: Week 6 Thursday, November 7
+# Project 2: TBD
 
 <!--<div class="duedate">
 <p><a href="https://forms.gle/qHWAFQe68h4tVBcE9">Submit Here</a></p>
