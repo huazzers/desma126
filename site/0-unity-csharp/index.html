@@ -183,6 +183,10 @@
               <ul class="nav flex-column">
               </ul>
             </li>
+            <li class="nav-item" data-bs-level="2"><a href="#in-class-exercise" class="nav-link">In-class exercise</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
             <li class="nav-item" data-bs-level="2"><a href="#exercise-before-next-class" class="nav-link">Exercise before next class</a>
               <ul class="nav flex-column">
               </ul>
@@ -609,6 +613,76 @@ multiple lines
 </li>
 </ul>
 <p><br></p>
+<hr />
+<h2 id="in-class-exercise">In-class exercise</h2>
+<p>Write a C&#35; script to store, set, and update character information.</p>
+<pre><code class="language-csharp">using UnityEngine;
+
+//MonoBehvaiour class name &quot;GooseInfo&quot; is the same as our file name &quot;GooseInfo.cs&quot;.
+public class GooseInfo : MonoBehaviour
+{
+    //basic variable types (string, int, float, bool)
+    //are all in small-case letters.
+
+    public string gooseName = &quot;danny&quot;; //a string of characters, aka text.
+    public int numberOfTeeth = 3; //integers; whole numbers, no decimals.
+    public float age = 10f; //floats; numbers with decimal ranges.
+    public bool isHappy = true; //boolean; can only be true or false. 
+
+    //Unity-specific variable types like &quot;Color&quot; and &quot;Material&quot;
+    //need to start with a capitalised letter.
+
+    Color furColor = Color.blue;
+    [SerializeField] Material baseMat; 
+        //[SerializeField] allows us to initialise
+        //this variable via drag-and-dropping
+        //a material asset into the inspector.
+
+    //Start() runs exactly once
+    //at the start of run time,
+    //or when the script is set to active.
+    private void Start()
+    {
+        //get the MeshRenderer component from the same gameobject
+        //that this script is attached to.
+        MeshRenderer renderer = GetComponent&lt;MeshRenderer&gt;();
+
+        //set this mesh renderer's material as baseMat.
+        renderer.material = baseMat;
+
+        //set the colour of the material in the mesh renderer as furColor.
+        renderer.material.color = furColor;
+    }
+
+    //Update() runs once every frame update
+    //as long as this script is active in the scene. 
+    private void Update()
+    {
+        //increase age by 0.01f each time
+        //using our custom function
+        AddAge(0.01f);
+
+        //OR
+        //age = NewAge(0.01f);
+
+        //shorthand for increasing age by 1
+        //age++; //same as age+=1;
+    }
+
+    //increases age by a float called &quot;amount&quot;
+    private void AddAge(float amount)
+    {
+        age += amount;
+    }
+
+    //returns a float equal to &quot;age + amount&quot; 
+    private float NewAge(float amount)
+    {
+        float result = age+amount;
+        return result;
+    }
+}
+</code></pre>
 <hr />
 <h2 id="exercise-before-next-class">Exercise before next class</h2>
 <p>Can you write a script that forces a GameObject to start at a specific position in the scene? </p>

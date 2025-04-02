@@ -524,6 +524,81 @@ multiple lines
 
 ---
 
+## In-class exercise
+
+Write a C&#35; script to store, set, and update character information.
+
+```csharp
+using UnityEngine;
+
+//MonoBehvaiour class name "GooseInfo" is the same as our file name "GooseInfo.cs".
+public class GooseInfo : MonoBehaviour
+{
+    //basic variable types (string, int, float, bool)
+    //are all in small-case letters.
+
+    public string gooseName = "danny"; //a string of characters, aka text.
+    public int numberOfTeeth = 3; //integers; whole numbers, no decimals.
+    public float age = 10f; //floats; numbers with decimal ranges.
+    public bool isHappy = true; //boolean; can only be true or false. 
+
+    //Unity-specific variable types like "Color" and "Material"
+    //need to start with a capitalised letter.
+
+    Color furColor = Color.blue;
+    [SerializeField] Material baseMat; 
+        //[SerializeField] allows us to initialise
+        //this variable via drag-and-dropping
+        //a material asset into the inspector.
+
+    //Start() runs exactly once
+    //at the start of run time,
+    //or when the script is set to active.
+    private void Start()
+    {
+        //get the MeshRenderer component from the same gameobject
+        //that this script is attached to.
+        MeshRenderer renderer = GetComponent<MeshRenderer>();
+
+        //set this mesh renderer's material as baseMat.
+        renderer.material = baseMat;
+
+        //set the colour of the material in the mesh renderer as furColor.
+        renderer.material.color = furColor;
+    }
+
+    //Update() runs once every frame update
+    //as long as this script is active in the scene. 
+    private void Update()
+    {
+        //increase age by 0.01f each time
+        //using our custom function
+        AddAge(0.01f);
+
+        //OR
+        //age = NewAge(0.01f);
+
+        //shorthand for increasing age by 1
+        //age++; //same as age+=1;
+    }
+
+    //increases age by a float called "amount"
+    private void AddAge(float amount)
+    {
+        age += amount;
+    }
+
+    //returns a float equal to "age + amount" 
+    private float NewAge(float amount)
+    {
+        float result = age+amount;
+        return result;
+    }
+}
+```
+
+---
+
 ## Exercise before next class
 
 Can you write a script that forces a GameObject to start at a specific position in the scene? 
