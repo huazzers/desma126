@@ -221,6 +221,7 @@ GameObject[] respawns = GameObject.FindGameObjectsWithTag("Respawn");</code></pr
 
 ## In-class exercise
 
+<!--change to exquisite corpse workshop.-->
 **Write a script that instantiates multiple prefabs that are:**
 
 1. **chosen at random from an array; AND**
