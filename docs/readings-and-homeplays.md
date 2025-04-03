@@ -42,7 +42,7 @@ Read the assigned material, and submit your response to the given questions **in
 
 <div class="duedate">
 <p>📌 <b>DUE: Week 2 Tuesday, April 8</b>
-</br><a href="https://forms.gle/8B5VJyHGwea7qNRP7">Submit Your Response Here</a></p>
+</br><a href="https://forms.gle/guG2HcU52nntLakn8">Submit Your Response Here</a></p>
 </div>
 
 Read Kate Compton's "So you want to build a generator" 
@@ -106,18 +106,9 @@ PC / HTML games will also be available in the PC work stations next to the 4th f
 ### Homeplay 1
 
 <div class="duedate">
-<p>📌 <b>DUE: Week 2 Thursday, April 10</b></p>
-</div>
-
-TBD
-
-<!--
-
-<div class="duedate">
-<p>Due: Week 2 Tuesday, October 8
+<p>📌 <b>DUE: Week 2 Thursday, April 10</b>
 </br><a href="https://docs.google.com/spreadsheets/d/1AiUgLQjXvfYdugF8H9iqIldoyj6m6JJZAEK97xzko9s/edit?usp=sharing">Sign Up + Submit Presentations Here</a></p>
 </div>
-
 
 Plan to spend about 30 ~ 60 minutes playing the game(s) with your group members, then **prepare a short 5 ~ 7 minute presentation** in response to the following:
 
@@ -131,7 +122,7 @@ Plan to spend about 30 ~ 60 minutes playing the game(s) with your group members,
 
 **Please share a link to any presentation materials** in the sign up sheet next to your group names. You will share your responses with the rest of the class during lesson time on the due date.
 
--->
+<br>
 
 ### Homeplay 2
 

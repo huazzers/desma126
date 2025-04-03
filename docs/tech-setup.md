@@ -78,3 +78,14 @@ document.querySelectorAll('a[href^="#"]')
    Open up your newly created Unity project. In the Unity Editor, go to Windows \> Package Manager \> Make sure that Visual Studio Editor package (version 2.0.20 and above) has been installed on your project. 
 
    Then, go to Edit \> Preferences \> External Tools \> Select your External Script Editor as either “Visual Studio” or “Visual Studio Code”. This will be the default program that runs when you try to open up a script in Unity. 
+
+<br>
+
+## Intellisense for Unity C&#35;
+
+Intellisense is a useful auto-complete feature that will give a list of suggestions for your code as you're typing. I recommend getting this working on your scripting program, because it will make the process of understanding C# a lot more assisted and easier to navigate. It is also helpful for referencing variables and functions across multiple scripts in your projects.
+
+Here's some places to start troubleshooting if it is not working on your program: 
+
+- [Stack Overflow: How to get intellisense in Visual Studio Code for Unity functions names?](https://stackoverflow.com/questions/52189426/how-to-get-intellisense-in-visual-studio-code-for-unity-functions-names)
+- [Fixing Visual Studio’s IntelliSense (auto-complete) in Unity](https://blog.terresquall.com/2020/11/fixing-visual-studios-intellisense-autocomplete-in-unity/)

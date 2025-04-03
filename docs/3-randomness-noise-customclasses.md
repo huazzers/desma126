@@ -386,25 +386,27 @@ Review from [our first introduction of C#](./0-unity-csharp.md/#unity-c):
 > - storing information such as variables and functions inside an object or class;
 > - programming interactive / dynamic behaviour in objects;
 
-Sometimes we need to write **custom classes to store data and functions** about specific objects.
-
-For example, we could have a class that describes specific properties of an object. 
+During the in-class demo of our first lesson, we wrote a custom MonoBehaviour class that describes specific properties of an object. 
 
 ```csharp
-public class Cat
+using UnityEngine;
+
+public class CatInfo : MonoBehaviour
 {
-    public string name;
-    public string breed;
-    public float size;
-    public bool hasCollar;
+    public string catName;
+    public float age;
+    public int numberOfLimbs;
+    public bool isHappy;
     public Color furColor;
-    public Color eyeColor;
+    public Material furMaterial;
 }
 ```
 
 <br>
 
-One way of implementing these custom classes is to use them as **small "helper" classes** inside our scripts.
+However, these custom scripts don't always need to be MonoBehaviours that are attached to objects in our scene.
+
+Another way of implementing these custom classes is to use them as **small "helper" classes** inside our scripts.
 
 For example, we may want to create a custom class that contains a variety of colour schemes. 
 

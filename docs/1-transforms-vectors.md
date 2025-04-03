@@ -39,13 +39,12 @@ document.querySelectorAll('a[href^="#"]')
 
 📦 **Unity packages from today's class:**
 > 
-> - In-class exercise: [**Solar System**](https://drive.google.com/file/d/1xjOoIX3iqXzK77oMmES5nmPFK0mZ30gJ/view?usp=drive_link)
 > - [**Transform and Vector Demos**](https://drive.google.com/file/d/1y8mqSyMuRD07H86_vb1oCa_PWLzPAdMl/view?usp=drive_link), including examples of:
 >     - Forcing object to start at a given position
 >     - Moving an object at constant velocity and at accelerating velocity
 >     - Making at object follow another object using LateUpdate()
 >     - Vector Multiplication Visualisation
-
+> - In-class exercise: [**Solar System**](https://drive.google.com/file/d/1xjOoIX3iqXzK77oMmES5nmPFK0mZ30gJ/view?usp=drive_link)
 
 ---
 
@@ -177,6 +176,8 @@ Vector3 as relative scale.
 Vector3 as rotational configuration.
 
 In Unity, rotation values are internally processed as [*Quarternion*](https://docs.unity3d.com/ScriptReference/Quaternion.html) values, which are more convenient for the computer to work with. In the inspector, we are reading *eulerAngle* representations of rotation in degrees along the X, Y, and Z axes.
+
+Read more on [Rotation and Orientation](https://docs.unity3d.com/Manual/QuaternionAndEulerRotationsInUnity.html) in Unity's User Manual. 
 
 ![Rotation as Vector3](./img/rotation-4.gif)
 
@@ -330,6 +331,14 @@ normalizedVector = someVector.normalized;
 
 Dot product is useful for comparing the directions of two different vectors. 
 
+In video game development, dot product is commonly used for checking forward-backward directions and AI vision (read more [here](https://amirazmi.net/dot-products-in-games-and-their-use-cases/)). 
+
+<figure>
+<img src="../img/dotproduct.gif" style="max-width:500px;">
+<figcaption>-- Visualisation of Dot Product, by <a href="https://acegikmo.com/mathvis/index.html">Freya Holmér</a></figcaption>
+</figure>
+
+
 ```csharp
 float dotProductAB = Vector3.Dot(A,B);
 
@@ -342,6 +351,8 @@ if (dotProductAB==0){
 }
 ```
 
+
+
 <br>
 
 #### Cross Product
@@ -350,7 +361,12 @@ if (dotProductAB==0){
 
 Cross product can produce a new vector that is perpendicular to two vectors.
 
-![Cross Product Diagram](./img/LeftHandRuleDiagram.png)
+This is often useful for calculating resultant rotational forces / torque between two forces, or [checking left-right directions](https://nic-gamedev.blogspot.com/2011/11/using-vector-mathematics-cross-products.html).
+
+<figure>
+<img src="../img/crossproduct.gif" style="max-width:500px;">
+<figcaption>-- Visualisation of Cross Product, by <a href="https://acegikmo.com/mathvis/index.html">Freya Holmér</a></figcaption>
+</figure>
 
 ```csharp
 Vector3 OA = A - O;
@@ -360,13 +376,16 @@ Vector3 crossAB = Vector3.Cross(OA,OB);
 //crossAB is perpendcular to both vectors OA and OB.
 ```
 
+
+
 <br>
 
-### Other vector methods that may be useful
+### Other vector(-related) methods that may be useful
 
-- [MoveTowards()](https://docs.unity3d.com/ScriptReference/Vector3.MoveTowards.html)
-- [RotateTowards()](https://docs.unity3d.com/ScriptReference/Vector3.RotateTowards.html)
-- [Reflect()](https://docs.unity3d.com/ScriptReference/Vector3.Reflect.html)
+- [Vector3.MoveTowards()](https://docs.unity3d.com/ScriptReference/Vector3.MoveTowards.html)
+- [Vector3.RotateTowards()](https://docs.unity3d.com/ScriptReference/Vector3.RotateTowards.html)
+- [Vector3.Reflect()](https://docs.unity3d.com/ScriptReference/Vector3.Reflect.html)
+- [Transform.LookAt()](https://docs.unity3d.com/6000.0/Documentation/ScriptReference/Transform.LookAt.html)
 
 <br>
 
@@ -393,6 +412,7 @@ How do we make a solar system that dynamically generates at the start of the sce
 
 ## Some course reminders
 
-- Fill up the [preliminary course survey](https://forms.gle/UtwGfebgKcHRvMCP7), if you haven't already.
+- Fill up the [preliminary course survey](https://forms.gle/aomLcyV5EHQ5YUdC6), if you haven't already.
 - [Reading Response 1](./readings-and-homeplays.md/#reading-response-1) is due next class.
 - Sign up for [Homeplay 1](./readings-and-homeplays.md/#homeplay-1)! 
+- Next lesson, we're going to start learning how to import 2D/3D assets into Unity. If there's any assets you want to use for your generator, it'd be useful to bring them to class next week. 
