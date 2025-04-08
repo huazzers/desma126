@@ -151,14 +151,6 @@
             
             <li class="nav-item" data-bs-level="1"><a href="#sprites-and-video-players" class="nav-link">Sprites and Video players</a>
               <ul class="nav flex-column">
-            <li class="nav-item" data-bs-level="2"><a href="#add-a-texture-material-to-a-3d-plane" class="nav-link">Add a texture material to a 3D Plane</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-bs-level="2"><a href="#sprite-renderer-component" class="nav-link">Sprite Renderer Component</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
             <li class="nav-item" data-bs-level="2"><a href="#video-player-component" class="nav-link">Video Player Component</a>
               <ul class="nav flex-column">
               </ul>
@@ -213,6 +205,7 @@ document.querySelectorAll('a[href^="#"]')
     });
 });
 </script>
+
 <h1 id="sprites-and-video-players">Sprites and Video players</h1>
 <hr />
 <p>📦 <strong>Unity packages from today's class:</strong></p>
@@ -230,68 +223,6 @@ document.querySelectorAll('a[href^="#"]')
 </blockquote>
 <p><br></p>
 <hr />
-<p>Here are some workflows for adding still and moving images to your scene. </p>
-<h2 id="add-a-texture-material-to-a-3d-plane">Add a texture material to a 3D Plane</h2>
-<h3 id="lit-vs-unlit-shaders">Lit VS Unlit shaders</h3>
-<p>When creating a new material in the Universal 3D pipeline, the default shader used for this material is a <strong>Universal Render Pipeline (URP) Lit shader</strong>. This means your material render will account for lighting in your scene. </p>
-<p>If you change this to an <strong>URP unlit shader</strong>, the material renders independently of the surrounding lighting. </p>
-<figure>
-<img src="../img/litvsunlit.gif">
-<figcaption>-- Lit shader (left) and unlit shader (right).
-</figcaption>
-</figure>
-
-<p><br></p>
-<p>URP also has shaders that are specific to sprite textures. In the <strong>shader drop down</strong>, go to <strong>URP</strong> &gt; <strong>2D</strong> &gt; select a <strong>Sprite shader</strong>. </p>
-<p><img alt="" src="../img/urp2dspriteshader.gif" /></p>
-<p><br></p>
-<h3 id="material-properties">Material Properties</h3>
-<p><em>(Note: The following properties may or may not be available depending on what material shader you're using. Pictured below are properties available in the URP Lit shader.)</em></p>
-<p><img alt="" src="../img/materialproperties.jpg" /></p>
-<p>Here are some notable properties you may consider adjusting for your material asset:</p>
-<ul>
-<li><strong>Workflow Mode</strong>: Choose between <a href="https://docs.unity3d.com/2021.3/Documentation/Manual/StandardShaderMetallicVsSpecular.html">metallic or specular</a>.</li>
-<li><strong>Surface type</strong>: Opaque by default. If your texture has transparent areas, you may need to change this to Transparent to reflect the alpha channel. </li>
-<li><strong>Render face</strong>: Front (only) by default. In 3D meshes, each face has a normal vector which determines which side the material should render on. If you want your texture to be visible on both sides of your mesh surface, you may need to change this to be "Both".</li>
-<li><strong>Texture maps</strong>: Add a texture asset in the box to the left of "Base Map". </li>
-<li><strong>Emission</strong>: Emit light across the material surface (you may also add an image texture here as an emission map). If you have Global Volume, this will add a glow effect to your material surface at a positive-value intensity. </li>
-<li><strong>Tiling and Offset</strong>: Determines how your texture is scaled / positioned along the mesh surface. </li>
-<li><strong>Specular Highlights and Environment Reflections</strong> (under Advanced Options): Toggle these checkboxes and see how they affect the way your material is lit. </li>
-</ul>
-<p><br></p>
-<h3 id="watch-out-for-z-fighting-in-intersecting-mesh-surfaces">Watch out for Z-fighting in intersecting mesh surfaces!</h3>
-<figure>
-    <img src="../img/zfighting.gif">
-    <figcaption>-- Comparison between a bush of 3 intersecting planes which has z-fighting and strange overlap renders (left) and a bush made of 6 non-intersecting planes joined at the center (right).
-    </figcaption>
-</figure>
-
-<p>When meshes intersect with other mesh objects, especially if they're overlapping on top of one another, you may encounter a bug that flickers between the two meshes as your camera moves past it. This may be due to <strong>Z-fighting</strong>, which happens when the camera confuses the depth levels of intersecting mesh objects, and can't determine which to render on top of the other. </p>
-<p>The best practice is to <strong>keep your mesh objects separate</strong> from each other, and avoid intersecting mesh objects altogether. </p>
-<p><br></p>
-<hr />
-<h2 id="sprite-renderer-component">Sprite Renderer Component</h2>
-<p>This component allows you to use 2D sprites in GameObjects without using any meshes. </p>
-<p>First, make sure your image is <strong>imported as a "Sprite (2D and UI)" texture type</strong>. This allows you to select this image for the Sprite component for objects in your scene, and for UI Images. </p>
-<p><img alt="" src="../img/texturetosprite2dui.gif" /></p>
-<p><br></p>
-<p>If you're importing <strong>a sprite sheet</strong> containing multiple sprites, you will also need to do the following:</p>
-<ol>
-<li>Set the <strong>Sprite Mode</strong> to "Multiple"</li>
-<li>Install the <strong>2D Sprite package</strong> from Unity's package manager -- this will enable the Sprite Editor that you can use to slice your sprite sheet into individual sprites.</li>
-<li>When opening up the Sprite Editor, you may choose to <strong>Slice Grid by Cell Size or Cell Count</strong>. Click "Apply". Now you will have access to individual sprites when you click the expand arrow on your sprite sheet asset.</li>
-</ol>
-<p><img alt="" src="../img/spritesheet.gif" /></p>
-<p><br></p>
-<p>Once you have your texture correctly imported, create a new empty GameObject and add a Sprite Renderer component. </p>
-<p><img alt="" src="../img/spriterend.jpg" /></p>
-<p>Consider adjusting the following properties according to your needs: </p>
-<ul>
-<li><strong>Sprite</strong>: Set this to the sprite texture you imported.</li>
-<li><strong>Color</strong>: Change the tint of your sprite material. </li>
-<li><strong>Order in Layer</strong> (under Additional Settings): Determines the order in which overlapping sprites are rendered (higher order values render above sprites with lower order values.)</li>
-</ul>
-<p><br></p>
 <h3 id="using-the-sprite-component-on-a-3d-moving-rigidbody">Using the Sprite Component on a 3D Moving Rigidbody</h3>
 <p>If you're applying a sprite to a moving 3D object (let's say a player gameobject), I recommend attaching the sprite component <strong>inside a separate gameobject</strong>, then <strong>parent it to your player GameObject</strong> that has your Rigidbody, collider components, and player movement scripts.</p>
 <p>In my package example, here is how my enemy object is arranged in my scene hierarchy:</p>

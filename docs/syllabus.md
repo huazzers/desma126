@@ -150,8 +150,6 @@ Your participation grade will also be determined by your level of engagement in 
 * Projects should be **ready to play** prior to the beginning of class.
 * Project files and documentation should be **submitted by 11:59PM** the same day.
 
-After the due date, a full letter grade will be deducted from the project grade for each class day that the assignment is late. 
-
 **If you anticipate that you won’t be able to complete the work by the due date, please contact us *before* the due date so we can discuss options.**
 
 #### Appropriation, Fair Use, and Generated Content

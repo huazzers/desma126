@@ -33,6 +33,7 @@ document.querySelectorAll('a[href^="#"]')
     });
 });
 </script>
+
 # Sprites and Video players
 
 ---
@@ -50,96 +51,6 @@ document.querySelectorAll('a[href^="#"]')
 <br>
 
 ---
-
-Here are some workflows for adding still and moving images to your scene. 
-
-## Add a texture material to a 3D Plane
-
-### Lit VS Unlit shaders
-
-When creating a new material in the Universal 3D pipeline, the default shader used for this material is a **Universal Render Pipeline (URP) Lit shader**. This means your material render will account for lighting in your scene. 
-
-If you change this to an **URP unlit shader**, the material renders independently of the surrounding lighting. 
-
-<figure>
-<img src="../img/litvsunlit.gif">
-<figcaption>-- Lit shader (left) and unlit shader (right).
-</figcaption>
-</figure>
-
-<br>
-
-URP also has shaders that are specific to sprite textures. In the **shader drop down**, go to **URP** > **2D** > select a **Sprite shader**. 
-
-![](./img/urp2dspriteshader.gif)
-
-<br>
-
-### Material Properties
-
-*(Note: The following properties may or may not be available depending on what material shader you're using. Pictured below are properties available in the URP Lit shader.)*
-
-![](./img/materialproperties.jpg)
-
-Here are some notable properties you may consider adjusting for your material asset:
-
-- **Workflow Mode**: Choose between [metallic or specular](https://docs.unity3d.com/2021.3/Documentation/Manual/StandardShaderMetallicVsSpecular.html).
-- **Surface type**: Opaque by default. If your texture has transparent areas, you may need to change this to Transparent to reflect the alpha channel. 
-- **Render face**: Front (only) by default. In 3D meshes, each face has a normal vector which determines which side the material should render on. If you want your texture to be visible on both sides of your mesh surface, you may need to change this to be "Both".
-- **Texture maps**: Add a texture asset in the box to the left of "Base Map". 
-- **Emission**: Emit light across the material surface (you may also add an image texture here as an emission map). If you have Global Volume, this will add a glow effect to your material surface at a positive-value intensity. 
-- **Tiling and Offset**: Determines how your texture is scaled / positioned along the mesh surface. 
-- **Specular Highlights and Environment Reflections** (under Advanced Options): Toggle these checkboxes and see how they affect the way your material is lit. 
-
-<br>
-
-### Watch out for Z-fighting in intersecting mesh surfaces! 
-
-<figure>
-    <img src="../img/zfighting.gif">
-    <figcaption>-- Comparison between a bush of 3 intersecting planes which has z-fighting and strange overlap renders (left) and a bush made of 6 non-intersecting planes joined at the center (right).
-    </figcaption>
-</figure>
-
-When meshes intersect with other mesh objects, especially if they're overlapping on top of one another, you may encounter a bug that flickers between the two meshes as your camera moves past it. This may be due to **Z-fighting**, which happens when the camera confuses the depth levels of intersecting mesh objects, and can't determine which to render on top of the other. 
-
-The best practice is to **keep your mesh objects separate** from each other, and avoid intersecting mesh objects altogether. 
-
-<br>
-
----
-
-## Sprite Renderer Component 
-
-This component allows you to use 2D sprites in GameObjects without using any meshes. 
-
-First, make sure your image is **imported as a "Sprite (2D and UI)" texture type**. This allows you to select this image for the Sprite component for objects in your scene, and for UI Images. 
-
-![](./img/texturetosprite2dui.gif)
-
-<br>
-
-If you're importing **a sprite sheet** containing multiple sprites, you will also need to do the following:
-
-1. Set the **Sprite Mode** to "Multiple"
-2. Install the **2D Sprite package** from Unity's package manager -- this will enable the Sprite Editor that you can use to slice your sprite sheet into individual sprites.
-3. When opening up the Sprite Editor, you may choose to **Slice Grid by Cell Size or Cell Count**. Click "Apply". Now you will have access to individual sprites when you click the expand arrow on your sprite sheet asset.
-
-![](./img/spritesheet.gif)
-
-<br>
-
-Once you have your texture correctly imported, create a new empty GameObject and add a Sprite Renderer component. 
-
-![](./img/spriterend.jpg)
-
-Consider adjusting the following properties according to your needs: 
-
-- **Sprite**: Set this to the sprite texture you imported.
-- **Color**: Change the tint of your sprite material. 
-- **Order in Layer** (under Additional Settings): Determines the order in which overlapping sprites are rendered (higher order values render above sprites with lower order values.)
-
-<br>
 
 ### Using the Sprite Component on a 3D Moving Rigidbody 
 
