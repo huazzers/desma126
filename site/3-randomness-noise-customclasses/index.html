@@ -223,11 +223,7 @@ document.querySelectorAll('a[href^="#"]')
 <blockquote>
 <ul>
 <li><a href="https://drive.google.com/file/d/1HC1tOnao0y_MKTLlgBbiiocQBjpJaId2/view?usp=sharing"><strong>Perlin Noise for Animation and Terrain Generation</strong></a></li>
-<li><a href="https://drive.google.com/file/d/1urb4VHbFvDKvS02d1IS7qVpusmFXUJlp/view?usp=drive_link"><strong>Using Scripts for Storing Data</strong></a><ul>
-<li>Spawning Objects at Random Positions without Repeats</li>
-<li>Colour Scheme Randomizer</li>
-</ul>
-</li>
+<li><a href="https://drive.google.com/file/d/1VVXN4iFZ__GYr5qsS0pKRMNGW8Kzxr0q/view?usp=drive_link"><strong>Using Scripts for Storing Data: Colour Scheme Randomizer</strong></a></li>
 </ul>
 </blockquote>
 <hr />
@@ -245,6 +241,7 @@ document.querySelectorAll('a[href^="#"]')
 <li>How to get an element from an array</li>
 </ul>
 </li>
+<li>For, While, Do-While Loops</li>
 <li>Random.Range()</li>
 </ul>
 <p><br></p>
@@ -395,22 +392,32 @@ Debug.Log(names[pick]); //prints one of the names in the array at random.
 <h4 id="using-random-seeds-in-perlin-noise">Using Random Seeds in Perlin Noise</h4>
 <p>Because Perlin noise is <strong>a pseudo-random pattern</strong> of float values (i.e. it's not <em>truly</em> random), the same sample X and Y coordinates will return the same value. </p>
 <p>You can use Random.Range to randomize the X or Y coordinates to sample random parts of the Perlin noise image. </p>
-<pre><code class="language-csharp">float randomSeed; 
+<pre><code class="language-csharp">float x,y,randomSeed;
 // Note: 
 // A (random) seed is like a starting sample coordinate
 // that can be passed into a pseudorandom generator like perlin noise 
 // to create a replicable outcome.
 
+[SerializeField] float someNoiseValue;
+
 void Start()
 {
-    randomSeedY = Random.Range(0f, 100f);
+    randomSeed = Random.Range(0f, 100f);
+    y = randomSeed; //this random y coordinate will stay the same throughout runtime.
 }
 
 void Update()
 {
-    float x = Time.time;
-    float y = randomSeed;
-    float someNoiseValue = Mathf.PerlinNoise(x,y);
+    x = Time.time; //increase x over time
+
+    //imagine this float &quot;someNoiseValue&quot; as
+    //a sample coordinate that starts from (0,y)
+    //and is travelling across the positive-x direction
+    //of a 2D plane made of perlin noise during runtime.
+
+    //&quot;someNoiseValue&quot; will fluctuate between the approximate range of 0 and 1. 
+
+    someNoiseValue = Mathf.PerlinNoise(x, y);
 }
 </code></pre>
 <p><br></p>
@@ -538,11 +545,12 @@ public class ColorScheme
     public Color accent;
 }
 </code></pre>
+<p><img alt="" src="../img/colorschememanager.jpg" /></p>
 <p><br></p>
 <hr />
 <h2 id="some-course-reminders">Some course reminders</h2>
 <ul>
-<li><a href="../project-1/">Project 1</a> is due next Tuesday.</li>
+<li><a href="../project-1/">Project 1</a> is due next Thursday.</li>
 <li>Instructions on <a href="../how-to-submit/">How To Submit</a> your Projects are now updated. </li>
 </ul></p>
     </article>

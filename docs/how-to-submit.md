@@ -43,23 +43,38 @@ document.querySelectorAll('a[href^="#"]')
 
 ## Submission Checklist
 
-Create an [itch.io](https://itch.io) page for your project. You will submit a link to this project page via the project submission form. 
+**<u>Before class on the day of the project deadline</u>**
 
-**On the day of the project deadline:**
+Create an [itch.io](https://itch.io) page for your project. You will submit a link to this project page via the project submission form. 
 
 The following items should be available on your project page and ready to be presented **before class starts**: 
 
-1. **Text description** that would be useful for someone viewing your project for the first time:
-    - The basic premise of the game -- what is it about?
-    - How to play the game -- how do you interact with the project?
-2. **Project build for WINDOWS**
-3. **Exported Unity package**
+<input type="checkbox"> **Project Title**
 
-You should include the following visual documentation of your project by **11:59PM on the same day**:
+<input type="checkbox"> **Text Description** that would be useful for introducing your project to someone for the first time:
 
-- **at least ONE animated GIF** of your project in motion, roughly 600 pixels wide, ideally under 5MB in size.
-- **at least TWO stills** from your project (1920x1080).
-- **(Optional) Recording of gameplay.** Roughly 60 seconds, long enough to demonstrate how your game is played (1920x1080, mp4/h.264)
+> 1. **The basic premise of the project**: What is your project about? 
+> 2. **How to play**: How do you interact with the project?
+
+<input type="checkbox"> **Project build for WINDOWS**
+
+<input type="checkbox"> **Exported Unity package**
+
+<br>
+
+**<u>By 11:59PM on the day of the project deadline:</u>**
+
+Submit your project documentation through the same submission form. 
+
+This should include **all the project information listed above** (ie. whatever you've uploaded onto your itch.io project page), as well as the following **visual documentation** of your project:
+
+<mark class="assign">⚠️ **DO NOT SHOW THE UNITY EDITOR IN YOUR VISUAL DOCUMENTATION.**</mark>
+
+<input type="checkbox"> **at least ONE animated GIF** of your project in motion, roughly 600 pixels wide, ideally under 5MB in size.
+
+<input type="checkbox"> **at least TWO stills** from your project (1920x1080).
+
+<input type="checkbox"> **(Optional) Recording of gameplay.** Roughly 60 seconds, long enough to demonstrate how your game is played (1920x1080, mp4/h.264)
 
 
 <br>

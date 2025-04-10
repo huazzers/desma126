@@ -41,10 +41,7 @@ document.querySelectorAll('a[href^="#"]')
 📦 **Unity packages from today's class:**
 > 
 > - [**Perlin Noise for Animation and Terrain Generation**](https://drive.google.com/file/d/1HC1tOnao0y_MKTLlgBbiiocQBjpJaId2/view?usp=sharing)
-> - [**Using Scripts for Storing Data**](https://drive.google.com/file/d/1urb4VHbFvDKvS02d1IS7qVpusmFXUJlp/view?usp=drive_link)
->       - Spawning Objects at Random Positions without Repeats
->       - Colour Scheme Randomizer
-
+> - [**Using Scripts for Storing Data: Colour Scheme Randomizer**](https://drive.google.com/file/d/1VVXN4iFZ__GYr5qsS0pKRMNGW8Kzxr0q/view?usp=drive_link)
 
 ---
 
@@ -60,6 +57,7 @@ Before we begin...
 - Arrays
     - How to declare and initialise arrays
     - How to get an element from an array
+- For, While, Do-While Loops
 - Random.Range()
 
 <br>
@@ -263,22 +261,32 @@ Because Perlin noise is **a pseudo-random pattern** of float values (i.e. it's n
 You can use Random.Range to randomize the X or Y coordinates to sample random parts of the Perlin noise image. 
 
 ```csharp
-float randomSeed; 
+float x,y,randomSeed;
 // Note: 
 // A (random) seed is like a starting sample coordinate
 // that can be passed into a pseudorandom generator like perlin noise 
 // to create a replicable outcome.
 
+[SerializeField] float someNoiseValue;
+
 void Start()
 {
-    randomSeedY = Random.Range(0f, 100f);
+    randomSeed = Random.Range(0f, 100f);
+    y = randomSeed; //this random y coordinate will stay the same throughout runtime.
 }
 
 void Update()
 {
-	float x = Time.time;
-	float y = randomSeed;
-	float someNoiseValue = Mathf.PerlinNoise(x,y);
+    x = Time.time; //increase x over time
+
+    //imagine this float "someNoiseValue" as
+    //a sample coordinate that starts from (0,y)
+    //and is travelling across the positive-x direction
+    //of a 2D plane made of perlin noise during runtime.
+
+    //"someNoiseValue" will fluctuate between the approximate range of 0 and 1. 
+
+    someNoiseValue = Mathf.PerlinNoise(x, y);
 }
 ```
 
@@ -448,11 +456,13 @@ public class ColorScheme
 }
 ```
 
+![](./img/colorschememanager.jpg)
+
 <br>
 
 ---
 
 ## Some course reminders
 
-- [Project 1](./project-1.md) is due next Tuesday.
+- [Project 1](./project-1.md) is due next Thursday.
 - Instructions on [How To Submit](./how-to-submit.md) your Projects are now updated. 
