@@ -128,7 +128,29 @@ By default, screenshots save to your **desktop** with the name ”Screen Shot [d
 
 ## How to export projects from Unity
 
+Before we export anything...
+
+### Project / Player Settings for Unity Build
+
+<!---->
+
+Go to **Edit > Project Settings > Select the Player tab**. 
+
+![](./img/project-settings.jpg)
+
+<br>
+
+Here's some settings you may customise:
+
+- **Product Name** - Set this to your project title. This will be the name of the executable file (.exe). 
+- **Default Icon and Cursor** - Set the executable file icon and in-game cursor. 
+- **Resolution and Presentation** - You may calibrate whether your game application runs in the background, and whether it opens in fullscreen or windowed view.
+
+<br>
+
 ### Building your project
+
+#### Unity version 2023 and earlier
 
 Start by opening the build settings under **File > Build Settings**.
 
@@ -148,11 +170,46 @@ Create a Windows build by changing Target Platform to “Windows” and clicking
 
 <br>
 
-After the build has finished, create a zipped folder containing all of the files and folders that unity created. **The build needs all these folders, exes, and dlls to run properly.**
+After the build has finished, locate the folder containing all the files and folders that Unity created. **The build needs all these folders, exes, and dlls to run properly.**
 
 ![](./img/Unity%20Build%20zip.png)
 
 <br>
+
+Rename this folder as **"YourName_Project123_Build"**, then compress it into a zipped folder. You will upload this .zip folder on itch.io and submit it for documentation.
+
+<br>
+
+#### Unity version 6
+
+Start by opening the build settings under **File > Build Profiles**.
+
+![](./img/unity6-build-1.jpg)
+
+<br>
+
+Select **Windows build profile** in the left column, and click **Switch Platform** if it's not already active. Once you've done this, the "Build and Run" option should be available. You may need to click another profile and click back to Windows for it to update.
+
+Under Windows settings, set architecture to **Intel 64-bit**.
+
+![](./img/unity6-build-2.jpg)
+
+<br>
+
+In the **Scene List** tab, add all the scenes you want to include in your project by clicking and dragging them from your assets folder to “Scene List” (also remove any scenes you don’t want to include). The topmost scene in this list will be the first to play when starting the game.
+
+![](./img/unity6-scenelist.gif)
+
+<br>
+
+After the build has finished, locate the folder containing all the files and folders that Unity created. **The build needs all these folders, exes, and dlls to run properly.**
+
+![](./img/unity6-build-3.jpg)
+
+<br>
+
+Rename this folder as **"YourName_Project123_Build"**, then compress it into a zipped folder. You will upload this .zip folder on itch.io and submit it for documentation.
+
 
 ### Unity Packages
 
@@ -173,7 +230,9 @@ You have two options:
 
 In the window that opens, de-select any assets that you don’t want to include. Be careful that you don’t exclude anything required to run your scene. If you only had your scene selected when clicking **Export Package…**, the window will only display the assets directly used in that scene. You can select entire folders, or even the top level Assets folder to bring up more assets to include in the export.
 
-Make sure the **Include dependencies** box is checked and click **Export…** to save your unitypackage file.
+Select **None**, then click **Include dependencies** box to include all assets used inside your scene. Finally, click **Export…** to save your unitypackage file.
+
+Name this Unity Package "YourName_Project123.unitypackage"
 
 ![](./img/export-package-3.gif)
 

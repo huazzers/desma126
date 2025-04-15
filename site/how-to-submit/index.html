@@ -272,7 +272,22 @@ document.querySelectorAll('a[href^="#"]')
 <p><br></p>
 <hr />
 <h2 id="how-to-export-projects-from-unity">How to export projects from Unity</h2>
+<p>Before we export anything...</p>
+<h3 id="project-player-settings-for-unity-build">Project / Player Settings for Unity Build</h3>
+<!---->
+
+<p>Go to <strong>Edit &gt; Project Settings &gt; Select the Player tab</strong>. </p>
+<p><img alt="" src="../img/project-settings.jpg" /></p>
+<p><br></p>
+<p>Here's some settings you may customise:</p>
+<ul>
+<li><strong>Product Name</strong> - Set this to your project title. This will be the name of the executable file (.exe). </li>
+<li><strong>Default Icon and Cursor</strong> - Set the executable file icon and in-game cursor. </li>
+<li><strong>Resolution and Presentation</strong> - You may calibrate whether your game application runs in the background, and whether it opens in fullscreen or windowed view.</li>
+</ul>
+<p><br></p>
 <h3 id="building-your-project">Building your project</h3>
+<h4 id="unity-version-2023-and-earlier">Unity version 2023 and earlier</h4>
 <p>Start by opening the build settings under <strong>File &gt; Build Settings</strong>.</p>
 <p><img alt="" src="../img/build_settings_1.gif" /></p>
 <p><br></p>
@@ -282,9 +297,26 @@ document.querySelectorAll('a[href^="#"]')
 <p>Create a Windows build by changing Target Platform to “Windows” and clicking build.</p>
 <p><img alt="" src="../img/build_settings_3.gif" /></p>
 <p><br></p>
-<p>After the build has finished, create a zipped folder containing all of the files and folders that unity created. <strong>The build needs all these folders, exes, and dlls to run properly.</strong></p>
+<p>After the build has finished, locate the folder containing all the files and folders that Unity created. <strong>The build needs all these folders, exes, and dlls to run properly.</strong></p>
 <p><img alt="" src="../img/Unity%20Build%20zip.png" /></p>
 <p><br></p>
+<p>Rename this folder as <strong>"YourName_Project123_Build"</strong>, then compress it into a zipped folder. You will upload this .zip folder on itch.io and submit it for documentation.</p>
+<p><br></p>
+<h4 id="unity-version-6">Unity version 6</h4>
+<p>Start by opening the build settings under <strong>File &gt; Build Profiles</strong>.</p>
+<p><img alt="" src="../img/unity6-build-1.jpg" /></p>
+<p><br></p>
+<p>Select <strong>Windows build profile</strong> in the left column, and click <strong>Switch Platform</strong> if it's not already active. Once you've done this, the "Build and Run" option should be available. You may need to click another profile and click back to Windows for it to update.</p>
+<p>Under Windows settings, set architecture to <strong>Intel 64-bit</strong>.</p>
+<p><img alt="" src="../img/unity6-build-2.jpg" /></p>
+<p><br></p>
+<p>In the <strong>Scene List</strong> tab, add all the scenes you want to include in your project by clicking and dragging them from your assets folder to “Scene List” (also remove any scenes you don’t want to include). The topmost scene in this list will be the first to play when starting the game.</p>
+<p><img alt="" src="../img/unity6-scenelist.gif" /></p>
+<p><br></p>
+<p>After the build has finished, locate the folder containing all the files and folders that Unity created. <strong>The build needs all these folders, exes, and dlls to run properly.</strong></p>
+<p><img alt="" src="../img/unity6-build-3.jpg" /></p>
+<p><br></p>
+<p>Rename this folder as <strong>"YourName_Project123_Build"</strong>, then compress it into a zipped folder. You will upload this .zip folder on itch.io and submit it for documentation.</p>
 <h3 id="unity-packages">Unity Packages</h3>
 <blockquote>
 <p>Read the official documentation for <a href="https://docs.unity3d.com/Manual/AssetPackagesCreate.html">exporting and importing Unity packages</a>.</p>
@@ -299,7 +331,8 @@ document.querySelectorAll('a[href^="#"]')
 </ul>
 <p><br></p>
 <p>In the window that opens, de-select any assets that you don’t want to include. Be careful that you don’t exclude anything required to run your scene. If you only had your scene selected when clicking <strong>Export Package…</strong>, the window will only display the assets directly used in that scene. You can select entire folders, or even the top level Assets folder to bring up more assets to include in the export.</p>
-<p>Make sure the <strong>Include dependencies</strong> box is checked and click <strong>Export…</strong> to save your unitypackage file.</p>
+<p>Select <strong>None</strong>, then click <strong>Include dependencies</strong> box to include all assets used inside your scene. Finally, click <strong>Export…</strong> to save your unitypackage file.</p>
+<p>Name this Unity Package "YourName_Project123.unitypackage"</p>
 <p><img alt="" src="../img/export-package-3.gif" /></p>
 <p><br></p>
 <h4 id="importing-unity-packages">Importing Unity Packages</h4>
