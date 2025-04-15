@@ -36,8 +36,8 @@ document.querySelectorAll('a[href^="#"]')
 <blockquote>Please read the <a href="../how-to-submit">How To Submit</a> page for more detailed instructions.</blockquote>
 </div>-->
 
-<!--
 
+<!--
 
 <figure>
     <img src="../img/wiiplay.png" width=100%>
@@ -301,6 +301,12 @@ Players of real-life games like tennis are able to control the velocity and spin
 
 <iframe width="100%" height="315" src="https://www.youtube.com/embed/EuWPjXJPOFU?si=cbszDkLHRCXNQPJi" title="Serena Williams & Conan Play Wii Tennis | Late Night with Conan O’Brien" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
+For your second project, you should map your controls to the arcade cabinet / cocktail table controls. Here's how the inputs are mapped on the game controller: 
+
+![](./img/arcade-controls.png)
+
+<br>
+
 **Consider how you allow the player to interact with the ball in 3D space.**
 
 How would you design an interface for your game that feels expressive and true to the original sport? How do existing games manage this complexity?
@@ -381,7 +387,6 @@ Consider increasing the **volume** and **pitch** of a sound effect based on how 
 ### Evaluation
 
 Your final project will be evaluated according to the guidelines listed in the [course syllabus](./syllabus.md/#evaluation-criteria).
-
 -->
 
 <!--

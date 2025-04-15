@@ -43,6 +43,14 @@ document.querySelectorAll('a[href^="#"]')
 >       - Change TextMeshPro using scripts, with custom style tags.
 > - [**Using Buttons to Instantiate new object and Destroy old object instance**](https://drive.google.com/file/d/1Kvlhx5w7Vvp2_088Kd8DM8unlnHniuPk/view?usp=drive_link)
 
+<br>
+
+📚 **Other relevant resources to today's topic:**
+>
+> - [**DebugKeyDown.cs script**](https://drive.google.com/file/d/1u5n9gf1Rt7t2O1eEisDmTnAtdSk7wgVI/view?usp=drive_link): Attach this in any gameobject in your scene to detect which input keys are being pressed.
+
+<br>
+
 ---
 
 Before we begin...
@@ -82,7 +90,7 @@ void Update(){
     if (Input.GetKey(KeyCode.Space)){
         Debug.Log("Spacebar is held down.");
         //will keep sending console message
-        //for as long as player holds down the spacebar.
+        //for as long as player holds down the button.
     }
 }
 ```
@@ -98,7 +106,7 @@ void Update(){
     if (Input.GetKeyDown(KeyCode.Mouse0)){
         Debug.Log("Left mouse button pressed.");
         //only sends console message once
-        //even if player continues to hold down the spacebar.
+        //even if player continues to hold down the button.
     }
 }
 ```
@@ -122,21 +130,6 @@ void Update(){
 These are very simple and straightforward methods for mapping inputs to custom actions, but certainly isn't the only one available! Unity has more organised systems in place for setting up our inputs -- we will discuss those later in the quarter.
 
 </br> 
-
-<!--
-### Using Unity's Legacy Input Manager
-
-> Read more about the [Input Manager](https://docs.unity3d.com/Manual/class-InputManager.html) in Unity's Manual.
-
-Unity has two Input modules, **the legacy version** (default) and **the new Input system** (which is a separate package that requires installation.) We'll just be covering the legacy Input module for now.
-
-The legacy Input Manager allows you to **define inputs and their associated actions** for your Projects. This lets us call our inputs using the names of these actions (as strings) and map multiple types of input under the same action. 
-
-Go to **Edit** > **Project Settings** > **Input Manager**, and expand the **Axes** dropdown list. 
-
-Another more elaborate method for setting up input systems uses Unity's new Input System -- we'll cover this later in the quarter.
-
--->
 
 ## UI
 
@@ -165,6 +158,7 @@ Create a new TMP element by **right-clicking in the Scene Hierarchy panel** > **
 When you create your first UI element in your scene, Unity automatically adds two other objects -- a **Canvas** (inside which our TMP element is nested) and an **EventSystem**.
 
 <br>
+
 
 #### Canvas
 
@@ -270,7 +264,7 @@ You can also edit the anchor point by using this dropdown in the inspector. Hold
 
 To fix this problem, Use the dropdown in the Game window to set a fixed aspect ratio or pixel size. **I recommend setting it to 1920x1080.** You may need to increase the font size of your text, or find the canvas scaler component and change it to "Scale With Screen Size"
 
-![](./img/screen%20aspect.gif)
+![](./img/gameview-aspectratio.gif)
 
 <br>
 
@@ -348,7 +342,7 @@ You can add custom .ttf and .otf font files into your asset folder, and convert 
 
 Go to **Window** > **TextMeshPro** > **Font Asset Creator**.
 
-Add your .ttf and .otf font file into Source Font File. Click **Generate Font Asset**. Unity will tell you if there are any characters missing or excluded from the selected font (this depends on what you put as your **Character Set** in the Font Asset Creator.)
+Add your .ttf or .otf font file into Source Font File. Click **Generate Font Asset**. Unity will tell you if there are any characters missing or excluded from the selected font (this depends on what you put as your **Character Set** in the Font Asset Creator.)
 
 Once you're ready, click **Save**. You can now use this Font Asset in your TextMeshPro components.
 
@@ -527,4 +521,4 @@ Try exploring these settings for your Main Camera object.
 
 ## Some course reminders
 
-- [Project 1](./project-1.md) is due next Tuesday.
+- [Project 1](./project-1.md) is due this Thursday.

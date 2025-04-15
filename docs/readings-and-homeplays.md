@@ -126,11 +126,45 @@ Plan to spend about 30 ~ 60 minutes playing the game(s) with your group members,
 
 ### Homeplay 2
 
+<!--Letter size half-fold printout
+COVER: game poster + Names___ 
+pg1: Brief 2-3 sentence about what you do in the game, using verbs
+pg2: Level Design
+pg3: Player mechanics.-->
+
+
+<!--
 <div class="duedate">
-<p>📌 <b>DUE: Week 5 Tuesday, April 29</b></p>
+<p>📌 <b>DUE: Week 4 Tuesday, April 22 (In-Class)</b></br><a href="https://docs.google.com/spreadsheets/d/1MyUCZyYpm9svy4uOqVpsANe3DwucLkXJLww36ObhlLE/edit?usp=sharing">Sign Up Here + Submit Presentations Here</a></p></p>
 </div>
 
-TBD 
+
+Spend about 30 ~ 60 minutes playing the game(s) you signed up for with your group members, then take down notes on the following topics in the worksheet printout. 
+
+1. Brief 2-3 sentence about what you do in the game, using verbs. 
+    - e.g. A (noun) that (verbs) a (noun) and (verbs) (nouns). If / when (noun) (verbs) a (noun), a (noun) (verbs).
+2. Level design.
+    - Consider the rules of the environment and how they are conveyed through visual / audio cues or props.
+    - How are objects, time, and space arranged / revealed to the player? (camera perspective, physical dimension, legibility, etc.)
+    - How do the levels change over time (if at all)? 
+3. Player Mechanics.
+    - How do player(s) interact with the game environment / other players? 
+
+You will submit this printout **at the end of class** the same day. 
+
+-->
+
+
+<br>
+
+### Homeplay 3
+
+<div class="duedate">
+<p>📌 <b>DUE: Week 8 Thursday, May 22</b></p>
+</div>
+
+TBD
+
 <!--
 <div class="duedate">
 <p>Due: Week 8 Tuesday, November 19
@@ -152,11 +186,3 @@ Plan to spend about 30 ~ 60 minutes playing the game(s) with your group members,
 **Please share a link to any presentation materials** in the sign up sheet next to your group names. You will share your responses with the rest of the class during lesson time on the due date.
 
 -->
-
-### Homeplay 3
-
-<div class="duedate">
-<p>📌 <b>DUE: Week 8 Thursday, May 22</b></p>
-</div>
-
-TBD

@@ -230,6 +230,14 @@ document.querySelectorAll('a[href^="#"]')
 <li><a href="https://drive.google.com/file/d/1Kvlhx5w7Vvp2_088Kd8DM8unlnHniuPk/view?usp=drive_link"><strong>Using Buttons to Instantiate new object and Destroy old object instance</strong></a></li>
 </ul>
 </blockquote>
+<p><br></p>
+<p>📚 <strong>Other relevant resources to today's topic:</strong></p>
+<blockquote>
+<ul>
+<li><a href="https://drive.google.com/file/d/1u5n9gf1Rt7t2O1eEisDmTnAtdSk7wgVI/view?usp=drive_link"><strong>DebugKeyDown.cs script</strong></a>: Attach this in any gameobject in your scene to detect which input keys are being pressed.</li>
+</ul>
+</blockquote>
+<p><br></p>
 <hr />
 <p>Before we begin...</p>
 <p><br></p>
@@ -259,7 +267,7 @@ document.querySelectorAll('a[href^="#"]')
     if (Input.GetKey(KeyCode.Space)){
         Debug.Log(&quot;Spacebar is held down.&quot;);
         //will keep sending console message
-        //for as long as player holds down the spacebar.
+        //for as long as player holds down the button.
     }
 }
 </code></pre>
@@ -270,7 +278,7 @@ document.querySelectorAll('a[href^="#"]')
     if (Input.GetKeyDown(KeyCode.Mouse0)){
         Debug.Log(&quot;Left mouse button pressed.&quot;);
         //only sends console message once
-        //even if player continues to hold down the spacebar.
+        //even if player continues to hold down the button.
     }
 }
 </code></pre>
@@ -286,21 +294,6 @@ document.querySelectorAll('a[href^="#"]')
 <p><br></p>
 <p>These are very simple and straightforward methods for mapping inputs to custom actions, but certainly isn't the only one available! Unity has more organised systems in place for setting up our inputs -- we will discuss those later in the quarter.</p>
 <p></br> </p>
-<!--
-### Using Unity's Legacy Input Manager
-
-> Read more about the [Input Manager](https://docs.unity3d.com/Manual/class-InputManager.html) in Unity's Manual.
-
-Unity has two Input modules, **the legacy version** (default) and **the new Input system** (which is a separate package that requires installation.) We'll just be covering the legacy Input module for now.
-
-The legacy Input Manager allows you to **define inputs and their associated actions** for your Projects. This lets us call our inputs using the names of these actions (as strings) and map multiple types of input under the same action. 
-
-Go to **Edit** > **Project Settings** > **Input Manager**, and expand the **Axes** dropdown list. 
-
-Another more elaborate method for setting up input systems uses Unity's new Input System -- we'll cover this later in the quarter.
-
--->
-
 <h2 id="ui">UI</h2>
 <p>For games it's often useful to add <strong>user interface elements</strong> like text and images on top of what the camera is seeing. Unity features a UI system, which we can use to add elements to our game like clickable buttons, meters, images, and text. </p>
 <p>To start with, we'll look at how to add text elements to your project.</p>
@@ -388,7 +381,7 @@ Another more elaborate method for setting up input systems uses Unity's new Inpu
 <p><strong>By default, your Game preview panel's aspect ratio is set to "Free Aspect."</strong> Notice that the canvas changes its size to match the dimensions of the screen! This can cause a lot of confusion when working with UI elements.</p>
 <p><br></p>
 <p>To fix this problem, Use the dropdown in the Game window to set a fixed aspect ratio or pixel size. <strong>I recommend setting it to 1920x1080.</strong> You may need to increase the font size of your text, or find the canvas scaler component and change it to "Scale With Screen Size"</p>
-<p><img alt="" src="../img/screen%20aspect.gif" /></p>
+<p><img alt="" src="../img/gameview-aspectratio.gif" /></p>
 <p><br></p>
 <p>You may also notice that <strong>the canvas is way larger than anything else in your scene</strong>. That is OK!</p>
 <p><br></p>
@@ -437,7 +430,7 @@ public class UpdateText : MonoBehaviour
 <h3 id="custom-font-assets-for-textmeshpro">Custom Font Assets for TextMeshPro</h3>
 <p>You can add custom .ttf and .otf font files into your asset folder, and convert them into a TextMeshPro Font Asset. </p>
 <p>Go to <strong>Window</strong> &gt; <strong>TextMeshPro</strong> &gt; <strong>Font Asset Creator</strong>.</p>
-<p>Add your .ttf and .otf font file into Source Font File. Click <strong>Generate Font Asset</strong>. Unity will tell you if there are any characters missing or excluded from the selected font (this depends on what you put as your <strong>Character Set</strong> in the Font Asset Creator.)</p>
+<p>Add your .ttf or .otf font file into Source Font File. Click <strong>Generate Font Asset</strong>. Unity will tell you if there are any characters missing or excluded from the selected font (this depends on what you put as your <strong>Character Set</strong> in the Font Asset Creator.)</p>
 <p>Once you're ready, click <strong>Save</strong>. You can now use this Font Asset in your TextMeshPro components.</p>
 <p><img alt="" src="../img/tmp-custom-font.gif" /></p>
 <p><br></p>
@@ -580,7 +573,7 @@ public void SpawnObj()
 <p><br></p>
 <h2 id="some-course-reminders">Some course reminders</h2>
 <ul>
-<li><a href="../project-1/">Project 1</a> is due next Tuesday.</li>
+<li><a href="../project-1/">Project 1</a> is due this Thursday.</li>
 </ul></p>
     </article>
 </section>

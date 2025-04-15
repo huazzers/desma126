@@ -47,7 +47,7 @@ document.querySelectorAll('a[href^="#"]')
 
 Create an [itch.io](https://itch.io) page for your project. You will submit a link to this project page via the project submission form. 
 
-The following items should be available on your project page and ready to be presented **before class starts**: 
+The following items should be available on your itch.io project page and ready to be presented **before class starts**: 
 
 <input type="checkbox"> **Project Title**
 
