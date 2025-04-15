@@ -523,6 +523,9 @@ public void SpawnObj()
 </code></pre>
 <p><br></p>
 <p><strong>If you don't want to completely destroy that instance of the GameObject or component from your scene</strong>, you may consider using <a href="https://docs.unity3d.com/ScriptReference/GameObject.SetActive.html">SetActive()</a> for GameObjects, and <a href="https://docs.unity3d.com/ScriptReference/Behaviour-enabled.html">.enabled</a> for components instead. This would just "switch off" your objects or components, but keeps them available in the scene so you can switch them back on again.</p>
+<blockquote>
+<p>Review: <a href="../2-prefabs-loops-arrays-import/#instantiate-and-destroy-vs-setactive"><strong>Instantiate and Destroy VS SetActive()</strong></a></p>
+</blockquote>
 <p><br></p>
 <p>There are also workflows for <a href="https://docs.unity3d.com/ScriptReference/Events.UnityEvent.AddListener.html">setting up UnityEvents and Listeners using scripts</a>, but we'll get to that in a later lesson!</p>
 <p><br></p>
