@@ -62,12 +62,10 @@ If you're hungry for more, below are some recommended talks on more methods and 
 ### Reading Response 2
 
 <div class="duedate">
-<p>📌 <b>DUE: Week 4 Thursday, April 24</b></p>
+<p>📌 <b>DUE: Week 4 Thursday, April 24</b>
+</br><a href="https://forms.gle/adXgwMUeBwsSoj5b9">Submit Your Response Here</a></p>
 </div>
 
-TBD
-
-<!--
 Read these two writings by Steve Swink:
 
 - [***Game Feel: The Secret Ingredient***](https://www.gamedeveloper.com/design/game-feel-the-secret-ingredient)
@@ -84,8 +82,6 @@ For this reading response, it helps to have some idea(s) for what you'd like to 
 Watch [***Juice it or lose it - a talk by Martin Jonasson & Petri Purho***](https://youtu.be/Fy0aCDmgnxg) for a live demonstration of how to get juiciness with tweening, particles, and other visual design decisions.
 
 <br>
-
--->
 
 ---
 

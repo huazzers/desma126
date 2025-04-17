@@ -29,24 +29,19 @@ document.querySelectorAll('a[href^="#"]')
 });
 </script>
 
-# Project 2: TBD
+# Project 2: Ball Game Remix
 
-<!--<div class="duedate">
-<p><a href="https://forms.gle/qHWAFQe68h4tVBcE9">Submit Here</a></p>
+<div class="duedate">
+<p>📌 <b>BALL GAME RESERACH DUE: Week 4 Thursday, April 24</b></p>
+<p>📌 <b>PROTOTYPE PLAYTEST DUE: Week 6 Tuesday, May 6</b></p>
+<p>📌 <b>FINAL PROJECT BUILD + DOCUMENTATION DUE: Week 7 Tuesday, May 13</b></p>
+<p><a>Submit Final Submission Here (TBD)</a></p>
 <blockquote>Please read the <a href="../how-to-submit">How To Submit</a> page for more detailed instructions.</blockquote>
-</div>-->
+</div>
 
+## Prompt
 
-<!--
-
-<figure>
-    <img src="../img/wiiplay.png" width=100%>
-    <figcaption>-- Wii Play, Nintendo</figcaption>
-</figure>
-
-### Prompt
-
-Adapt **one of the following** ball-based games into a digital game. 
+Adapt **one of the following** ball-based games into a digital game for gamepad controllers *OR* any of the arcade cabinets in the classroom*:
 
 - Ball-and-net sports (tennis, volleyball)
 - Ball-and-wall sports (squash, racketball, handball)
@@ -59,31 +54,48 @@ Adapt **one of the following** ball-based games into a digital game.
 
 <br>
 
-... AND add **an interesting twist** to your game. 
+(**Alternative controllers are also welcome, but you should consult the instructor beforehand.*)
 
 <br>
 
-### Requirements
+## Requirements
 
 Project 2 contains THREE COMPONENTS: 
-> - **PART 1 (5%): BALL GAME RESEARCH** </br><mark>*Due: Week 4 Tuesday, October 22*</mark> </br>Do some research about the game you have chosen, and bring your notes to class for discussion. (Refer [below](#ball-game-research) for research topics to cover.)
-> - **PART 2 (5%): PROTOTYPE PLAYTEST** </br><mark>*Due: Week 5 Thursday, October 31*</mark> </br>Bring a prototype of your project to class -- we will be playtesting each others' projects. Prioritise core mechanics for player interaction and level design, placeholder visuals and playing from the Unity Editor are ok at this stage. 
-> - **PART 3 (15%): FINAL PROJECT BUILD WITH DOCUMENTATION** </br><mark>*Due: Week 6 Thursday, November 7*</mark> </br>Refer to [final submission requirements](#final-submission) and [submission guidelines](./how-to-submit.md), then submit your final project. 
+> - **PART 1 (5%): BALL GAME RESEARCH** </br><mark>*Due: Week 4 Thursday, April 24*</mark> </br>Do some research about the game you have chosen, and bring your notes to class for discussion. (Scroll down to ["Ball Game Research"](#ball-game-research) for more info.)
+> - **PART 2 (5%): PROTOTYPE PLAYTEST** </br><mark>*Due: Week 6 Tuesday, May 6*</mark> </br>Bring a prototype of your project to class -- we will be playtesting each others' projects. Prioritise core mechanics for player interaction and level design, placeholder visuals and playing from the Unity Editor are ok at this stage. (Scroll down to [Prototype Playtest](#prototype-playtest) for more info.)
+> - **PART 3 (15%): FINAL PROJECT BUILD WITH DOCUMENTATION** </br><mark>*Due: Week 7 Tuesday, May 13*</mark> </br>Refer to [final submission requirements](#final-submission) and [submission guidelines](./how-to-submit.md), then submit your final project. 
 > 
 > **Total contribution to final course grade: 25%**
 
 <br>
 
+**📝 Final Project Checklist**
+
+Your final project must include the following elements:
+
+- ☑️ **Physics-based motion and collision** using the Rigidbody component.
+- ☑️ **Gameplay**: you must track player(s') score; consider play experiences and strategic options using level design and game mechanics.
+- ☑️ **Interaction Design**: you must include input key mapping for gamepad, arcade cabinet, or alternative custom controller(s); consider how to adapt ball game interaction in virtual space.
+- ☑️ **Visual Communication** of game state to player.
+- ☑️ **Sound**
+
+<br>
+
+Your final project *does not* have to be a traditional ball game.
+
+<br>
+
+---
+
 #### Ball Game Research
 
 After picking a ball game to adapt for Project 2, do some research about the game you have chosen, considering the following questions: 
 
-##### Environment
+<br>
+
+**Environment**
 
 <div class="div-container">
-    <div style="width:47.5%;">
-        <img src="../img/tennis%20court.png">
-    </div>
     <div style="width:47.5%;">
         <ul>
             <li style="margin-top:0;">What are the physical properties of the game environment (e.g. the ball, the play surface)?
@@ -94,19 +106,18 @@ After picking a ball game to adapt for Project 2, do some research about the gam
             </li>
         </ul>
     </div>
+    <div style="width:47.5%;">
+        <img src="../img/tennis%20court.png">
+    </div>
 </div>
 
 <br>
 
-##### Body
-
-For the *actual physical* game:
+**Body**
 
 <div class="div-container">
     <div style="width:47.5%;">
-        <img src="../img/baseball%20swing.jpeg">
-    </div>
-    <div style="width:47.5%;">
+        <p>For the <i>actual physical</i> game:</p>
         <ul>
             <li style="margin-top:0;">What tools or appendages are used to play the actual physical game?
             </li>
@@ -115,12 +126,8 @@ For the *actual physical* game:
             <li>Are there any properties or affordances that are unusual or unexpected?
             </li>
         </ul>
-    </div>
-</div>
-
-
-For your *digital* game:
-<ul>
+        <p>For your <i>digital</i> game:</p>
+        <ul>
             <li style="margin-top:0;">What tools or appendages does the player use to play your <i>digital</i> game?
             </li>
             <li>What are the properties and affordances of those tools?
@@ -130,15 +137,20 @@ For your *digital* game:
             <li>What are some affordances that only the digital game can have?
             </li>
         </ul>
+    </div>
+    <div style="width:47.5%;">
+        <img src="../img/baseball%20swing.jpeg">
+    </div>
+</div>
+
+
+
 
 <br>
 
-##### Mind
+**Mind**
 
 <div class="div-container">
-    <div style="width:47.5%;">
-        <img src="../img/tennisshots.png">
-    </div>
     <div style="width:47.5%;">
         <ul>
             <li style="margin-top:0;">What are the rules of your game? How does play proceed? Consider drawing a flow chart.
@@ -153,14 +165,21 @@ For your *digital* game:
             </li>
         </ul>
     </div>
+    <div style="width:47.5%;">
+        <img src="../img/tennisshots.png">
+    </div>
 </div>
 
 
 <br>
 
+
+---
+
+
 #### Prototype Playtest
 
-> **If this is your first time running a playtest**, I recommend reading [this set of suggestions and guidelines](https://mycours.es/gamedesign2018/files/2018/11/playtesting-primer.pdf) beforehand to have some idea of what to expect.
+> If this is your first time running a playtest, I recommend reading [**these suggestions and guidelines**](https://mycours.es/gamedesign2018/files/2018/11/playtesting-primer.pdf) beforehand to have some idea of what to expect.
 
 <br>
 
@@ -172,7 +191,7 @@ When showing your piece, consider the following:
 
 <br>
 
-Some general guidelines for playtesting projects:
+Other general guidelines when playtesting someone else's game:
 
 - one speaker at a time; be mindful of taking space and making space for others. 
 - critique the work, not the artist.
@@ -180,17 +199,14 @@ Some general guidelines for playtesting projects:
 - think out loud while playing the project.
 - avoid judgemental comments like "i like..." or "i don't like..."; instead: describe, analyse, and interpret -- tell us what you see, and explain how that shapes your experience of the project. 
 - try to break the project -- catch any bugs or loopholes you can find! 
-- consider where the artist would like to go from here, and how they can pursue their goals.
 
 <br>
 
-<br>
+---
 
 #### Final Submission
 
-Your final project should have the following elements:
-
-##### Physics
+##### **Physics**
 
 Your game must use the **Rigidbody** component to simulate **physics-based** motion and collision. 
 
@@ -201,7 +217,7 @@ Your game must use the **Rigidbody** component to simulate **physics-based** mot
 
 <br>
 
-##### Gameplay
+##### **Gameplay**
 
 Your game should keep track of one or more player's **score**. Scores should be determined more or less according to the rules of the game you are adapting.
 
@@ -293,7 +309,7 @@ If you're making a multiplayer game, you could consider what type of social mech
 
 <br>
 
-##### Interaction Design
+##### **Interaction Design**
 
 Translating the nuances of a sport to a digital game is a complex challenge.
 
@@ -301,13 +317,9 @@ Players of real-life games like tennis are able to control the velocity and spin
 
 <iframe width="100%" height="315" src="https://www.youtube.com/embed/EuWPjXJPOFU?si=cbszDkLHRCXNQPJi" title="Serena Williams & Conan Play Wii Tennis | Late Night with Conan O’Brien" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-For your second project, you should map your controls to the arcade cabinet / cocktail table controls. Here's how the inputs are mapped on the game controller: 
-
-![](./img/arcade-controls.png)
-
 <br>
 
-**Consider how you allow the player to interact with the ball in 3D space.**
+**Consider how you allow the player to interact with the ball in virtual space.**
 
 How would you design an interface for your game that feels expressive and true to the original sport? How do existing games manage this complexity?
 
@@ -364,7 +376,7 @@ For instance, there are many different examples of how tennis can be adapted to 
 
 <br>
 
-##### Visual Communication
+##### **Visual Communication**
 
 Consider the **look** and **feel** of your game, including lighting, materials, and more. If you wish, you may use 2D or 3D assets to compose your scene.
 
@@ -374,9 +386,14 @@ Lines, meters, and arrows, can be useful for indicating aim, force, spin, and mo
 
 Particle effects or a trail renderer can help draw attention to a fast moving object.
 
+<figure>
+    <img src="../img/wiiplay.png" width=100%>
+    <figcaption>-- Wii Play, Nintendo</figcaption>
+</figure>
+
 <br>
 
-##### Sound
+##### **Sound**
 
 Don't forget that sound can be a powerful communication tool, and can help make a game feel more expressive. 
 
@@ -384,44 +401,6 @@ Consider increasing the **volume** and **pitch** of a sound effect based on how 
 
 <br>
 
-### Evaluation
+## Evaluation
 
 Your final project will be evaluated according to the guidelines listed in the [course syllabus](./syllabus.md/#evaluation-criteria).
--->
-
-<!--
-?? ball game remix
-?? physics game in general -- just has to use physics mechanics? 
-
-# Prompt
-
-Remix the Unity roll-a-ball tutorial! 
-
-# Requirements
-
-Project 1 has a THREE-PART SUBMISSION PROCESS: 
-[] **PART 1 (2.5%): COMPLETE UNITY ROLL-A-BALL TUTORIAL** -- Submit tutorial build here (link tbd)</br>*(Due: October 3 (Week 1 Thursday))*
-[] **PART 2 (2.5%): SKETCH OF PROJECT PRPOSAL** -- Bring this to class for discussion! </br>*(Due: October 8 (Week 2 Tuesday))*
-[] **PART 3 (10%): FINAL PROJECT BUILD WITH DOCUMENTATION** -- Refer to [submission guidelines](./how-to-submit.md), and submit your final project here (link tbd) *(Due: October 17 (Week 3, Thursday))*
-
-**Total contribution to final course grade: 15%**
-
----
-
-**Your final project must follow the following rules:** 
-[] NO MOUSE INTERACTIONS. NONE! 
-[] PLAYER MECHANIC MUST INCLUDE A ROLLING BALL.
-[] AT LEAST 2 OF THE FOLLOWING ASPECTS OF CHOICE MUST BE DIFFERENT FROM THE TUTORIAL </br> 
-    * Level map - how does game* environment guide / challenge / support your player throughout the experience?
-    * Player controls - how the ball is rolled, player camera, etc. other player interactions
-    * Rules and mechanics - how game* responds to player's actions, how game* is won / lost / concluded. 
-
-**Your final project is not required to:** 
-* be a classic video game.
-* have sound / audio. 
-
-# Evaluation
-
-Your final project will be evaluated according to the guidelines listed in the [course syllabus](./index.md/#evaluation-criteria).
-
--->
