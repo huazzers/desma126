@@ -555,6 +555,14 @@ Level designers focus on how different game spaces can make players <b>feel</b> 
 
 <br>
 
+![](./img/zoy-portraits.png)
+
+> Program, for architects, is the name of the room, like kitchen or office. I always focus on activity, because when we talk about the program, sometimes we mislead. [...] If I saw this is an office, people think, “oh, I need to be quiet, I need to concentrate in here.” If I say this is the library, people start to think, “oh, I need to read in here.” So, I don’t want to mention the program. I just want to focus on activity. Here you can smoke; here you can enjoy art.
+> 
+> -- Extracts of interview transcript between Zoyander Street and Kaede, from [Interactive Portraits: Trans People in Japan](https://zoy.itch.io/iportraits).
+
+<br>
+
 ### What is level design?
 
 There are two ways to understand level design:
@@ -622,7 +630,7 @@ For your projects, consider layering your level with your own intentions for:
 
 ### Layout
 
-After you’ve nailed down what your goals and concepts are for your level. you can begin sketching or laying out ideas.
+After you’ve nailed down what your goals and concepts are for your level, you can begin sketching or laying out ideas.
 
 <br>
 
@@ -637,7 +645,7 @@ If you need to communicate your level to others in a team, you’ll need to be m
 
 ### Environmental Expressivity
 
-When thinking about a player’s movement through your level, at both micro and macro scales, there are features to consider about the environment that can exist from **intrinsic** to **the concept of the game** to **helping a player know where to go next**.
+When thinking about a player’s movement through your level, at both micro and macro scales, there are features to consider about the environment that can exist from **the intrinsic rules and logic of that space** to **the broader concept of the game** to **helping a player know where to go next**.
 
 <br>
 
@@ -657,20 +665,11 @@ How does the player understand what they can and can't do in the world. A ladder
 
 #### Signposting
 
-<div class="div-container">
-    <div style="width: 47.5%">
-        <figure>
-        <img src="../img/seasons.jpg">
-        <figcaption>-- Scavengers Studio - <a href="https://store.steampowered.com/app/695330/SEASON_A_letter_to_the_future/">SEASON: A letter to the future</a></figcaption>
-        </figure>
-    </div>
-    <div style="width: 47.5%">
-        <figure>
-        <img src="../img/bigthundermountainrailroad.png">
-        <figcaption>-- Disney World - Big Thunder Mountain Railroad (<a href="https://theoryofthemeparks.blogspot.com/2015/08/wayfinding-in-themed-design-weenie.html">Source</a>)</figcaption>
-        </figure>
-    </div>
-</div>
+![](./img/LDB_SkyrimThroatOfTheWorld-DisneylandMatterhorn.jpg)
+
+> "See that mountain?
+>
+> -- Todd Howard
 
 Showing where to go with a big landmark (see [weenies](https://theoryofthemeparks.blogspot.com/2015/08/wayfinding-in-themed-design-weenie.html) in theme park design) - another method can be leading using lighting (tendency to avoid darkness, trying to find a light)
 
@@ -748,6 +747,8 @@ Or the spectacle of surprise!
     </figcaption>
 </figure>
 
+<br>
+
 #### Spatial Sound
 
 A call from afar, music in the distance.
@@ -756,6 +757,8 @@ A call from afar, music in the distance.
     <img src="../img/pupattheparty.png">
     <figcaption>-- Will Herring - <a href="https://grey2scale.itch.io/pet-the-pup">Pet the Pup at the Party</a></figcaption>
 </figure>
+
+<br>
 
 #### External Forces
 
@@ -773,13 +776,19 @@ How are we getting there and how does that feel?
 </figcaption>
 </figure>
 
+<br>
+
 #### Spatial Memory
+
+![](./img/japanesecostco.webp)
 
 <figure>
 <blockquote><p>A place can feel familiar through multiple avenues - via the senses, and via various objects. And, through multiple scales - e.g. going to two Wal-Marts in the USA vs two Costcos in the USA/Japan. The 'components' of a place act together to give you this collection of memories, and if those components are present in high enough density in another part of the world, they can act to dredge up memories - even to the scale of perceiving something to be where it isn't.</p>
 </blockquote>
 <figcaption>-- Melos Han-tani - <a href="https://melodicambient.neocities.org/posts/2023-02-20-Japanese-Costco">Japanese Costco: A Device For Crossing Spacetime</a></figcaption>
 </figure>
+
+<br>
 
 <figure>
 <img src="../img/exit8.jpg">
@@ -848,6 +857,8 @@ Consider the "rambunctiousness" of your levels
 - Adapt another piece of media into a level. A chapter of a book. A song.
 - Draw a map from memory of something you do every day on the computer / phone / internet … how could you represent a non-spatial thing as a place to be navigated through?
 
+<br>
+
 ---
 
 ## Play
@@ -861,6 +872,8 @@ Here are some elements you may consider as you figure out how you'd like players
 <figcaption>-- Janet Murray - Hamlet on the Holodeck(1997)</figcaption>
 </figure>
 
+<br>
+
 *Player agency* is often seen as a central element of what makes games enjoyable as an interactive media, but this is definitely worth weighing against other implications of play.
 
 What are the implications of *exercising* agency? 
@@ -872,7 +885,7 @@ What about games *without* agency?
 </figure>
 
 <figure>
-<img src="../img/train.png">
+<img src="../img/train.png" width="100%">
 <figcaption>-- Brenda Romero - <a href="https://brenda.games/train">Train (board game)</a></figcaption>
 </figure>
 
@@ -968,6 +981,9 @@ Maybe the result isn’t a “good” game, but it becomes interesting, unexpect
 </figcaption>
 </figure>
 
+<br>
+
+
 ### Game Juice / Game Feel
 
 (You'll learn this once you complete [reading response 2](./readings-and-homeplays.md/#reading-response-2)!)
@@ -987,6 +1003,8 @@ Maybe the result isn’t a “good” game, but it becomes interesting, unexpect
 .
 
 and if you're doing a **multiplayer** game...
+
+<br>
 
 ### Perfect information / imperfect information
 

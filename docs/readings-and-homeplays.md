@@ -122,34 +122,39 @@ Plan to spend about 30 ~ 60 minutes playing the game(s) with your group members,
 
 ### Homeplay 2
 
-<!--Letter size half-fold printout
-COVER: game poster + Names___ 
-pg1: Brief 2-3 sentence about what you do in the game, using verbs
-pg2: Level Design
-pg3: Player mechanics.-->
-
-
-<!--
 <div class="duedate">
-<p>📌 <b>DUE: Week 4 Tuesday, April 22 (In-Class)</b></br><a href="https://docs.google.com/spreadsheets/d/1MyUCZyYpm9svy4uOqVpsANe3DwucLkXJLww36ObhlLE/edit?usp=sharing">Sign Up Here + Submit Presentations Here</a></p></p>
+<p>📌 <b>DUE: Week 4 Tuesday, April 22 (In-Class)</b></br><a href="https://docs.google.com/spreadsheets/d/1MyUCZyYpm9svy4uOqVpsANe3DwucLkXJLww36ObhlLE/edit?usp=sharing">Sign Up Here + Submit Discussion Notes Here</a></p></p>
 </div>
 
 
-Spend about 30 ~ 60 minutes playing the game(s) you signed up for with your group members, then take down notes on the following topics in the worksheet printout. 
+Spend about 30 ~ 60 minutes playing the game(s) you signed up for with your group members.
 
-1. Brief 2-3 sentence about what you do in the game, using verbs. 
-    - e.g. A (noun) that (verbs) a (noun) and (verbs) (nouns). If / when (noun) (verbs) a (noun), a (noun) (verbs).
-2. Level design.
-    - Consider the rules of the environment and how they are conveyed through visual / audio cues or props.
-    - How are objects, time, and space arranged / revealed to the player? (camera perspective, physical dimension, legibility, etc.)
-    - How do the levels change over time (if at all)? 
-3. Player Mechanics.
+Choose a level / gameplay mode to focus on, then take down notes on the following topics -- you may use a shared **word / presentation document OR pen-on-paper**:
+
+#### Player Mechanics
+
+1. Write a list of actions and behaviours your player can take in the game, and note how they are mapped onto the physical controllers.
     - How do player(s) interact with the game environment / other players? 
+    - Do these interactions feel aligned with the way you are operating the physical controller, and how so?
+    - How do these interactions express the physical properties of the videogame's characters / environment? 
+2. Then, organise these actions into a **flowchart** to illustrate how your player can transition across different states of activity / motion. 
+    - What can and can't players do throughout different points in the game?
+    - What are the conditions that trigger these state changes? 
 
-You will submit this printout **at the end of class** the same day. 
+#### Level Design
 
--->
+Consider the rules of the game environment and how they are conveyed through visual / audio cues or props. 
 
+Draft out **a blueprint / sketch of the level's layout** to support your analysis. 
+
+- How are objects and locations in the level arranged in time and space / revealed to the player? (camera perspective, physical dimension, sound effects, legibility, etc.)
+- How does the level change or progress over time? (difficulty progression, game states, checkpoints, etc.)
+- How do you think the level is trying to get the player(s) to behave? How do its design elements encourage players towards these behaviours? 
+- What happens if the player tries to break these rules? (gamers go left)
+
+<br>
+
+**At the end of class** the same day, you will present your key findings to the class and submit your a link to your discussion notes on the sign-up sheet.
 
 <br>
 
