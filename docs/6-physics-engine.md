@@ -441,7 +441,3 @@ For both exercise options, focus on getting the *feeling* of the interaction rig
 <br>
 
 ---
-
-## Some course reminders
-
-- Reading Response 2 is due on Thursday. 

@@ -1078,5 +1078,4 @@ Does play happen at the same time, or are different players acting at different 
 
 ## Some course reminders
 
-- Ball game research for Project 2 is due next Tuesday.
-- Reading Response 2 is due next Thursday. 
+- Ball game research for Project 2 and Reading Response 2 are due Thursday. 
