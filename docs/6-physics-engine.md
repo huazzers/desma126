@@ -1,5 +1,5 @@
 ---
-title: Physics Engine: Rigidbody, Collider, Collisions, Triggers
+title: Physics Engine - Rigidbody, Collider, Collisions, Triggers
 ---
 
 <script>hljs.highlightAll();</script>
@@ -33,19 +33,20 @@ document.querySelectorAll('a[href^="#"]')
     });
 });
 </script>
+
 # Physics Engine: Rigidbody, Collider, Collisions, Triggers
 
 ---
 
 📦 **Unity packages from today's class:**
 > 
-> - Class Demo: [Rocketship](https://drive.google.com/file/d/1CtX8i419p3Tt_ZFlw0ZkOT6jcIpQsatI/view?usp=drive_link)
+> - [In-class Demo](https://drive.google.com/file/d/1APoBFWiFC3lBm4fLg_saUas1_TkojysX/view?usp=drive_link), including examples of Player Movement using Rigidbodies, Trigger and Collision Detections for Pickups and Out-of-Bounds Position Reset
 
 <br>
 
 📚 **Other relevant resources to today's topic:**
 >
-> - The previous instructor for the Game Engine course, John Brumley made a wonderful sandbox to illustrate how Rigidbodies, collisions, triggers, and object tags can be used. You may find the package link [here](https://drive.google.com/file/d/1UKYuFHLns5P9PLSVDJrkA37vGY1rEMjh/view?usp=sharing). <br><br>![](./img/physicsdemo_john.png)
+> - John Brumley (a former instructor for this course) made a sandbox demo to illustrate how Rigidbodies, collisions, triggers, and object tags can be used. You may find the package link [here](https://drive.google.com/file/d/1UKYuFHLns5P9PLSVDJrkA37vGY1rEMjh/view?usp=sharing). <br><br>This package includes some very convenient [event handler scripts](https://drive.google.com/drive/folders/1waY3LgT3Gt77TfxkHdMoexPED_zqSXKG?usp=sharing) for triggers and collisions.<br><br>![](./img/physicsdemo_john.png)
 > - Unity Collision Matrix: a reference table for troubleshooting collisions and triggers <br> ![](./img/unitycollisionmatrix.png)
 > - [Ultimate Frame Data](https://ultimateframedata.com/): archive of how video games like Super Smash Bros and Street Fighter have set up timed hit boxes for character attack sequences. <br> ![](./img/YoshiEggLay.gif)
 
@@ -68,7 +69,7 @@ position += velocity * Time.deltaTime;
 
 But what if we were to consider other factors like an object's **physical properties** (e.g. mass, torque, bounciness) or other **external forces** (e.g. gravity, friction, collisions with other objects...)? 
 
-Using pure vector math to simulate physically "realistic" movement would still be possible -- it would just become more complicated!
+Using pure vector math to simulate physically "realistic" movement would still be possible -- it would just become more complicated.
 
 .
 
@@ -248,8 +249,7 @@ public class MovePositionDemo : MonoBehaviour
 
 ## Collision Detection
 
-Use the following functions to detect when a collision occurs.
-
+Use the following functions to detect when a collision occurs. 
 ```csharp
 public class CollisionDemo:MonoBehaviour
 {
@@ -261,11 +261,11 @@ public class CollisionDemo:MonoBehaviour
 	void OnCollisionStay(Collision collision)
 	{
 		//occurs continuously while two objects touch
-			Debug.Log("touching " + collision.gameObject.name);
+		Debug.Log("touching " + collision.gameObject.name);
 	}
 	void OnCollisionExit(Collision collision)
 	{
-			//occurs the moment two objects stop touching
+		//occurs the moment two objects stop touching
 		Debug.Log("collision with " + collision.gameObject.name + " ended");
 	}
 }
@@ -273,11 +273,7 @@ public class CollisionDemo:MonoBehaviour
 
 <br>
 
-Note that these functions only work in a script attached to a game object with a rigidbody and a collider. The variable `collision` provides information about what was hit.
-
-<br>
-
-For example, you could get the [tag](https://docs.unity3d.com/Manual/Tags.html) belonging to the collider's GameObject.
+The variable `collision` provides information about what was hit. For example, you could get the [tag](https://docs.unity3d.com/Manual/Tags.html) belonging to the collider's GameObject.
 
 ```csharp
 void OnCollisionEnter(Collision collision)
@@ -287,6 +283,12 @@ void OnCollisionEnter(Collision collision)
         }
 	}
 ```
+
+
+<br>
+
+Note that these functions only work when the colliding objects have their collider and rigidbody components correctly set. Refer to the [Unity Collision Matrix](./img/unitycollisionmatrix.png) to check what components and settings you'll need for detecting collisions between two objects. 
+
 
 <br>
 
@@ -408,11 +410,11 @@ private void OnTriggerEnter2D(Collider2D other)
 
 ---
 
-## Exercise
+## Work Time
 
-In preparation for Project 2...
+In preparation for Project 2, you may begin prototyping the following elements of your game:
 
-### **OPTION A**: Player Movement
+### Player Movement
 
 Make a player character placeholder (capsule, cube, sphere) that moves along a plane using **forces**, **torque**, or **MovePosition**. 
 
@@ -420,23 +422,38 @@ Make a player character placeholder (capsule, cube, sphere) that moves along a p
 - how much friction should your player movement have?
 - how is your character's motion affected by gravity, if at all? 
 
-You could also try using [Input.GetAxis](https://docs.unity3d.com/ScriptReference/Input.GetAxis.html) to map to arrowkeys, WASD, or MouseX/Y; 
+You could also try using [Input.GetAxis](https://docs.unity3d.com/ScriptReference/Input.GetAxis.html) to map to arrowkeys, WASD, Joystick Axes, or MouseX/Y; 
 
-<br>
+<br> 
 
-OR
-
-### **OPTION B**: Ball Movement
+### Ball Movement
 
 Make a simple prototype of the **ball interaction** for your game.
 
 - a paddle or club hitting a ball? 
 - a ball throwing mechanic? 
 - how bouncy or heavy should the ball be?
+- how should the ball move along different parts of your environment? 
 
 <br>
 
-For both exercise options, focus on getting the *feeling* of the interaction right! 
+### Level Layout
+
+Graybox your environment using primitive shapes. These will act as placeholders for your assets, so you can start setting up the scripts and scenes for your Unity project before completing any custom art. 
+
+These may include: 
+- setting up path, obstacles, and other environmental elements in your scene. 
+- objects with colliders for detecting triggers / collisions, and custom physics materials.
+- arranging camera to reveal players' perspective(s) throughout the scene. 
+
+Some tips:
+
+- Hold down the keyboard button [ V ] while in "Move Tool" to snap to the selected object's vertex. 
+- Snap the camera view to the scene view's current perspective by right clicking on the Camera GameObject > "Align with View".
+
+<br>
+
+For all the above elements, focus on getting the *feeling* of the interaction right! 
 
 <br>
 

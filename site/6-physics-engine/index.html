@@ -1,7 +1,7 @@
 <!doctype html>
 <html data-bs-theme="light">
     <head>
-                <title>6 physics engine - 👾 DESMA126 Game Engine</title>
+                <title>Physics Engine - Rigidbody, Collider, Collisions, Triggers - 👾 DESMA126 Game Engine</title>
 
             <meta charset="utf-8">
             <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -149,11 +149,6 @@
     <div class="sidebar navbar-collapse collapse card">
         <ul class="nav flex-column">
             
-            <li class="nav-item" data-bs-level="2"><a href="#title-physics-engine-rigidbody-collider-collisions-triggers" class="nav-link">title: Physics Engine: Rigidbody, Collider, Collisions, Triggers</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            
             <li class="nav-item" data-bs-level="1"><a href="#physics-engine-rigidbody-collider-collisions-triggers" class="nav-link">Physics Engine: Rigidbody, Collider, Collisions, Triggers</a>
               <ul class="nav flex-column">
             <li class="nav-item" data-bs-level="2"><a href="#physics-engine" class="nav-link">Physics Engine</a>
@@ -176,7 +171,7 @@
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-bs-level="2"><a href="#exercise" class="nav-link">Exercise</a>
+            <li class="nav-item" data-bs-level="2"><a href="#work-time" class="nav-link">Work Time</a>
               <ul class="nav flex-column">
               </ul>
             </li>
@@ -195,9 +190,7 @@
             
             
         </header>
-        <p><hr />
-<h2 id="title-physics-engine-rigidbody-collider-collisions-triggers">title: Physics Engine: Rigidbody, Collider, Collisions, Triggers</h2>
-<script>hljs.highlightAll();</script>
+        <p><script>hljs.highlightAll();</script>
 <!--jump to anchor tag adjusted to header height offset-->
 <script>
 // Get the header element
@@ -228,19 +221,20 @@ document.querySelectorAll('a[href^="#"]')
     });
 });
 </script>
+
 <h1 id="physics-engine-rigidbody-collider-collisions-triggers">Physics Engine: Rigidbody, Collider, Collisions, Triggers</h1>
 <hr />
 <p>📦 <strong>Unity packages from today's class:</strong></p>
 <blockquote>
 <ul>
-<li>Class Demo: <a href="https://drive.google.com/file/d/1CtX8i419p3Tt_ZFlw0ZkOT6jcIpQsatI/view?usp=drive_link">Rocketship</a></li>
+<li><a href="https://drive.google.com/file/d/1APoBFWiFC3lBm4fLg_saUas1_TkojysX/view?usp=drive_link">In-class Demo</a>, including examples of Player Movement using Rigidbodies, Trigger and Collision Detections for Pickups and Out-of-Bounds Position Reset</li>
 </ul>
 </blockquote>
 <p><br></p>
 <p>📚 <strong>Other relevant resources to today's topic:</strong></p>
 <blockquote>
 <ul>
-<li>The previous instructor for the Game Engine course, John Brumley made a wonderful sandbox to illustrate how Rigidbodies, collisions, triggers, and object tags can be used. You may find the package link <a href="https://drive.google.com/file/d/1UKYuFHLns5P9PLSVDJrkA37vGY1rEMjh/view?usp=sharing">here</a>. <br><br><img alt="" src="../img/physicsdemo_john.png" /></li>
+<li>John Brumley (a former instructor for this course) made a sandbox demo to illustrate how Rigidbodies, collisions, triggers, and object tags can be used. You may find the package link <a href="https://drive.google.com/file/d/1UKYuFHLns5P9PLSVDJrkA37vGY1rEMjh/view?usp=sharing">here</a>. <br><br>This package includes some very convenient <a href="https://drive.google.com/drive/folders/1waY3LgT3Gt77TfxkHdMoexPED_zqSXKG?usp=sharing">event handler scripts</a> for triggers and collisions.<br><br><img alt="" src="../img/physicsdemo_john.png" /></li>
 <li>Unity Collision Matrix: a reference table for troubleshooting collisions and triggers <br> <img alt="" src="../img/unitycollisionmatrix.png" /></li>
 <li><a href="https://ultimateframedata.com/">Ultimate Frame Data</a>: archive of how video games like Super Smash Bros and Street Fighter have set up timed hit boxes for character attack sequences. <br> <img alt="" src="../img/YoshiEggLay.gif" /></li>
 </ul>
@@ -255,7 +249,7 @@ position += velocity * Time.deltaTime;
 <p><img alt="Acceleration Demo" src="../img/velaccel.gif" /></p>
 <p><br></p>
 <p>But what if we were to consider other factors like an object's <strong>physical properties</strong> (e.g. mass, torque, bounciness) or other <strong>external forces</strong> (e.g. gravity, friction, collisions with other objects...)? </p>
-<p>Using pure vector math to simulate physically "realistic" movement would still be possible -- it would just become more complicated!</p>
+<p>Using pure vector math to simulate physically "realistic" movement would still be possible -- it would just become more complicated.</p>
 <p>.</p>
 <p>.</p>
 <p>.</p>
@@ -401,7 +395,7 @@ public class MovePositionDemo : MonoBehaviour
 </code></pre>
 <p><br></p>
 <h2 id="collision-detection">Collision Detection</h2>
-<p>Use the following functions to detect when a collision occurs.</p>
+<p>Use the following functions to detect when a collision occurs. </p>
 <pre><code class="language-csharp">public class CollisionDemo:MonoBehaviour
 {
     void OnCollisionEnter(Collision collision)
@@ -412,19 +406,17 @@ public class MovePositionDemo : MonoBehaviour
     void OnCollisionStay(Collision collision)
     {
         //occurs continuously while two objects touch
-            Debug.Log(&quot;touching &quot; + collision.gameObject.name);
+        Debug.Log(&quot;touching &quot; + collision.gameObject.name);
     }
     void OnCollisionExit(Collision collision)
     {
-            //occurs the moment two objects stop touching
+        //occurs the moment two objects stop touching
         Debug.Log(&quot;collision with &quot; + collision.gameObject.name + &quot; ended&quot;);
     }
 }
 </code></pre>
 <p><br></p>
-<p>Note that these functions only work in a script attached to a game object with a rigidbody and a collider. The variable <code>collision</code> provides information about what was hit.</p>
-<p><br></p>
-<p>For example, you could get the <a href="https://docs.unity3d.com/Manual/Tags.html">tag</a> belonging to the collider's GameObject.</p>
+<p>The variable <code>collision</code> provides information about what was hit. For example, you could get the <a href="https://docs.unity3d.com/Manual/Tags.html">tag</a> belonging to the collider's GameObject.</p>
 <pre><code class="language-csharp">void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.tag == &quot;Enemy&quot;){
@@ -432,6 +424,8 @@ public class MovePositionDemo : MonoBehaviour
         }
     }
 </code></pre>
+<p><br></p>
+<p>Note that these functions only work when the colliding objects have their collider and rigidbody components correctly set. Refer to the <a href="../img/unitycollisionmatrix.png">Unity Collision Matrix</a> to check what components and settings you'll need for detecting collisions between two objects. </p>
 <p><br></p>
 <h4 id="collision-detection-modes">Collision Detection Modes</h4>
 <p><strong>Discrete</strong> (default mode) is the least computationally demanding mode of collision detection, it's good for detecting slow collisions. </p>
@@ -526,27 +520,39 @@ public class MovePositionDemo : MonoBehaviour
 </code></pre>
 <p><br></p>
 <hr />
-<h2 id="exercise">Exercise</h2>
-<p>In preparation for Project 2...</p>
-<h3 id="option-a-player-movement"><strong>OPTION A</strong>: Player Movement</h3>
+<h2 id="work-time">Work Time</h2>
+<p>In preparation for Project 2, you may begin prototyping the following elements of your game:</p>
+<h3 id="player-movement">Player Movement</h3>
 <p>Make a player character placeholder (capsule, cube, sphere) that moves along a plane using <strong>forces</strong>, <strong>torque</strong>, or <strong>MovePosition</strong>. </p>
 <ul>
 <li>what are the directions in which your player can move?</li>
 <li>how much friction should your player movement have?</li>
 <li>how is your character's motion affected by gravity, if at all? </li>
 </ul>
-<p>You could also try using <a href="https://docs.unity3d.com/ScriptReference/Input.GetAxis.html">Input.GetAxis</a> to map to arrowkeys, WASD, or MouseX/Y; </p>
-<p><br></p>
-<p>OR</p>
-<h3 id="option-b-ball-movement"><strong>OPTION B</strong>: Ball Movement</h3>
+<p>You could also try using <a href="https://docs.unity3d.com/ScriptReference/Input.GetAxis.html">Input.GetAxis</a> to map to arrowkeys, WASD, Joystick Axes, or MouseX/Y; </p>
+<p><br> </p>
+<h3 id="ball-movement">Ball Movement</h3>
 <p>Make a simple prototype of the <strong>ball interaction</strong> for your game.</p>
 <ul>
 <li>a paddle or club hitting a ball? </li>
 <li>a ball throwing mechanic? </li>
 <li>how bouncy or heavy should the ball be?</li>
+<li>how should the ball move along different parts of your environment? </li>
 </ul>
 <p><br></p>
-<p>For both exercise options, focus on getting the <em>feeling</em> of the interaction right! </p>
+<h3 id="level-layout">Level Layout</h3>
+<p>Graybox your environment using primitive shapes. These will act as placeholders for your assets, so you can start setting up the scripts and scenes for your Unity project before completing any custom art. </p>
+<p>These may include: 
+- setting up path, obstacles, and other environmental elements in your scene. 
+- objects with colliders for detecting triggers / collisions, and custom physics materials.
+- arranging camera to reveal players' perspective(s) throughout the scene. </p>
+<p>Some tips:</p>
+<ul>
+<li>Hold down the keyboard button [ V ] while in "Move Tool" to snap to the selected object's vertex. </li>
+<li>Snap the camera view to the scene view's current perspective by right clicking on the Camera GameObject &gt; "Align with View".</li>
+</ul>
+<p><br></p>
+<p>For all the above elements, focus on getting the <em>feeling</em> of the interaction right! </p>
 <p><br></p>
 <hr /></p>
     </article>

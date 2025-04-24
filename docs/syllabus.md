@@ -136,7 +136,7 @@ You will be assigned occasional readings and games that are related to this cour
 #### Participation / Attendance
 This is an **in-person course**, so please come to class on time. We will be covering a lot of content quickly, so it is *very* important that you are present for each lesson.
 
-If you are more than 15 minutes late, you will be marked as late. Three late marks results in an unexcused absence. 
+If you are more than 10 minutes late to class (ie. 9:10 a.m.), you will be marked as late. Three late marks results in an unexcused absence. 
 
 **If you anticipate having to miss class, email the TA as soon as possible.** You get **two** unexcused absences before it starts affecting your grade. Every unexcused absence that follows will result in one full letter grade deduction from your participation score. 
 
