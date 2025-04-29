@@ -161,7 +161,7 @@ Draft out **a blueprint / sketch of the level's layout** to support your analysi
 ### Homeplay 3
 
 <div class="duedate">
-<p>📌 <b>DUE: Week 8 Thursday, May 22</b></p>
+<p>📌 <b>DUE: Week 8 Tuesday, May 20</b></p>
 </div>
 
 TBD

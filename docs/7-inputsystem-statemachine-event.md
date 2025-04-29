@@ -33,6 +33,7 @@ document.querySelectorAll('a[href^="#"]')
     });
 });
 </script>
+
 # Input Systems, State Machines, Events
 
 ---
@@ -41,13 +42,15 @@ document.querySelectorAll('a[href^="#"]')
 
 > Before importing both packages, make sure to install the Input System package on your Editor as well.
 > 
-> - [Cursor Input for World Space and Raycast](https://drive.google.com/file/d/1fxOu-Rvy_G3shZh2Rm6OedAWwUqqYJ8M/view?usp=drive_link)
-> - [New Input System Demo](https://drive.google.com/file/d/1f43f0bme2UTEzqcRk4T30ldGEymuVnJH/view?usp=drive_link)
+> - [New Input System Multiplayer Demo](https://drive.google.com/file/d/1NJs7TRDpvzd7RVUhs2ndMx_P6IzctLy2/view?usp=drive_link)
+> - [ScreenToWorldPoint and Raycast Demo](https://drive.google.com/file/d/1H4Xj9n5C6xVAK1fB1x_KuJqxRJXFovfm/view?usp=drive_link)
 
 <br>
 
 📚 **Other relevant resources to today's topic:**
 
+> - [Extra notes on Setting up Mouse Cursor Inputs](./7.5-mouse-cursor-input.md): May be less relevant for project 2, but could be something to explore for other projects. 
+> - [Button map for Arcade Cocktail Cabinet](./img/arcade-controls.png)<br><a href="../img/arcade-controls.png"><img src="../img/arcade-controls.png"></a>
 > - [Gamepad Tester](https://hardwaretester.com/gamepad): Online tool for testing gamepad input; useful for understanding how joystick buttons are mapped.
 > - [Unity's Rollaball Tutorial: Moving the Player](https://learn.unity.com/tutorial/moving-the-player?uv=2022.3&projectId=5f158f1bedbc2a0020e51f0d#650b1ec9edbc2a263aa43ebd): A simple example of how to set up player movement using Unity's new Input System. 
 
@@ -57,7 +60,7 @@ To recap, we've already learned how to map inputs to certain lines of code [usin
 
 However, as we get more ambitious with our projects, it makes sense to use a more organised solution for mapping input controls to specific actions. 
 
----
+<br>
 
 ## Legacy Input Solution: the Input Manager
 
@@ -89,7 +92,11 @@ Use [Input.GetAxis](https://docs.unity3d.com/ScriptReference/Input.GetAxis.html)
 
 The joystick is mapped to the axes **Horizontal** and **Vertical** by default, which also read the WASD and Arrow keys. 
 
-![](./img/joystickaxes.gif)
+
+<figure>
+<img src="../img/joystickaxes.gif">
+<figcaption>-- <a href="https://hardwaretester.com/gamepad">Gamepad Tester</a>: Online tool for testing gamepad input; useful for understanding how joystick buttons are mapped.</figcaption>
+</figure>
 
 <br>
 
@@ -104,27 +111,6 @@ It's sometimes useful to convert these inputs into a vector, for instance if you
 
 ```csharp
 Vector3 heading = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
-```
-
-<br>
-
-### Directional Input from Mouse
-
-You can also use the axes **Mouse X** and **Mouse Y** to get information about how the mouse is moving. 
-
-Note that this does *NOT* give you the position of the cursor on screen, but tells you the **direction** and **speed** the player is moving the mouse. 
-
-This is often used to aim the camera in first person games.
-
-```csharp
-float sensitivity = 8f;
-public GameObject camera;
-
-void Update()
-{
-	float mouseX = Input.GetAxis("Mouse X");
-	camera.transform.Rotate(Vector3.up, mouseX * sensitivity * Time.deltaTime);
-}
 ```
 
 <br>
@@ -154,91 +140,7 @@ if(Input.GetButtonUp("Fire2"))
 
 You can customize which string values and button mappings the input system uses for these functions in the Input Manager, but in most cases the default settings work well. You have access to **Jump**, **Fire 1**, **Fire 2**, **Fire 3**, which map to the four face buttons on a gamepad, to several commonly used keys on the keyboard, and in some cases to the buttons on the mouse.
 
-<Br>
-
-### Cursor Input
-
-#### Screem Space and World Space
-
-It's easy enough to read the screen coordinates of the cursor.
-
-Use **Input.mousePosition** to get the current position of the cursor in screen space.
-
-```csharp
-Vector3 mousePos = Input.mousePosition;
-//x is the x coordinate of the cursor in screenspace
-//y is the y coordinate of the cursor in screenspace
-//z is always 0.
-```
-
 <br>
-
-In screen space, the **bottom-left of the screen or window** is at **(0, 0)**. The **top-right of the screen or window** is the **height** and **width** of the screen in pixels, at ([Screen.width](https://docs.unity3d.com/ScriptReference/Screen-width.html), [Screen.height](https://docs.unity3d.com/ScriptReference/Screen-height.html)).
-
-The trick is to convert from screen space to the game's world coordinates (aka "**world space**"). 
-
-How a position in screen space corresponds to world space depends on where the camera is looking, whether the camera uses perspective or orthographic projection, and how "deep" into the scene you want the cursor to be.
-
-If you get a reference to the camera in your scene, you can convert from a screen coordinate to a world coordinate with **Camera.ScreenToWorldPoint**.
-
-```csharp
-Camera camera;
-void Start()
-{
-	camera = GetComponent<Camera>();
-}
-
-void Update()
-{
-	Vector3 mousePos = Input.mousePosition;
-	mousePos.z = 1; //the z component of the vector will
-	//determine the distance of our new position from the camera
-	Vector3 worldPos = camera.ScreenToWorldPoint(mousePos);
-}
-```
-
-In this case, ScreenToWorldPoint gives us a point one unit in front of the camera, with the same apparent position on screen as the cursor.
-
-<br>
-
-#### Raycasting from the camera
-
-If you want to interact with objects in a 3D scene using the mouse, at some point you will have to use **raycasting**.
-
-First, you need to get a Ray that passes from the camera, through your cursor, into the scene.
-
-A Ray contains **two vectors**, which represent the ray's **origin point in space** and its **direction vector**.
-
-```csharp
-Camera camera;
-void Start()
-{
-	camera = GetComponent<Camera>();
-}
-
-void Update()
-{
-	Vector3 mousePos = Input.mousePosition;
-	Ray cursorRay = camera.ScreenPointToRay(mousePos);
-}
-```
-
-<br>
-
-Then, you can use the ray to **raycast** against the ground or other objects in your scene.
-
-```csharp
-RaycastHit hitInfo
-if(Physics.Raycast(cursorRay, out hitInfo))
-{
-	Debug.Log(hitInfo.point); //prints the position in the scene that the raycast hit...
-
-    //or do something else, depending on what you hit!
-    if (hitInfo.collider.CompareTag("Enemy")){
-        Debug.Log("Found Enemy!");
-    }
-}
-```
 
 ---
 
@@ -477,18 +379,159 @@ In your Scene Hierarchy, duplicate your player GameObject (the one that contains
 
 ### Player Input Manager for Local Multiplayer
 
-*(Note: At this point, I haven't had any luck setting this up successfully, so no guarantees as to whether this will work!)*
+![](./img/playerinputmanager.jpg)
 
 The New Input system also has a built-in local multiplayer functionality using their **Player Input Manager** component. 
 
-As a challenge, you could try looking into articles and video tutorials online that demonstrate methods for 
+- **Notification Behaviour**: You could change this to Invoke Unity Events to call multiple methods simultaneously when a new player joins. 
+- **Join Behaviour**: Have players join automatically with a button press, or set up a custom join button.
+- **Player Prefab**: This will be the prefab that gets instantiated when a new player joins. 
+- **Enable Split-Screen**: Enables a split-screen view when a new player joins. 
 
-- having new players join *while* the game is running;
-- setting up split screen view for local multiplayer settings.
+![](./img/playerinputmanager.gif)
+
+<br>
 
 Remember that there are also other methods for setting up the above features *without* having to use the Player Input Manager (this is one of Unity's attempts to automate or standardise workflows for achieving standard results... ) 
 
-If you're getting nowhere with this approach, I recommend looking for another workaround strategy!
+<br>
+
+## ScreenToWorldPoint and Raycasts
+
+> These methods are commonly used for cursor input -- the notes for those are included this document: [Extra notes on Setting up Mouse Cursor Inputs](./7.5-mouse-cursor-input.md). 
+
+We'll learn how to use these for detecting objects and pinpointing positions in our game scene through our UI canvas screen.
+
+### Screen Space and World Space
+
+**Screen Space** is defined in 2 dimensions (X,Y). This space refers to the 2D area of your Unity game window. 
+
+In screen space, the **bottom-left of the screen or window** is at **(0, 0)**. The **top-right of the screen or window** is the **height** and **width** of the screen in pixels, at ([Screen.width](https://docs.unity3d.com/ScriptReference/Screen-width.html), [Screen.height](https://docs.unity3d.com/ScriptReference/Screen-height.html)).
+
+<br>
+
+**World Space** is defined in 3 dimensions (X,Y,Z). This space refers to the virtual 3D space inside your game.
+
+Sometimes it's useful to translate coordinates across these two spaces, e.g. when we're trying to aim at a specific object or position in our 3D scene through 2D screen coordinates.
+
+<br>
+
+### Camera.ScreenToWorldPoint
+
+ScreenToWorldPoint() is a method for determining how a position in screen space corresponds to world space depending on where the camera is looking, whether the camera uses perspective or orthographic projection, and how "deep" into the scene you want that positional coordinate to be.
+
+If you get a reference to the camera in your scene, you can convert from a screen coordinate to a world coordinate with **Camera.ScreenToWorldPoint**.
+
+In this [unity package demo example](https://drive.google.com/file/d/1H4Xj9n5C6xVAK1fB1x_KuJqxRJXFovfm/view?usp=drive_link), I used this method to aim at the direction in which my projectile will be launched. Here we're using a UI element to determine our target coordinate in screen space. 
+
+
+![](./img/screentoworldpoint_targetUI.gif)
+
+<br>
+
+In this case, ScreenToWorldPoint gives us a point ten units in front of the camera, with the same apparent position on screen as our UI target element.
+
+```csharp
+Camera camera;
+public RectTransform targetAim;
+Vector3 targetAimPos; //position of our target aim on the screen (we'll also assign the z-coordinate later)
+Vector3 worldPos; //position of where our target would be pointing at in worldspace from the screen.
+
+void Start()
+{
+	camera = GetComponent<Camera>();
+	// or "camera = Camera.main;", which refers to the Main camera assigned in your scene.
+}
+
+private void Update()
+{
+	// store our target aim's anchored position inside a Vector3 variable
+	// -- z coordinate would be zero.
+	// 		note the difference in syntax for getting 
+	// 		a Rect Transform position (RectTransform.anchoredPosition)
+    //      compared to a Transform component position (transform.position)
+	targetAimPos = targetAim.anchoredPosition;
+	
+	// assign the z coordinate for targetAimPos
+	// -- this will determine how far away from the camera our projectile will spawn.
+	targetAimPos.z = 10f;
+
+	worldPos = Camera.main.ScreenToWorldPoint(targetAimPos);
+
+	if (Input.GetButtonDown("Fire1"))
+	{
+		Shoot();
+	}
+
+}
+void Shoot()
+{
+	// calculate projection direction
+	Vector3 shootDirection = worldPos - projectileSpawnPoint.position;
+
+	// shoot! 
+	currentProjectile.GetComponent<Rigidbody>().isKinematic = false;
+	currentProjectile.GetComponent<Rigidbody>().AddForce(shootDirection.normalized * shootForce, ForceMode.Impulse);
+
+	// turn this script off after shooting.
+	// we will turn it back on when we have picked up another projectile.
+	this.enabled = false;
+}
+```
+
+<br>
+
+### Raycasting from the camera
+
+If you want to interact with objects in a 3D scene from a 2D screen space, at some point you will have to use **raycasting**.
+
+First, you need to get a Ray that passes from the camera, through your cursor, into the scene.
+
+A Ray contains **two vectors**, which represent the ray's **origin point in space** and its **direction vector**.
+
+Then, you can use the ray to **raycast** against the ground or other objects in your scene.
+
+In the same demo example as above, we're using the same target UI element to pick up projectiles in our scene. 
+
+![](./img/raycast_targetUI.gif)
+
+<br>
+
+```csharp
+Camera camera;
+public RectTransform targetAim;
+
+void Start()
+{
+	camera = GetComponent<Camera>(); //or Camera.main
+}
+
+void Update()
+{
+	Ray targetAimRay = camera.ScreenPointToRay(targetAim.anchoredPosition);
+
+	RaycastHit hitInfo;
+
+	if (Physics.Raycast(targetAimRay, out hitInfo))
+	{
+		/*
+		Debug.Log(hitInfo.point); //prints the position in the scene that the raycast hit...
+		*/
+
+		//or do something else, depending on what you hit!
+		if (hitInfo.collider.CompareTag("Projectile"))
+		{
+			Debug.Log("Found Ball!");
+
+			//pick up this projectile if we press the button "Fire1"
+			if (Input.GetButtonDown("Fire1"))
+			{
+				PickUpProjectile();
+			}
+		}
+	}
+}
+```
 
 <br>
 
