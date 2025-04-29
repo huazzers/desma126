@@ -870,4 +870,4 @@ The observer pattern keeps things manageable and organised when we want to set u
 
 ## Some course reminders
 
-- **Project 2 Prototype Playtest** is due next Thursday.
+- **Project 2 Prototype Playtest** is due next Tuesday.
