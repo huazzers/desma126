@@ -570,4 +570,4 @@ Try adjusting the **general parameters** (top most section) as well as settings 
 
 ## Some course reminders
 
-- **Project 2 Prototype Playtest** is due Thursday! 
+- **Project 2 Prototype Playtest** is due Tuesday! 
