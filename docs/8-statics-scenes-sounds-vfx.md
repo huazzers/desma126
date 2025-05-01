@@ -41,7 +41,7 @@ document.querySelectorAll('a[href^="#"]')
 
 > Before importing both packages, make sure to install the Input System package on your Editor as well.
 > 
-> - [Class Demo for Statics, Scenes, Sounds, and VFX](https://drive.google.com/file/d/10p7wFrZ4eyjThy15fe7DrPpGkY_OGE7I/view?usp=sharing)
+> - [Class Demo for Statics, Scenes, Sounds, and VFX](https://drive.google.com/file/d/1fHARIobN9O_mjd8kkvrP15i62MTDH7jM/view?usp=drive_link)
 > - [Singleton Game Manager Example](https://drive.google.com/file/d/1oE19e2Zh5RWHFG0369eGgh9tfJQq5--1/view?usp=sharing)
 
 ---
@@ -149,41 +149,6 @@ public class ScoreManager : MonoBehaviour{
         s_StartingScore = startingScore;
     }
 }
-```
-
-<br>
-
-## Static Classes
-
-You can also create **static classes** to contain other static variables and methods. 
-
-For example, if you have a set of mathematical functions that you plan to use across multiple scripts for your game, you could consider storing them inside a static class called "Utilities". 
-
-Note that static classes **cannot** derive from MonoBehaviours, nor contain non-static member variables and methods. 
-
-```csharp
-using UnityEngine;
-using System.Collections;
-
-public static class Utilities 
-{
-    //A static method can be invoked without an object of a class. 
-    //Note that static methods cannot access non-static member variables.
-
-    public static float Add(float num1, float num2){
-        return num1+num2;
-    }
-}
-```
-
-<br>
-
-Now, with this script saved in our project's Assets folder, we can easily access this method using `Utilities.Add(...)`.
-
-```csharp
-float firstNumber= 6;
-float secondNumber = 13;
-float sum = Utilities.Add(firstNumber,secondNumber);
 ```
 
 <br>

@@ -155,10 +155,6 @@
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-bs-level="2"><a href="#static-classes" class="nav-link">Static Classes</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
             <li class="nav-item" data-bs-level="2"><a href="#when-to-declare-as-static" class="nav-link">When to declare as static?</a>
               <ul class="nav flex-column">
               </ul>
@@ -235,7 +231,7 @@ document.querySelectorAll('a[href^="#"]')
 <blockquote>
 <p>Before importing both packages, make sure to install the Input System package on your Editor as well.</p>
 <ul>
-<li><a href="https://drive.google.com/file/d/10p7wFrZ4eyjThy15fe7DrPpGkY_OGE7I/view?usp=sharing">Class Demo for Statics, Scenes, Sounds, and VFX</a></li>
+<li><a href="https://drive.google.com/file/d/1fHARIobN9O_mjd8kkvrP15i62MTDH7jM/view?usp=drive_link">Class Demo for Statics, Scenes, Sounds, and VFX</a></li>
 <li><a href="https://drive.google.com/file/d/1oE19e2Zh5RWHFG0369eGgh9tfJQq5--1/view?usp=sharing">Singleton Game Manager Example</a></li>
 </ul>
 </blockquote>
@@ -325,30 +321,6 @@ void Start(){
         s_StartingScore = startingScore;
     }
 }
-</code></pre>
-<p><br></p>
-<h2 id="static-classes">Static Classes</h2>
-<p>You can also create <strong>static classes</strong> to contain other static variables and methods. </p>
-<p>For example, if you have a set of mathematical functions that you plan to use across multiple scripts for your game, you could consider storing them inside a static class called "Utilities". </p>
-<p>Note that static classes <strong>cannot</strong> derive from MonoBehaviours, nor contain non-static member variables and methods. </p>
-<pre><code class="language-csharp">using UnityEngine;
-using System.Collections;
-
-public static class Utilities 
-{
-    //A static method can be invoked without an object of a class. 
-    //Note that static methods cannot access non-static member variables.
-
-    public static float Add(float num1, float num2){
-        return num1+num2;
-    }
-}
-</code></pre>
-<p><br></p>
-<p>Now, with this script saved in our project's Assets folder, we can easily access this method using <code>Utilities.Add(...)</code>.</p>
-<pre><code class="language-csharp">float firstNumber= 6;
-float secondNumber = 13;
-float sum = Utilities.Add(firstNumber,secondNumber);
 </code></pre>
 <p><br></p>
 <h2 id="when-to-declare-as-static">When to declare as static?</h2>
