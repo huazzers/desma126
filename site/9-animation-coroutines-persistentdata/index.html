@@ -218,6 +218,7 @@ document.querySelectorAll('a[href^="#"]')
 <p>📦 <strong>Unity packages from today's class:</strong></p>
 <blockquote>
 <ul>
+<li>Class Demo for <a href="https://drive.google.com/file/d/1vnLyS2XKFzi8s1t199vnlJtY9c_v4xl7/view?usp=drive_link">using the Animator component for animating kinematic rigidbodies</a></li>
 <li>Class Demo for Persistent Data: <a href="https://drive.google.com/file/d/1R_RPTlQ_6cgxJIx1jqhKcePq6CBRn4aA/view?usp=drive_link">PlayerPrefs</a> and <a href="https://drive.google.com/file/d/1oNMR45ogcwncnedLQuj6oGcs2hc5jY62/view?usp=drive_link">Serialization</a></li>
 </ul>
 </blockquote>
@@ -331,7 +332,7 @@ IEnumerator LoopingCoroutine(){
 <p>...</p>
 <p><strong>Serialization</strong> is a feature of C# which allows you to convert a C# object into a binary data (1s and 0s in series, hence "serialization"), saved on disk as a binary file.</p>
 <p>Serialization allows us to store more complex data including arrays and bools, by converting the contents of a C&#35; object directly into a data file. </p>
-<p>Because it is in binary, that data is harder (though not impossible) for a player to edit, making it harder to cheat at a game. Binary files are also really compact in size, making it feasible for storing large amounts of data. The disadvantage of serialization is that it is a little harder to set up than PlayerPrefs.</p>
+<p>Because it is in binary, that data is harder (though not impossible) for a player to edit, making it harder to cheat at a game. Binary files are also really compact in size, making it feasible for storing large amounts of data. The disadvantage with using serialization is that it takes a couple more steps to set up compared to PlayerPrefs. </p>
 <p><br></p>
 <h3 id="playerprefs-example-code">PlayerPrefs Example Code</h3>
 <p>This example shows how to use PlayerPrefs to save data. PlayerPrefs allows you to save and load <em>some</em> primitive data types (string, int, float, but <em>not</em> bool) into the user's registry. Each <strong>value</strong> that you store can be accessed with an associated string, called a <strong>key</strong>.</p>
@@ -359,7 +360,7 @@ public class PlayerPrefsExample : MonoBehaviour
 
         //we can also supply GetString with a second argument, which is a default value.
         //Here, if the key &quot;className&quot; doesn't exist, the GetString function will return the default value &quot;no class&quot;
-        classData = PlayerPrefs.GetString(&quot;className&quot;, &quot;default&quot;);
+        classData = PlayerPrefs.GetString(&quot;className&quot;, &quot;no class&quot;);
 
         //you can use GetInt and GetFloat the same way as GetString to load data.
         //Optionally, you can also supply a default value to these functions.
@@ -371,7 +372,10 @@ public class PlayerPrefsExample : MonoBehaviour
             //here I'm using an int to represent a true false value
             //a value of 1 means 'true', a value of 0 means 'false'
 
-        boolData = PlayerPrefs.GetInt(&quot;invertMouse&quot;,0) == 1;
+            //&quot;== 1&quot; at the end is a conditional operator
+            //to return true or false, depending on whether or not our stored int is 1.
+
+        boolData = PlayerPrefs.GetInt(&quot;sfxMute&quot;,0) == 1;
         Debug.Log(&quot;Loaded data from PlayerPrefs!&quot;);
     }
 
@@ -389,9 +393,17 @@ public class PlayerPrefsExample : MonoBehaviour
         //remember, we can't store bools directly, but we can use an int to represent a bool...
         //true=1, and false=0
         if (boolData==true)
-            PlayerPrefs.SetInt(&quot;invertMouse&quot;, 1);
+            PlayerPrefs.SetInt(&quot;sfxMute&quot;, 1);
         else
-            PlayerPrefs.SetInt(&quot;invertMouse&quot;, 0);
+            PlayerPrefs.SetInt(&quot;sfxMute&quot;, 0);
+
+        //OR we could use a ternary operator &quot;?:&quot; to convert
+        //our bool into an integer that returns either 1 (true) or 0 (false)
+
+        /*
+        PlayerPrefs.SetInt(&quot;sfxMute&quot;, someBool ? 1 : 0);
+        */
+
         Debug.Log(&quot;Saved data to PlayerPrefs!&quot;);
     }
 
@@ -433,7 +445,9 @@ public class HighScore
 </code></pre>
 <p><br></p>
 <p>Having a <strong>list</strong> of HighScore objects also involves another class:</p>
-<pre><code class="language-csharp">public class HighScores
+<pre><code class="language-csharp">using System.Collections.Generic; //namespace needed for using Lists.
+
+public class HighScores
 {
     public List&lt;HighScore&gt; highScoreList;
 }

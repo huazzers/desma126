@@ -35,7 +35,7 @@ document.querySelectorAll('a[href^="#"]')
 <p>📌 <b>BALL GAME RESERACH DUE: Week 4 Thursday, April 24</b></p>
 <p>📌 <b>PROTOTYPE PLAYTEST DUE: Week 6 Tuesday, May 6</b></p>
 <p>📌 <b>FINAL PROJECT BUILD + DOCUMENTATION DUE: Week 7 Tuesday, May 13</b></p>
-<p><a>Submit Final Submission Here (TBD)</a></p>
+<p><a href="https://docs.google.com/forms/d/e/1FAIpQLSfYIkatQAdseB_9ViLEFxphgyGzzghXJnli4jjKpl2fUG2l9w/viewform?usp=sharing">Submit Final Submission Here</a></p>
 <blockquote>Please read the <a href="../how-to-submit">How To Submit</a> page for more detailed instructions.</blockquote>
 </div>
 

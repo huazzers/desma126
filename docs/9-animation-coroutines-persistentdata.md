@@ -39,6 +39,7 @@ document.querySelectorAll('a[href^="#"]')
 
 📦 **Unity packages from today's class:**
 > 
+> - Class Demo for [using the Animator component for animating kinematic rigidbodies](https://drive.google.com/file/d/1vnLyS2XKFzi8s1t199vnlJtY9c_v4xl7/view?usp=drive_link)
 > - Class Demo for Persistent Data: [PlayerPrefs](https://drive.google.com/file/d/1R_RPTlQ_6cgxJIx1jqhKcePq6CBRn4aA/view?usp=drive_link) and [Serialization](https://drive.google.com/file/d/1oNMR45ogcwncnedLQuj6oGcs2hc5jY62/view?usp=drive_link)
 
 <br>
@@ -214,7 +215,7 @@ Because the player can edit anything saved in PlayerPrefs, whether it's through 
 
 Serialization allows us to store more complex data including arrays and bools, by converting the contents of a C&#35; object directly into a data file. 
 
-Because it is in binary, that data is harder (though not impossible) for a player to edit, making it harder to cheat at a game. Binary files are also really compact in size, making it feasible for storing large amounts of data. The disadvantage of serialization is that it is a little harder to set up than PlayerPrefs.
+Because it is in binary, that data is harder (though not impossible) for a player to edit, making it harder to cheat at a game. Binary files are also really compact in size, making it feasible for storing large amounts of data. The disadvantage with using serialization is that it takes a couple more steps to set up compared to PlayerPrefs. 
 
 <br>
 
@@ -249,7 +250,7 @@ public class PlayerPrefsExample : MonoBehaviour
 
 		//we can also supply GetString with a second argument, which is a default value.
 		//Here, if the key "className" doesn't exist, the GetString function will return the default value "no class"
-		classData = PlayerPrefs.GetString("className", "default");
+		classData = PlayerPrefs.GetString("className", "no class");
 
 		//you can use GetInt and GetFloat the same way as GetString to load data.
 		//Optionally, you can also supply a default value to these functions.
@@ -260,8 +261,11 @@ public class PlayerPrefsExample : MonoBehaviour
 		//because PlayerPrefs can't store bools directly,
 			//here I'm using an int to represent a true false value
 			//a value of 1 means 'true', a value of 0 means 'false'
+
+			//"== 1" at the end is a conditional operator
+			//to return true or false, depending on whether or not our stored int is 1.
 		
-		boolData = PlayerPrefs.GetInt("invertMouse",0) == 1;
+		boolData = PlayerPrefs.GetInt("sfxMute",0) == 1;
 		Debug.Log("Loaded data from PlayerPrefs!");
 	}
 
@@ -279,9 +283,17 @@ public class PlayerPrefsExample : MonoBehaviour
 		//remember, we can't store bools directly, but we can use an int to represent a bool...
 		//true=1, and false=0
 		if (boolData==true)
-			PlayerPrefs.SetInt("invertMouse", 1);
+			PlayerPrefs.SetInt("sfxMute", 1);
 		else
-			PlayerPrefs.SetInt("invertMouse", 0);
+			PlayerPrefs.SetInt("sfxMute", 0);
+
+		//OR we could use a ternary operator "?:" to convert
+		//our bool into an integer that returns either 1 (true) or 0 (false)
+
+		/*
+		PlayerPrefs.SetInt("sfxMute", someBool ? 1 : 0);
+		*/
+
 		Debug.Log("Saved data to PlayerPrefs!");
 	}
 
@@ -339,6 +351,8 @@ public class HighScore
 Having a **list** of HighScore objects also involves another class:
 
 ```csharp
+using System.Collections.Generic; //namespace needed for using Lists.
+
 public class HighScores
 {
 	public List<HighScore> highScoreList;
