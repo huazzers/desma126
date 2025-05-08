@@ -45,12 +45,6 @@ document.querySelectorAll('a[href^="#"]')
 
 <br>
 
-📚 **Other relevant resources to today's topic:**
->
-> - [Example character Sprite Sheet for Class Demo](https://drive.google.com/file/d/1KSmyTj-9Q5NIcUfgZNh-W-xuZoH1emmC/view?usp=drive_link).
-
-<br>
-
 ---
 
 ### Using the Sprite Component on a 3D Moving Rigidbody 
