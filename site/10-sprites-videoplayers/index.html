@@ -211,7 +211,8 @@ document.querySelectorAll('a[href^="#"]')
 <p>📦 <strong>Unity packages from today's class:</strong></p>
 <blockquote>
 <ul>
-<li>Class Demo: <a href="https://drive.google.com/file/d/1Vezjb72HZ63HmDyYfX9SFHXkUTSRs_M_/view?usp=sharing">Sprites</a> (continuation from demo on <a href="../8-statics-scenes-sounds-vfx/">statics, scenes, sounds, and vfx</a>) and <a href="https://drive.google.com/file/d/118rMSklqyxJz00-TkoGh_F1lcFIpvJm1/view?usp=drive_link">Video Player</a></li>
+<li>Class Demo: <a href="https://drive.google.com/file/d/1U_zZTX5CNS9JyD6dVzaZD5a-FDTEBhiE/view?usp=drive_link">Sprites</a> (continuation from demo on <a href="../7-inputsystem-statemachine-event/">input systems in week 7</a>)</li>
+<li>Class Demo: <a href="https://drive.google.com/file/d/118rMSklqyxJz00-TkoGh_F1lcFIpvJm1/view?usp=drive_link">Video Player</a></li>
 </ul>
 </blockquote>
 <p><br></p>
@@ -234,27 +235,45 @@ document.querySelectorAll('a[href^="#"]')
 </li>
 </ul>
 </blockquote>
-<p><img alt="" src="../img/goalieparentsprite.jpg" /></p>
+<p><img alt="" src="../img/sprite-with-rigidbodies-hierarchy.jpg" /></p>
 <p><br></p>
-<h3 id="change-sprite-using-scripts">Change Sprite using Scripts</h3>
-<pre><code class="language-csharp">public Sprite sprIdle, sprAction; // attach your sprite textures in the inspector
-SpriteRenderer sprRend; // attach this script to the same object containing your sprite renderer
-
-void Start()
+<h3 id="switching-between-sprites-using-scripts">Switching between Sprites using Scripts</h3>
+<pre><code class="language-csharp">public class EnemyInfo : MonoBehaviour
 {
-    sprRend = GetComponent&lt;SpriteRenderer&gt;();
-    ChangeSprite(sprIdle); 
-}
+    public Sprite defaultSprite,onHitSprite; // attach your sprite textures in the inspector
+    public SpriteRenderer sprRend; // attach your sprite renderer
+    bool crIsRunning; // we'll need this bool to check if a coroutine is currently running
 
-//you could also call this function in a public UnityEvent
-//and attach the Sprite as an argument in the inspector. 
-public void ChangeSprite(Sprite toThisSprite)
-{
-    sprRend.sprite = toThisSprite;
-}
+    private void Start()
+    {
+        crIsRunning = false;
+    }
 
-//you could also consider using a coroutine function
-//to reset the sprite back to its idle state after a set duration
+    //we could call this public function inside a UnityEvent
+    public void ChangeToOnHitSprite()
+    {
+        //if the coroutine is currently running, then stop it.
+        if (crIsRunning)
+        {
+            StopCoroutine(&quot;ChangeSpriteForSeconds&quot;);
+        }
+
+        //start the coroutine.
+        crIsRunning = true;
+        StartCoroutine(ChangeSpriteForSeconds(onHitSprite,1f));
+    }
+
+    //a coroutine that changes to a non-default sprite &quot;spr&quot; 
+    //for &quot;interval&quot; amount of seconds
+    //then switches back to the default sprite at the end. 
+    IEnumerator ChangeSpriteForSeconds(Sprite spr, float interval)
+    {
+        sprRend.sprite = spr;
+        yield return new WaitForSeconds(interval);
+        sprRend.sprite = defaultSprite;
+        crIsRunning = false;
+    }
+}
 
 </code></pre>
 <h3 id="rotate-sprite-towards-camera">Rotate Sprite Towards Camera</h3>
@@ -263,6 +282,7 @@ public void ChangeSprite(Sprite toThisSprite)
 {
     public float rotationSpeed;
 
+    //Late update happens after update. 
     private void LateUpdate()
     {
         //Camera.main is a method for getting your camera that's tagged &quot;MainCamera&quot; 
@@ -283,6 +303,15 @@ public void ChangeSprite(Sprite toThisSprite)
     }
 }
 </code></pre>
+<p><br></p>
+<p>...or if you can use the <a href="https://docs.unity3d.com/6000.0/Documentation/ScriptReference/Transform.LookAt.html">Transform.LookAt</a> method to rotate your sprite towards the camera without setting a prior rotation speed (ie. there won't be any transition delay during a change in rotation.)</p>
+<pre><code class="language-csharp">void LateUpdate(){
+    transform.LookAt(Camera.main.transform);
+}
+</code></pre>
+<p><br></p>
+<p><img alt="" src="../img/sprite-with-rigidbodies-demo.gif" /></p>
+<p><br></p>
 <hr />
 <h2 id="video-player-component">Video Player Component</h2>
 <blockquote>
@@ -365,7 +394,7 @@ public void ChangeSprite(Sprite toThisSprite)
 <hr />
 <h2 id="some-course-reminders">Some course reminders</h2>
 <ul>
-<li><strong>Project 2</strong> is due Thursday! </li>
+<li><strong>Project 2</strong> is due next Tuesday! </li>
 </ul></p>
     </article>
 </section>

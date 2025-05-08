@@ -40,7 +40,8 @@ document.querySelectorAll('a[href^="#"]')
 
 📦 **Unity packages from today's class:**
 > 
-> - Class Demo: [Sprites](https://drive.google.com/file/d/1Vezjb72HZ63HmDyYfX9SFHXkUTSRs_M_/view?usp=sharing) (continuation from demo on [statics, scenes, sounds, and vfx](./8-statics-scenes-sounds-vfx.md)) and [Video Player](https://drive.google.com/file/d/118rMSklqyxJz00-TkoGh_F1lcFIpvJm1/view?usp=drive_link)
+> - Class Demo: [Sprites](https://drive.google.com/file/d/1U_zZTX5CNS9JyD6dVzaZD5a-FDTEBhiE/view?usp=drive_link) (continuation from demo on [input systems in week 7](./7-inputsystem-statemachine-event.md))
+> - Class Demo: [Video Player](https://drive.google.com/file/d/118rMSklqyxJz00-TkoGh_F1lcFIpvJm1/view?usp=drive_link)
 
 <br>
 
@@ -61,31 +62,49 @@ In my package example, here is how my enemy object is arranged in my scene hiera
 > - **Parent Gameobject** with Rigidbody, colliders, and physics-based movement script. 
 >       - **Child Gameobject** with Sprite component and sprite-related scripts (eg. rotating towards player camera, sprite switcher)
 
-![](./img/goalieparentsprite.jpg)
+![](./img/sprite-with-rigidbodies-hierarchy.jpg)
 
 <br>
 
-### Change Sprite using Scripts
+### Switching between Sprites using Scripts
 
 ```csharp
-public Sprite sprIdle, sprAction; // attach your sprite textures in the inspector
-SpriteRenderer sprRend; // attach this script to the same object containing your sprite renderer
-
-void Start()
+public class EnemyInfo : MonoBehaviour
 {
-    sprRend = GetComponent<SpriteRenderer>();
-    ChangeSprite(sprIdle); 
-}
+    public Sprite defaultSprite,onHitSprite; // attach your sprite textures in the inspector
+    public SpriteRenderer sprRend; // attach your sprite renderer
+    bool crIsRunning; // we'll need this bool to check if a coroutine is currently running
 
-//you could also call this function in a public UnityEvent
-//and attach the Sprite as an argument in the inspector. 
-public void ChangeSprite(Sprite toThisSprite)
-{
-    sprRend.sprite = toThisSprite;
-}
+    private void Start()
+    {
+        crIsRunning = false;
+    }
 
-//you could also consider using a coroutine function
-//to reset the sprite back to its idle state after a set duration
+    //we could call this public function inside a UnityEvent
+    public void ChangeToOnHitSprite()
+    {
+        //if the coroutine is currently running, then stop it.
+        if (crIsRunning)
+        {
+            StopCoroutine("ChangeSpriteForSeconds");
+        }
+
+        //start the coroutine.
+        crIsRunning = true;
+        StartCoroutine(ChangeSpriteForSeconds(onHitSprite,1f));
+    }
+
+    //a coroutine that changes to a non-default sprite "spr" 
+    //for "interval" amount of seconds
+    //then switches back to the default sprite at the end. 
+    IEnumerator ChangeSpriteForSeconds(Sprite spr, float interval)
+    {
+        sprRend.sprite = spr;
+        yield return new WaitForSeconds(interval);
+        sprRend.sprite = defaultSprite;
+        crIsRunning = false;
+    }
+}
 
 ```
 
@@ -98,6 +117,7 @@ public class RotateTowardsPlayer : MonoBehaviour
 {
     public float rotationSpeed;
 
+    //Late update happens after update. 
     private void LateUpdate()
     {
         //Camera.main is a method for getting your camera that's tagged "MainCamera" 
@@ -118,6 +138,22 @@ public class RotateTowardsPlayer : MonoBehaviour
     }
 }
 ```
+
+<br>
+
+...or if you can use the [Transform.LookAt](https://docs.unity3d.com/6000.0/Documentation/ScriptReference/Transform.LookAt.html) method to rotate your sprite towards the camera without setting a prior rotation speed (ie. there won't be any transition delay during a change in rotation.)
+
+```csharp
+void LateUpdate(){
+    transform.LookAt(Camera.main.transform);
+}
+```
+
+<br>
+
+![](./img/sprite-with-rigidbodies-demo.gif)
+
+<br>
 
 ---
 
@@ -207,4 +243,4 @@ Setting the video player's render mode to **"Camera Near Plane"** allows you to 
 
 ## Some course reminders
 
-- **Project 2** is due Thursday! 
+- **Project 2** is due next Tuesday! 
