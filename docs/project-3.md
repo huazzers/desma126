@@ -63,6 +63,14 @@ Consider the following options:
 
 <br>
 
+Your project should include **sound**, and **at least ONE (1)** of the following elements: 
+
+- [Interactive text](#interactive-text)
+- [Camera Systems](#camera-systems)
+- [Inventory Database](#inventory-database)
+
+<br>
+
 You may also consider extending upon or remixing a previous project as long as it meets the project prompt and requirements. **Your project proposal must be approved by an instructor / TA prior to the submission.**
 
 You are also welcome to work in groups of 2-3, please consult the instructor / TA for further directions beforehand. 
@@ -307,7 +315,7 @@ Your final project must include the following elements:
 
 - ☑️ **Express or communicate some ideas or principles** that you're interested in addressing through the medium of a videogame. 
 - ☑️ **Sound**
-- ☑️ **At least TWO (2)** of the following aspects into your project:
+- ☑️ **At least ONE (1)** of the following aspects into your project:
     - [Interactive text](#interactive-text)
     - [Camera Systems](#camera-systems)
     - [Inventory Database](#inventory-database)
@@ -418,4 +426,3 @@ As a prosthetic extension of the player character's form, inventory items also c
 ## Evaluation
 
 Your final project will be evaluated according to the guidelines listed in the [course syllabus](./syllabus.md/#evaluation-criteria).
--->
