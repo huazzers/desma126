@@ -155,18 +155,6 @@
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-bs-level="2"><a href="#toggling-text-visibility-using-trigger-events" class="nav-link">Toggling Text Visibility Using Trigger Events</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-bs-level="2"><a href="#setting-up-custom-dialogue-systems-in-unity" class="nav-link">Setting up custom dialogue systems in Unity</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-bs-level="2"><a href="#yarn-spinner" class="nav-link">Yarn Spinner</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
             <li class="nav-item" data-bs-level="2"><a href="#some-course-reminders" class="nav-link">Some course reminders</a>
               <ul class="nav flex-column">
               </ul>
@@ -245,13 +233,14 @@ document.querySelectorAll('a[href^="#"]')
 </blockquote>
 <p><br></p>
 <hr />
-<p>Last week, we made interactive text using the tiny game engine Bitsy. Most of you have included the following components in your Bitsy game:</p>
+<p>Interactive text for videogames typically contain the following elements:</p>
 <ul>
 <li>a <strong>dialogue sequence</strong> that plays upon interacting with a sprite, object, or ending/exit tile; </li>
 <li><strong>branching lists</strong> of dialogue that use <strong>conditional statements</strong> to determine which text to display at any given point;</li>
 <li>specific <strong>actions</strong> that get triggered upon arriving at a particular dialogue line (e.g. a room transition, or a variable change);</li>
 <li>a map of <strong>rooms</strong> that reveal different spaces, dialogues, and narratives. </li>
 </ul>
+<p>For example, take a look at <a href="https://make.bitsy.org/">Bitsy</a>, a browser-based game engine that uses pixel graphics and interactive text. </p>
 <figure>
 <img src="../img/bitsyflirting.gif">
 <figcaption>-- <a href="https://visager.itch.io/flirting">flirting</a>. Visager.
@@ -371,18 +360,26 @@ document.querySelectorAll('a[href^="#"]')
 
 <p><br></p>
 <h2 id="interactive-text-in-unity">Interactive Text in Unity</h2>
-<p>We can set up interactive text in Unity using trigger/collision detections and a custom dialogue system. We'll also learn how to set up <strong>multiple dialogue options</strong> for players to select.</p>
-<p>Let's start with a trigger event that toggles the visibility of a dialogue text. </p>
-<p><br></p>
-<h2 id="toggling-text-visibility-using-trigger-events">Toggling Text Visibility Using Trigger Events</h2>
-<p><strong>To use Trigger Events</strong> (and you can easily modify this example for a collision event instead):</p>
-<ol>
-<li>Set up your player object with <strong>tag "Player"</strong>.</li>
-<li>Create a <strong>trigger zone</strong> that the player will enter/exit to toggle the visibility of the dialogue. This can be an empty GameObject with a trigger collider.</li>
-<li>Set up your player and trigger zone for <a href="../6-physics-engine/#triggers"><strong>trigger detection</strong></a> -- here's a link to the <a href="../img/unitycollisionmatrix.png">collision matrix</a> for your reference. </li>
-<li>Add an object to your scene that will display your dialogue (e.g. an sprite image, a TextMeshPro object). Disable the GameObject so it's hidden at the start of the game. </li>
-<li><strong>Create a new C# script</strong>, then copy-paste the following code into your MonoBehaviour class. Attach this script onto your <strong>trigger zone object</strong>.</li>
-</ol>
+<p><a href="https://docs.google.com/document/d/1VpHp0g0Dpfd4cAGEDOh3MSzD-7VRnkYn79OPog-YCiU/edit?usp=sharing">Here's the notes for today's tutorial</a> -- We'll learn how to set up interactive text systems using Unity C# and a narrative tool called Ink.</p>
+<!--
+
+We can set up interactive text in Unity using trigger/collision detections and a custom dialogue system. We'll also learn how to set up **multiple dialogue options** for players to select.
+
+Let's start with a trigger event that toggles the visibility of a dialogue text. 
+
+<br>
+
+## Toggling Text Visibility Using Trigger Events
+
+**To use Trigger Events** (and you can easily modify this example for a collision event instead):
+
+1. Set up your player object with **tag "Player"**.
+2. Create a **trigger zone** that the player will enter/exit to toggle the visibility of the dialogue. This can be an empty GameObject with a trigger collider.
+3. Set up your player and trigger zone for [**trigger detection**](./6-physics-engine.md/#triggers) -- here's a link to the [collision matrix](./img/unitycollisionmatrix.png) for your reference. 
+4. Add an object to your scene that will display your dialogue (e.g. an sprite image, a TextMeshPro object). Disable the GameObject so it's hidden at the start of the game. 
+5. **Create a new C# script**, then copy-paste the following code into your MonoBehaviour class. Attach this script onto your **trigger zone object**.
+
+
 <pre><code class="language-csharp">//in the inspector, attach the dialogue object from your scene into this variable
 [SerializeField] GameObject dialogueGraphics; 
 
@@ -409,45 +406,58 @@ void OnTriggerExit(Collider col){
     }
 }
 </code></pre>
-<p>Alternatively, you could also set up <strong>event handlers</strong> that invoke multiple actions upon entering the trigger zone, e.g. if you want a sound effect to play when the dialogue activates. </p>
-<p>There are many possibilities for customising this trigger setup. In my example Unity package for this lesson, I used different trigger zones to enable / disable / destroy different dialogue graphics in my scene. </p>
-<p><img alt="" src="../img/handfootdialogue.gif" /></p>
-<p><br></p>
-<h2 id="setting-up-custom-dialogue-systems-in-unity">Setting up custom dialogue systems in Unity</h2>
-<p>What if we want to make <strong>a list of dialogue lines</strong> that get played in order? And what if we want to set up a <strong>branching dialogue list</strong> that displays different text according to whether specific conditions are met? This is where <strong>a custom dialogue system</strong> may come in handy. </p>
-<p>There are many existing Unity packages, extensions, and assets that already provide a foundational infrastructure for this (e.g. Twine, Ink, and other available products in the Unity asset store -- we will look at Yarn Spinner shortly after this), but I will show you how to build your own from scratch in C#. </p>
-<h3 id="anatomy-of-a-dialogue-tree">Anatomy of a Dialogue Tree</h3>
+
+
+Alternatively, you could also set up **event handlers** that invoke multiple actions upon entering the trigger zone, e.g. if you want a sound effect to play when the dialogue activates. 
+
+There are many possibilities for customising this trigger setup. In my example Unity package for this lesson, I used different trigger zones to enable / disable / destroy different dialogue graphics in my scene. 
+
+![](./img/handfootdialogue.gif)
+
+<br>
+
+## Setting up custom dialogue systems in Unity
+
+What if we want to make **a list of dialogue lines** that get played in order? And what if we want to set up a **branching dialogue list** that displays different text according to whether specific conditions are met? This is where **a custom dialogue system** may come in handy. 
+
+There are many existing Unity packages, extensions, and assets that already provide a foundational infrastructure for this (e.g. Twine, Ink, and other available products in the Unity asset store -- we will look at Yarn Spinner shortly after this), but I will show you how to build your own from scratch in C#. 
+
+### Anatomy of a Dialogue Tree
+
 <figure>
     <img src="../img/Dialog_tree_example.png">
     <figcaption>-- Example of a dialog tree (or conversation tree), depicting a fictional conversation between a player character and a non-player character. Source: <a href="https://en.wikipedia.org/wiki/Dialogue_tree">Wikipedia</a>.
     </figcaption>
 </figure>
 
-<p>In most video games and interactive text software, our dialogue is programmed in a <strong>node-based structure</strong> called a dialogue tree. Components typically include (listed in order of increasing scope):</p>
-<ol>
-<li>
-<p><strong>Options</strong>: buttons that allow players to select their actions / responses in the game. Typically used as connectors between multiple nodes.</p>
-</li>
-<li>
-<p><strong>Lines</strong>: the text that is played at any point of a given sequence, including other relevant information such as: </p>
-<ul>
-<li>which character is currently speaking;</li>
-<li>how the line is delivered in terms of emotional expression through voice, sprites, typography, and pacing;</li>
-<li>a list of available options with which the player can choose to respond.</li>
-</ul>
-</li>
-<li>
-<p><strong>Nodes</strong>: a group of lines that represent a singular game state. Multiple nodes may be linked through dialogue options, events, or conditional statements. </p>
-</li>
-</ol>
-<p><br></p>
-<p>We will make a <strong>custom serializable C# class</strong> for each of these components, and then use them in a <strong>MonoBehaviour class</strong> that we will attach to an object in our game scene as our dialogue manager script. </p>
-<h3 id="example-dialogue-system-using-custom-c-classes">Example Dialogue System using custom C&#35; classes</h3>
-<p><strong>Inspector preview</strong></p>
-<p><img alt="" src="../img/dialoguemanagerexample.jpg" />
-<br></p>
-<p><strong>C# Script</strong></p>
-<p>Try parsing through this script from the very bottom, then slowly move up. </p>
+In most video games and interactive text software, our dialogue is programmed in a **node-based structure** called a dialogue tree. Components typically include (listed in order of increasing scope):
+
+1. **Options**: buttons that allow players to select their actions / responses in the game. Typically used as connectors between multiple nodes.
+
+2. **Lines**: the text that is played at any point of a given sequence, including other relevant information such as: 
+
+    - which character is currently speaking;
+    - how the line is delivered in terms of emotional expression through voice, sprites, typography, and pacing;
+    - a list of available options with which the player can choose to respond.
+
+3. **Nodes**: a group of lines that represent a singular game state. Multiple nodes may be linked through dialogue options, events, or conditional statements. 
+
+<br>
+
+We will make a **custom serializable C# class** for each of these components, and then use them in a **MonoBehaviour class** that we will attach to an object in our game scene as our dialogue manager script. 
+
+### Example Dialogue System using custom C&#35; classes
+
+**Inspector preview**
+
+![](./img/dialoguemanagerexample.jpg)
+<br>
+
+**C# Script**
+
+Try parsing through this script from the very bottom, then slowly move up. 
+
+
 <pre><code class="language-csharp">using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -664,42 +674,63 @@ public class DialogueOption
     public int goToThisNode;
 }
 </code></pre>
-<p><br></p>
-<p>The benefit of customising your own dialogue system in C# is that you can design your own workflow that works best for your purposes. However, it's easy to get lost in the clutter of array elements in our inspector. </p>
-<p>If you have more complex branching dialogues, or prefer a more tidy workflow, you may consider integrating an external narrative game tool into your Unity project.</p>
-<p><br></p>
-<h2 id="yarn-spinner">Yarn Spinner</h2>
-<p>Yarn Spinner's Github page introduces their tool in the following manner: </p>
-<blockquote>
-<p>Yarn Spinner is a dialogue system that lets you write interactive conversations in a <strong>simple, screenplay-like</strong> format, which can be loaded into your game and run.</p>
-</blockquote>
+
+
+<br>
+
+The benefit of customising your own dialogue system in C# is that you can design your own workflow that works best for your purposes. However, it's easy to get lost in the clutter of array elements in our inspector. 
+
+If you have more complex branching dialogues, or prefer a more tidy workflow, you may consider integrating an external narrative game tool into your Unity project.
+
+<br>
+
+## Yarn Spinner
+
+Yarn Spinner's Github page introduces their tool in the following manner: 
+
+> Yarn Spinner is a dialogue system that lets you write interactive conversations in a **simple, screenplay-like** format, which can be loaded into your game and run.
+
 <figure>
 <img src="../img/gamesmadeinyarnspinner.jpg">
 <figcaption>-- A collection of games that have been made using Yarn Spinner. Taken from Yarn Spinner's home page. 
 </figcaption>
 </figure>
 
-<p><br></p>
-<p>Yarn Spinner has a simple-to-parse syntax, and has a lot of built-in functionality for setting up and displaying dialogues. It only takes a bit of setting up and some familiarity with their syntax to get a basic interactive dialogue up and running. Things may get more complicated once you get into extra customisations with dialogue graphics (e.g. setting up a custom speech bubble and options view.)</p>
-<p><br></p>
-<h3 id="setting-up-yarn-spinner">Setting up Yarn Spinner</h3>
-<blockquote>
-<p>If you need a refresher on anything below (including Yarn Spinner syntax), I recommend watching this Yarn Spinner workshop recording: </p>
-<p><iframe width="100%" height="500" src="https://www.youtube-nocookie.com/embed/KwrM8dMJ4F4?si=dzx-cLgBumEg3QWH" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></p>
-</blockquote>
-<p>Follow the instructions in the section titled "<a href="https://docs.yarnspinner.dev/using-yarnspinner-with-unity/installation-and-setup#install-via-the-unity-package-manager-1">Install via the Unity Package Manager</a>" on the Yarn Spinner documentation page.</p>
-<p>Then, download the <strong>Yarn Spinner extension in Visual Studio Code</strong> to access syntax highlighting and their node graph preview.</p>
-<p>Finally, follow these steps to get a simple dialogue runner up and running in your Unity Scene: <a href="https://docs.yarnspinner.dev/using-yarnspinner-with-unity/quick-start">https://docs.yarnspinner.dev/using-yarnspinner-with-unity/quick-start</a></p>
-<hr />
-<p>How do we write in Yarn Spinner in the first place?</p>
-<h3 id="syntax-for-yarn-spinner">Syntax for Yarn Spinner</h3>
-<blockquote>
-<p>Read Yarn Spinner's syntax documentation in their <a href="https://docs.yarnspinner.dev/beginners-guide/syntax-basics">beginner's guide</a>.</p>
-<p>Use the online text editor <a href="https://try.yarnspinner.dev/">Try Yarn Spinner</a> to playtest your yarn scripts before bringing them into Unity! You may also copy-paste any of the following code snippets in this section to see how they work. </p>
-</blockquote>
-<h4 id="nodes-lines-and-options">Nodes, Lines, and Options</h4>
-<p>Everything in Yarn is structured around <strong>nodes</strong> and <strong>lines</strong>. </p>
-<p>Here's how an empty node with a single line looks like: </p>
+<br>
+
+Yarn Spinner has a simple-to-parse syntax, and has a lot of built-in functionality for setting up and displaying dialogues. It only takes a bit of setting up and some familiarity with their syntax to get a basic interactive dialogue up and running. Things may get more complicated once you get into extra customisations with dialogue graphics (e.g. setting up a custom speech bubble and options view.)
+
+<br>
+
+### Setting up Yarn Spinner
+
+> If you need a refresher on anything below (including Yarn Spinner syntax), I recommend watching this Yarn Spinner workshop recording: 
+>
+> <iframe width="100%" height="500" src="https://www.youtube-nocookie.com/embed/KwrM8dMJ4F4?si=dzx-cLgBumEg3QWH" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+Follow the instructions in the section titled "[Install via the Unity Package Manager](https://docs.yarnspinner.dev/using-yarnspinner-with-unity/installation-and-setup#install-via-the-unity-package-manager-1)" on the Yarn Spinner documentation page.
+
+Then, download the **Yarn Spinner extension in Visual Studio Code** to access syntax highlighting and their node graph preview.
+
+Finally, follow these steps to get a simple dialogue runner up and running in your Unity Scene: [https://docs.yarnspinner.dev/using-yarnspinner-with-unity/quick-start](https://docs.yarnspinner.dev/using-yarnspinner-with-unity/quick-start)
+
+---
+
+How do we write in Yarn Spinner in the first place?
+
+### Syntax for Yarn Spinner
+
+> Read Yarn Spinner's syntax documentation in their [beginner's guide](https://docs.yarnspinner.dev/beginners-guide/syntax-basics).
+> 
+> Use the online text editor [Try Yarn Spinner](https://try.yarnspinner.dev/) to playtest your yarn scripts before bringing them into Unity! You may also copy-paste any of the following code snippets in this section to see how they work. 
+
+#### Nodes, Lines, and Options
+
+Everything in Yarn is structured around **nodes** and **lines**. 
+
+Here's how an empty node with a single line looks like: 
+
+
 <pre><code class="language-yaml">title: Start
 ---
 // A NODE starts with the header, which contains the node's TITLE.
@@ -716,9 +747,15 @@ Hello, world!
 //a node must END with the &quot;===&quot; marker.
 ===
 </code></pre>
-<p><br></p>
-<p>Almost every line of text you write inside a node is a <strong>line</strong>. The user has to press a key to advance to the next line. </p>
-<p>If there is a set of characters without spaces before a colon (:) at the beginning of the line, Yarn Spinner will mark that as <strong>the name of the character</strong>. </p>
+
+
+<br>
+
+Almost every line of text you write inside a node is a **line**. The user has to press a key to advance to the next line. 
+
+If there is a set of characters without spaces before a colon (:) at the beginning of the line, Yarn Spinner will mark that as **the name of the character**. 
+
+
 <pre><code>title: Start
 ---
 Here is some text.
@@ -729,8 +766,13 @@ Horse: ... or three!!!
 Horse: *neighs into the sunset*
 ===
 </code></pre>
-<p><br></p>
-<p>You may also set up <strong>dialogue options</strong> using the "-&gt;" marker. You can also nest options inside other options. </p>
+
+
+<br>
+
+You may also set up **dialogue options** using the "->" marker. You can also nest options inside other options. 
+
+
 <pre><code>title: Start
 ---
 Don't you just love having *multiple options* to choose from?
@@ -745,10 +787,17 @@ Don't you just love having *multiple options* to choose from?
         You bet!
 ===
 </code></pre>
-<p><br></p>
-<h4 id="built-in-commands">Built-in Commands</h4>
-<p>Having lots of options can get complex, so it’s often a good opportunity to break your story up into <strong>multiple nodes</strong> and jump between them. </p>
-<p>Use the <code>&lt;&lt;jump&gt;&gt;</code> command to jump to a different node. </p>
+
+
+<br>
+
+#### Built-in Commands
+
+Having lots of options can get complex, so it’s often a good opportunity to break your story up into **multiple nodes** and jump between them. 
+
+Use the `<<jump>>` command to jump to a different node. 
+
+
 <pre><code>title: Start
 ---
 Narrator: Are you ready? Remember, it's ride or die!
@@ -768,8 +817,13 @@ Narrator: We will ride without you, and that's that.
 You died. 
 ===
 </code></pre>
-<p><br></p>
-<p>You can also use the <code>&lt;&lt;wait&gt;&gt;</code> command to pause a number of seconds before the next line plays. This can be used for dramatic effect, or for setting up cutscenes in between dialogue lines. </p>
+
+
+<br>
+
+You can also use the `<<wait>>` command to pause a number of seconds before the next line plays. This can be used for dramatic effect, or for setting up cutscenes in between dialogue lines. 
+
+
 <pre><code>title: Start
 ---
 PatientDog: Look at how long I can wait before speaking!
@@ -777,7 +831,11 @@ PatientDog: Look at how long I can wait before speaking!
 PatientDog: BARK!
 ===
 </code></pre>
-<p>There's also the <code>&lt;&lt;stop&gt;&gt;</code> command that stops the dialogue runner in the middle of a node. You may use this at the end of an if statement, or a shortcut option button that ends the conversation. </p>
+
+
+There's also the `<<stop>>` command that stops the dialogue runner in the middle of a node. You may use this at the end of an if statement, or a shortcut option button that ends the conversation. 
+
+
 <pre><code>title: Start
 ---
 TalktativeNPC: I could go on and on about this topic for hours!
@@ -787,11 +845,19 @@ TalktativeNPC: I could go on and on about this topic for hours!
 TalkativeNPC: You sure are a good listener!
 &lt;&lt;jump TalkativeNPCPartTwo&gt;&gt;
 </code></pre>
-<p><br></p>
-<h4 id="variables-and-conditional-statements">Variables and Conditional Statements</h4>
-<p>You can also use <strong>variables</strong> to store information and set up <strong>conditional statements</strong>. </p>
-<p>Variables are denoted by the "$" sign before their name. You can declare and set them as numbers, strings, or booleans. You may also use them in your lines by calling them in curly brackets, e.g. <code>The current number is {$number}.</code></p>
-<p>If statements must close with an <code>&lt;&lt;endif&gt;&gt;</code> line. We can also use if statements to choose which options to make available.</p>
+
+
+<br>
+
+#### Variables and Conditional Statements
+
+You can also use **variables** to store information and set up **conditional statements**. 
+
+Variables are denoted by the "$" sign before their name. You can declare and set them as numbers, strings, or booleans. You may also use them in your lines by calling them in curly brackets, e.g. `The current number is {$number}.`
+
+If statements must close with an `<<endif>>` line. We can also use if statements to choose which options to make available.
+
+
 <pre><code>title: Start
 ---
 &lt;&lt;declare $apples = 0&gt;&gt;
@@ -814,15 +880,23 @@ Horse: Hey. Got any apples?
     Horse: A horse's nose never lies.
 ===
 </code></pre>
-<p><br></p>
-<h4 id="functions">Functions</h4>
-<p>Yarn Spinner has a set of built-in functions that allow you to <strong>randomize numbers in a given range</strong>, <strong>count the number of times a node has been visited</strong>, etc. They are all listed on <a href="https://docs.yarnspinner.dev/getting-started/writing-in-yarn/functions">their documentation page here</a>. </p>
-<p>How do we call custom functions from our Unity C# scripts in Yarn Spinner? </p>
-<h5 id="using-yarncommand-attribute-in-c-scripts">Using YarnCommand attribute in C&#35; scripts</h5>
-<blockquote>
-<p>More documentation about custom functions here: <a href="https://docs.yarnspinner.dev/using-yarnspinner-with-unity/creating-commands-functions">https://docs.yarnspinner.dev/using-yarnspinner-with-unity/creating-commands-functions</a></p>
-</blockquote>
-<p>In our C# script, add the Yarn.Unity namespace at the top of the script. Then, add a <code>[YarnCommand]</code> attribute just before our method function (which must be set to <code>public</code>!), and call the custom function name we will use in the Yarn script inside parentheses ().</p>
+
+
+<br>
+
+#### Functions
+
+Yarn Spinner has a set of built-in functions that allow you to **randomize numbers in a given range**, **count the number of times a node has been visited**, etc. They are all listed on [their documentation page here](https://docs.yarnspinner.dev/getting-started/writing-in-yarn/functions). 
+
+How do we call custom functions from our Unity C# scripts in Yarn Spinner? 
+
+##### Using YarnCommand attribute in C&#35; scripts
+
+> More documentation about custom functions here: [https://docs.yarnspinner.dev/using-yarnspinner-with-unity/creating-commands-functions](https://docs.yarnspinner.dev/using-yarnspinner-with-unity/creating-commands-functions)
+
+In our C# script, add the Yarn.Unity namespace at the top of the script. Then, add a `[YarnCommand]` attribute just before our method function (which must be set to `public`!), and call the custom function name we will use in the Yarn script inside parentheses ().
+
+
 <pre><code class="language-csharp">using Yarn.Unity;
 
 public class CharacterMovement : MonoBehaviour {
@@ -833,17 +907,29 @@ public class CharacterMovement : MonoBehaviour {
     }
 }
 </code></pre>
-<p><br></p>
-<p>Attach this script to a GameObject in your scene. Rename this GameObject to "MyCharacter".</p>
-<p>In our Yarn script, inside double arrows &lt;&lt; &gt;&gt;, we can call the <strong>custom function name</strong> AND <strong>the name of the GameObject</strong> that this MonoBehaviour script is attached to.</p>
+
+
+<br>
+
+Attach this script to a GameObject in your scene. Rename this GameObject to "MyCharacter".
+
+In our Yarn script, inside double arrows << >>, we can call the **custom function name** AND **the name of the GameObject** that this MonoBehaviour script is attached to.
+
+
 <pre><code>title: Start
 ---
 &lt;&lt;jump MyCharacter&gt;&gt;
 ===
 </code></pre>
-<p><br></p>
-<p>If your function takes in parameters, you may add them after the GameObject name inside the double arrows.</p>
-<p><strong>C# example</strong></p>
+
+
+<br>
+
+If your function takes in parameters, you may add them after the GameObject name inside the double arrows.
+
+**C# example**
+
+
 <pre><code class="language-csharp">using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -860,13 +946,20 @@ public class CharacterSpriteSwitcher : MonoBehaviour {
     }
 }
 </code></pre>
-<p><strong>Yarn example</strong></p>
+
+
+**Yarn example**
+
 <pre><code>title: Start
 ---
 &lt;&lt;switch_sprite MyCharacter 2&gt;&gt;
 ===
 </code></pre>
-<h5 id="custom-start-command-in-unity-c">Custom Start Command in Unity C&#35;</h5>
+
+
+##### Custom Start Command in Unity C&#35;
+
+
 <pre><code class="language-csharp">using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -884,9 +977,17 @@ public class DialogueTrigger : MonoBehaviour{
 }
 
 </code></pre>
-<h3 id="how-to-do-other-stuff-in-yarn-spinner">How to do other stuff in Yarn Spinner</h3>
-<p>You may refer to <strong>Yarn Spinner's FAQ page</strong> to explore what could be possible in this tool: <a href="https://docs.yarnspinner.dev/using-yarnspinner-with-unity/faq">https://docs.yarnspinner.dev/using-yarnspinner-with-unity/faq</a></p>
-<p>Yarn Spinner's Unity package also includes additional sample scenes that demonstrate how to set up specific features. They can be found inside <strong>the Unity Package manager</strong> &gt; look for the <strong>Yarn Spinner package</strong> under My Registries &gt; <strong>Samples</strong> &gt; Install any sample scenes you'd like to study as a reference. </p>
+
+
+### How to do other stuff in Yarn Spinner
+
+You may refer to **Yarn Spinner's FAQ page** to explore what could be possible in this tool: [https://docs.yarnspinner.dev/using-yarnspinner-with-unity/faq](https://docs.yarnspinner.dev/using-yarnspinner-with-unity/faq)
+
+Yarn Spinner's Unity package also includes additional sample scenes that demonstrate how to set up specific features. They can be found inside **the Unity Package manager** > look for the **Yarn Spinner package** under My Registries > **Samples** > Install any sample scenes you'd like to study as a reference. 
+
+
+-->
+
 <hr />
 <h2 id="some-course-reminders">Some course reminders</h2>
 <ul>

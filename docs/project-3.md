@@ -31,15 +31,14 @@ document.querySelectorAll('a[href^="#"]')
 
 # Project 3: Zine Game
 
-TBD
-
-<!--<div class="duedate">
-<p><a href="https://forms.gle/Ynd8THMzx2U4KwSo9">Submit Here</a></p>
+<div class="duedate">
+<p>📌 <b>PROJECT SKETCH DUE:</b> Week 8 Thursday, May 22</p>
+<p>📌 <b>FINAL PROJECT BUILD + DOCUMENTATION DUE:</b> Week 10 Thursday, June 5</p>
+<p><a>Submit Final Submission Here (TBD)</a></p>
 <blockquote>Please read the <a href="../how-to-submit">How To Submit</a> page for more detailed instructions.</blockquote>
-</div>-->
+</div>
 
-<!--
-### Prompt
+## Prompt
 
 At the start of the quarter, we unpacked the [many possible meanings](./0-unity-csharp.md/#what-is-an-engine) of the term "engine." 
 
@@ -70,7 +69,7 @@ You are also welcome to work in groups of 2-3, please consult the instructor / T
 
 <br>
 
-#### What is a zine?
+### What is a zine?
 
 > A zine is a small-circulation booklet or magazine, often created by hand or using digital tools through self-publishing. Unlike traditional magazines, zines are characterized by their **DIY ethos** and **independent spirit**. They cover a vast array of topics, from personal stories to art, poetry, and music. They’re standout pieces of print media because they can be as varied as the creators behind them.
 
@@ -187,18 +186,11 @@ dozens of fingerprints and organic bits smatter its well-worn hyperlinks.&lt;&#x
 
 <br>
 
-Ultimately, zines allow creators to explore topics close to their hearts, share their perspectives, and connect with like-minded individuals. They often challenge convention, offering alternative viewpoints and fostering a sense of empowerment among readers and creators alike.
+Ultimately, zines allow creators to explore topics close to their hearts, share their perspectives, and connect with like-minded individuals. They often challenge conventional beliefs and principles, offering alternative viewpoints and fostering a sense of empowerment among readers and creators alike.
 
 <br>
 
-Some examples / inspirations: 
-
-- [Submissions](https://itch.io/jam/zig-jam/entries) to the [Zine Idea Generator](https://zcmag.xyz/zine-idea-generator/?type=90&action=52&topic=99&nomature=1&plainmode=0&classroom=1) game jam.
-- [A collection of interactive zines](https://itch.io/c/1535486/ezm-reader-zines) on itch.io using [HTML5 Reader for Electric Zine Maker](https://jeremyoduber.itch.io/js-zine)
-
-<br>
-
-#### What is a zine game?
+### What is a zine game?
 
 <figure>
     <blockquote><p>When an individual or pair is solely responsible for a work you can watch an individual style develop: you can trace themes, both mechanical and otherwise, across a creator's work. [...] And being able (or learning to) identify the individual style, and growth, of individual authors leads to better criticism and a critical understanding of games. Not to mention, like I said, more personal games, more relevant games, more games with something to say. I want a world where everyone is capable of sitting down at a computer and making a game by herself. This is not to say that all games need to be made that way, but as a paradigm, I think the individual author has more to offer us than the team, especially at a time when videogames are so seemingly creatively bankrupt.</p>
@@ -209,13 +201,29 @@ Some examples / inspirations:
 
 <br>
 
+<figure>
+<blockquote>
+<p>
+"Both zines and games make me think of infinite possibility. In the spirit of Chen Chen tweeting that the moon and pictures of butts are poetry (true), and of lesbians saying any pair of adjacent objects is yuri (also true), I started calling everything a zine in 2023: 
+</p>
+<br>
+<img src="../img/zine%20alignment%20chart.jpeg">
+</blockquote>
+<figcaption>-- Zine alignment chart by <a href="https://hellodri.itch.io/">Dri (hellodri on itch.io)</a>. Dri writes more about making zine games in <a href="https://mailchi.mp/044f877ebec6/co-sine-dri-making-games">this Co-Sine newsletter</a>.
+</figcaption>
+</figure>
+
+<br>
+
 Just like how zines (or small-scale, self-published works) offer avenues for communication, expression, and knowledge circulation amongst niche and marginalised communities, zine games emerged from the desire to reclaim **individual authorship** and **creative autonomy** in videogame development from mainstream industries. 
 
 <br>
 
-If games could be whatever and however you wanted them to be, what ideas, stories, and play experiences would you like to include? 
+**If games could be whatever and however you wanted them to be, what ideas, stories, and play experiences would you like to include?**
 
-What sort of games could emerge *only* if they were authored by an individual or small group of people, uninhibited by the interests of external forces and stakeholders? 
+<br>
+
+**What sort of games could emerge** ***only*** **if they were authored by an individual or small group of people, uninhibited by the interests of external forces and stakeholders?**
 
 <br>
 
@@ -246,11 +254,11 @@ game mechanics based on real experiences
 
 
 <figure>
-    <img src="https://img.itch.zone/aW1hZ2UvNDI3ODMxLzIxMzk5MzEucG5n/original/P8LqAl.png">
     <blockquote><p> A videogame is a hotel is a machine for framing an experience which never actually occurs. Wonderful! You climb inside the shell of someone else’s excavated and inscrutable desires, you drop off your bags, you crawl around the litter where consciousness has passed, chairs, tables, boxes, doors, and then you leave and buy a postcard to remind you where you’ve been.
 </p></blockquote>
     <figcaption>-- <a href="https://thecatamites.itch.io/10-beautiful-postcards">10 Beautiful Postcards</a>. thecatamites.
     </figcaption>
+    <img src="https://img.itch.zone/aW1hZ2UvNDI3ODMxLzIxMzk5MzEucG5n/original/P8LqAl.png">
 </figure>
 
 <br>
@@ -262,6 +270,8 @@ game mechanics based on real experiences
     <figcaption>-- <a href="https://sunsetdandan.itch.io/the-day-i-couldnt-write-a-poem">The day I couldn't write a poem</a>. Zennyan and mikyokyuji.</figcaption>
 </figure>
 
+<br>
+
 <figure>
     <img src="https://img.itch.zone/aW1hZ2UvMTIwMDE1LzU1Mjg4MS5qcGc=/original/AGnmfP.jpg">
     <figcaption>-- <a href="https://dkoikos.itch.io/oikospiel">Oikospiel Book 1</a>. David Kanaga.
@@ -270,17 +280,41 @@ game mechanics based on real experiences
 
 <br>
 
+**Some other examples / inspirations:** 
+
+- [Submissions](https://itch.io/jam/zig-jam/entries) to the [Zine Idea Generator](https://zcmag.xyz/zine-idea-generator/?type=90&action=52&topic=99&nomature=1&plainmode=0&classroom=1) game jam. <br><br>![](./img/zineideageneratorexample.jpg)<br>
+- [A collection of interactive zines](https://itch.io/c/1535486/ezm-reader-zines) on itch.io using [HTML5 Reader for Electric Zine Maker](https://jeremyoduber.itch.io/js-zine) <br><br><iframe width="552" height="167" frameborder="0" src="https://itch.io/embed/454097"><a href="https://jeremyoduber.itch.io/js-zine">HTML5 Reader for Electric Zine Maker by Jeremy Oduber</a></iframe><br>
+- Manifesto games are also a possible approach to this assignment--what do games mean to you, and what could or should they represent? The [homepage description](https://itch.io/jam/manifesto-jam-22) and [submission entries](https://itch.io/jam/manifesto-jam-22/entries) for the Manifesto Game Jam 2022 offers a good place to start. <br><br> ![](https://img.itch.zone/aW1hZ2UyL2phbS8zMjE2NjQvODgyMzc0Ni5qcGc=/original/WohGMW.jpg)
+
+
+<br>
+
 ---
 
-### Requirements
+## Requirements
 
-There will be a **project sketch** due on **Week 8 Thurday, November 21**. Please bring your ideas / prototypes to class for discussion.
+Project 1 contains **TWO COMPONENTS**: 
+> - **PART 1: SKETCH OF PROJECT PROPOSAL** </br>📌 *Due: Week 8 Thursday, May 22* </br>Please bring your ideas / prototypes to class for discussion.
+> - **PART 2: FINAL PROJECT BUILD WITH DOCUMENTATION** </br>📌 *Due: Week 10 Thursday, June 5* </br>Refer to [submission guidelines](./how-to-submit.md), and submit your final project.
+> 
+> **Total contribution to final course grade: 25%**
 
-Your project must address the prompt above, and must have sound.
+<br>
 
-AND include **at least two** of the following aspects into your project:
+**📝 Final Project Checklist**
 
-#### Interactive Text
+Your final project must include the following elements:
+
+- ☑️ **Express or communicate some ideas or principles** that you're interested in addressing through the medium of a videogame. 
+- ☑️ **Sound**
+- ☑️ **At least TWO (2)** of the following aspects into your project:
+    - [Interactive text](#interactive-text)
+    - [Camera Systems](#camera-systems)
+    - [Inventory Database](#inventory-database)
+
+<br>
+
+### Interactive Text
 
 A linear journey. A branching dialogue system. A visual novel. Text is an easy way to set the tone and context of your piece. If you're interested in getting into the weeds of writing, consider implementing a system for interacting with your text. 
 
@@ -290,6 +324,8 @@ A linear journey. A branching dialogue system. A visual novel. Text is an easy w
     </figcaption>
 </figure>
 
+<br>
+
 <figure>
     <img src="../img/interactive portraits.gif">
     <figcaption>-- <a href="https://zoy.itch.io/iportraits">Interactive Portraits: Trans People in Japan</a>. Zoyander Street.
@@ -298,7 +334,7 @@ A linear journey. A branching dialogue system. A visual novel. Text is an easy w
 
 <br>
 
-#### Camera Systems
+### Camera Systems
 
 Consider the perspective and point of view of the players. Include multiple camera perspectives in your project. This could be set up using overlay cameras, camera switching, or a more elaborate camera sytem like Cinemachine. 
 
@@ -308,6 +344,8 @@ Consider the perspective and point of view of the players. Include multiple came
     </figcaption>
 </figure>
 
+<br>
+
 <figure>
     <img src="../img/mkapolk.gif">
     <figcaption>-- <a href="https://www.glorioustrainwrecks.com/node/11189">Sleepy Boy Wishes He Could Go Into a K-Hole and Just... Never Leave</a>. mkapolk.
@@ -316,7 +354,7 @@ Consider the perspective and point of view of the players. Include multiple came
 
 <br>
 
-#### Inventory / Collections / Save System
+### Inventory Database
 
 ![](./img/carrier%20bag%20of%20fiction.jpg)
 
@@ -349,6 +387,8 @@ While a jump is immediate, items have potential and an inventory holds the branc
     </figcaption>
 </figure>
 
+<br>
+
 <figure>
     <img src="../img/grotto.png">
     <figcaption>-- <a href="https://www.mudroom.rip/">Grotto</a> (2023). Items, world, and more are generated from lineage. Sometimes items are just to help with getting around.
@@ -365,6 +405,8 @@ As a prosthetic extension of the player character's form, inventory items also c
     </figcaption>
 </figure>
 
+<br>
+
 <figure>
     <img src="../img/resevil.png">
     <figcaption>-- Resident Evil 4 (2005). Limited carrying space, optimizing your carrying case.
@@ -373,7 +415,7 @@ As a prosthetic extension of the player character's form, inventory items also c
 
 <br>
 
-### Evaluation
+## Evaluation
 
 Your final project will be evaluated according to the guidelines listed in the [course syllabus](./syllabus.md/#evaluation-criteria).
 -->

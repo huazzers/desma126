@@ -59,12 +59,14 @@ document.querySelectorAll('a[href^="#"]')
 ---
 
 
-Last week, we made interactive text using the tiny game engine Bitsy. Most of you have included the following components in your Bitsy game:
+Interactive text for videogames typically contain the following elements:
 
 - a **dialogue sequence** that plays upon interacting with a sprite, object, or ending/exit tile; 
 - **branching lists** of dialogue that use **conditional statements** to determine which text to display at any given point;
 - specific **actions** that get triggered upon arriving at a particular dialogue line (e.g. a room transition, or a variable change);
 - a map of **rooms** that reveal different spaces, dialogues, and narratives. 
+
+For example, take a look at [Bitsy](https://make.bitsy.org/), a browser-based game engine that uses pixel graphics and interactive text. 
 
 <figure>
 <img src="../img/bitsyflirting.gif">
@@ -205,6 +207,10 @@ Last week, we made interactive text using the tiny game engine Bitsy. Most of yo
 <br>
 
 ## Interactive Text in Unity
+
+[Here's the notes for today's tutorial](https://docs.google.com/document/d/1VpHp0g0Dpfd4cAGEDOh3MSzD-7VRnkYn79OPog-YCiU/edit?usp=sharing) -- We'll learn how to set up interactive text systems using Unity C# and a narrative tool called Ink.
+
+<!--
 
 We can set up interactive text in Unity using trigger/collision detections and a custom dialogue system. We'll also learn how to set up **multiple dialogue options** for players to select.
 
@@ -813,6 +819,9 @@ public class DialogueTrigger : MonoBehaviour{
 You may refer to **Yarn Spinner's FAQ page** to explore what could be possible in this tool: [https://docs.yarnspinner.dev/using-yarnspinner-with-unity/faq](https://docs.yarnspinner.dev/using-yarnspinner-with-unity/faq)
 
 Yarn Spinner's Unity package also includes additional sample scenes that demonstrate how to set up specific features. They can be found inside **the Unity Package manager** > look for the **Yarn Spinner package** under My Registries > **Samples** > Install any sample scenes you'd like to study as a reference. 
+
+
+-->
 
 ---
 

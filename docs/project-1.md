@@ -32,8 +32,8 @@ document.querySelectorAll('a[href^="#"]')
 # Project 1: Auto-Generator
 
 <div class="duedate">
-<p>📌 <b>SKETCH/PROPOSAL DUE: Week 2 Thursday, April 10</b></p>
-<p>📌 <b>FINAL PROJECT BUILD + DOCUMENTATION DUE: Week 3 Thursday, April 17</b></p>
+<p>📌 <b>SKETCH/PROPOSAL DUE:</b> Week 2 Thursday, April 10</p>
+<p>📌 <b>FINAL PROJECT BUILD + DOCUMENTATION DUE:</b> Week 3 Thursday, April 17</p>
 <p><a href="https://forms.gle/DdU363hqEDBTenadA">Submit Final Submission Here</a></p>
 <blockquote>Please read the <a href="../how-to-submit">How To Submit</a> page for more detailed instructions.</blockquote>
 </div>

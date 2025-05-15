@@ -1,5 +1,5 @@
 ---
-title: Inventory and Collections
+title: Inventory Database
 ---
 
 <script>hljs.highlightAll();</script>
@@ -33,7 +33,8 @@ document.querySelectorAll('a[href^="#"]')
     });
 });
 </script>
-# Inventory and Collections
+
+# Inventory Database
 
 ---
 
@@ -47,7 +48,7 @@ document.querySelectorAll('a[href^="#"]')
 
 📚 **Other relevant resources to today's topic:**
 >
-> - More on narrative and mechanical possibilities of Inventory, Collections, and Save Systems, listed under the [Requirements section of Project 3 page](./project-3.md/#inventory-collections-save-system).
+> - More on narrative and mechanical possibilities of Inventory, Collections, and Save Systems, listed under the [Requirements section of Project 3 page](./project-3.md/#inventory-database).
 > - Recommended video tutorials:
 >     - Scrollable UI Panels -- could be used for your long Inventory lists! [https://www.youtube.com/watch?v=XJdtxELpbh8](https://www.youtube.com/watch?v=XJdtxELpbh8)
 
