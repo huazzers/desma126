@@ -39,7 +39,7 @@ document.querySelectorAll('a[href^="#"]')
 
 📦 **Unity packages from today's class:**
 > 
-> - Tutorial notes for Simple Dialogue in Unity and Ink: [https://docs.google.com/document/d/1VpHp0g0Dpfd4cAGEDOh3MSzD-7VRnkYn79OPog-YCiU/edit?usp=sharing]
+> - [Tutorial notes for Simple Dialogue in Unity and Ink](https://docs.google.com/document/d/1VpHp0g0Dpfd4cAGEDOh3MSzD-7VRnkYn79OPog-YCiU/edit?usp=sharing)
 
 <br>
 
