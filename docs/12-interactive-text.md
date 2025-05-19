@@ -39,7 +39,7 @@ document.querySelectorAll('a[href^="#"]')
 
 📦 **Unity packages from today's class:**
 > 
-> - Class Demo: [Custom Dialogue System in Unity using C# scripts and Trigger Event Handlers](https://drive.google.com/file/d/1gJ0TIe_eD4ZOvHYbarFxefn4aez9BAld/view?usp=drive_link) -- Note: Player movement is controlled by keyboard buttons Q W E R; Dialogue Advancement uses spacebar key. 
+> - Tutorial notes for Simple Dialogue in Unity and Ink: [https://docs.google.com/document/d/1VpHp0g0Dpfd4cAGEDOh3MSzD-7VRnkYn79OPog-YCiU/edit?usp=sharing]
 
 <br>
 
@@ -51,8 +51,8 @@ document.querySelectorAll('a[href^="#"]')
 >     - Typewriter effect: [https://youtu.be/_nRzoTzeyxU?t=821](https://youtu.be/_nRzoTzeyxU?t=821)
 >     - Dynamic scaling for Dialogue Background Image: [https://www.youtube.com/watch?v=K13WnNL1OYM](https://www.youtube.com/watch?v=K13WnNL1OYM)
 > - Other tools for interactive text in Unity:
->     - [Ink](https://www.inklestudios.com/ink/), by Inkle, with [Unity integration asset](https://assetstore.unity.com/packages/tools/integration/ink-integration-for-unity-60055).
 >     - [Twine](https://twinery.org/), with Unity integration using [Cradle](https://github.com/daterre/Cradle). 
+>     - [Yarn Spinner Unity Package](https://docs.yarnspinner.dev/using-yarnspinner-with-unity/installation-and-setup#install-via-the-unity-package-manager-1)
 
 <br>
 

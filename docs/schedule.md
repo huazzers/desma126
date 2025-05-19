@@ -57,6 +57,6 @@
 | W5  | **04/29**</br><p>Tutorial: [Input Systems, State Machines, Events](./7-inputsystem-statemachine-event.md)</p> | **05/01**</br><p>Tutorial: [Statics, Scenes, Sounds, VFX](./8-statics-scenes-sounds-vfx.md)</p>|
 | W6  | **05/06**</br><p><mark class="due">📌 DUE: Project 2 Prototype Playtest</mark></p><p>Tutorial: [Animation, Coroutines, Persistent Data](./9-animation-coroutines-persistentdata.md)</p> | **05/08**</br><p>Tutorial: [Sprites and Video Players](./10-sprites-videoplayers.md)</p><p>Studio Time</p>|
 | W7  | **05/13**</br><p><mark class="due">📌 DUE: Project 2</mark></p><p>Project 2 Crit</p> | **05/15**</br><p>Project 2 Crit (cont.) </p><p><mark class="assign">▶️ ASSIGN: [Project 3](./project-3.md), [Homeplay 3 (Extra Credit)](./readings-and-homeplays.md/#homeplay-3)</mark></p>|
-| W8  | **05/20**</br><p>Tutorial: Interactive Text</p> | **05/22**</br><p><mark class="due">📌 DUE: Homeplay 3, Project 3 Sketch</mark></p><p>Tutorial: More Cameras, Cinemachine</p>|
+| W8  | **05/20**</br><p>Tutorial: [Interactive Text](./12-interactive-text.md)</p> | **05/22**</br><p><mark class="due">📌 DUE: Homeplay 3, Project 3 Sketch</mark></p><p>Tutorial: More Cameras, Cinemachine</p>|
 | W9  | **05/27**</br><p>Tutorial: Inventory Database</p> | **05/29**</br><p>Studio Time</p>|
 | W10  | **06/03**</br><p>Studio Time</p> | **06/05**</br><p><mark class="due">📌 DUE: Project 3</mark></p><p>Project 3 Crit</p> |
