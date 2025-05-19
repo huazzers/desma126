@@ -827,4 +827,4 @@ Yarn Spinner's Unity package also includes additional sample scenes that demonst
 
 ## Some course reminders
 
-- **Project 3 Sketch** is due Thursday.
+- **Homeplay 3 (Extra Credit)** and **Project 3 Sketch** is due Thursday.
