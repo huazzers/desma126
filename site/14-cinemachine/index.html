@@ -1,0 +1,526 @@
+<!doctype html>
+<html data-bs-theme="light">
+    <head>
+                <title>Sprites in 2.5D, Videoplayers, Cinemachine - 👾 DESMA126 Game Engine</title>
+
+            <meta charset="utf-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+            
+            
+            
+
+            
+                <link  rel="icon" type="image/x-icon" href="../assets/img/favicon.ico">
+            
+            <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fira+Mono:400,700">
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+            <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+            <link rel="stylesheet" href="../assets/css/root.min.css">
+            <link rel="stylesheet" href="../assets/css/main.min.css">
+            <link rel="stylesheet" href="../assets/css/media.min.css">
+            <link rel="stylesheet" href="../assets/css/mkdocstrings.min.css">
+                <link href="../extra.css" rel="stylesheet">
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+                <script src="../search/main.js"></script>
+
+            
+                
+            
+    </head>
+
+    <body>
+        <div class="container py-3">
+            <header>
+                    <!-- block header -->
+<nav class="navbar navbar-expand-xl border-bottom">
+    <div class="container-fluid">
+        
+
+        
+            <span class=" fs-4 title-color site-name" id="component-site-name" style="text-transform: uppercase;">👾 DESMA126 Game Engine</span>
+        
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsMenu"
+            aria-controls="navbarsMenu" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse flex-column ml-auto" id="navbarsMenu">
+            <ul class="navbar-nav">
+
+                <!-- block menu -->
+                <li class="nav-item">
+                    <!-- block menu -->
+    
+        <li class="nav-item" id="component-menu">
+            <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="
+                            nav-link text-gray text-decoration-none" href="..">[🏠 Home]</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="
+                            nav-link text-gray text-decoration-none" href="../syllabus/">[📜 Syllabus]</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="
+                            nav-link text-gray text-decoration-none" href="../schedule/">[📅 Schedule]</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="
+                            nav-link dropdown-toggle text-decoration-none" href="#" data-bs-toggle="dropdown">[📌 Assignments]</a>
+                            <ul class="dropdown-menu">
+                                    <!-- block dropdown-menu -->
+    <li>
+        <a href="../how-to-submit/" class="dropdown-item text-decoration-none ">How To Submit</a>
+    </li>
+<!-- endblock -->
+                                    <!-- block dropdown-menu -->
+    <li>
+        <a href="../readings-and-homeplays/" class="dropdown-item text-decoration-none ">Readings & Homeplays</a>
+    </li>
+<!-- endblock -->
+                                    <!-- block dropdown-menu -->
+    <li>
+        <a href="../project-1/" class="dropdown-item text-decoration-none ">Project 1</a>
+    </li>
+<!-- endblock -->
+                                    <!-- block dropdown-menu -->
+    <li>
+        <a href="../project-2/" class="dropdown-item text-decoration-none ">Project 2</a>
+    </li>
+<!-- endblock -->
+                                    <!-- block dropdown-menu -->
+    <li>
+        <a href="../project-3/" class="dropdown-item text-decoration-none ">Project 3</a>
+    </li>
+<!-- endblock -->
+                            </ul>
+                        </li>
+            </ul>
+        </li>
+<!-- endblock -->
+                </li>
+                <!-- endblock -->
+
+                <!-- block search -->
+                <li class="nav-item">
+                    <a class="collapsed" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+                        <div class="md-search-icon">
+                            <i class="fa fa-search" aria-hidden="true"></i>
+                        </div>
+                    </a>
+                </li>
+                <!--  endblock -->
+
+                <!-- block source -->
+                <li class="nav-item">
+                    
+                </li>
+                <!--  endblock -->
+            </ul>
+        </div>
+    </div>
+</nav>
+<!--  endblock -->
+            </header>
+
+            <main><!-- block search -->
+<div class="collapse" id="collapseExample">
+    <div role="search" class="search-box">
+        <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+            <input type="text" name="q" class="search-query"
+            placeholder="Search docs" title="Type search term here" />
+        </form>
+    </div>
+</div>
+<!-- endblock -->
+
+                
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-3 d-none d-md-block" id="component-sidebar">
+                                    <!-- block sidebar -->
+<div class="navbar-expand-md" role="complementary">
+    
+    <div class="sidebar navbar-collapse collapse card">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="1"><a href="#sprites-in-25d-video-players-cinemachine" class="nav-link">Sprites in 2.5D, Video players, Cinemachine</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#sprites-in-25d" class="nav-link">Sprites in 2.5D</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#video-player-component" class="nav-link">Video Player Component</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#switching-between-multiple-cameras" class="nav-link">Switching between Multiple Cameras</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#cinemachine" class="nav-link">Cinemachine</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div>
+<!-- endblock -->
+                            </div>
+                            <div class="col-md-9 col-12" id="component-content">
+                                    <!-- block content -->
+<section class="container post" id="component-content">
+    <article>
+        <header>
+            
+            
+        </header>
+        <p><script>hljs.highlightAll();</script>
+<!--jump to anchor tag adjusted to header height offset-->
+<script>
+// Get the header element
+let header = document.querySelector('header');
+
+// Get the height of the header
+document.querySelectorAll('a[href^="#"]')
+.forEach(function (anchor) {
+    anchor.addEventListener('click', 
+    function (event) {
+        event.preventDefault();
+
+        // Get the target element that 
+        // the anchor link points to
+        let target = document.querySelector(
+            this.getAttribute('href')
+        );
+
+        let headerHeight = header.offsetHeight*2;
+
+        let targetPosition = target
+            .getBoundingClientRect().top - headerHeight;
+
+        window.scrollTo({
+            top: targetPosition + window.scrollY,
+            behavior: 'smooth'
+        });
+    });
+});
+</script>
+
+<h1 id="sprites-in-25d-video-players-cinemachine">Sprites in 2.5D, Video players, Cinemachine</h1>
+<hr />
+<p>📦 <strong>Unity packages from today's class:</strong></p>
+<blockquote>
+<ul>
+<li><a href="https://drive.google.com/file/d/1Zfs8qNNDYjaI_TTR2N7eV2QA2gUOnuMo/view?usp=drive_link"><strong>Class Demo</strong></a>, including examples of Sprites that rotate towards the camera, Video Players, Simple Multiple Camera Setup and Cinemachine</li>
+</ul>
+</blockquote>
+<p><br></p>
+<p>📚 <strong>Other relevant resources to today's topic:</strong></p>
+<blockquote>
+<ul>
+<li><a href="https://docs.unity3d.com/6000.1/Documentation/Manual/urp/cameras-multiple.html"><strong>Configuring Multiple Cameras in URP</strong></a>, including camera stacking, split-screen rendering, and using different post-processing for separate cameras.</li>
+<li>Intro to Cinemachine Video tutorials by iHeartGameDev: an overview of Cinemachine's features and properties. <ul>
+<li><a href="https://www.youtube.com/watch?v=P_ibDJhFVMU"><strong>Cinemachine Overview and Brain Explained</strong></a></li>
+<li><a href="https://www.youtube.com/watch?v=asruvbmUyw8"><strong>Cinemachine Virtual Cameras Explained</strong></a></li>
+</ul>
+</li>
+</ul>
+</blockquote>
+<p><br></p>
+<hr />
+<h2 id="sprites-in-25d">Sprites in 2.5D</h2>
+<figure>
+<img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.freegameplanet.com%2Fwp-content%2Fuploads%2F2016%2F10%2FPaper-Mario-3D-Land.gif&f=1&nofb=1&ipt=7027f4585a3d0053dfcb732e9a0ba61cc657f6799e9bf7c92b73b4d4bd6df1bd">
+<figcaption> -- Paper Mario 3D Land. </figcaption>
+</figure>
+
+<p>You may consider working with 2D sprites in 3D space for your projects. </p>
+<p>Here's some approaches you may consider:</p>
+<h3 id="using-the-sprite-component-on-a-3d-object">Using the Sprite Component on a 3D Object</h3>
+<p>If you're applying a sprite to a 3D object (let's say a player gameobject), I recommend attaching the sprite renderer component <strong>inside a separate gameobject</strong>, then <strong>parent it to your player GameObject</strong>. This is so that we can reorient our sprite independently of the player parent group's transform component. </p>
+<blockquote>
+<ul>
+<li><strong>Parent Gameobject</strong> with scripts for player movement, player info, etc. <ul>
+<li><strong>Child Gameobject</strong> with Sprite Renderer component and sprite-related scripts (eg. rotating towards player camera, sprite switcher)</li>
+</ul>
+</li>
+</ul>
+</blockquote>
+<p><br></p>
+<h3 id="rotate-sprite-towards-camera">Rotate Sprite Towards Camera</h3>
+<p>One common technique for 2.5D games is to use <strong>billboarding</strong>, which forces the sprite to face the camera at a perpendicular angle.</p>
+<p>This method uses the <a href="https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Vector3.RotateTowards.html">Vector3.RotateTowards()</a> function to rotate sprites towards the camera. </p>
+<pre><code class="language-csharp">public class RotateTowardsPlayer : MonoBehaviour
+{
+    public float rotationSpeed;
+
+    //Late update happens after update. 
+    private void LateUpdate()
+    {
+        //Camera.main is a method for getting your camera that's tagged &quot;MainCamera&quot; 
+        //typically only a single MainCamera exists in your scene
+        //make sure to tag your player camera as MainCamera.
+
+        //first get directional vector3 from this object to camera position.
+        Vector3 targetDirection = Camera.main.transform.position - transform.position;
+
+        float step = rotationSpeed * Time.deltaTime;
+
+        //Rotate the forward vector towards the target direction by one step
+        Vector3 newDirection = Vector3.RotateTowards(transform.forward, targetDirection, step, 0.0f);
+
+        //rotate our object along this new direction.
+        //here, i'm setting the y-vector as 0 so it rotates along the world Y-axis.
+        transform.rotation = Quaternion.LookRotation(new Vector3(newDirection.x,0,newDirection.z));
+    }
+}
+</code></pre>
+<p><br></p>
+<p>...or if you can use the <a href="https://docs.unity3d.com/6000.0/Documentation/ScriptReference/Transform.LookAt.html">Transform.LookAt</a> method to rotate your sprite towards the camera without setting a prior rotation speed (ie. there won't be any transition delay during a change in rotation.)</p>
+<pre><code class="language-csharp">void LateUpdate(){
+    transform.LookAt(Camera.main.transform);
+}
+</code></pre>
+<p><br></p>
+<hr />
+<h2 id="video-player-component">Video Player Component</h2>
+<blockquote>
+<p>Read the documentation for the video player component on <a href="https://docs.unity3d.com/2022.3/Documentation/Manual/class-VideoPlayer.html"><strong>Unity's Manual</strong></a>.</p>
+</blockquote>
+<h3 id="importing-a-video-into-your-assets-folder">Importing a Video into your Assets folder.</h3>
+<blockquote>
+<p>Check out the following documentation on Unity's Manual: </p>
+<ul>
+<li><a href="https://docs.unity3d.com/2022.3/Documentation/Manual/VideoSources-FileCompatibility.html"><strong>video file compatibilities</strong></a> across different target platforms;</li>
+<li><a href="https://docs.unity3d.com/2022.3/Documentation/Manual/VideoTransparency.html"><strong>video transparency support</strong></a>, if you're using videos with alpha channel renders. </li>
+</ul>
+</blockquote>
+<p>Select the video clip in your assets folder. Make sure to tick the checkbox for <strong>"Transcode"</strong> in the Inspector panel, and then hit <strong>Apply</strong>.</p>
+<p><img alt="" src="../img/videotranscode.jpg" /></p>
+<p><br></p>
+<p>The simplest way of attaching a video onto a mesh object is to add a video player component, then attach the transcoded video clip asset inside the video player as a "Video Clip". </p>
+<p>The default render mode should be set to "Material Override", which replaces the current material base texture with the video. </p>
+<figure>
+    <img src="../img/videoplayermaterialoverridelit.gif">
+    <figcaption>-- Video Player on different 3D primitive objects.
+    </figcaption>
+</figure>
+
+<p><br></p>
+<h3 id="video-player-properties">Video Player Properties</h3>
+<p><img alt="" src="../img/videoplayer.jpg" /></p>
+<p>Here are some notable properties to take note of when setting up your video player:</p>
+<ul>
+<li><strong>Source</strong>: Defaults to "Video Clip." You may change this to URL if you want to paste an online video link -- note that you may need Wi-fi access during runtime for your video to play. </li>
+<li><strong>Play On Awake</strong>: Automatically plays the video at the start of the scene. To manually trigger the video playback, call the <a href="https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Video.VideoPlayer.Play.html">Play()</a> command from the Video Player class in a C# script. </li>
+<li><strong>Loop</strong>: loops the video playback.</li>
+<li><strong>Playback speed</strong>: Defaults at 1. Change this number if you want the video to play faster (higher float) or slower (lower float).</li>
+<li><strong>Render Mode</strong>: Defaults to "Material Override". More info about using other render modes are listed in the sections below. </li>
+<li><strong>Alpha</strong>: Defaults to 1. Transparency level of the video. </li>
+<li><strong>Audio Output Mode</strong>: Defaults to "Audio Source". You may set a different Audio Source, or set the Audio Output Mode to "None" if you want the video to play without any audio tracks. </li>
+</ul>
+<p><br></p>
+<h3 id="video-to-render-texture-workflow">Video to Render Texture workflow</h3>
+<p>If you want to further customise how the video renders onto a material, you may consider setting the video player output to a <strong>render texture</strong> instead. </p>
+<p>The following demonstrates the workflow of this method: </p>
+<table>
+<thead>
+<tr>
+<th>Video Player</th>
+<th>→</th>
+<th>Render Texture</th>
+<th>→</th>
+<th>Texture Map on Material</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Takes a video clip and renders its playback according to the selected render mode, which in this case would be "Render Texture".</td>
+<td></td>
+<td>An asset that receives the video player's output as a texture</td>
+<td></td>
+<td>Render texture can be plugged into a material's base colour, normal, emission, etc.</td>
+</tr>
+</tbody>
+</table>
+<p><br></p>
+<p><strong>STEP BY STEP INSTRUCTIONS:</strong></p>
+<ol>
+<li>Create a video player component in an empty GameObject in your scene. You will only need <strong>one video player component per video clip</strong> in your scene, i.e. you don't need a video player component on every mesh object that's rendering the video. 
+<br><br>Set the <strong>render mode</strong> to "Render Texture."<br><br><img src="../img/rendertexture.jpg"><br><br></li>
+<li>In your assets folder, create a <strong>Render Texture</strong> asset. You may set the size of the texture to match your video clip's resolution or aspect ratio.<br><br><img src="../img/rendertexture-1.gif"><br><br></li>
+<li>Attach this render texture to the <strong>Target Texture</strong> property in the video player component. <br><br><img src="../img/rendertexture-2.jpg"><br><br></li>
+<li>Create a new <strong>Material</strong> asset, then attach your render texture asset as a texture for the material's base colour property. This workflow also allows you the option to plug in the video texture to other material properties besides the base colour. 
+<br><br><img src="../img/rendertexture-3.gif"><br><br></li>
+</ol>
+<p><br></p>
+<h3 id="video-to-camera-plane">Video to Camera Plane</h3>
+<p>Setting the video player's render mode to <strong>"Camera Far Plane"</strong> allows you to project the video along the far plane of the selected camera view. This could be an option for playing a video in the camera's background.</p>
+<p><img alt="" src="../img/camerafarplane.gif" /></p>
+<p><br></p>
+<p>Setting the video player's render mode to <strong>"Camera Near Plane"</strong> allows you to project the video along the nearest plane of the selected camera view. This could be an option for playing a video over other objects in the scene. </p>
+<p><img alt="" src="../img/cameranearplane.gif" /></p>
+<p><br></p>
+<hr />
+<h2 id="switching-between-multiple-cameras">Switching between Multiple Cameras</h2>
+<p>For each camera object in your scene, set the gameObject tag to be "MainCamera". </p>
+<p>Then, we can use a public method to toggle select cameras on or off. <code>Camera.main</code> will refer to whichever camera is currently active or has the highest priority level (available in the Camera component &gt; Rendering &gt; Priority).</p>
+<pre><code class="language-csharp">using UnityEngine;
+
+public class CameraHandler : MonoBehaviour
+{
+    public void SwitchMainCamTo(Camera cam)
+    {
+        //disable old camera
+        Camera.main.enabled = false;
+
+        //enable new camera
+        cam.enabled = true;
+
+    }
+}
+</code></pre>
+<p><br></p>
+<hr />
+<h2 id="cinemachine">Cinemachine</h2>
+<blockquote>
+<p>Here's the <a href="https://docs.unity3d.com/Packages/com.unity.cinemachine@2.3/api/Cinemachine.html"><strong>scripting API</strong></a> and <a href="https://docs.unity3d.com/Packages/com.unity.cinemachine@2.3/manual/index.html"><strong>documentation manual</strong></a> for Cinemachine 2. It's a bit difficult to sift through, so you may have better luck by directly looking up your Cinemachine question in a search browser or community forum... </p>
+<p>If you need an overview of Cinemachine's components and properties, I recommend these tutorials by iHeartGameDev:</p>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=P_ibDJhFVMU"><strong>Cinemachine Overview and Brain Explained</strong></a></li>
+<li><a href="https://www.youtube.com/watch?v=asruvbmUyw8"><strong>Cinemachine Virtual Cameras Explained</strong></a></li>
+</ul>
+</blockquote>
+<h3 id="installing-cinemachine-from-the-package-manager">Installing Cinemachine from the Package Manager</h3>
+<p>Cinemachine is available as a package on the Unity Registry. </p>
+<p>Go to <strong>Window &gt; Package Manager &gt; Install Cinemachine from the Unity Registry</strong></p>
+<p>⚠️ <strong>IF YOU'RE USING UNITY 6</strong>, the default Cinemachine package is currently version 3, which will look entirely different from what's in the class notes! We want to be on <strong>Cinemachine Version 2.0+</strong> for this class. When installing Cinemachine from the Package Manager, go to <strong>Version History</strong> and <strong>install the latest version of Cinemachine 2.0 release</strong>. </p>
+<p><img alt="" src="../img/installcinemachinev2.jpg" /></p>
+<p><br></p>
+<h3 id="how-cinemachine-works">How Cinemachine works</h3>
+<p>There are two main components that you will encounter when using Cinemachine -- the <strong>Cinemachine Brain</strong> and the <strong>Cinemachine Virtual Camera</strong>.</p>
+<figure>
+    <img src="../img/howcinemachineworks.jpg">
+    <figcaption>-- Screenshot taken from iHeartGameDev's <a href="https://www.youtube.com/watch?v=asruvbmUyw8">Cinemachine Tutorial Video.</a></figcaption>
+</figure>
+
+<p>In Cinemachine, we're only controlling a single camera object that has a <strong>Cinemachine Brain</strong> component attached to it. The Cinemachine Brain forces our camera to match the settings of a selected virtual camera from our scene, including instructions for transitioning from one virtual camera to another. </p>
+<p><strong>When using Cinemachine, you won't be able to change your camera's orientation from its transform properties -- you would have to make those changes in the corresponding Cinemachine Virtual Camera component.</strong></p>
+<p><br></p>
+<p><strong>Cinemachine virtual cameras</strong> behave like independent camera stations that can be simultaneously active in our scene, but only become "live" when their priority level is set to the highest order. Virtual cameras contain specific instructions for how our camera should behave, including: </p>
+<ul>
+<li>the follow target, ie. which object to follow for positional tracking;</li>
+<li>the look target, ie. which object our camera should aim at;</li>
+<li>camera settings like field of vision (FOV) and mode overrides (eg. perspective, orthogonal);</li>
+<li>camera shaking presets using noise.</li>
+</ul>
+<p><br></p>
+<p>The main benefit of using Cinemachine is that it allows us to achieve the cinematic effects of smoothly interpolated camera transitions and object tracking without having to code everything from scratch.</p>
+<p><br></p>
+<h3 id="setting-up-virtual-cameras">Setting up Virtual Cameras</h3>
+<p>Right click in your scene hierarchy, then go to <strong>Cinemachine &gt; Virtual Camera</strong>. This will make two changes to our scene:</p>
+<ol>
+<li>A new GameObject with a Virtual Camera component is added to our scene</li>
+<li>The main camera now has a Cinemachine Brain component, as indicated by the tiny logo to the right of its name.</li>
+</ol>
+<p><img alt="" src="../img/cinemachinebrainicon.jpg" /></p>
+<p><br></p>
+<p>Here are some features you may consider using in these two components: </p>
+<h4 id="cinemachine-virtual-camera-component">Cinemachine Virtual Camera Component</h4>
+<p><img alt="" src="../img/cinemachinevcam.jpg" /></p>
+<h5 id="previewing-virtual-cameras"><u>Previewing Virtual Cameras</u></h5>
+<ul>
+<li><strong>Solo button</strong>: an easy way to selectively previewing virtual cameras one by one. </li>
+<li><strong>Save During Play</strong>: saves any changes made to your virtual camera during Play Mode. </li>
+<li><strong>Game Window Guides</strong>: useful for composing the camera's body/aim settings for Dead Zone and Soft Zone (availability is dependent on the selected mode.)</li>
+</ul>
+<h5 id="calibrating-multiple-cameras"><u>Calibrating Multiple Cameras</u></h5>
+<ul>
+<li><strong>Priority</strong>: when there are multiple active virtual cameras in the scene, the Cinemachine Brain will prioritise virtual cameras with higher priority values. </li>
+<li><strong>Standby Update</strong>: Tells the virtual camera whether / how often to update when it is not live.</li>
+</ul>
+<h5 id="setting-up-follow-targets"><u>Setting up follow targets</u></h5>
+<ul>
+<li><strong>Follow</strong>: the virtual camera's position will follow this object. </li>
+<li><strong>Body</strong>: determines the movement of your virtual camera while it is following an object. Defaults to "Transposer", which allows us to set the offset and damping. Can set this to "None" if we're not following anything. </li>
+</ul>
+<h5 id="setting-up-look-at-targets"><u>Setting up look at targets</u></h5>
+<ul>
+<li><strong>Look At</strong>: the virtual camera will always aim at this object.</li>
+<li><strong>Aim</strong>: determines the movement of your virtual camera while it is aiming at an object. Defaults to "Composer", which allows us to set the offset and damping. Can set this to "Do Nothing" if we're not looking at anything. </li>
+</ul>
+<h5 id="other-camera-features"><u>Other camera features</u></h5>
+<ul>
+<li><strong>Mode Override</strong> (inside Lens &gt; Advanced): forces the camera mode to be perspective, orthogonal, etc.</li>
+<li><strong>On Camera Live</strong> (inside Transitions): a Unity Event that gets invoked when the camera is live. You can add public methods here to listen for this event.</li>
+<li><strong>Noise</strong>: adds a camera shake effect. </li>
+</ul>
+<p><br></p>
+<h4 id="cinemachine-brain-component">Cinemachine Brain Component</h4>
+<p><img alt="" src="../img/cinemachinebrain.jpg" /></p>
+<h5 id="camera-transitions"><u>Camera Transitions</u></h5>
+<ul>
+<li><strong>Default Blend</strong>: The default interpolation when transitioning across any two virtual cameras. </li>
+<li><strong>Custom Blends</strong>: You can create a custom Cinemachine Blend asset to set different blends for different camera transitions. </li>
+</ul>
+<h5 id="events"><u>Events</u></h5>
+<ul>
+<li><strong>Camera Cut Event</strong>: a Unity Event that gets invoked when a cut transition happens. </li>
+<li><strong>Camera Activated Event</strong>: a Unity Event that gets invoked at the start of a transition blend between two virtual cameras.</li>
+</ul>
+<p><br></p></p>
+    </article>
+</section>
+<!-- endblock -->
+                            </div>
+                        </div>
+                    </div>
+                
+                
+            </main>
+
+            
+                    <!-- block preview -->
+<!-- endblock -->
+            
+
+            
+                    <!-- block footer -->
+<footer class="pt-4 my-md-5 pt-md-5 border-top" id="component-footer">
+    <div class="row">
+        <div class="col-12 col-md">
+                <!-- block copyright -->
+
+    <small class="d-block mb-3">
+        Made with
+        <a href="https://github.com/FernandoCelmer/mkdocs-simple-blog" target="_blank" rel="noopener">
+            Simple Blog for MkDocs
+        </a>
+    </small>
+
+<!-- endblock -->
+        </div>
+    </div>
+</footer>
+<!-- endblock -->
+            
+        </div>
+
+            <script>var base_url = '..';</script>
+            <script src="../assets/js/jquery-3.3.1.slim.min.js""></script>
+            <script src="../assets/js/bootstrap.bundle.min.js""></script>
+            <script src="../assets/js/main.min.js""></script>
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js" defer></script>
+                <script src="../search/main.js" defer></script>
+
+    </body>
+
+</html>
