@@ -476,7 +476,56 @@ public class CameraHandler : MonoBehaviour
 <li><strong>Camera Cut Event</strong>: a Unity Event that gets invoked when a cut transition happens. </li>
 <li><strong>Camera Activated Event</strong>: a Unity Event that gets invoked at the start of a transition blend between two virtual cameras.</li>
 </ul>
-<p><br></p></p>
+<p><br></p>
+<h3 id="switching-between-different-virtual-cameras">Switching between different virtual cameras</h3>
+<p>Similar to regular Unity camera objects, you could switch between virtual cameras by activating / deactivating them. </p>
+<p>Whenever we want to access any Cinemachine-related objects using scripts, we need to add <strong>the Cinemachine namespace</strong> at the top of our script.</p>
+<pre><code class="language-csharp">using UnityEngine;
+using Cinemachine; //we need this namespace to access Cinemachine's scripting library. 
+
+public class CinemachineHandler : MonoBehaviour
+{
+    public void SwitchVirtualCameraTo(CinemachineVirtualCamera vcam)
+    {
+        //NOTE: This script only works for Cinemachine 2.0+; 
+
+        //ICinemachineCamera refers to the interface of a cinemachine camera. 
+        //here, we're getting the current active virtual camera from the cinemachine brain. 
+        ICinemachineCamera currentCam = CinemachineCore.Instance.GetActiveBrain(0).ActiveVirtualCamera;
+
+        currentCam.VirtualCameraGameObject.SetActive(false);
+        vcam.gameObject.SetActive(true);
+    }
+}
+
+</code></pre>
+<p><br></p>
+<p>...or if you need your virtual cameras to be active at all times, you could change their priority level instead. </p>
+<pre><code class="language-csharp">using UnityEngine;
+using Cinemachine; //we need this namespace to access Cinemachine's scripting library. 
+
+public class CinemachineHandler : MonoBehaviour
+{
+    public void SwitchVirtualCameraTo(CinemachineVirtualCamera vcam)
+    {
+        //NOTE: This script only works for Cinemachine 2.0+; 
+
+        //ICinemachineCamera refers to the interface of a cinemachine camera. 
+        //here, we're getting the current active virtual camera from the cinemachine brain. 
+        ICinemachineCamera currentCam = CinemachineCore.Instance.GetActiveBrain(0).ActiveVirtualCamera;
+
+        //get the current active camera's priority level
+        int priorityLevel = currentCam.Priority;
+
+        //decrease the current camera's priority level by 1.
+        currentCam.Priority -=1;
+
+        //assign the current camera's original priority level 
+        //to the next camera that we want to switch to
+        vcam.Priority = priorityLevel;
+    }
+}
+</code></pre></p>
     </article>
 </section>
 <!-- endblock -->

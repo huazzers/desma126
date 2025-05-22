@@ -349,3 +349,61 @@ Here are some features you may consider using in these two components:
 - **Camera Activated Event**: a Unity Event that gets invoked at the start of a transition blend between two virtual cameras.
 
 <br>
+
+### Switching between different virtual cameras
+
+Similar to regular Unity camera objects, you could switch between virtual cameras by activating / deactivating them. 
+
+Whenever we want to access any Cinemachine-related objects using scripts, we need to add **the Cinemachine namespace** at the top of our script.
+
+```csharp
+using UnityEngine;
+using Cinemachine; //we need this namespace to access Cinemachine's scripting library. 
+
+public class CinemachineHandler : MonoBehaviour
+{
+    public void SwitchVirtualCameraTo(CinemachineVirtualCamera vcam)
+    {
+        //NOTE: This script only works for Cinemachine 2.0+; 
+
+        //ICinemachineCamera refers to the interface of a cinemachine camera. 
+        //here, we're getting the current active virtual camera from the cinemachine brain. 
+        ICinemachineCamera currentCam = CinemachineCore.Instance.GetActiveBrain(0).ActiveVirtualCamera;
+
+        currentCam.VirtualCameraGameObject.SetActive(false);
+        vcam.gameObject.SetActive(true);
+    }
+}
+
+```
+
+<br>
+
+...or if you need your virtual cameras to be active at all times, you could change their priority level instead. 
+
+```csharp
+using UnityEngine;
+using Cinemachine; //we need this namespace to access Cinemachine's scripting library. 
+
+public class CinemachineHandler : MonoBehaviour
+{
+    public void SwitchVirtualCameraTo(CinemachineVirtualCamera vcam)
+    {
+        //NOTE: This script only works for Cinemachine 2.0+; 
+
+        //ICinemachineCamera refers to the interface of a cinemachine camera. 
+        //here, we're getting the current active virtual camera from the cinemachine brain. 
+        ICinemachineCamera currentCam = CinemachineCore.Instance.GetActiveBrain(0).ActiveVirtualCamera;
+
+        //get the current active camera's priority level
+        int priorityLevel = currentCam.Priority;
+
+        //decrease the current camera's priority level by 1.
+        currentCam.Priority -=1;
+
+        //assign the current camera's original priority level 
+        //to the next camera that we want to switch to
+        vcam.Priority = priorityLevel;
+    }
+}
+```
