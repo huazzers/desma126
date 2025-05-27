@@ -42,13 +42,15 @@ document.querySelectorAll('a[href^="#"]')
 
 📦 **Unity packages from today's class:**
 > 
-> - Class Demo: [**Inventory System (Fixed and Dynamic) using Scriptable Objects, Lists, and/or Arrays**](https://drive.google.com/file/d/1aHxO1kaaCEIQI3RIN5HpIUQEYFpmUEQH/view?usp=sharing)
+> - Class Demo: [**Simple Inventory Database using Scriptable Objects and Arrays**](https://drive.google.com/file/d/1p6klt8QtXuGtnW0twLf79jUP802EhIxe/view?usp=sharing)
+>     - The scripts for this package are also available as a .zip here: [https://drive.google.com/file/d/1oFrPHVK3bQh-s26JzEk3Yfs8yvf584TC/view?usp=sharing](https://drive.google.com/file/d/1oFrPHVK3bQh-s26JzEk3Yfs8yvf584TC/view?usp=sharing)
+>     - For dynamic inventories using Lists, refer to this older package example that I made for this lesson in Fall 2024: [**Inventory System (Fixed and Dynamic) using Scriptable Objects, Lists, and/or Arrays**](https://drive.google.com/file/d/1aHxO1kaaCEIQI3RIN5HpIUQEYFpmUEQH/view?usp=sharing)
 
 <br>
 
 📚 **Other relevant resources to today's topic:**
 >
-> - More on narrative and mechanical possibilities of Inventory, Collections, and Save Systems, listed under the [Requirements section of Project 3 page](./project-3.md/#inventory-database).
+> - More on narrative and mechanical possibilities of inventory databases, listed under the [Requirements section of Project 3 page](./project-3.md/#inventory-database).
 > - Recommended video tutorials:
 >     - Scrollable UI Panels -- could be used for your long Inventory lists! [https://www.youtube.com/watch?v=XJdtxELpbh8](https://www.youtube.com/watch?v=XJdtxELpbh8)
 
@@ -140,7 +142,7 @@ document.querySelectorAll('a[href^="#"]')
 
 
 
-## Making an Inventory System in Unity
+## Anatomy of an Inventory Database
 
 > This demo uses techniques mentioned in this gamedevbeginner article "[How to Make an Inventory System in Unity](https://gamedevbeginner.com/how-to-make-an-inventory-system-in-unity/)" 
 
@@ -151,6 +153,7 @@ When making inventory systems, you're typically dealing with three different ele
 1. **Item Data**: a definition of an item, such as name, sprite icon, description, uses/functions/effects, etc. 
 2. **Item Instance**: an instance of an item data that exists in your game scene, which may have unique characteristics from other instances of the same item type. 
 3. **Container**: a storage unit for containing a number of items, typically in a list or array.
+4. **UI Display Handler**: for visualising inventory information within the game.
 
 <br>
 
@@ -164,9 +167,9 @@ The setup for your inventory system will look differently depending on how your 
 
 Let's start by making a scriptable object for our item data. 
 
-### Item Data using Scriptable Objects
+## Item Data using Scriptable Objects
 
-#### Why use scriptable objects?
+### Why use scriptable objects?
 
 Scriptable objects are script asset templates that allow you to create instances of a script inside your project, not your scene. **Think of them as prefab templates for making multiple scripts of the same type.** However, unlike prefabs themselves, you aren't storing an entire GameObject inside your folder -- you're only storing data. And because scriptable objects live inside your project, they are accessible throughout multiple scenes in your game.
 
@@ -174,7 +177,7 @@ In this example, we can use scriptable objects to make a template for storing it
 
 <br>
 
-#### How to create a scriptable object
+### How to create a scriptable object
 
 1. **Create a C# script** called "ItemData", then open it.
 2. Replace `MonoBehaviour` with `ScriptableObject`. Then add the `[CreateAssetMenu]` attribute above this line -- this lets you create an instance of this scriptable object by right-clicking in your assets folder > **Create** > **Item Data**.
@@ -446,6 +449,121 @@ Here, because the items that will enter our inventory are predictable, we can st
 
 ---
 
+## Inventory UI Display Handler
+
+In my array example, I have a MonoBehaviour script for updating and displaying the inventory through images, panels, and buttons. 
+
+*Note: This script is taken from a different project, so the names may not match entirely with the example scripts above.*
+
+```csharp
+using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
+
+public class InventoryDisplayHandler : MonoBehaviour
+{
+    //drag in our inventory manager scriptable object from our assets.
+    public InventoryManager inventoryManager;
+
+    [Header("selected item display")]
+    
+    public GameObject selectedItemParentGroup;
+    public Image selectedItemImage;
+    public TextMeshProUGUI selectedItemName, selectedItemDescription;
+    int currentSelectedItem;
+
+    [Header("inventory item slots")]
+    public GameObject[] inventoryItemSlots;
+
+    private void Awake()
+    {
+        //initialise our inventory manager on awake. 
+        inventoryManager.ResetInventory();
+
+        //update our inventory UI display
+        UpdateInventoryItemSlots();
+    }
+
+    
+    public void UpdateInventoryItemSlots()
+    {
+        for (int i=0; i<inventoryItemSlots.Length; i++)
+        {
+            //if item has 1 or more qty
+            if (inventoryManager.inventory[i].qty > 0)
+            {
+                //show the item slot
+                if (!inventoryItemSlots[i].activeSelf)
+                {
+                    inventoryItemSlots[i].SetActive(true);
+                }
+
+                //update item sprite and color
+                inventoryItemSlots[i].GetComponent<Image>().sprite = inventoryManager.inventory[i].sprite;
+                inventoryItemSlots[i].GetComponent<Image>().color = inventoryManager.inventory[i].color;
+                inventoryItemSlots[i].transform.GetComponentInChildren<TextMeshProUGUI>().text = inventoryManager.inventory[i].qty.ToString();
+            } else
+            {
+                //item qty = 0
+                //hide the slot
+                if (inventoryItemSlots[i].activeSelf)
+                {
+                    inventoryItemSlots[i].SetActive(false);
+                }
+            }
+        }
+    }
+
+    //attached to the button OnClick functions of my inventory slots.
+    //  each slot is assigned a different index number to call inside the inspector.
+    public void UpdateItemInfoPanel(int index)
+    {
+        if (!selectedItemParentGroup.activeSelf)
+        {
+            selectedItemParentGroup.SetActive(true);
+        }
+
+        currentSelectedItem = index;
+
+        //update item info panel with data relevant to the selected item
+        selectedItemImage.sprite = inventoryManager.inventory[index].sprite;
+        selectedItemImage.color = inventoryManager.inventory[index].color;
+        selectedItemName.text = inventoryManager.inventory[index].itemName;
+        selectedItemDescription.text = inventoryManager.inventory[index].description;
+    }
+
+    //just for demonstration purposes, let's have a function to add a random item to our inventory
+    public void AddRandomItem()
+    {
+        //select a random item instance from inventoryManager
+        //and add 1 to its qty property.
+        inventoryManager.inventory[Random.Range(0, inventoryManager.inventory.Length)].qty++;
+        UpdateInventoryItemSlots();
+    }
+
+    //when we use an item, we want to reduce the item qty by 1 from the inventory database
+    //  (which IsRemovingLastItem is responsible for)
+    public void UseItem()
+    {
+        //add whatever function you want to happen when we use an item here
+
+        if (inventoryManager.IsRemovingLastItem(inventoryManager.inventory[currentSelectedItem]))
+        {
+            inventoryItemSlots[currentSelectedItem].SetActive(false);
+        }
+
+        UpdateInventoryItemSlots();
+
+        //close out the item info panel after using item.
+        selectedItemParentGroup.SetActive(false);
+
+    }
+}
+```
+
+---
+
 ## Some course reminders
 
-- To get credit for Homeplay 2 or Project 3 Sketch, email me your submission (this can be a short written response) by end of the day this Friday (Nov 22, 11:59P).
+- Check your email re: one-on-one meething schedules for the next two lessons. 
+- Student Experiences of Teaching (SET) Surveys are now accepting responses until Week 10 Saturday, June 7, 8a.m.
