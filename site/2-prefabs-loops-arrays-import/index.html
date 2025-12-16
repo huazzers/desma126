@@ -1,0 +1,583 @@
+<!doctype html>
+<html data-bs-theme="light">
+    <head>
+                <title>Prefabs, Loops, Arrays, Importing 2D and 3D Assets - 👾 DESMA126 Game Engine</title>
+
+            <meta charset="utf-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+            
+            
+            
+
+            
+                <link  rel="icon" type="image/x-icon" href="../assets/img/favicon.ico">
+            
+            <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fira+Mono:400,700">
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+            <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+            <link rel="stylesheet" href="../assets/css/root.min.css">
+            <link rel="stylesheet" href="../assets/css/main.min.css">
+            <link rel="stylesheet" href="../assets/css/media.min.css">
+            <link rel="stylesheet" href="../assets/css/mkdocstrings.min.css">
+                <link href="../extra.css" rel="stylesheet">
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+                <script src="../search/main.js"></script>
+
+            
+                
+            
+    </head>
+
+    <body>
+        <div class="container py-3">
+            <header>
+                    <!-- block header -->
+<nav class="navbar navbar-expand-xl border-bottom">
+    <div class="container-fluid">
+        
+
+        
+            <span class=" fs-4 title-color site-name" id="component-site-name" style="text-transform: uppercase;">👾 DESMA126 Game Engine</span>
+        
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsMenu"
+            aria-controls="navbarsMenu" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse flex-column ml-auto" id="navbarsMenu">
+            <ul class="navbar-nav">
+
+                <!-- block menu -->
+                <li class="nav-item">
+                    <!-- block menu -->
+<!-- endblock -->
+                </li>
+                <!-- endblock -->
+
+                <!-- block search -->
+                <li class="nav-item">
+                    <a class="collapsed" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+                        <div class="md-search-icon">
+                            <i class="fa fa-search" aria-hidden="true"></i>
+                        </div>
+                    </a>
+                </li>
+                <!--  endblock -->
+
+                <!-- block source -->
+                <li class="nav-item">
+                    
+                </li>
+                <!--  endblock -->
+            </ul>
+        </div>
+    </div>
+</nav>
+<!--  endblock -->
+            </header>
+
+            <main><!-- block search -->
+<div class="collapse" id="collapseExample">
+    <div role="search" class="search-box">
+        <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+            <input type="text" name="q" class="search-query"
+            placeholder="Search docs" title="Type search term here" />
+        </form>
+    </div>
+</div>
+<!-- endblock -->
+
+                
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-3 d-none d-md-block" id="component-sidebar">
+                                    <!-- block sidebar -->
+<div class="navbar-expand-md" role="complementary">
+    
+    <div class="sidebar navbar-collapse collapse card">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="1"><a href="#prefabs-loops-arrays-importing-2d-and-3d-assets" class="nav-link">Prefabs, Loops, Arrays, Importing 2D and 3D Assets</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#review-from-last-class" class="nav-link">Review from last class</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#exercise-from-last-class" class="nav-link">Exercise from last class</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#prefabs" class="nav-link">Prefabs</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#loops" class="nav-link">Loops</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#arrays" class="nav-link">Arrays</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#importing-3d-assets" class="nav-link">Importing 3D Assets</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#importing-2d-assets" class="nav-link">Importing 2D Assets</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#in-class-exercise" class="nav-link">In-class exercise</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#some-course-reminders" class="nav-link">Some course reminders</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div>
+<!-- endblock -->
+                            </div>
+                            <div class="col-md-9 col-12" id="component-content">
+                                    <!-- block content -->
+<section class="container post" id="component-content">
+    <article>
+        <header>
+            
+            
+        </header>
+        <p><script>hljs.highlightAll();</script>
+<!--jump to anchor tag adjusted to header height offset-->
+<script>
+// Get the header element
+let header = document.querySelector('header');
+
+// Get the height of the header
+document.querySelectorAll('a[href^="#"]')
+.forEach(function (anchor) {
+    anchor.addEventListener('click', 
+    function (event) {
+        event.preventDefault();
+
+        // Get the target element that 
+        // the anchor link points to
+        let target = document.querySelector(
+            this.getAttribute('href')
+        );
+
+        let headerHeight = header.offsetHeight*2;
+
+        let targetPosition = target
+            .getBoundingClientRect().top - headerHeight;
+
+        window.scrollTo({
+            top: targetPosition + window.scrollY,
+            behavior: 'smooth'
+        });
+    });
+});
+</script>
+
+<h1 id="prefabs-loops-arrays-importing-2d-and-3d-assets">Prefabs, Loops, Arrays, Importing 2D and 3D Assets</h1>
+<p>📦 <strong>Unity packages from today's class:</strong></p>
+<blockquote>
+<ul>
+<li>Exercise from last class: <a href="https://drive.google.com/file/d/1uBBVTtAAEvbKtbLRWtLmyPOb0eR1-lsm/view?usp=sharing"><strong>Solar System Generator</strong></a></li>
+<li><a href="https://drive.google.com/file/d/1sH16po2eEjkW3uxHKE4OTx0q28x1QpMh/view?usp=drive_link"><strong>Exquisite Corpse Demo</strong></a></li>
+<li>In-class exercise: <a href="https://drive.google.com/file/d/1xR83VQw-ZQqmZih9ZSWRj2UKqHl56O44/view?usp=sharing"><strong>Spawn Random Prefab at Random Position</strong></a><ul>
+<li>Spawn at random position within set maximum distance.</li>
+<li>Spawn at random position within set min-max range along X Y and Z axes.</li>
+<li>Spawn at random positions selected from a given array of positions (without repeats).</li>
+</ul>
+</li>
+</ul>
+</blockquote>
+<p>📚 <strong>Other relevant resources to today's topic:</strong></p>
+<blockquote>
+<ul>
+<li>Sample <a href="https://drive.google.com/file/d/12aXLuE8FMkveyTF5uzSK46hW1kOhXLQ_/view?usp=drive_link"><strong>3D Models</strong></a> and <a href="https://drive.google.com/file/d/1ApYp9t8fvPvWEHPQsjc5RsMTygZ3nKHA/view?usp=drive_link"><strong>2D Assets</strong></a> to practice asset import into Unity.</li>
+</ul>
+</blockquote>
+<hr />
+<p>Before we begin...</p>
+<h2 id="review-from-last-class">Review from last class</h2>
+<ul>
+<li>📌 <strong>Reading Response 1 is DUE today!</strong></li>
+<li><a href="https://docs.unity3d.com/Manual/GameObjects.html">Transform component</a> and its properties</li>
+<li><a href="https://docs.unity3d.com/Manual/UsingComponents.html">Vectors</a> and how to use them<ul>
+<li>Vector math operations and method functions</li>
+<li>Using vectors for procedural animation</li>
+</ul>
+</li>
+</ul>
+<hr />
+<h2 id="exercise-from-last-class">Exercise from last class</h2>
+<p><strong>How do we make a solar system that dynamically generates at the start of the scene:</strong></p>
+<ol>
+<li><strong>a random number of planets and moons;</strong></li>
+<li><strong>a set distance interval between each consecutive sibling planet?</strong></li>
+</ol>
+<iframe width="100%" height="315" src="https://www.youtube-nocookie.com/embed/GFa_E9BCoUg?si=qQja99oKoHmzb9t-&amp;controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+<iframe width="100%" height="315" src="https://www.youtube-nocookie.com/embed/2_GG6TGaoII?si=wz_ArkzXmQFZcVxl&amp;controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+<hr />
+<h2 id="prefabs">Prefabs</h2>
+<blockquote>
+<p>Read about <a href="https://docs.unity3d.com/Manual/Prefabs.html">Prefabs</a> in the Unity Manual.</p>
+</blockquote>
+<p>Prefabs allow you to <strong>store a GameObject and its information</strong> (including its components, property values, child objects, etc.) into your Unity project folder <strong>as a reusable Asset</strong>. </p>
+<p>This Prefab Asset can be used as a base template from which you can create and modify new Prefab instances in the scene.</p>
+<p><br></p>
+<h3 id="how-to-create-a-prefab-from-an-existing-gameobject-in-the-scene">How to create a Prefab from an existing GameObject in the scene</h3>
+<p><strong>Click and drag the GameObject from the Scene Hierarchy into your project folder panel.</strong></p>
+<p>The GameObject should now be marked with a blue icon, and have an arrow button to the right of its name that leads you to the Prefab editor.</p>
+<p><img alt="How To Make A GameObject Prefab" src="../img/makeprefab.gif" /></p>
+<p><br></p>
+<h3 id="how-to-instantiate-a-gameobject">How to Instantiate a GameObject</h3>
+<p>We use the <a href="https://docs.unity3d.com/ScriptReference/Object.Instantiate.html">Instantiate()</a> method function to <strong>spawn new instances of a GameObject</strong> in our scene.</p>
+<pre><code class="language-csharp">Instantiate(someGameObject);
+</code></pre>
+<p><br></p>
+<p>You could also <strong>pass a GameObject instance into a GameObject variable</strong>. This allows you to reference it later in your script. </p>
+<pre><code class="language-csharp">GameObject obj = Instantiate(someGameObject);
+
+//let's say we want to change the position of this instance
+obj.transform.position = someVector;
+
+//or set it to a new parent
+obj.transform.parent = someParentObject;
+
+</code></pre>
+<p><br></p>
+<p>The Instantiate() method can also be called in other ways that allow you to <strong>pass multiple parameters at once</strong>. </p>
+<p>The Unity Scripting API lists all the different ways you can declare the <a href="https://docs.unity3d.com/ScriptReference/Object.Instantiate.html">Instantiate()</a> function.</p>
+<p>For example:</p>
+<pre><code class="language-csharp">GameObject obj = Instantiate(
+    spawnThisGameObject, //GameObject
+    atSomePosition, //Vector3
+    atSomeQuaternionRotation, //Quaternion
+    underSomeParent); //Transform
+
+</code></pre>
+<p><br></p>
+<h3 id="instantiate-and-destroy-vs-setactive">Instantiate and Destroy VS SetActive()</h3>
+<p>If you need to completely remove a gameobject or component from the scene, you may use the <a href="https://docs.unity3d.com/6000.0/Documentation/ScriptReference/Object.Destroy.html">Destroy()</a> function like so:</p>
+<pre><code class="language-csharp">//removes the gameObject from the scene
+Destroy(gameObject);
+
+//removes a script component called &quot;ThisScript&quot; from the gameobject
+Destroy(GetComponent&lt;ThisScript&gt;());
+</code></pre>
+<p><br></p>
+<p>However, instantiating and destroying objects over and over again can add a toll on your build's performance. </p>
+<p>Whenever possible, you may want to opt for <strong>toggling objects' active state / components' enabled state</strong> in your scene instead. </p>
+<pre><code class="language-csharp">//checks if gameobject is currently active
+if (gameObject.activeSelf){
+    //deactivates the gameObject in your scene
+    gameObject.SetActive(false);
+}
+
+
+//checks if this component's behaviour is enabled
+if (GetComponent&lt;ThisScript&gt;().enabled){
+
+//OR
+
+//checks if this component's behaviour is enabled 
+//AND if the associated gameObject is active
+
+//if (GetComponent&lt;ThisScript&gt;().isActiveAndEnabled){
+
+    //deactivates the component called &quot;ThisScript&quot; in your gameObject
+    GetComponent&lt;ThisScript&gt;().enabled = false;
+}
+
+//OR
+
+//you can make a toggle function that switches
+//the boolean enabled state between true and false
+void ToggleComponentEnabled(){
+
+    //someBool = !someBool;
+    //i.e. set this bool to be NOT what it currently is
+
+    GetComponent&lt;ThisScript&gt;().enabled = !GetComponent&lt;ThisScript&gt;().enabled  
+}
+
+</code></pre>
+<hr />
+<h2 id="loops">Loops</h2>
+<p>Loop functions allow you to repeat an action multiple times. </p>
+<p>Watch the Unity Tutorial below to learn about: </p>
+<ul>
+<li><strong>While loops</strong></li>
+<li><strong>Do-while Loops</strong></li>
+<li><strong>For Loops</strong></li>
+</ul>
+<iframe width="100%" height="315" src="https://www.youtube.com/embed/Jefkb3Gm7vE?si=tyLETphQQTI-FwwH" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+<p><br></p>
+<p>... and one more video about <strong>Foreach Loops</strong>.</p>
+<iframe width="100%" height="315" src="https://www.youtube-nocookie.com/embed/WhACXlObR8s?si=vHWChlqbapALZ_Of&amp;controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+<hr />
+<h2 id="arrays">Arrays</h2>
+<blockquote>
+<p>Read about <a href="https://docs.unity3d.com/2020.1/Documentation/ScriptReference/Array.html">Arrays</a> in the Unity Manual.</p>
+</blockquote>
+<p>Arrays allow you to <strong>store multiple objects in a single variable</strong>. </p>
+<p>Each object stored in an array (ie. an array element) is assigned <strong>an index number</strong>, starting with <strong>the first element being numbered as zero, not one</strong>. To call an element from an array, we must reference its index number like this: <code>arrayName[indexNumber]</code></p>
+<p><br></p>
+<p>For example, below is a string array called "fruits".</p>
+<table>
+<thead>
+<tr>
+<th>Array Index</th>
+<th>0</th>
+<th>1</th>
+<th>2</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Array Element</td>
+<td>"apples"</td>
+<td>"pears"</td>
+<td>"oranges"</td>
+</tr>
+</tbody>
+</table>
+<pre><code class="language-csharp">string[] fruits = {&quot;apples&quot;, &quot;pears&quot;, &quot;oranges&quot;};
+
+Debug.Log(fruits[0]); //returns &quot;apples&quot;
+Debug.Log(fruits[1]); //returns &quot;pears&quot;
+Debug.Log(fruits[2]); //returns &quot;oranges&quot;
+
+</code></pre>
+<p><br> </p>
+<p>Every array has a <strong>Length</strong> property, which gives you the number elements in the array.</p>
+<pre><code class="language-csharp">string[] fruits = {&quot;apples&quot;, &quot;pears&quot;, &quot;oranges&quot;};
+
+Debug.Log(&quot;Length of fruits array: &quot;+ fruits.Length); 
+// console will print &quot;Length of fruits array: 3&quot;.
+</code></pre>
+<p><br></p>
+<p><strong>Arrays cannot be resized while the project is running.</strong> If you need to resize a container of objects, either recreate the array with a different length, or use a <a href="https://learn.unity.com/tutorial/lists-and-dictionaries#63561975edbc2a0cf1ad33b2">List</a> instead.</p>
+<p><br></p>
+<h3 id="how-to-declare-an-array">How to declare an array</h3>
+<p><strong>Declare the type of variable</strong> that is being stored in the array, followed by <strong>square brackets</strong> <code>[]</code> . </p>
+<pre><code class="language-csharp">float[] someFloats; // a private float array
+private Transform[] someTransforms; // a private Transform array
+public Vector3[] someVectors; // a public Vector3 array
+[SerializeField] GameObject[] someGameObjects; // a private GameObject array that is visible in the Inspector.
+</code></pre>
+<p><br></p>
+<p>You can initialise the array by:</p>
+<ul>
+<li><strong>using an array constructor method in your scripts;</strong> </br><pre><code class="language-csharp hljs">// Creates an array with 5 empty elements
+int[] numbers = new int[5]; 
+<br>
+// Initialises array with elements
+numbers = {1, 2, 3, 4, 5};
+<br>
+//OR declare and initialise at once
+int[] numbers = new int[] {1,2,3,4,5};
+</code></pre><br></li>
+<li><strong>storing elements in the Inspector</strong>, if your array is either public OR private with a [SerializeField] attribute;<br><br><figure><img src ="../img/Int-Array-with-5-elements.webp"><figcaption></figcaption></figure><br></li>
+<li><strong>using a method that sets the contents of an array</strong> </br><pre><code class="language-csharp hljs">//stores all GameObjects in the scene with tag "Respawn" into the array
+GameObject[] respawns = GameObject.FindGameObjectsWithTag("Respawn");</code></pre></li>
+</ul>
+<hr />
+<h2 id="importing-3d-assets">Importing 3D Assets</h2>
+<p>Generally, .fbx is the preferred format for 3D asset imports in Unity, but .obj formats are also acceptable if there is no animation data involved. </p>
+<p>If there are any texture files or material data (such as .mtl files that accompany .obj formats, or texture images), it's best to keep them in the same file directory as the 3D asset that they belong to. </p>
+<h3 id="import-settings-for-3d-models">Import settings for 3D models</h3>
+<p>You can calibrate your import settings for 3D models from the Inspector window by selecting it in the Project Window. </p>
+<p><br></p>
+<p><strong>Model</strong></p>
+<p>Modify the scale at which the model will be imported into Unity, if needed.</p>
+<p>No need to import BlendShapes, Visibility, Camera, nor Lights if you just need the 3D model as is.</p>
+<p><img alt="" src="../img/3dassetimportsettings-1.jpg" /></p>
+<p><br></p>
+<p><strong>Rig</strong></p>
+<p>Set Animation Type to "None" if your model does not have any armature rigs.</p>
+<p><img alt="" src="../img/3dassetimportsettings-2.jpg" /></p>
+<p><br></p>
+<p><strong>Animation</strong></p>
+<p>No need to import animation if there's no animation to import.</p>
+<p><img alt="" src="../img/3dassetimportsettings-3.jpg" /></p>
+<p><br></p>
+<p><strong>Materials</strong></p>
+<p>If you'd like to modify the embedded material of your 3D asset, click <strong>Extract Materials</strong>. This will create a new editable material in your Project Window that is based on the original imported material.</p>
+<p>You may also remap your materials by clicking and dragging your custom materials into the relevant channels under <strong>On Demand Remap</strong>.</p>
+<p><img alt="" src="../img/3dassetimportsettings-4.jpg" /></p>
+<p><br></p>
+<hr />
+<h2 id="importing-2d-assets">Importing 2D Assets</h2>
+<h3 id="image-as-material-texture-for-3d-surfaces">Image as material texture for 3D surfaces</h3>
+<p><img alt="" src="../img/texturewithalpha.jpg" /></p>
+<p>By default, images will be imported as default textures. </p>
+<p>If your image has transparency, make sure that you are detecting an Alpha Source (default: Input Texture Alpha), and that "Alpha Is Transparency" is marked true.</p>
+<h4 id="lit-vs-unlit-shaders">Lit VS Unlit shaders</h4>
+<p>When creating a new material in the Universal 3D pipeline, the default shader used for this material is a <strong>Universal Render Pipeline (URP) Lit shader</strong>. This means your material render will account for lighting in your scene. </p>
+<p>If you change this to an <strong>URP unlit shader</strong>, the material renders independently of the surrounding lighting. </p>
+<figure>
+<img src="../img/litvsunlit.gif">
+<figcaption>-- Lit shader (left) and unlit shader (right).
+</figcaption>
+</figure>
+
+<p><br></p>
+<p>URP also has shaders that are specific to sprite textures. In the <strong>shader drop down</strong>, go to <strong>URP</strong> &gt; <strong>2D</strong> &gt; select a <strong>Sprite shader</strong>. </p>
+<p><img alt="" src="../img/urp2dspriteshader.gif" /></p>
+<p><br></p>
+<h4 id="material-properties">Material Properties</h4>
+<p><em>(Note: The following properties may or may not be available depending on what material shader you're using. Pictured below are properties available in the URP Lit shader.)</em></p>
+<p><img alt="" src="../img/materialproperties.jpg" /></p>
+<p>Here are some notable properties you may consider adjusting for your material asset:</p>
+<ul>
+<li><strong>Workflow Mode</strong>: Choose between <a href="https://docs.unity3d.com/2021.3/Documentation/Manual/StandardShaderMetallicVsSpecular.html">metallic or specular</a>.</li>
+<li><strong>Surface type</strong>: Opaque by default. If your texture has transparent areas, you may need to change this to Transparent to reflect the alpha channel. </li>
+<li><strong>Render face</strong>: Front (only) by default. In 3D meshes, each face has a normal vector which determines which side the material should render on. If you want your texture to be visible on both sides of your mesh surface, you may need to change this to be "Both".</li>
+<li><strong>Texture maps</strong>: Add a texture asset in the box to the left of "Base Map". </li>
+<li><strong>Emission</strong>: Emit light across the material surface (you may also add an image texture here as an emission map). If you have Global Volume, this will add a glow effect to your material surface at a positive-value intensity. </li>
+<li><strong>Tiling and Offset</strong>: Determines how your texture is scaled / positioned along the mesh surface. </li>
+<li><strong>Specular Highlights and Environment Reflections</strong> (under Advanced Options): Toggle these checkboxes and see how they affect the way your material is lit. </li>
+</ul>
+<p><br></p>
+<h4 id="watch-out-for-z-fighting-in-intersecting-mesh-surfaces">Watch out for Z-fighting in intersecting mesh surfaces!</h4>
+<figure>
+    <img src="../img/zfighting.gif">
+    <figcaption>-- Comparison between a bush of 3 intersecting planes which has z-fighting and strange overlap renders (left) and a bush made of 6 non-intersecting planes joined at the center (right).
+    </figcaption>
+</figure>
+
+<p>When meshes intersect with other mesh objects, especially if they're overlapping on top of one another, you may encounter a bug that flickers between the two meshes as your camera moves past it. This may be due to <strong>Z-fighting</strong>, which happens when the camera confuses the depth levels of intersecting mesh objects, and can't determine which to render on top of the other. </p>
+<p>The best practice is to <strong>keep your mesh objects separate</strong> from each other, and avoid intersecting mesh objects altogether. </p>
+<p><br></p>
+<h3 id="image-as-sprite">Image as sprite</h3>
+<p>Images can also be <strong>imported as a "Sprite (2D and UI)" texture type</strong>. This allows you to select this image for the Sprite component for objects in your scene, and for UI Images. </p>
+<p><img alt="" src="../img/texturetosprite2dui.gif" /></p>
+<p><br></p>
+<h4 id="sprite-renderer-component">Sprite Renderer Component</h4>
+<p>This component allows you to use 2D sprites in GameObjects without using any meshes.</p>
+<p>If you're importing <strong>a sprite sheet containing multiple sprites</strong>, you will also need to do the following:</p>
+<ol>
+<li>Set the <strong>Sprite Mode</strong> to "Multiple"</li>
+<li>Install the <strong>2D Sprite package</strong> from Unity's package manager -- this will enable the Sprite Editor that you can use to slice your sprite sheet into individual sprites.</li>
+<li>When opening up the Sprite Editor, you may choose to <strong>Slice Grid by Cell Size or Cell Count</strong>. Click "Apply". Now you will have access to individual sprites when you click the expand arrow on your sprite sheet asset.</li>
+</ol>
+<p><img alt="" src="../img/spritesheet.gif" /></p>
+<p><br></p>
+<p>Once you have your texture correctly imported, create a new empty GameObject and <strong>add a Sprite Renderer component</strong>. Alternatively, you can also drag the sprite asset directly from your Project window into your scene hierarchy.</p>
+<p><img alt="" src="../img/spriterend.jpg" /></p>
+<p><br></p>
+<p>Consider adjusting the following properties according to your needs: </p>
+<ul>
+<li><strong>Sprite</strong>: Set this to the sprite texture you imported.</li>
+<li><strong>Color</strong>: Change the tint of your sprite material. </li>
+<li><strong>Order in Layer</strong> (under Additional Settings): Determines the order in which overlapping sprites are rendered (higher order values render above sprites with lower order values.)</li>
+</ul>
+<p><br></p>
+<p><strong>To change sprites via C# Script</strong></p>
+<pre><code class="language-csharp">public Sprite spr1, spr2; // attach your sprite textures in the inspector
+SpriteRenderer sprRend; // attach this script to the same object containing your sprite renderer
+
+void Start()
+{
+    sprRend = GetComponent&lt;SpriteRenderer&gt;();
+    sprRend.sprite=spr2; 
+}
+
+//you could also make this a function
+//and call it using &quot;ChangeSprite(spr2)&quot;, for example
+public void ChangeSprite(Sprite toThisSprite)
+{
+    sprRend.sprite = toThisSprite;
+}
+</code></pre>
+<p><br></p>
+<hr />
+<h2 id="in-class-exercise">In-class exercise</h2>
+<p><strong>Write a script that instantiates multiple prefabs that are:</strong></p>
+<ol>
+<li><strong>chosen at random from an array; AND</strong></li>
+<li><strong>assigned a random position within a given scope.</strong> (i.e. nothing should be "out of bounds", OR objects should only spawn at very specific positions.)</li>
+</ol>
+<p>Consider:</p>
+<ul>
+<li>random prefabs within a given distance / range along world axes. </li>
+<li>random prefabs that are assigned different positions from a given array of coordinates. </li>
+</ul>
+<p><em>(Hint: Try using:</em></p>
+<ul>
+<li><em>array.Length;</em> </li>
+<li><em><a href="https://docs.unity3d.com/ScriptReference/Random.Range.html">Random.Range()</a>; AND/OR</em></li>
+<li><em>empty GameObjects as positional references.)</em></li>
+</ul>
+<figure>
+    <img src="../img/exquisite-corpse.gif">
+    <figcaption>-- You could apply these techniques in an exquisite corpse generator (unity package available at the top of the page!)
+    </figcaption>
+</figure>
+<hr />
+<h2 id="some-course-reminders">Some course reminders</h2>
+<ul>
+<li><a href="../readings-and-homeplays/#homeplay-1">Homeplay 1</a> and <a href="../project-1/">Project 1 Sketch</a> are both due next class.</li>
+</ul></p>
+    </article>
+</section>
+<!-- endblock -->
+                            </div>
+                        </div>
+                    </div>
+                
+                
+            </main>
+
+            
+                    <!-- block preview -->
+<!-- endblock -->
+            
+
+            
+                    <!-- block footer -->
+<footer class="pt-4 my-md-5 pt-md-5 border-top" id="component-footer">
+    <div class="row">
+        <div class="col-12 col-md">
+                <!-- block copyright -->
+
+    <small class="d-block mb-3">
+        Made with
+        <a href="https://github.com/FernandoCelmer/mkdocs-simple-blog" target="_blank" rel="noopener">
+            Simple Blog for MkDocs
+        </a>
+    </small>
+
+<!-- endblock -->
+        </div>
+    </div>
+</footer>
+<!-- endblock -->
+            
+        </div>
+
+            <script>var base_url = '..';</script>
+            <script src="../assets/js/jquery-3.3.1.slim.min.js""></script>
+            <script src="../assets/js/bootstrap.bundle.min.js""></script>
+            <script src="../assets/js/main.min.js""></script>
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js" defer></script>
+                <script src="../search/main.js" defer></script>
+
+    </body>
+
+</html>

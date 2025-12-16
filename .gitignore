@@ -1,0 +1,2 @@
+#ignore all archive unity build files except .gif and image files
+archive/*.zip

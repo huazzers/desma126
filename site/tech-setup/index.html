@@ -1,0 +1,262 @@
+<!doctype html>
+<html data-bs-theme="light">
+    <head>
+                <title>Tech Setup - 👾 DESMA126 Game Engine</title>
+
+            <meta charset="utf-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+            
+            
+            
+
+            
+                <link  rel="icon" type="image/x-icon" href="../assets/img/favicon.ico">
+            
+            <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fira+Mono:400,700">
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+            <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+            <link rel="stylesheet" href="../assets/css/root.min.css">
+            <link rel="stylesheet" href="../assets/css/main.min.css">
+            <link rel="stylesheet" href="../assets/css/media.min.css">
+            <link rel="stylesheet" href="../assets/css/mkdocstrings.min.css">
+                <link href="../extra.css" rel="stylesheet">
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+                <script src="../search/main.js"></script>
+
+            
+                
+            
+    </head>
+
+    <body>
+        <div class="container py-3">
+            <header>
+                    <!-- block header -->
+<nav class="navbar navbar-expand-xl border-bottom">
+    <div class="container-fluid">
+        
+
+        
+            <span class=" fs-4 title-color site-name" id="component-site-name" style="text-transform: uppercase;">👾 DESMA126 Game Engine</span>
+        
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsMenu"
+            aria-controls="navbarsMenu" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse flex-column ml-auto" id="navbarsMenu">
+            <ul class="navbar-nav">
+
+                <!-- block menu -->
+                <li class="nav-item">
+                    <!-- block menu -->
+<!-- endblock -->
+                </li>
+                <!-- endblock -->
+
+                <!-- block search -->
+                <li class="nav-item">
+                    <a class="collapsed" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+                        <div class="md-search-icon">
+                            <i class="fa fa-search" aria-hidden="true"></i>
+                        </div>
+                    </a>
+                </li>
+                <!--  endblock -->
+
+                <!-- block source -->
+                <li class="nav-item">
+                    
+                </li>
+                <!--  endblock -->
+            </ul>
+        </div>
+    </div>
+</nav>
+<!--  endblock -->
+            </header>
+
+            <main><!-- block search -->
+<div class="collapse" id="collapseExample">
+    <div role="search" class="search-box">
+        <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+            <input type="text" name="q" class="search-query"
+            placeholder="Search docs" title="Type search term here" />
+        </form>
+    </div>
+</div>
+<!-- endblock -->
+
+                
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-3 d-none d-md-block" id="component-sidebar">
+                                    <!-- block sidebar -->
+<div class="navbar-expand-md" role="complementary">
+    
+    <div class="sidebar navbar-collapse collapse card">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="1"><a href="#tech-setup" class="nav-link">Tech Setup</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#setting-up-unity-and-visual-studio-code" class="nav-link">Setting up Unity and Visual Studio / Code</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#intellisense-for-unity-c" class="nav-link">Intellisense for Unity C&#35;</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div>
+<!-- endblock -->
+                            </div>
+                            <div class="col-md-9 col-12" id="component-content">
+                                    <!-- block content -->
+<section class="container post" id="component-content">
+    <article>
+        <header>
+            
+            
+        </header>
+        <p><!--jump to anchor tag adjusted to header height offset-->
+<script>
+// Get the header element
+let header = document.querySelector('header');
+
+// Get the height of the header
+document.querySelectorAll('a[href^="#"]')
+.forEach(function (anchor) {
+    anchor.addEventListener('click', 
+    function (event) {
+        event.preventDefault();
+
+        // Get the target element that 
+        // the anchor link points to
+        let target = document.querySelector(
+            this.getAttribute('href')
+        );
+
+        let headerHeight = header.offsetHeight*2;
+
+        let targetPosition = target
+            .getBoundingClientRect().top - headerHeight;
+
+        window.scrollTo({
+            top: targetPosition + window.scrollY,
+            behavior: 'smooth'
+        });
+    });
+});
+</script>
+
+<h1 id="tech-setup">Tech Setup</h1>
+<h2 id="setting-up-unity-and-visual-studio-code">Setting up Unity and Visual Studio / Code</h2>
+<ol>
+<li>
+<p>Download <strong>Unity Hub</strong>: <a href="https://unity.com/download">https://unity.com/download</a>  </p>
+</li>
+<li>
+<p>Open Unity Hub, and download <strong>the latest version of Unity Editor with long term support (LTS)</strong> — currently this is 6000.0.43f. </p>
+</li>
+<li>
+<p>Any editor version from 2022 or later should work fine, too. </p>
+</li>
+<li>
+<p>When downloading the Unity Editor, make sure to include the following modules (in check boxes)</p>
+</li>
+<li>
+<p>✅ <strong>Microsoft Visual Studio Community</strong> <br />
+     (*only available on WINDOWS)</p>
+<ul>
+<li>If prompted to run the Visual Studio Installer, make sure that “Game Development with Unity” is checked under the Workloads tab.</li>
+</ul>
+<p><img alt="" src="../img/vs-installer-unity.jpg" /></p>
+<ul>
+<li><strong>If you’re using a Mac device:</strong><br />
+   Because Visual Studio for Mac is no longer supported, you’ll need to download <a href="https://code.visualstudio.com/">Visual Studio Code</a> instead.</li>
+</ul>
+<p>Next, install the Unity for Visual Studio Code extension (published by Microsoft) from the <a href="https://marketplace.visualstudio.com/items?itemName=visualstudiotoolsforunity.vstuc">Visual Studio Code Marketplace</a>, or the <a href="https://code.visualstudio.com/docs/configure/extensions/extension-marketplace">Extensions Marketplace</a> inside Visual Studio Code.</p>
+</li>
+<li>
+<p>✅ <strong>Windows Build Support (IL2CPP or Mono)</strong></p>
+</li>
+<li>
+<p>✅ <strong>Mac Build Support (IL2CPP or Mono)</strong></p>
+</li>
+<li>
+<p><strong>Make a New Unity Project from Unity Hub.</strong></p>
+</li>
+</ol>
+<p>In Unity Hub, go to Projects &gt; New Project &gt; Select your editor version at the dropdown field above &gt; Select Universal 3D (To start, we will use the Universal Render Pipeline and create a 3D Unity Project.) </p>
+<p>All Unity projects are stored locally as a folder on your computer. Select a name (e.g. “GameEngineWeek1”) and location for your project folder.</p>
+<p>We’ll leave “Connect to Unity Cloud” and “Use Unity Version Control” unchecked for now. </p>
+<p>Then click “Create Project.” </p>
+<p><img alt="" src="../img/unity-new-project.jpg" /></p>
+<ol>
+<li><strong>Set up Unity for Visual Studio / Code integration</strong></li>
+</ol>
+<p>Open up your newly created Unity project. In the Unity Editor, go to Windows &gt; Package Manager &gt; Make sure that Visual Studio Editor package (version 2.0.20 and above) has been installed on your project. </p>
+<p>Then, go to Edit &gt; Preferences &gt; External Tools &gt; Select your External Script Editor as either “Visual Studio” or “Visual Studio Code”. This will be the default program that runs when you try to open up a script in Unity. </p>
+<p><br></p>
+<h2 id="intellisense-for-unity-c">Intellisense for Unity C&#35;</h2>
+<p>Intellisense is a useful auto-complete feature that will give a list of suggestions for your code as you're typing. I recommend getting this working on your scripting program, because it will make the process of understanding C# a lot more assisted and easier to navigate. It is also helpful for referencing variables and functions across multiple scripts in your projects.</p>
+<p>Here's some places to start troubleshooting if it is not working on your program: </p>
+<ul>
+<li><a href="https://stackoverflow.com/questions/52189426/how-to-get-intellisense-in-visual-studio-code-for-unity-functions-names">Stack Overflow: How to get intellisense in Visual Studio Code for Unity functions names?</a></li>
+<li><a href="https://blog.terresquall.com/2020/11/fixing-visual-studios-intellisense-autocomplete-in-unity/">Fixing Visual Studio’s IntelliSense (auto-complete) in Unity</a></li>
+</ul></p>
+    </article>
+</section>
+<!-- endblock -->
+                            </div>
+                        </div>
+                    </div>
+                
+                
+            </main>
+
+            
+                    <!-- block preview -->
+<!-- endblock -->
+            
+
+            
+                    <!-- block footer -->
+<footer class="pt-4 my-md-5 pt-md-5 border-top" id="component-footer">
+    <div class="row">
+        <div class="col-12 col-md">
+                <!-- block copyright -->
+
+    <small class="d-block mb-3">
+        Made with
+        <a href="https://github.com/FernandoCelmer/mkdocs-simple-blog" target="_blank" rel="noopener">
+            Simple Blog for MkDocs
+        </a>
+    </small>
+
+<!-- endblock -->
+        </div>
+    </div>
+</footer>
+<!-- endblock -->
+            
+        </div>
+
+            <script>var base_url = '..';</script>
+            <script src="../assets/js/jquery-3.3.1.slim.min.js""></script>
+            <script src="../assets/js/bootstrap.bundle.min.js""></script>
+            <script src="../assets/js/main.min.js""></script>
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js" defer></script>
+                <script src="../search/main.js" defer></script>
+
+    </body>
+
+</html>

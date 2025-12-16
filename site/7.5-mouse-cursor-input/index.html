@@ -1,0 +1,290 @@
+<!doctype html>
+<html data-bs-theme="light">
+    <head>
+                <title>Mouse and Cursor Inputs - 👾 DESMA126 Game Engine</title>
+
+            <meta charset="utf-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+            
+            
+            
+
+            
+                <link  rel="icon" type="image/x-icon" href="../assets/img/favicon.ico">
+            
+            <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fira+Mono:400,700">
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+            <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+            <link rel="stylesheet" href="../assets/css/root.min.css">
+            <link rel="stylesheet" href="../assets/css/main.min.css">
+            <link rel="stylesheet" href="../assets/css/media.min.css">
+            <link rel="stylesheet" href="../assets/css/mkdocstrings.min.css">
+                <link href="../extra.css" rel="stylesheet">
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+                <script src="../search/main.js"></script>
+
+            
+                
+            
+    </head>
+
+    <body>
+        <div class="container py-3">
+            <header>
+                    <!-- block header -->
+<nav class="navbar navbar-expand-xl border-bottom">
+    <div class="container-fluid">
+        
+
+        
+            <span class=" fs-4 title-color site-name" id="component-site-name" style="text-transform: uppercase;">👾 DESMA126 Game Engine</span>
+        
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsMenu"
+            aria-controls="navbarsMenu" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse flex-column ml-auto" id="navbarsMenu">
+            <ul class="navbar-nav">
+
+                <!-- block menu -->
+                <li class="nav-item">
+                    <!-- block menu -->
+<!-- endblock -->
+                </li>
+                <!-- endblock -->
+
+                <!-- block search -->
+                <li class="nav-item">
+                    <a class="collapsed" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+                        <div class="md-search-icon">
+                            <i class="fa fa-search" aria-hidden="true"></i>
+                        </div>
+                    </a>
+                </li>
+                <!--  endblock -->
+
+                <!-- block source -->
+                <li class="nav-item">
+                    
+                </li>
+                <!--  endblock -->
+            </ul>
+        </div>
+    </div>
+</nav>
+<!--  endblock -->
+            </header>
+
+            <main><!-- block search -->
+<div class="collapse" id="collapseExample">
+    <div role="search" class="search-box">
+        <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+            <input type="text" name="q" class="search-query"
+            placeholder="Search docs" title="Type search term here" />
+        </form>
+    </div>
+</div>
+<!-- endblock -->
+
+                
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-3 d-none d-md-block" id="component-sidebar">
+                                    <!-- block sidebar -->
+<div class="navbar-expand-md" role="complementary">
+    
+    <div class="sidebar navbar-collapse collapse card">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="1"><a href="#mouse-and-cursor-inputs" class="nav-link">Mouse and Cursor Inputs</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#legacy-input-system" class="nav-link">Legacy Input System</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#screentoworldpoint-and-raycasts-with-cursor-input" class="nav-link">ScreenToWorldPoint and Raycasts with Cursor Input</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div>
+<!-- endblock -->
+                            </div>
+                            <div class="col-md-9 col-12" id="component-content">
+                                    <!-- block content -->
+<section class="container post" id="component-content">
+    <article>
+        <header>
+            
+            
+        </header>
+        <p><script>hljs.highlightAll();</script>
+<!--jump to anchor tag adjusted to header height offset-->
+<script>
+// Get the header element
+let header = document.querySelector('header');
+
+// Get the height of the header
+document.querySelectorAll('a[href^="#"]')
+.forEach(function (anchor) {
+    anchor.addEventListener('click', 
+    function (event) {
+        event.preventDefault();
+
+        // Get the target element that 
+        // the anchor link points to
+        let target = document.querySelector(
+            this.getAttribute('href')
+        );
+
+        let headerHeight = header.offsetHeight*2;
+
+        let targetPosition = target
+            .getBoundingClientRect().top - headerHeight;
+
+        window.scrollTo({
+            top: targetPosition + window.scrollY,
+            behavior: 'smooth'
+        });
+    });
+});
+</script>
+
+<h1 id="mouse-and-cursor-inputs">Mouse and Cursor Inputs</h1>
+<hr />
+<p>📦 <strong>Unity packages from today's class:</strong></p>
+<blockquote>
+<p>Before importing both packages, make sure to install the Input System package on your Editor as well.</p>
+<ul>
+<li><a href="https://drive.google.com/file/d/1fxOu-Rvy_G3shZh2Rm6OedAWwUqqYJ8M/view?usp=drive_link">Cursor Input for World Space and Raycast</a></li>
+</ul>
+</blockquote>
+<hr />
+<h2 id="legacy-input-system">Legacy Input System</h2>
+<h3 id="directional-input-from-mouse">Directional Input from Mouse</h3>
+<p>You can use the axes <strong>Mouse X</strong> and <strong>Mouse Y</strong> to get information about how the mouse is moving. </p>
+<p>Note that this does <em>NOT</em> give you the position of the cursor on screen, but tells you the <strong>direction</strong> and <strong>speed</strong> the player is moving the mouse. </p>
+<p>This is often used to aim the camera in first person games.</p>
+<pre><code class="language-csharp">float sensitivity = 8f;
+public GameObject camera;
+
+void Update()
+{
+    float mouseX = Input.GetAxis(&quot;Mouse X&quot;);
+    camera.transform.Rotate(Vector3.up, mouseX * sensitivity * Time.deltaTime);
+}
+</code></pre>
+<h2 id="screentoworldpoint-and-raycasts-with-cursor-input">ScreenToWorldPoint and Raycasts with Cursor Input</h2>
+<h3 id="screen-space-and-world-space">Screen Space and World Space</h3>
+<p>It's easy enough to read the screen coordinates of the cursor.</p>
+<p>Use <strong>Input.mousePosition</strong> to get the current position of the cursor in screen space.</p>
+<pre><code class="language-csharp">Vector3 mousePos = Input.mousePosition;
+//x is the x coordinate of the cursor in screenspace
+//y is the y coordinate of the cursor in screenspace
+//z is always 0.
+</code></pre>
+<p><br></p>
+<p>In screen space, the <strong>bottom-left of the screen or window</strong> is at <strong>(0, 0)</strong>. The <strong>top-right of the screen or window</strong> is the <strong>height</strong> and <strong>width</strong> of the screen in pixels, at (<a href="https://docs.unity3d.com/ScriptReference/Screen-width.html">Screen.width</a>, <a href="https://docs.unity3d.com/ScriptReference/Screen-height.html">Screen.height</a>).</p>
+<p>The trick is to convert from screen space to the game's world coordinates (aka "<strong>world space</strong>"). </p>
+<p>How a position in screen space corresponds to world space depends on where the camera is looking, whether the camera uses perspective or orthographic projection, and how "deep" into the scene you want the cursor to be.</p>
+<p>If you get a reference to the camera in your scene, you can convert from a screen coordinate to a world coordinate with <strong>Camera.ScreenToWorldPoint</strong>.</p>
+<pre><code class="language-csharp">Camera camera;
+void Start()
+{
+    camera = GetComponent&lt;Camera&gt;();
+}
+
+void Update()
+{
+    Vector3 mousePos = Input.mousePosition;
+    mousePos.z = 1; //the z component of the vector will
+    //determine the distance of our new position from the camera
+    Vector3 worldPos = camera.ScreenToWorldPoint(mousePos);
+}
+</code></pre>
+<p>In this case, ScreenToWorldPoint gives us a point one unit in front of the camera, with the same apparent position on screen as the cursor.</p>
+<p><br></p>
+<h3 id="raycasting-from-the-camera">Raycasting from the camera</h3>
+<p>If you want to interact with objects in a 3D scene using the mouse, at some point you will have to use <strong>raycasting</strong>.</p>
+<p>First, you need to get a Ray that passes from the camera, through your cursor, into the scene.</p>
+<p>A Ray contains <strong>two vectors</strong>, which represent the ray's <strong>origin point in space</strong> and its <strong>direction vector</strong>.</p>
+<pre><code class="language-csharp">Camera camera;
+void Start()
+{
+    camera = GetComponent&lt;Camera&gt;();
+}
+
+void Update()
+{
+    Vector3 mousePos = Input.mousePosition;
+    Ray cursorRay = camera.ScreenPointToRay(mousePos);
+}
+</code></pre>
+<p><br></p>
+<p>Then, you can use the ray to <strong>raycast</strong> against the ground or other objects in your scene.</p>
+<pre><code class="language-csharp">RaycastHit hitInfo;
+if(Physics.Raycast(cursorRay, out hitInfo))
+{
+    Debug.Log(hitInfo.point); //prints the position in the scene that the raycast hit...
+
+    //or do something else, depending on what you hit!
+    if (hitInfo.collider.CompareTag(&quot;Enemy&quot;)){
+        Debug.Log(&quot;Found Enemy!&quot;);
+    }
+}
+</code></pre></p>
+    </article>
+</section>
+<!-- endblock -->
+                            </div>
+                        </div>
+                    </div>
+                
+                
+            </main>
+
+            
+                    <!-- block preview -->
+<!-- endblock -->
+            
+
+            
+                    <!-- block footer -->
+<footer class="pt-4 my-md-5 pt-md-5 border-top" id="component-footer">
+    <div class="row">
+        <div class="col-12 col-md">
+                <!-- block copyright -->
+
+    <small class="d-block mb-3">
+        Made with
+        <a href="https://github.com/FernandoCelmer/mkdocs-simple-blog" target="_blank" rel="noopener">
+            Simple Blog for MkDocs
+        </a>
+    </small>
+
+<!-- endblock -->
+        </div>
+    </div>
+</footer>
+<!-- endblock -->
+            
+        </div>
+
+            <script>var base_url = '..';</script>
+            <script src="../assets/js/jquery-3.3.1.slim.min.js""></script>
+            <script src="../assets/js/bootstrap.bundle.min.js""></script>
+            <script src="../assets/js/main.min.js""></script>
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js" defer></script>
+                <script src="../search/main.js" defer></script>
+
+    </body>
+
+</html>
