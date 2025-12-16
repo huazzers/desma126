@@ -3,6 +3,15 @@ md-footer__inner { display: none !important; }
 .nav-link[rel="next"] {display: none;}
 .nav-link[rel="prev"] {display: none;}
 
+@media only screen and (min-width: 1600px) {
+    .navbar-expand-xl .navbar-toggler {
+        display: none !important;
+    }
+    .navbar-expand-xl .navbar-nav {
+        flex-direction: row !important;
+    }
+}
+
 @media only screen and (max-width: 767.9px) {
 
     .site-name{
@@ -100,6 +109,10 @@ md-footer__inner { display: none !important; }
     td, thead{
         font-size:small !important;
     }
+}
+
+#component-site-name>a{
+    text-decoration:none;
 }
 
 #component-sidebar{
@@ -207,12 +220,14 @@ mark{
     background-color:#fbeac7;
 }
 
-mark.due{
+div.due{
     background-color:#f1bdbe;
+    padding: 0 0.25rem;
 }
 
-mark.assign{
+div.assign{
     background-color: #fbeac7;
+    padding: 0 0.25rem;
 }
 
 figcaption{
@@ -299,6 +314,22 @@ a.dropdown-item{
 a{
     color: teal !important;
     font-size:100% !important;
+}
+
+.due > ul >li::marker{
+    color: teal !important;
+}
+
+.due > ul > li > a{
+    color: darkslategray !important;
+}
+
+.due > ul > li > a:hover{
+    color:red !important;
+}
+
+ul.navbar-nav>li.nav-item>a.nav-link{
+    font-size:95% !important;
 }
 
 a:hover{
