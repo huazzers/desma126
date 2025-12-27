@@ -27,6 +27,16 @@ document.querySelectorAll('a[href^="#"]')
         });
     });
 });
+
+    window.onload = function(e){
+        var cell = document.getElementById('component-site-name');
+        var caseId = cell.innerHTML;
+        cell.innerHTML = '';
+        var link = document.createElement('a');
+        link.href = '../';
+        link.appendChild(document.createTextNode(caseId));
+        cell.appendChild(link);
+    }
 </script>
 
 # How to Submit
@@ -89,6 +99,7 @@ Animated GIFs are durable and easy to view (though not always small in size). In
 
 I personally use and recommend [ScreenToGif](https://www.screentogif.com/), which is a good tool for quickly making a gif. Photoshop, Premiere, AfterEffects, or other video editors can also export gifs. You may also find the following free tools helpful:
 
+- [Gifski](https://gif.ski/) is a high-quality gif encoder available for Windows and macOS.
 - [EzGif.com](https://ezgif.com/) is an online GIF maker, editor, and compressor. Great for reducing the file size of GIFs.
 - [LICEcap](https://www.cockos.com/licecap/) is a badly-named free OSX app which can capture an area of your screen and save it directly to an animated GIF.
 - [Online-convert.com](https://www.online-convert.com/) offers a browser tool for converting videos into GIFs.
@@ -150,8 +161,6 @@ Here's some settings you may customise:
 
 ### Building your project
 
-#### Unity version 2023 and earlier
-
 Start by opening the build settings under **File > Build Settings**.
 
 ![](./img/build_settings_1.gif)
@@ -179,6 +188,8 @@ After the build has finished, locate the folder containing all the files and fol
 Rename this folder as **"YourName_Project123_Build"**, then compress it into a zipped folder. You will upload this .zip folder on itch.io and submit it for documentation.
 
 <br>
+
+<!--
 
 #### Unity version 6
 
@@ -210,6 +221,7 @@ After the build has finished, locate the folder containing all the files and fol
 
 Rename this folder as **"YourName_Project123_Build"**, then compress it into a zipped folder. You will upload this .zip folder on itch.io and submit it for documentation.
 
+-->
 
 ### Unity Packages
 

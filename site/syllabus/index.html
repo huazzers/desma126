@@ -1,7 +1,7 @@
 <!doctype html>
 <html data-bs-theme="light">
     <head>
-                <title>Syllabus - 👾 DESMA126 Game Engine</title>
+                <title>📜 Syllabus - 👾 DESMA126 Game Engine</title>
 
             <meta charset="utf-8">
             <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -54,6 +54,34 @@
                 <!-- block menu -->
                 <li class="nav-item">
                     <!-- block menu -->
+    
+        <li class="nav-item" id="component-menu">
+            <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="
+                            nav-link text-gray text-decoration-none" href="..">[🏠 Home]</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class=" active 
+                            nav-link text-gray text-decoration-none" href="./">[📜 Syllabus]</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="
+                            nav-link text-gray text-decoration-none" href="../schedule/">[📅 Schedule]</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="
+                            nav-link dropdown-toggle text-decoration-none" href="#" data-bs-toggle="dropdown">[📌 Assignments]</a>
+                            <ul class="dropdown-menu">
+                                    <!-- block dropdown-menu -->
+    <li>
+        <a href="../how-to-submit/" class="dropdown-item text-decoration-none ">How To Submit</a>
+    </li>
+<!-- endblock -->
+                            </ul>
+                        </li>
+            </ul>
+        </li>
 <!-- endblock -->
                 </li>
                 <!-- endblock -->
@@ -175,18 +203,28 @@ document.querySelectorAll('a[href^="#"]')
         });
     });
 });
+
+    window.onload = function(e){
+        var cell = document.getElementById('component-site-name');
+        var caseId = cell.innerHTML;
+        cell.innerHTML = '';
+        var link = document.createElement('a');
+        link.href = '../';
+        link.appendChild(document.createTextNode(caseId));
+        cell.appendChild(link);
+    }
 </script>
 
 <h1 id="syllabus">📜 Syllabus</h1>
 <hr />
-<p><strong>LOCATION:</strong> Broad 4240<br/>
+<p><strong>LOCATION:</strong> Broad 4230<br/>
 <strong>TIME:</strong> Tuesdays and Thursdays, 9 a.m. - 11:50 a.m.</p>
 <p><strong>INSTRUCTOR</strong><br/>
-Office hours: By appointment only; Tuesdays, 12:30 p.m. - 1:30 p.m. @ Game Lab (Broad 3252)<br/>
+Office hours: TBD<br/>
 Email: huazzers@g.ucla.edu</p>
 <p><strong>TEACHING ASSISTANT</strong><br/>
-Office hours: By appointment only; Thursdays, 12:30 p.m. - 1:30 p.m. @ 3rd floor studio (Broad 3241)<br/>
-Email: lanxinerrr@gmail.com</p>
+Office hours: TBD<br/>
+Email: TBD</p>
 <h2 id="course-description">Course Description</h2>
 <p>This course introduces the fundamentals of programming interactive projects in game development software. </p>
 <p>Classwork focuses on familiarizing students with game engines, computer programming concepts, player experience, and other skills that are foundational to making digital games.</p>
@@ -195,7 +233,7 @@ Email: lanxinerrr@gmail.com</p>
 <hr />
 <h2 id="course-prerequisites">Course Prerequisites</h2>
 <ul>
-<li>DESMA 24 Motion</li>
+<li>DESMA 28 Interactivity</li>
 <li>DESMA 101 Media Arts Introduction / DESMA 104 Design Futures</li>
 </ul>
 <p>This course will be heavy on C# scripting in Unity scripting API. If you haven't fulfilled the above pre-requisites but have <strong>prior experience in either writing code or using the Unity game engine</strong>, please let me know.</p>
@@ -205,7 +243,7 @@ Email: lanxinerrr@gmail.com</p>
 <hr />
 <h2 id="course-outline">Course Outline</h2>
 <h3 id="unit-1-generative-computation">Unit 1: Generative Computation</h3>
-<p>Using generative design to create random/unique/dynamic ecosystems, worlds, characters, and events in Unity. </p>
+<p>Design modular or procedural algorithms to create random/unique/dynamic behaviours, environments, and characters in Unity. </p>
 <blockquote>
 <p><strong>Week 1-3</strong>
 </br>Intro to Unity Game Engine and C#, Vector fundamentals, Prefabs and Instantiation, Arrays and Randomness, UI</p>
@@ -214,21 +252,21 @@ Email: lanxinerrr@gmail.com</p>
 <h3 id="unit-2-playing-with-physics">Unit 2: Playing with Physics</h3>
 <p>Using physics, math, gamepad mapping tools to design environments and mechanics for interactive gameplay.</p>
 <blockquote>
-<p><strong>Week 4-7</strong>
+<p><strong>Week 3-6</strong>
 </br>Level Design, Input Systems, Physics Simulations, Static Variables and Singletons, Sound, Coroutines, Persistent Data</p>
-<p><strong>Project 2: TBD -- Make a physics-based video game to be played on the Arcade Cabinet / Table!</strong></p>
+<p><strong>Project 2: Ball Game Remix</strong></p>
 </blockquote>
 <h3 id="intermission-alt-engines">Intermission: Alt-Engines</h3>
 <p>Explore other tiny game engines!</p>
 <blockquote>
 <p><strong>Week 7</strong>
-</br>Micro Game Jam(s) -- Make an entire game in a single class.</p>
+</br>Alt-Game Engine Jam(s) -- Make an entire game in a single class.</p>
 </blockquote>
-<h3 id="unit-3-save-scene">Unit 3: Save &amp;&amp; Scene</h3>
+<h3 id="unit-3-engine-for-expression">Unit 3: Engine for Expression</h3>
 <p>Using dialogue systems, inventory data, and cinematic affordances of the game engine to stage and contextualise your play experiences. </p>
 <blockquote>
-<p><strong>Week 8-10</strong>
-</br>Cinemachine, Interactive Fiction, Inventory and Collections</p>
+<p><strong>Week 7-10</strong>
+</br>Cinematic Tools, Interactive Text, Inventory Databases</p>
 <p><strong>Project 3: Zine Game</strong></p>
 </blockquote>
 <hr />
@@ -242,8 +280,8 @@ Email: lanxinerrr@gmail.com</p>
 <li>Project 1: 15%</li>
 <li>Project 2: 25%</li>
 <li>Project 3: 25%</li>
-<li>Reading / Homeplay responses: 15%</li>
-<li>Participation / Attendance: 20%</li>
+<li>Reading and Homeplay responses: 15%</li>
+<li>Participation: 20%</li>
 </ul>
 </blockquote>
 <h3 id="evaluation-criteria">Evaluation Criteria</h3>
@@ -253,44 +291,75 @@ Email: lanxinerrr@gmail.com</p>
 <blockquote>
 <ul>
 <li><strong>Timely submission</strong></br>Did you submit your project on time? (see <a href="#late-work"><em>Late Work</em></a> for more details.)</li>
-<li><strong>Completion of Project Deliverables</strong></br>Does your project meet the requirements of the assignment?</li>
+<li><strong>Completion of Project Deliverables</strong></br>Did you submit your project files and documentation? </li>
+<li><strong>Fulfilment of Project Requirements</strong></br>Does your project meet the intended direction and requirements of the assignment?</li>
 <li><strong>Attention to detail and craft</strong></br>Does the project run? Are there unintended bugs, glitches, etc.</li>
 <li><strong>Project scope / aesthetic and technical ambition</strong></br>Are you doing the bare minimum, or are you pushing yourself technically and/or aesthetically? </li>
-<li><strong>Creative risk-taking and resourcefulness</strong></br>Are you pushing the limits of the tools? Hacky solutions are perfectly acceptable and encouraged!</li>
+<li><strong>Creative risk-taking / resourcefulness</strong></br>Are you pushing the limits of the tools and making full use of the possibilities they offer? Hacky solutions and unconventional "misuse" are perfectly acceptable and encouraged!</li>
 </ul>
 </blockquote>
 <h4 id="readings-homeplays">Readings / Homeplays</h4>
-<p>You will be assigned occasional readings and games that are related to this course, accompanied by a questionnaire for you to complete and bring to class. These are graded pass/fail -- if you did the work, you will get full credit.</p>
-<h4 id="participation-attendance">Participation / Attendance</h4>
-<p>This is an <strong>in-person course</strong>, so please come to class on time. We will be covering a lot of content quickly, so it is <em>very</em> important that you are present for each lesson.</p>
-<p>If you are more than 10 minutes late to class (ie. 9:10 a.m.), you will be marked as late. Three late marks results in an unexcused absence. </p>
-<p><strong>If you anticipate having to miss class, email the TA as soon as possible.</strong> You get <strong>two</strong> unexcused absences before it starts affecting your grade. Every unexcused absence that follows will result in one full letter grade deduction from your participation score. </p>
-<p>Your participation grade will also be determined by your level of engagement in class. If you seem disengaged or are disruptive in class, we will reach out and discuss the matter with you. If a pattern of disruption or disengagement continues, we will be taking note and it will be reflected in your grade.</p>
-<h3 id="other-assignment-related-rules">Other assignment-related rules</h3>
+<p>Reading and homeplay responses will be assigned according to conceptual and technical topics covered in class, and are designed to support early ideation stages for each respective project assignment.</p>
+<p>These are graded pass/fail -- if you did the work, you will get full credit.</p>
+<h4 id="participation">Participation:</h4>
+<p>Participation will be evaluated based on the following:</p>
+<blockquote>
+<ul>
+<li><strong>Attendance</strong></li>
+<li><strong>Participation in class discussion / critique</strong></li>
+<li><strong>Active communication with TA and instructor in course-related matters</strong>, including project discussions and attendance notices</li>
+<li><strong>Staying on task during in-class work periods</strong></li>
+</ul>
+</blockquote>
+<h4 id="attendance-policy">Attendance Policy</h4>
+<p><strong>If you are more than 5 minutes late to class (ie. 9:05 a.m.)</strong>, you will be marked as <strong>late</strong>. </p>
+<p><strong>Two late marks</strong> results in <strong>an unexcused absence</strong>. </p>
+<p>Unexcused absences will lower your grade. <strong>More than three (&gt;3) unexcused absences will result in an automatic fail</strong>, and must be addressed on a case-by-case basis. </p>
+<p>Any attendance-related disputes should be discussed with the TA within a week.</p>
+<p><strong>If you anticipate being late or absent, you should inform me AND the TA before class begins.</strong> It is also your responsibility to arrange alternative plans with me and the TA for any work you've missed from being absent (eg. attending office hours, sharing project updates, etc.)</p>
 <h4 id="late-work">Late Work</h4>
 <p><strong>On the day the project is due:</strong></p>
 <ul>
 <li>Projects should be <strong>ready to play</strong> prior to the beginning of class.</li>
 <li>Project files and documentation should be <strong>submitted by 11:59PM</strong> the same day.</li>
 </ul>
-<p><strong>If you anticipate that you won’t be able to complete the work by the due date, please contact us <em>before</em> the due date so we can discuss options.</strong></p>
+<p><strong>If you anticipate that you won’t be able to complete the work by the due date</strong>, please contact the instructor <em>before</em> the due date so we can discuss options.</p>
 <h4 id="appropriation-fair-use-and-generated-content">Appropriation, Fair Use, and Generated Content</h4>
-<p><strong>You are expected to develop your own assets for your project submissions.</strong> </p>
-<p>The use of existing prompt-based AI generation programs, including but not limited to ChatGPT, DALLE, Stable Diffusion, and Midjourney, is not allowed in this class. There are <a href="#recommended-tools">many other reliable solutions and resources</a> available to you, please use this opportunity to explore them.</p>
-<p>If you're planning to borrow or generate assets from somewhere else, please consult the instructor beforehand AND be able to justify your decision for doing so. While developing early stage prototypes and testing mechanics, it is acceptable to use placeholder assets.</p>
-<p><strong>No credit will be awarded for plagiarised work.</strong> All submitted projects should be original and developed within the duration of this class. Remember to acknowledge / cite your tools and sources appropriately in your submission.</p>
+<p>Although generative AI, template projects, and readymade assets can offer seemingly more "professional" results quickly, your purpose here to learn, and the best way to learn is to do it yourself or make things with others around you. So even if it means spending more time getting less done, or making mistakes along the way, I strongly advise against using any shortcuts while you're in this class.</p>
+<p>You are also expected to develop your own assets for project submission -- use this opportunity to explore the <a href="#required-tools">resources</a> available to you.</p>
+<p><br></p>
+<p><strong>The bottom line:</strong> </p>
+<ol>
+<li>No prompt-generating code from scratch -- we can tell. </li>
+<li>
+<p>If you're going to use generative tools, template projects, or readymade assets in your submission:</p>
+<ul>
+<li>consult the instructor or TA beforehand, and be able to justify your decision in doing so;</li>
+<li>cite your sources in your project submission. Failure to cite any major use of such resources will be considered an academic integrity violation and evaluated accordingly. </li>
+</ul>
+</li>
+<li>
+<p>Placeholder assets are okay during early stage prototypes for testing mechanics. </p>
+</li>
+<li>All submitted projects should be original and developed within the duration of this class.</li>
+<li>If you have technical questions:<ul>
+<li>if it's something we've already covered in class, try looking up keywords on the class website using the search toolbar 🔎 (located at the top right corner);</li>
+<li>ask the instructor or TA in class, through email, or book office hours;</li>
+<li>ask your peers during work time or outside of class -- I recommend setting up a group chat or discord server where you can share resources and troubleshoot questions together;</li>
+<li>browse <a href="#c-scripting-and-unity-development">manuals, community forums, and tutorials</a> created by other practicing developers.</li>
+</ul>
+</li>
+</ol>
 <hr />
 <h2 id="resources">Resources</h2>
-<h3 id="readings-games">Readings / Games</h3>
-<p>All assigned readings and games will be provided for you -- no need to purchase textbooks for this class. (see <a href="../readings-and-homeplays/"><em>Readings &amp; Homeplays</em></a> for more details.)</p>
+<h3 id="readings-homeplays_1">Readings / Homeplays</h3>
+<p>All assigned readings and homeplay projects will be provided for you -- no need to purchase textbooks for this class. </p>
 <h3 id="required-tools">Required Tools</h3>
 <ul>
 <li><strong>Unity</strong> -- Please install <a href="https://unity.com/download">Unity Hub</a> and get the latest LTS version of Unity Editor (currently 6000.0.43f1). Other editor versions may differ slightly from each other, but anything 2021 or later should be ok.</li>
 <li><strong>Visual Studio</strong> -- Install Microsoft Visual Studio or Visual Studio Code, you should have the option to do this when installing Unity.</li>
-</ul>
-<h3 id="recommended-tools">Recommended Tools</h3>
-<p><strong>2D and 3D production software of your choice:</strong></p>
-<ul>
+<li><strong>A three-button mouse</strong> -- always bring your mouse to class!</li>
+<li><strong>2D and 3D production software of your choice:</strong><ul>
 <li><a href="https://krita.org/en/">Krita</a> -- professional free and open source digital paint tool.</li>
 <li><a href="https://www.blender.org/">Blender</a> -- powerful free and open source 3D art and animation tool.</li>
 <li><a href="https://www.piskelapp.com/">Piskel</a> -- free pixel art app.</li>
@@ -299,17 +368,27 @@ Email: lanxinerrr@gmail.com</p>
 <li><a href="https://prominent.itch.io/crocotile3d">Crocotile 3d</a> -- A tool for creating 3d scenes with 2d tiles.</li>
 <li><a href="https://www.mixamo.com/">Mixamo</a> -- Free, but requires a login. Includes community sourced walk cycles and 3D animations which you can apply to any model that can T-pose.</li>
 </ul>
-<p><strong>Audio resources:</strong></p>
+</li>
+</ul>
+<h3 id="other-recommended-resources">Other Recommended Resources</h3>
+<h4 id="for-making-project-assets">For Making Project Assets</h4>
 <ul>
 <li><a href="https://freesound.org/">freesound.org</a> -- audio database that has search filters sorted by licenses. login required for downloading files. good source for adding sound effects and music to your projects. </li>
 <li><a href="https://www.audacityteam.org/">Audacity</a> -- free software for recording and editing audio; the version without Muse Hub should suffice for your purposes.</li>
 </ul>
 <p>For more asset creation tools, check out this <a href="https://github.com/everestpipkin/tools-list#making-assets---images-models-sound-video">exhaustive list of cheap and free tools compiled by Everest Pipkin</a>.</p>
-<p><strong>Additional resources for C# scripting and Unity development:</strong></p>
+<h4 id="c-scripting-and-unity-development">C# scripting and Unity development**</h4>
 <ul>
 <li>Unity documentation -- <a href="https://docs.unity3d.com/ScriptReference/index.html">Scripting Reference</a> and <a href="https://docs.unity3d.com/Manual/index.html">Editor Manual</a>.</li>
 <li>Community Forums -- <a href="https://stackexchange.com/">Stack Exchange</a>, <a href="https://discussions.unity.com/">Unity Discussions</a>.</li>
-<li><a href="https://www.amazon.com/Learn-One-Day-Well-Hands/dp/1518800270">Learn C# in One Day and Learn it Well</a> by Jamie Chan.</li>
+<li>YouTube. Here are a few channels that are usually pretty good.<ul>
+<li><a href="https://www.youtube.com/playlist?list=PLX2vGYjWbI0RQ3O-nAuJd2LWm7lH5htrL">Unity’s official channel</a></li>
+<li><a href="https://youtu.be/XtQMytORBmM">Game Maker’s Toolkit</a></li>
+<li><a href="https://youtube.com/playlist?list=PLzDRvYVwl53vxdAPq8OznBAdjf0eeiipT">Code Monkey</a></li>
+<li><a href="https://www.youtube.com/channel/UCYbK_tjZ2OrIZFBvU6CCMiA">Brackeys</a> (no longer updated)</li>
+<li><a href="https://www.youtube.com/playlist?list=PLFFUZ_uHAWMU44iAlkVoXKnsOefNYdsaK">3 Minute Game Design</a></li>
+</ul>
+</li>
 </ul>
 <hr />
 <h2 id="campus-wide-resources-and-information">Campus-wide resources and information</h2>
@@ -378,6 +457,19 @@ We're all living in the meta-game engine called the occupational forces of the U
 
             
                     <!-- block preview -->
+    <div class="preview row row-cols-md-3 text-center pt-md-3" id="component-preview">
+        <div class="col themed-grid-col">
+            <a rel="prev" href=".." class="nav-link">
+                <i class="fa fa-arrow-left"></i> Previous
+            </a>
+        </div>
+        <div class="col themed-grid-col"></div>
+        <div class="col themed-grid-col">
+            <a rel="next" href="../schedule/" class="nav-link">
+                Next <i class="fa fa-arrow-right"></i>
+            </a>
+        </div>
+    </div>
 <!-- endblock -->
             
 

@@ -15,6 +15,26 @@
             margin-left:0 !important;
         }
     }
+
+    blockquote{
+        margin: 0 0.5em;
+    }
+
+    table th:first-of-type {
+        width: 10%;
+    }
+    table th:nth-of-type(2) {
+        width: 45%;
+    }
+    table th:nth-of-type(3) {
+        width: 45%;
+    }
+
+/*
+    table tr:nth-child(1)>td:nth-child(2), table tr:nth-child(8)>td:nth-child(2), table tr:nth-child(10)>td:nth-child(3){
+        background-color:gray;
+    }*/
+
 </style>
 
 <!--jump to anchor tag adjusted to header height offset-->
@@ -46,17 +66,27 @@
             });
         });
     });
-    </script>
+    
+    window.onload = function(e){
+        var cell = document.getElementById('component-site-name');
+        var caseId = cell.innerHTML;
+        cell.innerHTML = '';
+        var link = document.createElement('a');
+        link.href = '../';
+        link.appendChild(document.createTextNode(caseId));
+        cell.appendChild(link);
+    }
+</script>
 
 |  | Tuesday       | Thursday      |
 | ------- | ------------- | ------------- |
-| W1  | **04/01**</br><p><mark class="due">📌 DUE: <a href="https://forms.gle/3LVDUEox97UH1xwY6">Preliminary Survey</a></mark></p><p>Course Overview & Introductions</p><p>[Tech Setup](./tech-setup.md) </p><p>Lecture: [Intro to Game Engine, Unity, and C#](./0-unity-csharp.md)</p><p><mark class="assign">▶️ ASSIGN: [Reading Response 1](./readings-and-homeplays.md/#reading-response-1), [Project 1](./project-1.md)</mark></p> | **04/03**</br><p>Tutorial: [Transforms, Vectors](./1-transforms-vectors.md)</p><p><mark class="assign">▶️ ASSIGN: [Homeplay 1](./readings-and-homeplays.md#homeplay-1)</mark></p> |
-| W2  | **04/08**</br><p><mark class="due">📌 DUE: Reading Response 1</mark></p><p>Tutorial: [Prefabs, Loops, Arrays](./2-prefabs-loops-arrays-import.md)</p> | **04/10**</br><p><mark class="due">📌 DUE: Homeplay 1, Project 1 Sketch </mark></p><p>Tutorial: [Randomness, Noise, Custom Classes for Storing Data](./3-randomness-noise-customclasses.md)</p>|
-| W3  | **04/15**</br><p>Tutorial: [Basic Input, UI, Lights and Camera Settings](./4-basicinput-ui-lights-camera.md)</p><p>Demo: [How to Submit](./how-to-submit.md)</p><p>Studio Time</p> | **04/17**</br><p><mark class="due">📌 DUE: Project 1</mark></p><p>Project 1 Crit</p><p><mark class="assign">▶️ ASSIGN: [Reading Response 2](./readings-and-homeplays.md/#reading-response-2), [Project 2](./project-2.md)</mark></p>|
-| W4  | **04/22**</br><p>Lecture: [Game + Play + Level Design!](./5-game-play-level-design.md)</p><p><mark class="assign">▶️ ASSIGN: Homeplay 2 (In-Class)</mark></p> | **04/24**</br><p><mark class="due">📌 DUE: Reading Response 2, Ball Game Research</mark></p><p>Tutorial: [Physics Engine: Rigidbody, Collider, Collisions, Triggers](./6-physics-engine.md)</p>|
-| W5  | **04/29**</br><p>Tutorial: [Input Systems, State Machines, Events](./7-inputsystem-statemachine-event.md)</p> | **05/01**</br><p>Tutorial: [Statics, Scenes, Sounds, VFX](./8-statics-scenes-sounds-vfx.md)</p>|
-| W6  | **05/06**</br><p><mark class="due">📌 DUE: Project 2 Prototype Playtest</mark></p><p>Tutorial: [Animation, Coroutines, Persistent Data](./9-animation-coroutines-persistentdata.md)</p> | **05/08**</br><p>Studio Time</p>|
-| W7  | **05/13**</br><p><mark class="due">📌 DUE: Project 2</mark></p><p>Project 2 Crit</p> | **05/15**</br><p>Project 2 Crit (cont.) </p><p><mark class="assign">▶️ ASSIGN: [Project 3](./project-3.md), [Homeplay 3 (Extra Credit)](./readings-and-homeplays.md/#homeplay-3)</mark></p>|
-| W8  | **05/20**</br><p>Tutorial: [Interactive Text](./12-interactive-text.md)</p> | **05/22**</br><p><mark class="due">📌 DUE: Homeplay 3, Project 3 Sketch</mark></p><p>Tutorial: [Sprites in 2.5D, Video players, Cinemachine](./14-cinemachine.md)</p>|
-| W9  | **05/27**</br><p>Tutorial: [Inventory Database](./13-inventory-database.md)</p> | **05/29**</br><p>Studio Time</p>|
-| W10  | **06/03**</br><p>Studio Time</p> | **06/05**</br><p><mark class="due">📌 DUE: Project 3</mark></p><p>Project 3 Crit</p> |
+| W1  | **01/06**</br><p>Introductions</p><p>[Tech Setup](https://docs.google.com/document/d/1CGhRzQgaY6i87bgxVyaFQmYGLqq-W-n90z05SzFD9ns/edit?usp=sharing)</p><p>Course Overview</p><p>Lecture: Intro to Game Engine</p><p>Tutorial: Intro to Unity Interface</p><blockquote><p>Making a New Unity Project, Basic Unity Navigation, GameObjects and Components, Importing 2D and 3D Assets</p></blockquote><div class="assign"><p>▶️ ASSIGN:</p><ul><li>Survey (Due: W1 Thu, 01/08)</li><li>Reading + Homeplay Response 1 (W2 Tue, 01/13)</li><li>Project 1 (Due: W3 Tue, 01/20)</li></ul></div> | **01/08**</br><div class="due"><p>📌 DUE: </p><ul><li>Survey</li></ul></div><p>Tutorial: C# Fundamentals, Modular Generation</p><blockquote><p>Anatomy of a Unity C# Script, Vector Math for Transforming GameObjects, Prefab Instantiation, Loops, Arrays</p></blockquote> |
+| W2  | **01/13**</br><div class="due"><p>📌 DUE: </p><ul><li>Reading + Homeplay Response 1</li></ul></div><p>Tutorial: Procedural Generation</p><blockquote><p>Noise, Custom Functions and Classes</p></blockquote><p>Studio Time: One-on-one checkins</p><blockquote><p>Bring your ideas, works in progress, and questions to class!</p></blockquote> | **01/15**</br><p>Tutorial: Basic Input, UI, Light and Camera Settings, Animations</p><p>How To Submit</p>|
+| W3  | **01/20**</br><div class="due"><p>📌 DUE: </p><ul><li>Project 1</li></ul></div><p>Lecture: Game + Play + Level Design</p><p>Tutorial: Prototyping Game Environments with Roll-a-ball</p><blockquote><p>Grayboxing, Unity Terrain</p></blockquote><div class="assign"><p>▶️ ASSIGN:</p><ul><li>Project 2 (Due: W6 Thu, 02/12)</li><li>Reading Response 2 (W4 Tue, 01/27)</li></ul></div> | **01/22**</br><p>Tutorial: Physics Engine<p><blockquote><p>Rigidbodies, Colliders, Collisions, Triggers</p></blockquote>|
+| W4  | **01/27**</br><div class="due"><p>📌 DUE: </p><ul><li>Project 2 Proposal</li><li>Reading Response 2</li></ul></div><p>Tutorial: Input System, State Machines</p> | **01/29**</br><p>Tutorial: Game Data and Scene Management</p><blockquote><p>Score-keeping, Singletons, Loading Scenes, Coroutines, UI</p></blockquote>|
+| W5  | **02/03**</br><div class="due"><p>📌 DUE: </p><ul><li>Project 2 Prototype Playtest</li></ul></div><p>Tutorial: Sounds, Video Players, Visual Effects</p> | **02/05**</br><p>Studio Time: One-on-one meetings</p>|
+| W6  | **02/10**</br><p>Tutorial: Post-processing, How To Submit</p><p>Studio Time: One-on-one meetings</p> | **02/12**</br><div class="due"><p>📌 DUE: </p><ul><li>Project 2</li></ul></div><div class="assign"><p>▶️ ASSIGN:</p><ul><li>Project 3 (W10 Tue, 03/10)</li><li>Homeplay Response 2 (W8 Tue, 02/24)</li><li>Extra Topics Survey (Due: W8 Tue, 02/24)</li></ul></div>|
+| W7  | **02/17**</br><p>Alt-Game Engine Jam</p> | **02/19**</br><p>Tutorial: Interactive Text Workshop with Ink</p>|
+| W8  | **02/24**</br><div class="due"><p>📌 DUE: </p><ul><li>Homeplay Response 2</li><li>Extra Topics Survey</li></ul></div><p>Tutorial: Cinematic Tools in Unity, Inventory System</p><blockquote><p>More Unity Camera Tricks, Cinemachine, Timeline, Scriptable Objects</p></blockquote> | **02/26**</br><div class="due"><p>📌 DUE: </p><ul><li>Project 3 Proposal</li></ul></div><p>Studio Time: One-on-one meetings</p>|
+| W9  | **03/03**</br><p>Tutorial: Extra Topics <!--Persistent Data, NavMesh / NPC Behaviour, More Animation Tips--></p> | **03/05**</br><p>Studio Time: One-on-one meetings</p>|
+| W10  | **03/10**</br><div class="due"><p>📌 DUE: </p><ul><li>Project 3</li></ul></div><p>Project 3 Crit Day 1</p> | **03/12**</br><p>Project 3 Crit Day 2</p> |

@@ -28,22 +28,32 @@ document.querySelectorAll('a[href^="#"]')
         });
     });
 });
+
+    window.onload = function(e){
+        var cell = document.getElementById('component-site-name');
+        var caseId = cell.innerHTML;
+        cell.innerHTML = '';
+        var link = document.createElement('a');
+        link.href = '../';
+        link.appendChild(document.createTextNode(caseId));
+        cell.appendChild(link);
+    }
 </script>
 
 # 📜 Syllabus
 
 ---
 
-**LOCATION:** Broad 4240<br/>
+**LOCATION:** Broad 4230<br/>
 **TIME:** Tuesdays and Thursdays, 9 a.m. - 11:50 a.m.
 
 **INSTRUCTOR**<br/>
-Office hours: By appointment only; Tuesdays, 12:30 p.m. - 1:30 p.m. @ Game Lab (Broad 3252)<br/>
+Office hours: TBD<br/>
 Email: huazzers@g.ucla.edu
 
 **TEACHING ASSISTANT**<br/>
-Office hours: By appointment only; Thursdays, 12:30 p.m. - 1:30 p.m. @ 3rd floor studio (Broad 3241)<br/>
-Email: lanxinerrr@gmail.com
+Office hours: TBD<br/>
+Email: TBD
 
 
 
@@ -59,7 +69,7 @@ This course is offered in parallel with the concurrent courses, Game Design and 
 ---
 
 ## Course Prerequisites
-* DESMA 24 Motion
+* DESMA 28 Interactivity
 * DESMA 101 Media Arts Introduction / DESMA 104 Design Futures
 
 This course will be heavy on C# scripting in Unity scripting API. If you haven't fulfilled the above pre-requisites but have **prior experience in either writing code or using the Unity game engine**, please let me know.
@@ -74,7 +84,7 @@ By the end of this course, you will be able to create a real-time, interactive s
 ## Course Outline
 
 ### Unit 1: Generative Computation
-Using generative design to create random/unique/dynamic ecosystems, worlds, characters, and events in Unity. 
+Design modular or procedural algorithms to create random/unique/dynamic behaviours, environments, and characters in Unity. 
 
 > **Week 1-3**
 </br>Intro to Unity Game Engine and C#, Vector fundamentals, Prefabs and Instantiation, Arrays and Randomness, UI
@@ -84,22 +94,22 @@ Using generative design to create random/unique/dynamic ecosystems, worlds, char
 ### Unit 2: Playing with Physics
 Using physics, math, gamepad mapping tools to design environments and mechanics for interactive gameplay.
 
-> **Week 4-7**
+> **Week 3-6**
 </br>Level Design, Input Systems, Physics Simulations, Static Variables and Singletons, Sound, Coroutines, Persistent Data
 > 
-> **Project 2: TBD -- Make a physics-based video game to be played on the Arcade Cabinet / Table!**
+> **Project 2: Ball Game Remix**
 
 ### Intermission: Alt-Engines
 Explore other tiny game engines!
 
 > **Week 7**
-</br>Micro Game Jam(s) -- Make an entire game in a single class.
+</br>Alt-Game Engine Jam(s) -- Make an entire game in a single class.
 
-### Unit 3: Save && Scene
+### Unit 3: Engine for Expression
 Using dialogue systems, inventory data, and cinematic affordances of the game engine to stage and contextualise your play experiences. 
 
-> **Week 8-10**
-</br>Cinemachine, Interactive Fiction, Inventory and Collections
+> **Week 7-10**
+</br>Cinematic Tools, Interactive Text, Inventory Databases
 > 
 > **Project 3: Zine Game**
 
@@ -112,37 +122,52 @@ Using dialogue systems, inventory data, and cinematic affordances of the game en
 > * Project 1: 15%
 > * Project 2: 25%
 > * Project 3: 25%
-> * Reading / Homeplay responses: 15%
-> * Participation / Attendance: 20%
+> * Reading and Homeplay responses: 15%
+> * Participation: 20%
 
 ### Evaluation Criteria
+
 #### Projects
 Considering the likelihood that everyone is coming in with different skillsets and coding experiences, the expectation for this class is that **you approach each project with your own level of skill and comfort in mind.** Design a project for yourself that **pushes your technical skills a little bit**, but also allows you to **lean into your existing strengths and practices.**
 
 We will evaluate your projects based on:
 
 > * **Timely submission**</br>Did you submit your project on time? (see [*Late Work*](#late-work) for more details.)
-> * **Completion of Project Deliverables**</br>Does your project meet the requirements of the assignment?
+> * **Completion of Project Deliverables**</br>Did you submit your project files and documentation? 
+> * **Fulfilment of Project Requirements**</br>Does your project meet the intended direction and requirements of the assignment?
 > * **Attention to detail and craft**</br>Does the project run? Are there unintended bugs, glitches, etc.
 > * **Project scope / aesthetic and technical ambition**</br>Are you doing the bare minimum, or are you pushing yourself technically and/or aesthetically? 
-> * **Creative risk-taking and resourcefulness**</br>Are you pushing the limits of the tools? Hacky solutions are perfectly acceptable and encouraged!
+> * **Creative risk-taking / resourcefulness**</br>Are you pushing the limits of the tools and making full use of the possibilities they offer? Hacky solutions and unconventional "misuse" are perfectly acceptable and encouraged!
 
  
 #### Readings / Homeplays
 
-You will be assigned occasional readings and games that are related to this course, accompanied by a questionnaire for you to complete and bring to class. These are graded pass/fail -- if you did the work, you will get full credit.
+Reading and homeplay responses will be assigned according to conceptual and technical topics covered in class, and are designed to support early ideation stages for each respective project assignment.
+
+These are graded pass/fail -- if you did the work, you will get full credit.
 
 
-#### Participation / Attendance
-This is an **in-person course**, so please come to class on time. We will be covering a lot of content quickly, so it is *very* important that you are present for each lesson.
+#### Participation:
 
-If you are more than 10 minutes late to class (ie. 9:10 a.m.), you will be marked as late. Three late marks results in an unexcused absence. 
+Participation will be evaluated based on the following:
 
-**If you anticipate having to miss class, email the TA as soon as possible.** You get **two** unexcused absences before it starts affecting your grade. Every unexcused absence that follows will result in one full letter grade deduction from your participation score. 
+> * **Attendance**
+> * **Participation in class discussion / critique**
+> * **Active communication with TA and instructor in course-related matters**, including project discussions and attendance notices
+> * **Staying on task during in-class work periods**
 
-Your participation grade will also be determined by your level of engagement in class. If you seem disengaged or are disruptive in class, we will reach out and discuss the matter with you. If a pattern of disruption or disengagement continues, we will be taking note and it will be reflected in your grade.
 
-### Other assignment-related rules
+#### Attendance Policy
+
+**If you are more than 5 minutes late to class (ie. 9:05 a.m.)**, you will be marked as **late**. 
+
+**Two late marks** results in **an unexcused absence**. 
+
+Unexcused absences will lower your grade. **More than three (>3) unexcused absences will result in an automatic fail**, and must be addressed on a case-by-case basis. 
+
+Any attendance-related disputes should be discussed with the TA within a week.
+
+**If you anticipate being late or absent, you should inform me AND the TA before class begins.** It is also your responsibility to arrange alternative plans with me and the TA for any work you've missed from being absent (eg. attending office hours, sharing project updates, etc.)
 
 #### Late Work
 **On the day the project is due:**
@@ -150,53 +175,70 @@ Your participation grade will also be determined by your level of engagement in 
 * Projects should be **ready to play** prior to the beginning of class.
 * Project files and documentation should be **submitted by 11:59PM** the same day.
 
-**If you anticipate that you won’t be able to complete the work by the due date, please contact us *before* the due date so we can discuss options.**
+**If you anticipate that you won’t be able to complete the work by the due date**, please contact the instructor *before* the due date so we can discuss options.
 
 #### Appropriation, Fair Use, and Generated Content
 
-**You are expected to develop your own assets for your project submissions.** 
+Although generative AI, template projects, and readymade assets can offer seemingly more "professional" results quickly, your purpose here to learn, and the best way to learn is to do it yourself or make things with others around you. So even if it means spending more time getting less done, or making mistakes along the way, I strongly advise against using any shortcuts while you're in this class.
 
-The use of existing prompt-based AI generation programs, including but not limited to ChatGPT, DALLE, Stable Diffusion, and Midjourney, is not allowed in this class. There are [many other reliable solutions and resources](#recommended-tools) available to you, please use this opportunity to explore them.
+You are also expected to develop your own assets for project submission -- use this opportunity to explore the [resources](#required-tools) available to you.
 
-If you're planning to borrow or generate assets from somewhere else, please consult the instructor beforehand AND be able to justify your decision for doing so. While developing early stage prototypes and testing mechanics, it is acceptable to use placeholder assets.
+<br>
 
-**No credit will be awarded for plagiarised work.** All submitted projects should be original and developed within the duration of this class. Remember to acknowledge / cite your tools and sources appropriately in your submission.
+**The bottom line:** 
+
+1. No prompt-generating code from scratch -- we can tell. 
+2. If you're going to use generative tools, template projects, or readymade assets in your submission:
+    - consult the instructor or TA beforehand, and be able to justify your decision in doing so;
+    - cite your sources in your project submission. Failure to cite any major use of such resources will be considered an academic integrity violation and evaluated accordingly. 
+
+3. Placeholder assets are okay during early stage prototypes for testing mechanics. 
+4. All submitted projects should be original and developed within the duration of this class.
+5. If you have technical questions:
+    - if it's something we've already covered in class, try looking up keywords on the class website using the search toolbar 🔎 (located at the top right corner);
+    - ask the instructor or TA in class, through email, or book office hours;
+    - ask your peers during work time or outside of class -- I recommend setting up a group chat or discord server where you can share resources and troubleshoot questions together;
+    - browse [manuals, community forums, and tutorials](#c-scripting-and-unity-development) created by other practicing developers.
 
 ---
 
 ## Resources
 
-### Readings / Games
-All assigned readings and games will be provided for you -- no need to purchase textbooks for this class. (see [*Readings & Homeplays*](./readings-and-homeplays.md) for more details.)
+### Readings / Homeplays
+All assigned readings and homeplay projects will be provided for you -- no need to purchase textbooks for this class. 
 
 ### Required Tools
 - **Unity** -- Please install [Unity Hub](https://unity.com/download) and get the latest LTS version of Unity Editor (currently 6000.0.43f1). Other editor versions may differ slightly from each other, but anything 2021 or later should be ok.
 - **Visual Studio** -- Install Microsoft Visual Studio or Visual Studio Code, you should have the option to do this when installing Unity.
+- **A three-button mouse** -- always bring your mouse to class!
+- **2D and 3D production software of your choice:**
+    - [Krita](https://krita.org/en/) -- professional free and open source digital paint tool.
+    - [Blender](https://www.blender.org/) -- powerful free and open source 3D art and animation tool.
+    - [Piskel](https://www.piskelapp.com/) -- free pixel art app.
+    - [Aseprite](https://www.aseprite.org/) -- inexpensive pixel art and animation tool.
+    - [Sculptris](http://pixologic.com/sculptris/) -- “A gateway into the exciting world of 3D.”
+    - [Crocotile 3d](https://prominent.itch.io/crocotile3d) -- A tool for creating 3d scenes with 2d tiles.
+    - [Mixamo](https://www.mixamo.com/) -- Free, but requires a login. Includes community sourced walk cycles and 3D animations which you can apply to any model that can T-pose.
 
-### Recommended Tools
+### Other Recommended Resources
 
-**2D and 3D production software of your choice:**
-
-- [Krita](https://krita.org/en/) -- professional free and open source digital paint tool.
-- [Blender](https://www.blender.org/) -- powerful free and open source 3D art and animation tool.
-- [Piskel](https://www.piskelapp.com/) -- free pixel art app.
-- [Aseprite](https://www.aseprite.org/) -- inexpensive pixel art and animation tool.
-- [Sculptris](http://pixologic.com/sculptris/) -- “A gateway into the exciting world of 3D.”
-- [Crocotile 3d](https://prominent.itch.io/crocotile3d) -- A tool for creating 3d scenes with 2d tiles.
-- [Mixamo](https://www.mixamo.com/) -- Free, but requires a login. Includes community sourced walk cycles and 3D animations which you can apply to any model that can T-pose.
-
-**Audio resources:**
+#### For Making Project Assets
 
 - [freesound.org](https://freesound.org/) -- audio database that has search filters sorted by licenses. login required for downloading files. good source for adding sound effects and music to your projects. 
 - [Audacity](https://www.audacityteam.org/) -- free software for recording and editing audio; the version without Muse Hub should suffice for your purposes.
 
 For more asset creation tools, check out this [exhaustive list of cheap and free tools compiled by Everest Pipkin](https://github.com/everestpipkin/tools-list#making-assets---images-models-sound-video).
 
-**Additional resources for C# scripting and Unity development:**
+#### C# scripting and Unity development**
 
 - Unity documentation -- [Scripting Reference](https://docs.unity3d.com/ScriptReference/index.html) and [Editor Manual](https://docs.unity3d.com/Manual/index.html).
 - Community Forums -- [Stack Exchange](https://stackexchange.com/), [Unity Discussions](https://discussions.unity.com/).
-- [Learn C# in One Day and Learn it Well](https://www.amazon.com/Learn-One-Day-Well-Hands/dp/1518800270) by Jamie Chan.
+- YouTube. Here are a few channels that are usually pretty good.
+    - [Unity’s official channel](https://www.youtube.com/playlist?list=PLX2vGYjWbI0RQ3O-nAuJd2LWm7lH5htrL)
+    - [Game Maker’s Toolkit](https://youtu.be/XtQMytORBmM)
+    - [Code Monkey](https://youtube.com/playlist?list=PLzDRvYVwl53vxdAPq8OznBAdjf0eeiipT)
+    - [Brackeys](https://www.youtube.com/channel/UCYbK_tjZ2OrIZFBvU6CCMiA) (no longer updated)
+    - [3 Minute Game Design](https://www.youtube.com/playlist?list=PLFFUZ_uHAWMU44iAlkVoXKnsOefNYdsaK)
 
 ---
 
