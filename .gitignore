@@ -1,4 +1,1 @@
 #ignore all archive unity build files except .gif and image files
-
-#ignore main.min.css
-site/assets/css/main.min.css
