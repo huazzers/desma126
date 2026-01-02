@@ -27,14 +27,27 @@ document.querySelectorAll('a[href^="#"]')
         });
     });
 });
+
+    window.onload = function(e){
+        var cell = document.getElementById('component-site-name');
+        var caseId = cell.innerHTML;
+        cell.innerHTML = '';
+        var link = document.createElement('a');
+        link.href = '../';
+        link.appendChild(document.createTextNode(caseId));
+        cell.appendChild(link);
+    }
 </script>
 
 # Readings and Homeplays
 
 ---
 
+TBD
+
+<!--
+
 ## Reading Responses
-<!--Brief description on what reading responses are.-->
 
 Read the assigned material, and submit your response to the given questions **in your own words.**
 
@@ -58,6 +71,8 @@ If you're hungry for more, below are some recommended talks on more methods and 
 - Herbert Wolverson 2020 Roguelike Celebration Talk "Procedural Map Generation Techniques" (27 min) [https://www.youtube.com/live/TlLIOgWYVpI](https://www.youtube.com/live/TlLIOgWYVpI) 
 
 <br>
+
+
 
 ### Reading Response 2
 
@@ -176,3 +191,5 @@ Plan to spend about 30 ~ 60 minutes playing the game(s) with your group members,
     - anything from this game that you're interested in applying towards your own project.
 
 **Please share a link to any presentation materials** in the sign up sheet next to your group names. You will share your responses with the rest of the class during lesson time on the due date.
+
+-->

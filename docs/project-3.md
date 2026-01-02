@@ -27,10 +27,23 @@ document.querySelectorAll('a[href^="#"]')
         });
     });
 });
+
+    window.onload = function(e){
+        var cell = document.getElementById('component-site-name');
+        var caseId = cell.innerHTML;
+        cell.innerHTML = '';
+        var link = document.createElement('a');
+        link.href = '../';
+        link.appendChild(document.createTextNode(caseId));
+        cell.appendChild(link);
+    }
 </script>
 
 # Project 3: Zine Game
 
+TBD
+
+<!--
 <div class="duedate">
 <p>📌 <b>PROJECT SKETCH DUE:</b> Week 8 Thursday, May 22</p>
 <p>📌 <b>FINAL PROJECT BUILD + DOCUMENTATION DUE:</b> Week 10 Thursday, June 5</p>
@@ -426,3 +439,4 @@ As a prosthetic extension of the player character's form, inventory items also c
 ## Evaluation
 
 Your final project will be evaluated according to the guidelines listed in the [course syllabus](./syllabus.md/#evaluation-criteria).
+-->

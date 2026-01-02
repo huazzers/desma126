@@ -48,12 +48,12 @@ document.querySelectorAll('a[href^="#"]')
 **TIME:** Tuesdays and Thursdays, 9 a.m. - 11:50 a.m.
 
 **INSTRUCTOR**<br/>
-Office hours: TBD<br/>
+Office hours: Thursdays 12 p.m. - 1 p.m., by appointment only.<br/>
 Email: huazzers@g.ucla.edu
 
 **TEACHING ASSISTANT**<br/>
-Office hours: TBD<br/>
-Email: TBD
+Office hours: Tuesdays 12 p.m. - 1 p.m., by appointment only.<br/>
+Email: elliotbyu@g.ucla.edu
 
 
 

@@ -27,10 +27,23 @@ document.querySelectorAll('a[href^="#"]')
         });
     });
 });
+
+    window.onload = function(e){
+        var cell = document.getElementById('component-site-name');
+        var caseId = cell.innerHTML;
+        cell.innerHTML = '';
+        var link = document.createElement('a');
+        link.href = '../';
+        link.appendChild(document.createTextNode(caseId));
+        cell.appendChild(link);
+    }
 </script>
 
 # Project 2: Ball Game Remix
 
+TBD
+
+<!--
 <div class="duedate">
 <p>📌 <b>BALL GAME RESERACH DUE: Week 4 Thursday, April 24</b></p>
 <p>📌 <b>PROTOTYPE PLAYTEST DUE: Week 6 Tuesday, May 6</b></p>
@@ -404,3 +417,5 @@ Consider increasing the **volume** and **pitch** of a sound effect based on how 
 ## Evaluation
 
 Your final project will be evaluated according to the guidelines listed in the [course syllabus](./syllabus.md/#evaluation-criteria).
+
+-->

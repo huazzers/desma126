@@ -27,9 +27,23 @@ document.querySelectorAll('a[href^="#"]')
         });
     });
 });
+
+    window.onload = function(e){
+        var cell = document.getElementById('component-site-name');
+        var caseId = cell.innerHTML;
+        cell.innerHTML = '';
+        var link = document.createElement('a');
+        link.href = '../';
+        link.appendChild(document.createTextNode(caseId));
+        cell.appendChild(link);
+    }
 </script>
 
 # Project 1: Auto-Generator
+
+TBD
+
+<!--
 
 <div class="duedate">
 <p>📌 <b>SKETCH/PROPOSAL DUE:</b> Week 2 Thursday, April 10</p>
@@ -85,3 +99,5 @@ Project 1 contains **TWO COMPONENTS**:
 Your final project will be evaluated according to the guidelines listed in the [course syllabus](./syllabus.md/#evaluation-criteria).
 
 ---
+
+-->
