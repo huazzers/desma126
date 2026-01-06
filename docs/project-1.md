@@ -114,5 +114,3 @@ To get familiar with building custom dynamic systems using Unity and C#, your fi
 Your final project will be evaluated according to the guidelines listed in the [course syllabus](./syllabus.md/#evaluation-criteria).
 
 ---
-
--->

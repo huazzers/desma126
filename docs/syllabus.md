@@ -207,8 +207,7 @@ You are also expected to develop your own assets for project submission -- use t
 All assigned readings and homeplay projects will be provided for you -- no need to purchase textbooks for this class. 
 
 ### Required Tools
-- **Unity** -- Please install [Unity Hub](https://unity.com/download) and get the latest LTS version of Unity Editor (currently 6000.0.43f1). Other editor versions may differ slightly from each other, but anything 2021 or later should be ok.
-- **Visual Studio** -- Install Microsoft Visual Studio or Visual Studio Code, you should have the option to do this when installing Unity.
+- **Unity** and **Visual Studio / Visual Studio Code (Mac)**
 - **A three-button mouse** -- always bring your mouse to class!
 - **2D and 3D production software of your choice:**
     - [Krita](https://krita.org/en/) -- professional free and open source digital paint tool.
@@ -228,7 +227,7 @@ All assigned readings and homeplay projects will be provided for you -- no need 
 
 For more asset creation tools, check out this [exhaustive list of cheap and free tools compiled by Everest Pipkin](https://github.com/everestpipkin/tools-list#making-assets---images-models-sound-video).
 
-#### C# scripting and Unity development**
+#### C# scripting and Unity development
 
 - Unity documentation -- [Scripting Reference](https://docs.unity3d.com/ScriptReference/index.html) and [Editor Manual](https://docs.unity3d.com/Manual/index.html).
 - Community Forums -- [Stack Exchange](https://stackexchange.com/), [Unity Discussions](https://discussions.unity.com/).
