@@ -80,13 +80,13 @@ To get familiar with building custom dynamic systems using Unity and C#, your fi
 
 **Inspirations**
 
-<figure><a href="https://jamschutz.itch.io/quick-character-creator"><img src="../img/quickcharactercreator.jpg"></a><figcaption>-- Hao Liao and Joey Schutz, "<a href="https://jamschutz.itch.io/quick-character-creator">Quick Charcater Genreator</a>"</figcaption></figure>
+<figure><a href="https://jamschutz.itch.io/quick-character-creator"><img src="../img/quickcharactercreator.jpg"></a><figcaption>-- Hao Liao and Joey Schutz, "<a href="https://jamschutz.itch.io/quick-character-creator">Quick Character Genreator</a>"</figcaption></figure>
 
 <figure><a href="https://grey2scale.itch.io/pet-the-pup"><img src="../img/petthepup.gif"></a><figcaption>-- Will Herring, "<a href="https://grey2scale.itch.io/pet-the-pup">Pet the Pup at the Party</a>"</figcaption></figure>
 
 <figure><a href="https://lingdonh.itch.io/better-horses"><img src="../img/betterhorses.png"></a><figcaption>-- Lingdong Huang, "<a href="https://lingdonh.itch.io/better-horses">Better Horses</a>"</figcaption></figure>
 
-<figure><a href="http://www.galaxykate.com/apps/Prototypes/LTrees/"><img src="../img/flowers.png"></a><figcaption>-- Kate Compton"<a href="http://www.galaxykate.com/apps/Prototypes/LTrees/">Flowers</a>"... who also wrote this Tumblr post about making generators "<a href="https://www.tumblr.com/galaxykate0/139774965871/so-you-want-to-build-a-generator">So you want to build a generator...</a>"</figcaption></figure>
+<figure><a href="http://www.galaxykate.com/apps/Prototypes/LTrees/"><img src="../img/flowers.png"></a><figcaption>-- Kate Compton, "<a href="http://www.galaxykate.com/apps/Prototypes/LTrees/">Flowers</a>"... who also wrote this Tumblr post about making generators "<a href="https://www.tumblr.com/galaxykate0/139774965871/so-you-want-to-build-a-generator">So you want to build a generator...</a>"</figcaption></figure>
 
 <figure><a href="https://titouanm.com/mucartographer/"><img src="../img/mucartographer.png"></a><figcaption>-- Titouan Millet, "<a href="https://titouanm.com/mucartographer/">Mu Cartographer</a>"</figcaption></figure>
 

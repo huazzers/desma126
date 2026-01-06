@@ -195,7 +195,6 @@ You are also expected to develop your own assets for project submission -- use t
 3. Placeholder assets are okay during early stage prototypes for testing mechanics. 
 4. All submitted projects should be original and developed within the duration of this class.
 5. If you have technical questions:
-    - if it's something we've already covered in class, try looking up keywords on the class website using the search toolbar 🔎 (located at the top right corner);
     - ask the instructor or TA in class, through email, or book office hours;
     - ask your peers during work time or outside of class -- I recommend setting up a group chat or discord server where you can share resources and troubleshoot questions together;
     - browse [manuals, community forums, and tutorials](#c-scripting-and-unity-development) created by other practicing developers.
