@@ -60,7 +60,7 @@ To get familiar with building custom dynamic systems using Unity and C#, your fi
 **Consider the following options:**
 
 * a landscape / level / terrain generator;
-* a random character generator, eg. exquisite corpse;
+* a character generator, eg. exquisite corpse;
 * an evolution simulator, e.g. cellular automaton.
 
 </br>
