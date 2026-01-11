@@ -124,6 +124,8 @@ Using dialogue systems, inventory data, and cinematic affordances of the game en
 > * Project 3: 25%
 > * Reading and Homeplay responses: 15%
 > * Participation: 20%
+> 
+> **Optional Extra credit**: Attend a Game Lab event, or any other guest talk, art exhibition, or performance related to games and interactive media, and tell me about your experience! 
 
 ### Evaluation Criteria
 
