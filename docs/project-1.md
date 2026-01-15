@@ -43,7 +43,7 @@ document.querySelectorAll('a[href^="#"]')
 
 <div class="duedate">
 <p>📌 <b>FINAL PROJECT BUILD + DOCUMENTATION DUE:</b> Week 3 Tuesday, January 20</p>
-<p>Submit Final Submission Here (TBD)</p>
+<p><a href="https://forms.gle/eWJPZNMc2SoSoWgf7">Submit Final Submission Here</a></p>
 <blockquote>Please read the <a href="../how-to-submit">How To Submit</a> page for more detailed instructions.</blockquote>
 </div>
 
