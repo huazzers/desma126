@@ -109,8 +109,8 @@ Project 2 contains THREE COMPONENTS:
 Your final project must include the following elements:
 
 - ☑️ **Physics-based motion and collision** using the Rigidbody component.
-- ☑️ **Gameplay**: track player(s') score; consider play experiences and strategic optto adapt ball game interaction in virtual spaions using level design and game mechanics.
-- ☑️ **Interaction Design**: consider how ce using input key-mapping.
+- ☑️ **Gameplay**: track player(s') score; consider play experiences and strategic options using level design and game mechanics.
+- ☑️ **Interaction Design**: consider how to adapt your ball game interaction in virtual space using input key-mapping.
 - ☑️ **Visual Communication**: include a starting scene; instructions on how to play; and conveying changes in game states during play.
 - ☑️ **Sound**
 
