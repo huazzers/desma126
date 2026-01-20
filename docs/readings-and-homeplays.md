@@ -66,6 +66,45 @@ Play **at least ONE (1)** of the following projects in this [spreadsheet](https:
 - Kate Compton PROCJAM 2015 Talk (15:58 - 49:53) "[Let It Grow: Practical Procedural Generation From The Ground Up](https://www.youtube.com/live/s_eyo_m_hnc?feature=shared&t=958)" 
 - Herbert Wolverson 2020 Roguelike Celebration Talk "[Procedural Map Generation Techniques](https://www.youtube.com/live/TlLIOgWYVpI)" 
 
+<br>
+
+---
+
+## Reading Response 2
+
+<div class="duedate">
+<p>📌 <b>DUE: Week 4 Tuesday, January 27</b>
+</div>
+
+Read Steve Swink’s “[Game Feel: The Secret Ingredient](https://www.gamedeveloper.com/design/game-feel-the-secret-ingredient)”
+
+<br>
+
+***AND***
+
+<br>
+
+**any ONE (1)** of the following:
+
+- Henry Jenkins, “[Game Design As Narrative Architecture](https://drive.google.com/file/d/1FmHFVyv-vv19LSccrY80BWfGVFQJ1Qh3/view?usp=sharing)"
+- Alenda Cheng, “[Rambunctious Games: A Manifesto for Environmental Game Design](https://drive.google.com/file/d/1nxV71PJjhWbC6NariZf_mNYbCeAkZ5xI/view?usp=sharing)”
+
+<br>
+
+... and then [**submit your responses here**](https://forms.gle/zvkidpDeg3h9wBu66). 
+
+> 💡 Tip: You can add placeholder text inside the first question to see questions in the next section... just make sure your final submission is properly updated with your intended response!
+
+</br>
+
+***Optional***: 
+
+- Read **Chapter 17** of [***Game Feel: A Game Designer's Guide to Virtual Sensation***](https://gamifique.wordpress.com/wp-content/uploads/2011/11/2-game-feel.pdf) (pg. 316 of the PDF).
+- Watch [***Juice it or lose it - a talk by Martin Jonasson & Petri Purho***](https://youtu.be/Fy0aCDmgnxg) for a live demonstration of how to get juiciness with tweening, particles, and other visual design decisions.
+
+<br>
+
+---
 <!--
 
 ## Reading Responses

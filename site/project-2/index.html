@@ -69,7 +69,7 @@
                             nav-link text-gray text-decoration-none" href="../schedule/">[📅 Schedule]</a>
                         </li>
                         <li class="nav-item dropdown">
-                            <a class="
+                            <a class=" active 
                             nav-link dropdown-toggle text-decoration-none" href="#" data-bs-toggle="dropdown">[📌 Assignments]</a>
                             <ul class="dropdown-menu">
                                     <!-- block dropdown-menu -->
@@ -90,6 +90,11 @@
                                     <!-- block dropdown-menu -->
     <li>
         <a href="../project-1/" class="dropdown-item text-decoration-none ">Project 1</a>
+    </li>
+<!-- endblock -->
+                                    <!-- block dropdown-menu -->
+    <li>
+        <a href="./" class="dropdown-item text-decoration-none  active ">Project 2</a>
     </li>
 <!-- endblock -->
                             </ul>
@@ -136,6 +141,18 @@
             
             <li class="nav-item" data-bs-level="1"><a href="#project-2-ball-game-remix" class="nav-link">Project 2: Ball Game Remix</a>
               <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#prompt" class="nav-link">Prompt</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#requirements" class="nav-link">Requirements</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#evaluation" class="nav-link">Evaluation</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
               </ul>
             </li>
         </ul>
@@ -180,85 +197,85 @@ document.querySelectorAll('a[href^="#"]')
         });
     });
 });
-
-    window.onload = function(e){
-        var cell = document.getElementById('component-site-name');
-        var caseId = cell.innerHTML;
-        cell.innerHTML = '';
-        var link = document.createElement('a');
-        link.href = '../';
-        link.appendChild(document.createTextNode(caseId));
-        cell.appendChild(link);
-    }
 </script>
 
 <h1 id="project-2-ball-game-remix">Project 2: Ball Game Remix</h1>
-<p>TBD</p>
-<!--
 <div class="duedate">
-<p>📌 <b>BALL GAME RESERACH DUE: Week 4 Thursday, April 24</b></p>
-<p>📌 <b>PROTOTYPE PLAYTEST DUE: Week 6 Tuesday, May 6</b></p>
-<p>📌 <b>FINAL PROJECT BUILD + DOCUMENTATION DUE: Week 7 Tuesday, May 13</b></p>
-<p><a href="https://docs.google.com/forms/d/e/1FAIpQLSfYIkatQAdseB_9ViLEFxphgyGzzghXJnli4jjKpl2fUG2l9w/viewform?usp=sharing">Submit Final Submission Here</a></p>
+<p>📌 <b>PROPOSAL DUE:</b> Week 4 Tuesday, January 27</p>
+<p>📌 <b>PROTOTYPE PLAYTEST:</b> Week 5 Tuesday, February 3</p>
+<p>📌 <b>FINAL PROJECT BUILD + DOCUMENTATION DUE:</b> Week 6 Thursday, February 12</p>
+<p>Submit Final Submission Here (TBD)</p>
 <blockquote>Please read the <a href="../how-to-submit">How To Submit</a> page for more detailed instructions.</blockquote>
 </div>
 
-## Prompt
+<h2 id="prompt">Prompt</h2>
+<p>Adapt <strong>one of the following</strong> ball-based games into a digital game, with a twist!</p>
+<ul>
+<li>Ball-and-net sports (tennis, volleyball)</li>
+<li>Ball-and-wall sports (squash, racketball, handball)</li>
+<li>Throwing sports (Bocce Ball, dodgeball, bowling, skee ball)</li>
+<li>Tabletop sports (Billiards, Pool, Foosball, Air hockey)</li>
+<li><a href="https://www.youtube.com/watch?v=6Ez9QR7Lq3o">Beigoma</a> / Beyblade</li>
+<li>Golf</li>
+<li>Pinball / <a href="https://www.youtube.com/watch?v=agamnUk5Y84">Bagatelle</a></li>
+<li>Pachinko</li>
+</ul>
+<p><br></p>
+<p><strong>Optional challenge:</strong></p>
+<p>Make your game playable with <strong>gamepad controllers, or some other custom controller</strong> -- please consult with the instructor beforehand for further guidance.</p>
+<p><br></p>
+<p><strong>Inspiration</strong></p>
+<figure><a href="https://pippinbarr.com/pongs/info/"><img src="../img/36pongs.gif"></a><figcaption>-- Pippin Bar, "<a href="https://pippinbarr.com/pongs/info/">PONGS (36 Pong Variations)</a>"</figcaption></figure>
 
-Adapt **one of the following** ball-based games into a digital game for gamepad controllers *OR* any of the arcade cabinets in the classroom*:
+<p><br></p>
+<figure><a href="https://sokpop.itch.io/flipper-volcano"><img src="../img/flippervolcano.gif" width="600px"></a><figcaption>-- Sokpop Collective, "<a href="https://sokpop.itch.io/flipper-volcano">Flipper Volcano</a>"</figcaption></figure>
 
-- Ball-and-net sports (tennis, volleyball)
-- Ball-and-wall sports (squash, racketball, handball)
-- Throwing sports (Bocce Ball, dodgeball, bowling, skee ball)
-- Tabletop sports (Billiards, Pool, Foosball, Air hockey)
-- [Beigoma](https://www.youtube.com/watch?v=6Ez9QR7Lq3o) / Beyblade
-- Golf
-- Pinball / [Bagatelle](https://www.youtube.com/watch?v=agamnUk5Y84)
-- Pachinko
+<p><br></p>
+<figure><a href="https://www.youtube.com/watch?v=g4x9KYtaVtM"><img src="../img/kirbydreamcourse.gif" width="600px"></a><figcaption>-- "<a href="https://www.youtube.com/watch?v=g4x9KYtaVtM">Kirby's Dream Course</a>"</figcaption></figure>
 
-<br>
+<p><br></p>
+<figure><a href="https://www.youtube.com/watch?v=yYypwqRnoI8"><img src="../img/katamaridamacy.gif" width="600px"></a><figcaption>-- "<a href="https://www.youtube.com/watch?v=yYypwqRnoI8">Katamari Damacy</a>"</figcaption></figure>
 
-(**Alternative controllers are also welcome, but you should consult the instructor beforehand.*)
+<p><br></p>
+<figure><a href="https://www.youtube.com/watch?v=xUgYZwEd4fM"><img src="../img/supermonkeyball.gif" width="600px"></a><figcaption>-- "<a href="https://www.youtube.com/watch?v=xUgYZwEd4fM">Super Monkey Ball</a>"</figcaption></figure>
 
-<br>
+<p><br></p>
+<figure><a href="https://akuparagames.itch.io/ynglet"><img src="../img/ynglet.gif" width="600px"></a><figcaption>-- Akupara Games, "<a href="https://akuparagames.itch.io/ynglet">Ynglet</a>"</figcaption></figure>
 
-## Requirements
+<p><br></p>
+<figure><a href="https://www.youtube.com/watch?v=T3N8vK7yDxE"><img src="../img/wooden maze.jpg" width="600px"></a><figcaption>-- Brio, "<a href="https://www.youtube.com/watch?v=T3N8vK7yDxE">Labyrinth Game</a>"</figcaption></figure>
 
-Project 2 contains THREE COMPONENTS: 
-> - **PART 1 (5%): BALL GAME RESEARCH** </br><mark>*Due: Week 4 Thursday, April 24*</mark> </br>Do some research about the game you have chosen, and bring your notes to class for discussion. (Scroll down to ["Ball Game Research"](#ball-game-research) for more info.)
-> - **PART 2 (5%): PROTOTYPE PLAYTEST** </br><mark>*Due: Week 6 Tuesday, May 6*</mark> </br>Bring a prototype of your project to class -- we will be playtesting each others' projects. Prioritise core mechanics for player interaction and level design, placeholder visuals and playing from the Unity Editor are ok at this stage. (Scroll down to [Prototype Playtest](#prototype-playtest) for more info.)
-> - **PART 3 (15%): FINAL PROJECT BUILD WITH DOCUMENTATION** </br><mark>*Due: Week 7 Tuesday, May 13*</mark> </br>Refer to [final submission requirements](#final-submission) and [submission guidelines](./how-to-submit.md), then submit your final project. 
-> 
-> **Total contribution to final course grade: 25%**
+<p><br></p>
+<figure><a href="https://www.youtube.com/watch?v=V8OqMAnxY9M"><img src="../img/arcticeggs.gif" width="600px"></a><figcaption>-- The Water Museum, "<a href="https://www.youtube.com/watch?v=V8OqMAnxY9M">Arctic Eggs</a>"</figcaption></figure>
 
-<br>
-
-**📝 Final Project Checklist**
-
-Your final project must include the following elements:
-
-- ☑️ **Physics-based motion and collision** using the Rigidbody component.
-- ☑️ **Gameplay**: you must track player(s') score; consider play experiences and strategic options using level design and game mechanics.
-- ☑️ **Interaction Design**: you must include input key mapping for gamepad, arcade cabinet, or alternative custom controller(s); consider how to adapt ball game interaction in virtual space.
-- ☑️ **Visual Communication** of game state to player.
-- ☑️ **Sound**
-
-<br>
-
-Your final project *does not* have to be a traditional ball game.
-
-<br>
-
----
-
-#### Ball Game Research
-
-After picking a ball game to adapt for Project 2, do some research about the game you have chosen, considering the following questions: 
-
-<br>
-
-**Environment**
-
+<p><br></p>
+<h2 id="requirements">Requirements</h2>
+<p>Project 2 contains THREE COMPONENTS: </p>
+<blockquote>
+<ul>
+<li><strong>PART 1: PROPOSAL</strong> </br><mark><em>Due: Week 4 Tuesday, January 27</em></mark> </br>Do some research about the game you have chosen, and come prepared with your notes to pitch your project idea. (Scroll down to <a href="#proposal">"Proposal"</a> for more info.)</li>
+<li><strong>PART 2: PROTOTYPE PLAYTEST</strong> </br><mark><em>Due: Week 5 Tuesday, February 3</em></mark> </br>Bring a prototype of your project to class -- we will be playtesting each others' projects. Prioritise core mechanics for player interaction and level design, placeholder visuals and playing from the Unity Editor are ok at this stage. (Scroll down to <a href="#prototype-playtest">Prototype Playtest</a> for more info.)</li>
+<li><strong>PART 3: FINAL PROJECT BUILD WITH DOCUMENTATION</strong> </br><mark><em>Due: Week 6 Thursday, February 12</em></mark> </br>Refer to <a href="#final-submission">final submission requirements</a> and <a href="../how-to-submit/">submission guidelines</a>, then submit your final project. </li>
+</ul>
+</blockquote>
+<p><br></p>
+<p><strong>📝 Final Project Checklist</strong></p>
+<p>Your final project must include the following elements:</p>
+<ul>
+<li>☑️ <strong>Physics-based motion and collision</strong> using the Rigidbody component.</li>
+<li>☑️ <strong>Gameplay</strong>: track player(s') score; consider play experiences and strategic optto adapt ball game interaction in virtual spaions using level design and game mechanics.</li>
+<li>☑️ <strong>Interaction Design</strong>: consider how ce using input key-mapping.</li>
+<li>☑️ <strong>Visual Communication</strong>: include a starting scene; instructions on how to play; and conveying changes in game states during play.</li>
+<li>☑️ <strong>Sound</strong></li>
+</ul>
+<p><br></p>
+<p><strong>Your final project <em>does not</em> have to be a traditional ball game.</strong></p>
+<p><br></p>
+<hr />
+<h3 id="proposal">Proposal</h3>
+<p>After picking a ball game to adapt for Project 2, do some research about the game you have chosen, considering the following questions -- and pitch your ideas for your project.</p>
+<p><br></p>
+<p><strong>Environment</strong></p>
 <div class="div-container">
     <div style="width:47.5%;">
         <ul>
@@ -275,10 +292,8 @@ After picking a ball game to adapt for Project 2, do some research about the gam
     </div>
 </div>
 
-<br>
-
-**Body**
-
+<p><br></p>
+<p><strong>Body</strong></p>
 <div class="div-container">
     <div style="width:47.5%;">
         <p>For the <i>actual physical</i> game:</p>
@@ -307,13 +322,8 @@ After picking a ball game to adapt for Project 2, do some research about the gam
     </div>
 </div>
 
-
-
-
-<br>
-
-**Mind**
-
+<p><br></p>
+<p><strong>Mind</strong></p>
 <div class="div-container">
     <div style="width:47.5%;">
         <ul>
@@ -334,72 +344,53 @@ After picking a ball game to adapt for Project 2, do some research about the gam
     </div>
 </div>
 
-
-<br>
-
-
----
-
-
-#### Prototype Playtest
-
-> If this is your first time running a playtest, I recommend reading [**these suggestions and guidelines**](https://mycours.es/gamedesign2018/files/2018/11/playtesting-primer.pdf) beforehand to have some idea of what to expect.
-
-<br>
-
-When showing your piece, consider the following:
-
-1. **what you'd like to learn** from this playtest -- what questions or concerns would you like addressed from this test?
-2. **what sort of information you'd like playtesters to have before / while / after** interacting with your project (description, instructions, game rules, specific aspects you'd like feedback on.) <br><br>You may benefit from a **cold read** of your project (i.e. playtesters will enter your project with minimal to no prior briefing.) You may choose to reveal your intentions at the end to see how they compare with playtesters' "authentic" responses to your project.
-3. be prepared to **take notes** on how playtesters respond to your project (including their behaviours and emotions while playing the game -- not just verbal comments!)
-
-<br>
-
-Other general guidelines when playtesting someone else's game:
-
-- one speaker at a time; be mindful of taking space and making space for others. 
-- critique the work, not the artist.
-- use "i" statements.
-- think out loud while playing the project.
-- avoid judgemental comments like "i like..." or "i don't like..."; instead: describe, analyse, and interpret -- tell us what you see, and explain how that shapes your experience of the project. 
-- try to break the project -- catch any bugs or loopholes you can find! 
-
-<br>
-
----
-
-#### Final Submission
-
-##### **Physics**
-
-Your game must use the **Rigidbody** component to simulate **physics-based** motion and collision. 
-
-- Experiment with the **mass, drag, and angular drag** of the ball to obtain results appropriate for your sport. A bowling ball has very different properties than a ping pong ball!
-- Use [Rigidbody.AddForce](https://docs.unity3d.com/ScriptReference/Rigidbody.AddForce.html) or [Rigidbody.AddForceAtPosition](https://docs.unity3d.com/ScriptReference/Rigidbody.AddForceAtPosition.html) to **adjust velocity**. Consider when to use the different [force modes](https://docs.unity3d.com/ScriptReference/ForceMode.html): Force, Acceleration, Impulse, VelocityChange
-- Use [OnCollisionEnter](https://docs.unity3d.com/ScriptReference/MonoBehaviour.OnCollisionEnter.html) to **detect when objects collide**, and play appropriate sounds
-- Use [OnTriggerEnter](https://docs.unity3d.com/ScriptReference/MonoBehaviour.OnTriggerEnter.html) to **detect when objects enter an area**, such as a scoring zone or an out-of-bounds zone.
-
-<br>
-
-##### **Gameplay**
-
-Your game should keep track of one or more player's **score**. Scores should be determined more or less according to the rules of the game you are adapting.
-
-Consider how your **game mechanics** and **level design** can offer different strategic options and play experiences.
-
-For example, you could research how factors like [spin](https://en.wikipedia.org/wiki/Glossary_of_cue_sports_terms#spin) or tilt affect the game you are adapting, and consider whether your game should include a way for players to spin the ball or tilt the playing area.
-
+<p><br></p>
+<hr />
+<h3 id="prototype-playtest">Prototype Playtest</h3>
+<blockquote>
+<p>If this is your first time running a playtest, I recommend reading <a href="https://mycours.es/gamedesign2018/files/2018/11/playtesting-primer.pdf"><strong>these suggestions and guidelines</strong></a> beforehand to have some idea of what to expect.</p>
+</blockquote>
+<p><br></p>
+<p>When showing your piece, consider the following:</p>
+<ol>
+<li><strong>what you'd like to learn</strong> from this playtest -- what questions or concerns would you like addressed from this test?</li>
+<li><strong>what sort of information you'd like playtesters to have before / while / after</strong> interacting with your project (description, instructions, game rules, specific aspects you'd like feedback on.) <br><br>You may benefit from a <strong>cold read</strong> of your project (i.e. playtesters will enter your project with minimal to no prior briefing.) You may choose to reveal your intentions at the end to see how they compare with playtesters' "authentic" responses to your project.</li>
+<li>be prepared to <strong>take notes</strong> on how playtesters respond to your project (including their behaviours and emotions while playing the game -- not just verbal comments!)</li>
+</ol>
+<p><br></p>
+<p>Other general guidelines when playtesting someone else's game:</p>
+<ul>
+<li>one speaker at a time; be mindful of taking space and making space for others. </li>
+<li>critique the work, not the artist.</li>
+<li>use "i" statements.</li>
+<li>think out loud while playing the project.</li>
+<li>avoid judgemental comments like "i like..." or "i don't like..."; instead: describe, analyse, and interpret -- tell us what you see, and explain how that shapes your experience of the project. </li>
+<li>try to break the project -- catch any bugs or loopholes you can find! </li>
+</ul>
+<p><br></p>
+<hr />
+<h3 id="final-submission">Final Submission</h3>
+<h4 id="physics"><strong>Physics</strong></h4>
+<p>Your game must use the <strong>Rigidbody</strong> component to simulate <strong>physics-based</strong> motion and collision. </p>
+<ul>
+<li>Experiment with the <strong>mass, drag, and angular drag</strong> of the ball to obtain results appropriate for your sport. A bowling ball has very different properties than a ping pong ball!</li>
+<li>Use <a href="https://docs.unity3d.com/ScriptReference/Rigidbody.AddForce.html">Rigidbody.AddForce</a> or <a href="https://docs.unity3d.com/ScriptReference/Rigidbody.AddForceAtPosition.html">Rigidbody.AddForceAtPosition</a> to <strong>adjust velocity</strong>. Consider when to use the different <a href="https://docs.unity3d.com/ScriptReference/ForceMode.html">force modes</a>: Force, Acceleration, Impulse, VelocityChange</li>
+<li>Use <a href="https://docs.unity3d.com/ScriptReference/MonoBehaviour.OnCollisionEnter.html">OnCollisionEnter</a> to <strong>detect when objects collide</strong>, and play appropriate sounds</li>
+<li>Use <a href="https://docs.unity3d.com/ScriptReference/MonoBehaviour.OnTriggerEnter.html">OnTriggerEnter</a> to <strong>detect when objects enter an area</strong>, such as a scoring zone or an out-of-bounds zone.</li>
+</ul>
+<p><br></p>
+<h4 id="gameplay"><strong>Gameplay</strong></h4>
+<p>Your game should keep track of one or more player's <strong>score</strong>. Scores should be determined more or less according to the rules of the game you are adapting.</p>
+<p>Consider how your <strong>game mechanics</strong> and <strong>level design</strong> can offer different strategic options and play experiences.</p>
+<p>For example, you could research how factors like <a href="https://en.wikipedia.org/wiki/Glossary_of_cue_sports_terms#spin">spin</a> or tilt affect the game you are adapting, and consider whether your game should include a way for players to spin the ball or tilt the playing area.</p>
 <figure>
     <img src="../img/ballspindiagram.png" width=100%>
     <figcaption>-- For instance, this diagram shows how topspin affects the trajectory of the ball in table tennis. The ball would have fallen off the table if it's trajectory had not bent downwards due to spin!</figcaption>
 </figure>
 
-<br>
-
-You could also explore how **different terrains** for your playing field can affect the gameplay.
-
-See examples of ping pong variations by Laurent Perbos, Gabriel Orozco, and Lee Wen. How would these tables change the experience of playing table tennis?
-
+<p><br></p>
+<p>You could also explore how <strong>different terrains</strong> for your playing field can affect the gameplay.</p>
+<p>See examples of ping pong variations by Laurent Perbos, Gabriel Orozco, and Lee Wen. How would these tables change the experience of playing table tennis?</p>
 <div class="div-container">
     <div style="width:47.5%;margin-right:2.5%;">
         <figure>
@@ -415,32 +406,27 @@ See examples of ping pong variations by Laurent Perbos, Gabriel Orozco, and Lee 
     </div>
 </div>
 
-<br>
-
+<p><br></p>
 <figure>
     <img src="../img/pingpong-pond.png" width=100%>
     <figcaption>-- Gabriel Orozco - Ping Pond Table</figcaption>
 </figure>
 
-<br>
-
+<p><br></p>
 <figure>
     <img src="../img/pingpong-goaround.png" width=100%>
     <figcaption>-- Lee Wen - Ping Pong Go Around</figcaption>
 </figure>
 
-<br>
-
-What other affordances can digital games offer beyond changing the shape of the playing field? Animated obstacles? AIs? Alternative control schemes? Genre mashups?
-
+<p><br></p>
+<p>What other affordances can digital games offer beyond changing the shape of the playing field? Animated obstacles? AIs? Alternative control schemes? Genre mashups?</p>
 <figure>
 <iframe width="100%" height="315" src="https://www.youtube.com/embed/UXw6TY_6YVA" title="Pin Pon, 2015 - Gameplay Trailer" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 <figcaption>-- Theo Triantafyllidis - <a href="https://theotrian.itch.io/pinpon">Pin Pon</a>. <br>"Pin Pon is a game about online dating. Using a leap motion controller, players try to bounce stuff off their part of the table and into the opponents. Its always a match!" 
 </figcaption>
 </figure>
 
-<br>
-
+<p><br></p>
 <figure>
 <div class="div-container">
     <div style="width:47.5%;">
@@ -454,43 +440,31 @@ What other affordances can digital games offer beyond changing the shape of the 
 </figcaption>
 </figure>
 
-<br>
-
+<p><br></p>
 <figure>
 <div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/24498490?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Untitled (idk)"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
 <figcaption>-- Peter Lu, Steven Amrhein and Alex Rickett - Animal Golf. <br>"Balls are round, socially acceptable things to hit with clubs. But they roll! That’s not helping anybody. Animal Golf is what happens when you replace boring, rollable golf balls with animals that bounce, flip, and wobble. If you’ve ever wanted to hit a whale into a whale shaped hole, now’s your chance!" 
 </figcaption>
 </figure>
 
-<br>
-
-If you're making a multiplayer game, you could consider what type of social mechanics you'd like your players to have.
-
+<p><br></p>
+<p>If you're making a multiplayer game, you could consider what type of social mechanics you'd like your players to have.</p>
 <figure>
 <iframe src="https://editor.p5js.org/nkrkt/full/T9DxpX_kR" width=800 height=800></iframe>
 <figcaption> -- Nick Crockett - Multiplayer Game Prompt Generator
 </figure>
 
-<br>
-
-##### **Interaction Design**
-
-Translating the nuances of a sport to a digital game is a complex challenge.
-
-Players of real-life games like tennis are able to control the velocity and spin of their of the ball with subtle changes to how they strike the ball with the racquet. Traditional game controls, whether it's a gamepad or mouse and keyboard, don't usually offer this level of control!
-
+<p><br></p>
+<h4 id="interaction-design"><strong>Interaction Design</strong></h4>
+<p>Translating the nuances of a sport to a digital game is a complex challenge.</p>
+<p>Players of real-life games like tennis are able to control the velocity and spin of their of the ball with subtle changes to how they strike the ball with the racquet. Traditional game controls, whether it's a gamepad or mouse and keyboard, don't usually offer this level of control!</p>
 <iframe width="100%" height="315" src="https://www.youtube.com/embed/EuWPjXJPOFU?si=cbszDkLHRCXNQPJi" title="Serena Williams & Conan Play Wii Tennis | Late Night with Conan O’Brien" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-<br>
-
-**Consider how you allow the player to interact with the ball in virtual space.**
-
-How would you design an interface for your game that feels expressive and true to the original sport? How do existing games manage this complexity?
-
-For instance, there are many different examples of how tennis can be adapted to the screen:
-
-<br>
-
+<p><br></p>
+<p><strong>Consider how you allow the player to interact with the ball in virtual space.</strong></p>
+<p>How would you design an interface for your game that feels expressive and true to the original sport? How do existing games manage this complexity?</p>
+<p>For instance, there are many different examples of how tennis can be adapted to the screen:</p>
+<p><br></p>
 <div class="div-container">
     <div style="width:60%;margin-right:2.5%;">
         <p style="margin-top:0 !important">
@@ -505,8 +479,7 @@ For instance, there are many different examples of how tennis can be adapted to 
     </div>
 </div>
 
-<br>
-
+<p><br></p>
 <div class="div-container">
     <div style="width:60%;margin-right:2.5%;">
         <p style="margin-top:0 !important">
@@ -521,8 +494,7 @@ For instance, there are many different examples of how tennis can be adapted to 
     </div>
 </div>
 
-<br>
-
+<p><br></p>
 <div class="div-container">
     <div style="width:60%;margin-right:2.5%;">
         <p style="margin-top:0 !important">
@@ -538,38 +510,25 @@ For instance, there are many different examples of how tennis can be adapted to 
     </div>
 </div>
 
-<br>
-
-##### **Visual Communication**
-
-Consider the **look** and **feel** of your game, including lighting, materials, and more. If you wish, you may use 2D or 3D assets to compose your scene.
-
-Use visual elements to **communicate the state of the game** to the player. 
-
-Lines, meters, and arrows, can be useful for indicating aim, force, spin, and more.
-
-Particle effects or a trail renderer can help draw attention to a fast moving object.
-
+<p><br></p>
+<h4 id="visual-communication"><strong>Visual Communication</strong></h4>
+<p>Consider the <strong>look</strong> and <strong>feel</strong> of your game, including lighting, materials, and more. If you wish, you may use 2D or 3D assets to compose your scene.</p>
+<p>Include a <strong>start scene</strong> and <strong>instructions</strong> on how to play. </p>
+<p>Use visual elements to <strong>communicate the state of the game</strong> to the player. </p>
+<p>Lines, meters, and arrows, can be useful for indicating aim, force, spin, and more.</p>
+<p>Particle effects or a trail renderer can help draw attention to a fast moving object.</p>
 <figure>
     <img src="../img/wiiplay.png" width=100%>
     <figcaption>-- Wii Play, Nintendo</figcaption>
 </figure>
 
-<br>
-
-##### **Sound**
-
-Don't forget that sound can be a powerful communication tool, and can help make a game feel more expressive. 
-
-Consider increasing the **volume** and **pitch** of a sound effect based on how hard the ball collides with another object, or consider giving moving objects a "whoosh" sound that changes pitch and volume according to the object's speed.
-
-<br>
-
-## Evaluation
-
-Your final project will be evaluated according to the guidelines listed in the [course syllabus](./syllabus.md/#evaluation-criteria).
-
---></p>
+<p><br></p>
+<h4 id="sound"><strong>Sound</strong></h4>
+<p>Don't forget that sound can be a powerful communication tool, and can help make a game feel more expressive. </p>
+<p>Consider increasing the <strong>volume</strong> and <strong>pitch</strong> of a sound effect based on how hard the ball collides with another object, or consider giving moving objects a "whoosh" sound that changes pitch and volume according to the object's speed.</p>
+<p><br></p>
+<h2 id="evaluation">Evaluation</h2>
+<p>Your final project will be evaluated according to the guidelines listed in the <a href="../syllabus/#evaluation-criteria">course syllabus</a>.</p></p>
     </article>
 </section>
 <!-- endblock -->
@@ -582,6 +541,19 @@ Your final project will be evaluated according to the guidelines listed in the [
 
             
                     <!-- block preview -->
+    <div class="preview row row-cols-md-3 text-center pt-md-3" id="component-preview">
+        <div class="col themed-grid-col">
+            <a rel="prev" href="../project-1/" class="nav-link">
+                <i class="fa fa-arrow-left"></i> Previous
+            </a>
+        </div>
+        <div class="col themed-grid-col"></div>
+        <div class="col themed-grid-col">
+            <a rel="next" class="nav-link disabled">
+                Next <i class="fa fa-arrow-right"></i>
+            </a>
+        </div>
+    </div>
 <!-- endblock -->
             
 

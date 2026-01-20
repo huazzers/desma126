@@ -27,34 +27,21 @@ document.querySelectorAll('a[href^="#"]')
         });
     });
 });
-
-    window.onload = function(e){
-        var cell = document.getElementById('component-site-name');
-        var caseId = cell.innerHTML;
-        cell.innerHTML = '';
-        var link = document.createElement('a');
-        link.href = '../';
-        link.appendChild(document.createTextNode(caseId));
-        cell.appendChild(link);
-    }
 </script>
 
 # Project 2: Ball Game Remix
 
-TBD
-
-<!--
 <div class="duedate">
-<p>📌 <b>BALL GAME RESERACH DUE: Week 4 Thursday, April 24</b></p>
-<p>📌 <b>PROTOTYPE PLAYTEST DUE: Week 6 Tuesday, May 6</b></p>
-<p>📌 <b>FINAL PROJECT BUILD + DOCUMENTATION DUE: Week 7 Tuesday, May 13</b></p>
-<p><a href="https://docs.google.com/forms/d/e/1FAIpQLSfYIkatQAdseB_9ViLEFxphgyGzzghXJnli4jjKpl2fUG2l9w/viewform?usp=sharing">Submit Final Submission Here</a></p>
+<p>📌 <b>PROPOSAL DUE:</b> Week 4 Tuesday, January 27</p>
+<p>📌 <b>PROTOTYPE PLAYTEST:</b> Week 5 Tuesday, February 3</p>
+<p>📌 <b>FINAL PROJECT BUILD + DOCUMENTATION DUE:</b> Week 6 Thursday, February 12</p>
+<p>Submit Final Submission Here (TBD)</p>
 <blockquote>Please read the <a href="../how-to-submit">How To Submit</a> page for more detailed instructions.</blockquote>
 </div>
 
 ## Prompt
 
-Adapt **one of the following** ball-based games into a digital game for gamepad controllers *OR* any of the arcade cabinets in the classroom*:
+Adapt **one of the following** ball-based games into a digital game, with a twist!
 
 - Ball-and-net sports (tennis, volleyball)
 - Ball-and-wall sports (squash, racketball, handball)
@@ -67,18 +54,53 @@ Adapt **one of the following** ball-based games into a digital game for gamepad 
 
 <br>
 
-(**Alternative controllers are also welcome, but you should consult the instructor beforehand.*)
+**Optional challenge:**
+
+Make your game playable with **gamepad controllers, or some other custom controller** -- please consult with the instructor beforehand for further guidance.
 
 <br>
+
+**Inspiration**
+
+<figure><a href="https://pippinbarr.com/pongs/info/"><img src="../img/36pongs.gif"></a><figcaption>-- Pippin Bar, "<a href="https://pippinbarr.com/pongs/info/">PONGS (36 Pong Variations)</a>"</figcaption></figure>
+
+<br>
+
+<figure><a href="https://sokpop.itch.io/flipper-volcano"><img src="../img/flippervolcano.gif" width="600px"></a><figcaption>-- Sokpop Collective, "<a href="https://sokpop.itch.io/flipper-volcano">Flipper Volcano</a>"</figcaption></figure>
+
+<br>
+
+<figure><a href="https://www.youtube.com/watch?v=g4x9KYtaVtM"><img src="../img/kirbydreamcourse.gif" width="600px"></a><figcaption>-- "<a href="https://www.youtube.com/watch?v=g4x9KYtaVtM">Kirby's Dream Course</a>"</figcaption></figure>
+
+<br>
+
+<figure><a href="https://www.youtube.com/watch?v=yYypwqRnoI8"><img src="../img/katamaridamacy.gif" width="600px"></a><figcaption>-- "<a href="https://www.youtube.com/watch?v=yYypwqRnoI8">Katamari Damacy</a>"</figcaption></figure>
+
+<br>
+
+<figure><a href="https://www.youtube.com/watch?v=xUgYZwEd4fM"><img src="../img/supermonkeyball.gif" width="600px"></a><figcaption>-- "<a href="https://www.youtube.com/watch?v=xUgYZwEd4fM">Super Monkey Ball</a>"</figcaption></figure>
+
+<br>
+
+<figure><a href="https://akuparagames.itch.io/ynglet"><img src="../img/ynglet.gif" width="600px"></a><figcaption>-- Akupara Games, "<a href="https://akuparagames.itch.io/ynglet">Ynglet</a>"</figcaption></figure>
+
+<br>
+
+<figure><a href="https://www.youtube.com/watch?v=T3N8vK7yDxE"><img src="../img/wooden maze.jpg" width="600px"></a><figcaption>-- Brio, "<a href="https://www.youtube.com/watch?v=T3N8vK7yDxE">Labyrinth Game</a>"</figcaption></figure>
+
+<br>
+
+<figure><a href="https://www.youtube.com/watch?v=V8OqMAnxY9M"><img src="../img/arcticeggs.gif" width="600px"></a><figcaption>-- The Water Museum, "<a href="https://www.youtube.com/watch?v=V8OqMAnxY9M">Arctic Eggs</a>"</figcaption></figure>
+
+<br>
+
 
 ## Requirements
 
 Project 2 contains THREE COMPONENTS: 
-> - **PART 1 (5%): BALL GAME RESEARCH** </br><mark>*Due: Week 4 Thursday, April 24*</mark> </br>Do some research about the game you have chosen, and bring your notes to class for discussion. (Scroll down to ["Ball Game Research"](#ball-game-research) for more info.)
-> - **PART 2 (5%): PROTOTYPE PLAYTEST** </br><mark>*Due: Week 6 Tuesday, May 6*</mark> </br>Bring a prototype of your project to class -- we will be playtesting each others' projects. Prioritise core mechanics for player interaction and level design, placeholder visuals and playing from the Unity Editor are ok at this stage. (Scroll down to [Prototype Playtest](#prototype-playtest) for more info.)
-> - **PART 3 (15%): FINAL PROJECT BUILD WITH DOCUMENTATION** </br><mark>*Due: Week 7 Tuesday, May 13*</mark> </br>Refer to [final submission requirements](#final-submission) and [submission guidelines](./how-to-submit.md), then submit your final project. 
-> 
-> **Total contribution to final course grade: 25%**
+> - **PART 1: PROPOSAL** </br><mark>*Due: Week 4 Tuesday, January 27*</mark> </br>Do some research about the game you have chosen, and come prepared with your notes to pitch your project idea. (Scroll down to ["Proposal"](#proposal) for more info.)
+> - **PART 2: PROTOTYPE PLAYTEST** </br><mark>*Due: Week 5 Tuesday, February 3*</mark> </br>Bring a prototype of your project to class -- we will be playtesting each others' projects. Prioritise core mechanics for player interaction and level design, placeholder visuals and playing from the Unity Editor are ok at this stage. (Scroll down to [Prototype Playtest](#prototype-playtest) for more info.)
+> - **PART 3: FINAL PROJECT BUILD WITH DOCUMENTATION** </br><mark>*Due: Week 6 Thursday, February 12*</mark> </br>Refer to [final submission requirements](#final-submission) and [submission guidelines](./how-to-submit.md), then submit your final project. 
 
 <br>
 
@@ -87,22 +109,22 @@ Project 2 contains THREE COMPONENTS:
 Your final project must include the following elements:
 
 - ☑️ **Physics-based motion and collision** using the Rigidbody component.
-- ☑️ **Gameplay**: you must track player(s') score; consider play experiences and strategic options using level design and game mechanics.
-- ☑️ **Interaction Design**: you must include input key mapping for gamepad, arcade cabinet, or alternative custom controller(s); consider how to adapt ball game interaction in virtual space.
-- ☑️ **Visual Communication** of game state to player.
+- ☑️ **Gameplay**: track player(s') score; consider play experiences and strategic optto adapt ball game interaction in virtual spaions using level design and game mechanics.
+- ☑️ **Interaction Design**: consider how ce using input key-mapping.
+- ☑️ **Visual Communication**: include a starting scene; instructions on how to play; and conveying changes in game states during play.
 - ☑️ **Sound**
 
 <br>
 
-Your final project *does not* have to be a traditional ball game.
+**Your final project *does not* have to be a traditional ball game.**
 
 <br>
 
 ---
 
-#### Ball Game Research
+### Proposal
 
-After picking a ball game to adapt for Project 2, do some research about the game you have chosen, considering the following questions: 
+After picking a ball game to adapt for Project 2, do some research about the game you have chosen, considering the following questions -- and pitch your ideas for your project.
 
 <br>
 
@@ -190,7 +212,7 @@ After picking a ball game to adapt for Project 2, do some research about the gam
 ---
 
 
-#### Prototype Playtest
+### Prototype Playtest
 
 > If this is your first time running a playtest, I recommend reading [**these suggestions and guidelines**](https://mycours.es/gamedesign2018/files/2018/11/playtesting-primer.pdf) beforehand to have some idea of what to expect.
 
@@ -217,9 +239,9 @@ Other general guidelines when playtesting someone else's game:
 
 ---
 
-#### Final Submission
+### Final Submission
 
-##### **Physics**
+#### **Physics**
 
 Your game must use the **Rigidbody** component to simulate **physics-based** motion and collision. 
 
@@ -230,7 +252,7 @@ Your game must use the **Rigidbody** component to simulate **physics-based** mot
 
 <br>
 
-##### **Gameplay**
+#### **Gameplay**
 
 Your game should keep track of one or more player's **score**. Scores should be determined more or less according to the rules of the game you are adapting.
 
@@ -322,7 +344,7 @@ If you're making a multiplayer game, you could consider what type of social mech
 
 <br>
 
-##### **Interaction Design**
+#### **Interaction Design**
 
 Translating the nuances of a sport to a digital game is a complex challenge.
 
@@ -389,9 +411,11 @@ For instance, there are many different examples of how tennis can be adapted to 
 
 <br>
 
-##### **Visual Communication**
+#### **Visual Communication**
 
 Consider the **look** and **feel** of your game, including lighting, materials, and more. If you wish, you may use 2D or 3D assets to compose your scene.
+
+Include a **start scene** and **instructions** on how to play. 
 
 Use visual elements to **communicate the state of the game** to the player. 
 
@@ -406,7 +430,7 @@ Particle effects or a trail renderer can help draw attention to a fast moving ob
 
 <br>
 
-##### **Sound**
+#### **Sound**
 
 Don't forget that sound can be a powerful communication tool, and can help make a game feel more expressive. 
 
@@ -417,5 +441,3 @@ Consider increasing the **volume** and **pitch** of a sound effect based on how 
 ## Evaluation
 
 Your final project will be evaluated according to the guidelines listed in the [course syllabus](./syllabus.md/#evaluation-criteria).
-
--->
