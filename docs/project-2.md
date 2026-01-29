@@ -56,7 +56,7 @@ Adapt **one of the following** ball-based games into a digital game, with a twis
 
 **Optional challenge:**
 
-Make your game playable with **gamepad controllers, or some other custom controller** -- please consult with the instructor beforehand for further guidance.
+Make your game playable with **gamepad controllers, or some other custom controller** -- here are [some controllers available for loan](https://docs.google.com/document/d/12xWX6D5BNMk3bkcmL-j84xUTzw7mQUgU99o5iEM__zA/edit?usp=sharing) in the EDA checkout. Please consult with the instructor beforehand for further guidance.
 
 <br>
 
@@ -99,7 +99,7 @@ Make your game playable with **gamepad controllers, or some other custom control
 
 Project 2 contains THREE COMPONENTS: 
 > - **PART 1: PROPOSAL** </br><mark>*Due: Week 4 Tuesday, January 27*</mark> </br>Do some research about the game you have chosen, and come prepared with your notes to pitch your project idea. (Scroll down to ["Proposal"](#proposal) for more info.)
-> - **PART 2: PROTOTYPE PLAYTEST** </br><mark>*Due: Week 5 Tuesday, February 3*</mark> </br>Bring a prototype of your project to class -- we will be playtesting each others' projects. Prioritise core mechanics for player interaction and level design, placeholder visuals and playing from the Unity Editor are ok at this stage. (Scroll down to [Prototype Playtest](#prototype-playtest) for more info.)
+> - **PART 2: PROTOTYPE PLAYTEST** </br><mark>*Due: Week 5 Thursday, February 5*</mark> </br>Bring a prototype of your project to class -- we will be playtesting each others' projects. Prioritise core mechanics for player interaction and level design, placeholder visuals and playing from the Unity Editor are ok at this stage. (Scroll down to [Prototype Playtest](#prototype-playtest) for more info.)
 > - **PART 3: FINAL PROJECT BUILD WITH DOCUMENTATION** </br><mark>*Due: Week 6 Thursday, February 12*</mark> </br>Refer to [final submission requirements](#final-submission) and [submission guidelines](./how-to-submit.md), then submit your final project. 
 
 <br>
