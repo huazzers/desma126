@@ -226,6 +226,8 @@ All assigned readings and homeplay projects will be provided for you -- no need 
 
 - [freesound.org](https://freesound.org/) -- audio database that has search filters sorted by licenses. login required for downloading files. good source for adding sound effects and music to your projects. 
 - [Audacity](https://www.audacityteam.org/) -- free software for recording and editing audio; the version without Muse Hub should suffice for your purposes.
+- [Petaporon](https://pixwlk.itch.io/petaporon) -- browser-based minimalistic piano roll sequencer.
+- [Lovely Composer](https://1oogames.itch.io/lovely-composer) -- retro chiptune music-making software for $9.
 
 For more asset creation tools, check out this [exhaustive list of cheap and free tools compiled by Everest Pipkin](https://github.com/everestpipkin/tools-list#making-assets---images-models-sound-video).
 
