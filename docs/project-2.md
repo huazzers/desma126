@@ -35,7 +35,7 @@ document.querySelectorAll('a[href^="#"]')
 <p>📌 <b>PROPOSAL DUE:</b> Week 4 Tuesday, January 27</p>
 <p>📌 <b>PROTOTYPE PLAYTEST:</b> Week 5 Thursday, February 5</p>
 <p>📌 <b>FINAL PROJECT BUILD + DOCUMENTATION DUE:</b> Week 6 Thursday, February 12</p>
-<p>Submit Final Submission Here (TBD)</p>
+<p><a href="https://forms.gle/tr6WswZkG2fVdS2m6">Submit Final Submission Here</a></p>
 <blockquote>Please read the <a href="../how-to-submit">How To Submit</a> page for more detailed instructions.</blockquote>
 </div>
 
