@@ -41,25 +41,19 @@ document.querySelectorAll('a[href^="#"]')
 
 # Project 3: Zine Game
 
-TBD
-
-<!--
 <div class="duedate">
-<p>📌 <b>PROJECT SKETCH DUE:</b> Week 8 Thursday, May 22</p>
-<p>📌 <b>FINAL PROJECT BUILD + DOCUMENTATION DUE:</b> Week 10 Thursday, June 5</p>
-<p><a href="https://forms.gle/Vcr6Dr2uHfeWikHT7">Submit Final Submission Here</a></p>
+<p>📌 <b>PROJECT SKETCH DUE:</b> Week 8 Thursday, February 26</p>
+<p>📌 <b>FINAL PROJECT BUILD + DOCUMENTATION DUE:</b> Week 10 Tuesday, March 10</p>
+<p>Submit Final Submission Here (TBD)</p>
 <blockquote>Please read the <a href="../how-to-submit">How To Submit</a> page for more detailed instructions.</blockquote>
 </div>
 
 ## Prompt
 
-At the start of the quarter, we unpacked the [many possible meanings](./0-unity-csharp.md/#what-is-an-engine) of the term "engine." 
-
-To conclude this course, our final project will focus on this definition of the "engine": 
-
-> "A person or group of people which influence a larger group; a driving force." 
->
-> "Anything used to effect a purpose; any device or contrivance; an agent."
+<figure>
+<blockquote><p>"(A plularity of voices) is something the videogame industry, by its nature cannot give us. I like to think about zines——self-published, self-distributed magazines and books. Send me a dollar and a self-addressed envelope; I'll send you a stapled book of some stories from my life, or some pictures I took of out-of-the-way nooks of my city, or researched acounts of historical murders, or some jokes about sea life [...] I like the idea of games as zines: as transmissions of ideas and culture from person to person, as personal artifacts instead of impersonal creations by teams of forty-five artists and fifteen programmers."</p></blockquote>
+<figcaption>-- Anna Anthropy, Rise of the Videogame Zinesters</figcaption>
+</figure>
 
 <br>
 
@@ -69,30 +63,35 @@ Build a **zine game** that acts as **an engine for containing, transferring, and
 
 Consider the following options:
 
-- An original game inspired by a personal experience;
-- A personal response to an existing piece (a film, a manifesto, an article, an event...);
+- An original game inspired by a personal experience, or artifacts from your day-to-day;
+- A personal response to an existing piece (a film, a [manifesto](https://itch.io/jam/manifesto-jam), an article, an event...);
 - A gift or letter exchange addressed to someone, or a group of people.
 - A metacritique of what a game engine can do, or what games could be. 
 
 <br>
 
-Your project should include **sound**, and **at least ONE (1)** of the following elements: 
+Your project should include 
 
-- [Interactive text](#interactive-text)
-- [Camera Systems](#camera-systems)
-- [Inventory Database](#inventory-database)
+1. **sound**
+2. **at least ONE (1)** of the following elements: 
+    - [Interactive text](#interactive-text)
+    - [Camera Systems](#camera-systems)
+    - [Inventory Database](#inventory-database)
+3. and **another core game mechanic**, either from the above three options, or a topic covered in our previous two units. 
 
 <br>
 
 You may also consider extending upon or remixing a previous project as long as it meets the project prompt and requirements. **Your project proposal must be approved by an instructor / TA prior to the submission.**
 
-You are also welcome to work in groups of 2-3, please consult the instructor / TA for further directions beforehand. 
+You are also welcome to work in **groups of 2-3**, instructions for collaborating on Unity projects are included in our [Tech Setup](https://docs.google.com/document/d/1CGhRzQgaY6i87bgxVyaFQmYGLqq-W-n90z05SzFD9ns/edit?tab=t.0#heading=h.udkiiyzjuo9) document.
 
 <br>
 
 ### What is a zine?
 
-> A zine is a small-circulation booklet or magazine, often created by hand or using digital tools through self-publishing. Unlike traditional magazines, zines are characterized by their **DIY ethos** and **independent spirit**. They cover a vast array of topics, from personal stories to art, poetry, and music. They’re standout pieces of print media because they can be as varied as the creators behind them.
+> A small-circulation booklet or magazine, often created by hand or using digital tools through self-publishing. 
+
+Unlike traditional magazines, zines are characterized by their **DIY ethos** and **independent spirit**. They cover a vast array of topics, from personal stories to art, poetry, and music. They’re standout pieces of print media because they can be as varied as the creators behind them.
 
 <figure>
     <img src="../img/zine-fire.jpg">
@@ -106,7 +105,9 @@ You are also welcome to work in groups of 2-3, please consult the instructor / T
 
 <br>
 
-A zine can also be thought of as a form of participatory culture, which has low barriers for artistic expression and civic engagement. Considering the tools we have today, blogging, website building, and game-making can be tools for zine-making as well. 
+> A form of participatory culture, with low barriers for artistic expression and civic engagement. 
+
+Considering the tools we have today, blogging, website building, and game-making can be tools for zine-making as well. 
 
 <figure>
 <iframe scrolling="no" width="570" height="800" srcdoc="&lt;html&gt;&lt;head&gt;&lt;script src=&quot;https://kickscondor.github.io/js/slaptrash.js&quot;&gt;&lt;/script&gt;&lt;/head&gt;&lt;body&gt;&lt;div class=&quot;slaptrash&quot;&gt;&lt;solid color&#x3D;&quot;black #335&quot;&gt;&lt;&#x2F;solid&gt;
@@ -204,10 +205,6 @@ dozens of fingerprints and organic bits smatter its well-worn hyperlinks.&lt;&#x
 <figcaption>--<a href="https://www.kickscondor.com/slaptrash/#">Slaptrash Demo #1</a> by KicksCondor.
 </figcaption>
 </figure>
-
-<br>
-
-Ultimately, zines allow creators to explore topics close to their hearts, share their perspectives, and connect with like-minded individuals. They often challenge conventional beliefs and principles, offering alternative viewpoints and fostering a sense of empowerment among readers and creators alike.
 
 <br>
 
@@ -315,8 +312,8 @@ game mechanics based on real experiences
 ## Requirements
 
 Project 1 contains **TWO COMPONENTS**: 
-> - **PART 1: SKETCH OF PROJECT PROPOSAL** </br>📌 *Due: Week 8 Thursday, May 22* </br>Please bring your ideas / prototypes to class for discussion.
-> - **PART 2: FINAL PROJECT BUILD WITH DOCUMENTATION** </br>📌 *Due: Week 10 Thursday, June 5* </br>Refer to [submission guidelines](./how-to-submit.md), and submit your final project.
+> - **PART 1: SKETCH OF PROJECT PROPOSAL** </br>📌 *Due: Week 8 Thursday, February 26* </br>Please bring your ideas / prototypes to class for discussion, including a **project timeline** that maps out what you need done by when leading up to the deadline. 
+> - **PART 2: FINAL PROJECT BUILD WITH DOCUMENTATION** </br>📌 *Due: Week 10 Tuesday, March 10* </br>Refer to [submission guidelines](./how-to-submit.md), and submit your final project.
 > 
 > **Total contribution to final course grade: 25%**
 
@@ -332,6 +329,7 @@ Your final project must include the following elements:
     - [Interactive text](#interactive-text)
     - [Camera Systems](#camera-systems)
     - [Inventory Database](#inventory-database)
+- ☑️ and **another core game mechanic**, either from the above three options, or a topic covered in our previous two units. 
 
 <br>
 
@@ -439,4 +437,3 @@ As a prosthetic extension of the player character's form, inventory items also c
 ## Evaluation
 
 Your final project will be evaluated according to the guidelines listed in the [course syllabus](./syllabus.md/#evaluation-criteria).
--->
