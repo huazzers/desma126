@@ -25,19 +25,5 @@ nav:
 plugins:
   - exclude:
       glob:
-        - '0-unity-csharp.md'
-        - '1-transforms-vectors.md'
-        - '2-prefabs-loops-arrays-import.md'
-        - '3-randomness-noise-customclasses.md'
-        - '4-basicinput-ui-lights-camera.md'
-        - '5-game-play-level-design.md'
-        - '6-physics-engine.md'
-        - '7-inputsystem-statemachine-event.md'
-        - '7.5-mouse-cursor-input.md'
-        - '8-statics-scenes-sounds-vfx.md'
-        - '9-animation-coroutines-persistentdata.md'
-        - '10-sprites-videoplayers.md'
-        - '11-bitsy.md'
-        - '12-interactive-text.md'
         - '13-inventory-database.md'
         - '14-cinemachine.md'

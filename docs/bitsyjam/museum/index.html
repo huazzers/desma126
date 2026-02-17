@@ -6,15 +6,15 @@
 
 <meta charset="UTF-8">
 
-<title>Welcome to the {wvy}{rbw}Bitsy Museum{/rbw}{/wvy} !{pg}Presented by the class of DESMA 126: Game Engine, Fall 2024.</title>
+<title>Welcome to the {wvy}{rbw}Bitsy Museum{/rbw}{/wvy} !{pg}Presented by the class of DESMA 126: Game Engine, Winter 2026.</title>
 
 <script type="text/bitsyGameData" id="exportedGameData">
-Welcome to the {wvy}{rbw}Bitsy Museum{/rbw}{/wvy} !{pg}Presented by the class of DESMA 126: Game Engine, Fall 2024.
+Welcome to the {wvy}{rbw}Bitsy Museum{/rbw}{/wvy} !{pg}Presented by the class of DESMA 126: Game Engine, Winter 2026.
 
-# BITSY VERSION 8.12
+# BITSY VERSION 8.15
 
 ! VER_MAJ 8
-! VER_MIN 12
+! VER_MIN 15
 ! ROOM_FORMAT 1
 ! DLG_COMPAT 0
 ! TXT_MODE 0
@@ -203,7 +203,7 @@ SPR A
 10111101
 00100100
 00100100
-POS 0 8,8
+POS 0 7,8
 
 SPR a
 00000000
@@ -229,7 +229,6 @@ ITM 0
 00011000
 00000000
 NAME tea
-DLG 1
 
 ITM 1
 00000000
@@ -241,7 +240,6 @@ ITM 1
 00010000
 00011000
 NAME key
-DLG 2
 BLIP 2
 
 DLG 0
@@ -255,14 +253,6 @@ DLG 0
 """
 NAME cat dialog
 
-DLG 1
-You found a nice warm cup of tea
-NAME tea dialog
-
-DLG 2
-A key! {wvy}What does it open?{wvy}
-NAME key dialog
-
 DLG 3
 hamster
 NAME hamster
@@ -270,10 +260,6 @@ NAME hamster
 DLG 4
 game2
 NAME thursdayafternoon
-
-DLG 5
-
-NAME sprite c dialog
 
 DLG 6
 rat
@@ -427,6 +413,7 @@ body {
 }
 
 #game {
+	image-rendering:pixelated;
 	background:black;
 	width:100vw;
 	max-width:100vh;
@@ -1757,7 +1744,7 @@ var bitsy = mainProcess.system;
 // is this the right place for this to live?
 var version = {
 	major: 8, // major changes
-	minor: 12, // smaller changes
+	minor: 15, // smaller changes
 	devBuildPhase: "RELEASE",
 };
 function getEngineVersion() {
@@ -8631,8 +8618,8 @@ function movePlayer(direction, isFirstMove) {
 	}
 
 	if (end) {
-        window.open(dialog[end.id].src + ".html", "_self");
-    }
+		startEndingDialog(end);
+	}
 	else if (ext) {
 		movePlayerThroughExit(ext);
 	}
@@ -12156,6 +12143,7 @@ CHAR 9835
 011011
 011000
 000000
+</script>
 </script>
 
 </head>

@@ -39,7 +39,7 @@ document.querySelectorAll('a[href^="#"]')
 
 ---
 
-<embed type="text/html" src="../bitsyjam/on_a_thursday_afternoon___.html" width="100%" height="500">
+<embed type="text/html" src="../bitsyjam/on_a_tuesday_afternoon___.html" width="100%" height="500">
 
 ## What is Bitsy? 
 
@@ -59,13 +59,13 @@ By the end of class, we'd have made a Bitsy game in groups of 2-3 and (hopefully
 
 | Time | Activity |
 |---|---|
-| 1400 | 🍎 Intro to Game Jam activity and Bitsy game engine |
-| 1420 | 💡 Brainstorm Ideas |
-| 1430 | 🗳️ Voting for Ideas |
-| 1440 | 🤝 Form Groups |
-| 1450 | ⚒️ WORK WORK WORK |
-| 1620 | ⏱️ TIMES UP -- Submit and Present ! |
-| 1650 | 🏁 Game Jam end ! |
+| 0900 | 🍎 Intro to Game Jam activity and Bitsy game engine |
+| 0920 | 💡 Brainstorm Ideas |
+| 0930 | 🗳️ Voting for Ideas |
+| 0940 | 🤝 Form Groups |
+| 0950 | ⚒️ WORK WORK WORK |
+| 1120 | ⏱️ TIMES UP -- Submit and Present ! |
+| 1150 | 🏁 Game Jam end ! |
 
 ### Prompt
 
@@ -79,30 +79,9 @@ We’ll return to this in a moment. But first how do you do things in bitsy?
 
 ## Intro to Bitsy
 
+> Here's our Tutorial Notes: [**Bitsy Workshop**](https://docs.google.com/document/d/1R9Om07CeanjrNTW1GPOvXREeEI92x3VFQSNvYGQSTds/edit?usp=sharing)
+
 ![](./img/bitsy.jpg)
-
-Get to the engine here: [https://ledoux.itch.io/bitsy](https://ledoux.itch.io/bitsy)
-
-We’ll take a stroll through the engine using this [bitsy pdf handout](https://zeroday.camp/wp-content/uploads/2018/09/Bitsy-Guides.pdf)
-
-Look at what others have made: [https://itch.io/games/tag-bitsy](https://itch.io/games/tag-bitsy)
-
-![](./img/bitsy-demo.png)
-
-<br>
-
-If you want to look at even more tutorials / info / hacks/ etc…
-
-- bitsy docs has the latest information about how to do things in the editor: [https://make.bitsy.org/docs/](https://make.bitsy.org/docs/)
-- [Another tutorial](https://www.shimmerwitch.space/bitsyTutorial.html) (also in [Chinese](https://zhuanlan.zhihu.com/p/527178844) and [Japanese](https://gamewriter.jp/2022/11/15/bitsy%e3%81%ae%e3%83%81%e3%83%a5%e3%83%bc%e3%83%88%e3%83%aa%e3%82%a2%e3%83%ab/)):
-- bitsy handout (lots of links to other things): [https://rahji.github.io/bitsy-handout/web/](https://rahji.github.io/bitsy-handout/web/)
-- bitsy tools map (also lots of links): [https://haraiva.neocities.org/bitsytools#1,4](https://haraiva.neocities.org/bitsytools#1,4)
-
-<figure>
-    <img src="../img/endlessscroll.gif">
-    <figcaption>-- <a href="https://haraiva.itch.io/endless-scroll">Endless Scroll</a>. Cecile Richard (haraiva).</figcaption>
-</figure>
-
 
 <br>
 
@@ -125,7 +104,7 @@ Each person gets ***Three votes***
 
 ![](./img/start-line.gif)
 
-Read through the ideas. Place a star **✰** on your favorite ones.
+Read through the ideas. Place a sticker on your favorite ones.
 
 ![](./img/start-line.gif)
 
@@ -143,6 +122,8 @@ We’ll take the top 4-5 ideas and write them on the board!
 - Three people max.
 - Workshop the idea, make a sketch, storyboard, plan what you’ll make (remember that your game can be small)
 - Divide up the work if needed. (writing, drawing, sounds, bitsy assembly)
+    * **Have a "developer" work on the core interactions of your game using placeholder interactable objects and rooms.** <br>This person would implement the dialogs, variable actions, and exit/endings of the game; and eventually compile the finalised assets made by other team members. <br><br>There could be multiple developers working on different parts of the game -- remember to plan ahead for how certain variable data should be labelled to avoid conflicts when merging. 
+    * **Have only ONE (1) person working on room and tile designs.** <br>Merging room and tile data can get especially tedious, because you'll find yourself needing to re-index a bunch of tile assets... <br><br>Other game asset data like sprites, avatars, items, and audio are comparatively easier to compile from multiple sources. 
 - Make sure to add an **ending** somewhere in your project!
 
 <br>
@@ -157,29 +138,14 @@ Take a look at the **“Game Data”** tool. If you scroll around (or search for
 
 If you’ve decided to use any hacks or plugins this might be a bit more tricky.
 
-<br>
-
-### Exporting and sharing the game
-
-From the “Download” tool you can export your game as an HTML file -- **email this HTML file to me** so I can add your project to the Bitsy Museum!
-
-To share bitsy projects online, you can embed it on your website using an iframe:
-
-```html
-<iframe src="path/to/my-fancy-bitsy.html"></iframe>
-```
-
-<br>
-
-You can also upload it directly to itch.io and make a project page!
-
 <figure>
-    <img src="../img/novena.gif">
-    <figcaption>-- <a href="https://haraiva.itch.io/novena">Novena</a>. Cecile Richard (haraiva).</figcaption>
+    <img src="../img/endlessscroll.gif">
+    <figcaption>-- <a href="https://haraiva.itch.io/endless-scroll">Endless Scroll</a>. Cecile Richard (haraiva).</figcaption>
 </figure>
 
 <br>
 
+<!--
 ---
 
 ## ... THE MOMENT YOU'VE ALL BEEN WAITING FOR!
@@ -187,11 +153,12 @@ You can also upload it directly to itch.io and make a project page!
 <embed type="text/html" src="../bitsyjam/museum/index.html" width="100%" height="500">
 
 <br>
+-->
 
 
 ---
 
 ## Some course reminders
 
-- **Homeplay 2 (Extra Credit)** is due next Tuesday.
-- **Project 3 Sketch** is due next Thursday.
+- **Homeplay Response 2** is due next Tuesday.
+- **Project 3 Proposal** is due next Thursday.
