@@ -145,15 +145,12 @@ If you’ve decided to use any hacks or plugins this might be a bit more tricky.
 
 <br>
 
-<!--
----
 
 ## ... THE MOMENT YOU'VE ALL BEEN WAITING FOR!
 
 <embed type="text/html" src="../bitsyjam/museum/index.html" width="100%" height="500">
 
 <br>
--->
 
 
 ---
