@@ -26,4 +26,3 @@ plugins:
   - exclude:
       glob:
         - '13-inventory-database.md'
-        - '14-cinemachine.md'
