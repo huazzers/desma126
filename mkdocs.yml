@@ -25,4 +25,3 @@ nav:
 plugins:
   - exclude:
       glob:
-        - '13-inventory-database.md'
