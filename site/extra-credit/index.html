@@ -1,7 +1,7 @@
 <!doctype html>
 <html data-bs-theme="light">
     <head>
-                <title>Project 1 - 👾 DESMA126 Game Engine</title>
+                <title>Extra Credit - 👾 DESMA126 Game Engine</title>
 
             <meta charset="utf-8">
             <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -89,7 +89,7 @@
 <!-- endblock -->
                                     <!-- block dropdown-menu -->
     <li>
-        <a href="./" class="dropdown-item text-decoration-none  active ">Project 1</a>
+        <a href="../project-1/" class="dropdown-item text-decoration-none ">Project 1</a>
     </li>
 <!-- endblock -->
                                     <!-- block dropdown-menu -->
@@ -104,7 +104,7 @@
 <!-- endblock -->
                                     <!-- block dropdown-menu -->
     <li>
-        <a href="../extra-credit/" class="dropdown-item text-decoration-none ">Extra Credit</a>
+        <a href="./" class="dropdown-item text-decoration-none  active ">Extra Credit</a>
     </li>
 <!-- endblock -->
                             </ul>
@@ -149,20 +149,8 @@
     <div class="sidebar navbar-collapse collapse card">
         <ul class="nav flex-column">
             
-            <li class="nav-item" data-bs-level="1"><a href="#project-1-auto-generator" class="nav-link">Project 1: Auto-Generator</a>
+            <li class="nav-item" data-bs-level="1"><a href="#extra-credit" class="nav-link">Extra Credit</a>
               <ul class="nav flex-column">
-            <li class="nav-item" data-bs-level="2"><a href="#prompt" class="nav-link">Prompt</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-bs-level="2"><a href="#requirements" class="nav-link">Requirements</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-bs-level="2"><a href="#evaluation" class="nav-link">Evaluation</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
               </ul>
             </li>
         </ul>
@@ -178,7 +166,17 @@
             
             
         </header>
-        <p><!--jump to anchor tag adjusted to header height offset-->
+        <p><style>
+    @media (min-width: 768px) {
+
+        .d-md-block {
+        display: none !important;
+        }
+
+    }
+</style>
+
+<!--jump to anchor tag adjusted to header height offset-->
 <script>
 // Get the header element
 let header = document.querySelector('header');
@@ -208,79 +206,24 @@ document.querySelectorAll('a[href^="#"]')
     });
 });
 
-    window.onload = function(e){
-        var cell = document.getElementById('component-site-name');
-        var caseId = cell.innerHTML;
-        cell.innerHTML = '';
-        var link = document.createElement('a');
-        link.href = '../';
-        link.appendChild(document.createTextNode(caseId));
-        cell.appendChild(link);
-    }
+window.onload = function(e){
+    var cell = document.getElementById('component-site-name');
+    var caseId = cell.innerHTML;
+    cell.innerHTML = '';
+    var link = document.createElement('a');
+    link.href = '../';
+    link.appendChild(document.createTextNode(caseId));
+    cell.appendChild(link);
+}
 </script>
 
-<h1 id="project-1-auto-generator">Project 1: Auto-Generator</h1>
+<h1 id="extra-credit">Extra Credit</h1>
 <div class="duedate">
-<p>📌 <b>FINAL PROJECT BUILD + DOCUMENTATION DUE:</b> Week 3 Tuesday, January 20</p>
-<p><a href="https://forms.gle/eWJPZNMc2SoSoWgf7">Submit Final Submission Here</a></p>
-<blockquote>Please read the <a href="../how-to-submit">How To Submit</a> page for more detailed instructions.</blockquote>
+<p>📌 <b>DUE:</b> Week 10 Friday, March 13</p>
 </div>
 
-<h2 id="prompt">Prompt</h2>
-<p>In order to keep play interesting and unique for each iteration, video games often use custom algorithmic systems that dynamically generate different environments, characters, and other game data using the same set of assets.</p>
-<p>To get familiar with building custom dynamic systems using Unity and C#, your first project prompt is as follows:</p>
-<p><strong><em>Create a generator in Unity that only requires 1 ~ 2 button controls to run.</em></strong></p>
-<hr />
-<p><strong>Consider the following options:</strong></p>
-<ul>
-<li>a landscape / level / terrain generator;</li>
-<li>a character generator, eg. exquisite corpse;</li>
-<li>an evolution simulator, e.g. cellular automaton.</li>
-</ul>
-<p></br>
-<strong>Possible techniques:</strong></p>
-<ul>
-<li>modular architecture using prefabs, arrays/lists, instantiate/destroy functions, empty transforms as connection points;<br><img alt="" src="../img/exquisite-corpse_cropped.gif" /></li>
-<li>procedural / algorithmic generation using random functions, perlin noise, custom parameters, L-systems, cellular automata, etc.<br><img alt="" src="../img/0505.gif" /><br><br><figure><a href="https://thebibites.itch.io/the-bibites"><img alt="" src="../img/bibites.png" /></a><figcaption>-- <a href="https://thebibites.itch.io/the-bibites">The Bibites</a> on itch.io</figcaption></figure><figure><a href="https://www.youtube.com/watch?v=E1B4UoSQMFw"><img alt="" src="../img/L-system.png" /></a><figcaption>-- (Youtube video) "<a href="https://www.youtube.com/watch?v=E1B4UoSQMFw">Coding Traing #16: L-systems</a>"</figcaption><figure><figure><a href="https://conwaylife.com/"><img alt="" src="../img/conwaysgameoflife.gif" /></a><br><img alt="" src="../img/conwaysgameoflife_summary.jpg" /><figcaption>-- <a href="https://conwaylife.com/">Conway's Game of Life</a></figcaption></figure></li>
-</ul>
-<p></br>
-<strong>Tips:</strong></p>
-<ul>
-<li>Consider what <strong>constraints</strong> or <strong>rules</strong> you can impose to create unique forms and color palettes.</li>
-<li><strong>You may work in 2D or 3D.</strong> Lean into your strengths as a visual designer / artist as much as possible with this project! (And also remember you don't have much time!)</li>
-<li><strong>Consider how a viewer will see / experience your generative designs.</strong> Can they orbit the camera around? Can they press a button to generate new objects?</li>
-</ul>
-<p></br></p>
-<p><strong>Inspirations</strong></p>
-<figure><a href="https://jamschutz.itch.io/quick-character-creator"><img src="../img/quickcharactercreator.jpg"></a><figcaption>-- Hao Liao and Joey Schutz, "<a href="https://jamschutz.itch.io/quick-character-creator">Quick Character Genreator</a>"</figcaption></figure>
-
-<figure><a href="https://grey2scale.itch.io/pet-the-pup"><img src="../img/petthepup.gif"></a><figcaption>-- Will Herring, "<a href="https://grey2scale.itch.io/pet-the-pup">Pet the Pup at the Party</a>"</figcaption></figure>
-
-<figure><a href="https://lingdonh.itch.io/better-horses"><img src="../img/betterhorses.png"></a><figcaption>-- Lingdong Huang, "<a href="https://lingdonh.itch.io/better-horses">Better Horses</a>"</figcaption></figure>
-
-<figure><a href="http://www.galaxykate.com/apps/Prototypes/LTrees/"><img src="../img/flowers.png"></a><figcaption>-- Kate Compton, "<a href="http://www.galaxykate.com/apps/Prototypes/LTrees/">Flowers</a>"... who also wrote this Tumblr post about making generators "<a href="https://www.tumblr.com/galaxykate0/139774965871/so-you-want-to-build-a-generator">So you want to build a generator...</a>"</figcaption></figure>
-
-<figure><a href="https://titouanm.com/mucartographer/"><img src="../img/mucartographer.png"></a><figcaption>-- Titouan Millet, "<a href="https://titouanm.com/mucartographer/">Mu Cartographer</a>"</figcaption></figure>
-
-<figure><a href="https://ncase.me/emoji-prototype/"><img src="../img/ncaseemojisim.png"></a><figcaption>-- Nicky Case, "<a href="https://ncase.me/emoji-prototype/">Emoji Simulator</a>"</figcaption></figure>
-
-<p><br></p>
-<h2 id="requirements">Requirements</h2>
-<p><strong>Your final project requires:</strong></p>
-<ul>
-<li>the use of <strong>modular OR procedural generation techniques</strong>, or even a mix of both!</li>
-<li><strong>at least 1~2 button controls</strong> to run.</li>
-</ul>
-<p></br>
-<strong>Your final project is not required to:</strong> </p>
-<ul>
-<li>be a traditional video game;</li>
-<li>have sound / audio.</li>
-</ul>
-<p><br></p>
-<h2 id="evaluation">Evaluation</h2>
-<p>Your final project will be evaluated according to the guidelines listed in the <a href="../syllabus/#evaluation-criteria">course syllabus</a>.</p>
-<hr /></p>
+<p><em>Attend a Game Lab event, or any other guest talk, art exhibition, or performance related to games and interactive media, and tell me about your experience!</em></p>
+<p>Please submit your response before the deadline: <a href="https://forms.gle/opuZtoqX1JY9uUri9">https://forms.gle/opuZtoqX1JY9uUri9</a></p></p>
     </article>
 </section>
 <!-- endblock -->
@@ -295,13 +238,13 @@ document.querySelectorAll('a[href^="#"]')
                     <!-- block preview -->
     <div class="preview row row-cols-md-3 text-center pt-md-3" id="component-preview">
         <div class="col themed-grid-col">
-            <a rel="prev" href="../readings-and-homeplays/" class="nav-link">
+            <a rel="prev" href="../project-3/" class="nav-link">
                 <i class="fa fa-arrow-left"></i> Previous
             </a>
         </div>
         <div class="col themed-grid-col"></div>
         <div class="col themed-grid-col">
-            <a rel="next" href="../project-2/" class="nav-link">
+            <a rel="next" class="nav-link disabled">
                 Next <i class="fa fa-arrow-right"></i>
             </a>
         </div>

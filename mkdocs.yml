@@ -22,6 +22,7 @@ nav:
     - Project 1: project-1.md
     - Project 2: project-2.md
     - Project 3: project-3.md
+    - Extra Credit: extra-credit.md
 plugins:
   - exclude:
       glob:
