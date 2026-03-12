@@ -57,7 +57,7 @@ window.onload = function(e){
 # Extra Credit
 
 <div class="duedate">
-<p>📌 <b>DUE:</b> Week 10 Friday, March 13</p>
+<p>📌 <b>DUE:</b> Week 10 Sunday, March 15</p>
 </div>
 
 *Attend a Game Lab event, or any other guest talk, art exhibition, or performance related to games and interactive media, and tell me about your experience!*

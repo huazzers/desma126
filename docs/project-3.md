@@ -43,7 +43,7 @@ document.querySelectorAll('a[href^="#"]')
 
 <div class="duedate">
 <p>📌 <b>PROJECT SKETCH DUE:</b> Week 8 Thursday, February 26</p>
-<p>📌 <b>FINAL PROJECT BUILD + DOCUMENTATION DUE:</b> Week 10 Tuesday, March 10</p>
+<p>📌 <b>FINAL PROJECT BUILD + DOCUMENTATION DUE:</b> Week 10 Thursday, March 12</p>
 <p><a href="https://forms.gle/hHeRWW4fHNiRezTB9">Submit Final Submission Here</a></p>
 <blockquote>Please read the <a href="../how-to-submit">How To Submit</a> page for more detailed instructions.</blockquote>
 </div>
@@ -313,7 +313,7 @@ game mechanics based on real experiences
 
 Project 1 contains **TWO COMPONENTS**: 
 > - **PART 1: SKETCH OF PROJECT PROPOSAL** </br>📌 *Due: Week 8 Thursday, February 26* </br>Please bring your ideas / prototypes to class for discussion, including a **project timeline** that maps out what you need done by when leading up to the deadline. 
-> - **PART 2: FINAL PROJECT BUILD WITH DOCUMENTATION** </br>📌 *Due: Week 10 Tuesday, March 10* </br>Refer to [submission guidelines](./how-to-submit.md), and submit your final project.
+> - **PART 2: FINAL PROJECT BUILD WITH DOCUMENTATION** </br>📌 *Due: Week 10 Thursday, March 12* </br>Refer to [submission guidelines](./how-to-submit.md), and submit your final project.
 > 
 > **Total contribution to final course grade: 25%**
 
